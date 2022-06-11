@@ -1,4 +1,4 @@
-import * as _ from "lodash"
+import DifficultyLevel from '@/services/enum/DifficultyLevel'
 import { InjectionKey } from 'vue'
 import { createStore, useStore as baseUseStore, Store } from 'vuex'
 
@@ -11,7 +11,9 @@ export interface State {
   rounds: Round[]
 }
 export interface Setup {
-  difficultyLevel: number
+  playerCount: number
+  botCount: number
+  difficultyLevel: DifficultyLevel
 }
 export interface Round {
   round: number
@@ -31,7 +33,9 @@ export const store = createStore<State>({
     language: "en",
     baseFontSize: 1.0,
     setup: {
-      difficultyLevel: 1
+      playerCount: 1,
+      botCount: 1,
+      difficultyLevel: DifficultyLevel.EASY
     },
     rounds: []
   },
@@ -45,6 +49,15 @@ export const store = createStore<State>({
     },
     language(state : State, language: string) {
       state.language = language
+    },
+    setupPlayerCount(state : State, playerCount: number) {
+      state.setup.playerCount = playerCount
+    },
+    setupBotCount(state : State, botCount: number) {
+      state.setup.botCount = botCount
+    },
+    setupDifficultyLevel(state : State, level: number) {
+      state.setup.difficultyLevel = level
     },
     endGame(state : State) {
       state.rounds = []

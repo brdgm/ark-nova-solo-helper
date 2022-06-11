@@ -2,9 +2,24 @@
   "gameTitle": "Ark Nova",
   "home": {
     "title": "Ark Nova Solo Helper",
-    "play1": "Play the <a href='https://boardgamegeek.com/thread/2823056/rno-alternative-solo-mode' target='_blank' rel='noopener'><b>A.R.N.O. Solo Mode</b></a> (unofficial) of <a href='https://boardgamegeek.com/boardgame/342942/ark-nova' target='_blank' rel='noopener'><b>Ark Nova</b></a>.",
+    "play1": "Play the <a href='https://boardgamegeek.com/thread/2823056/rno-alternative-solo-mode' target='_blank' rel='noopener'><b>A.R.N.O. Solo Mode</b></a> (unofficial) of <a href='https://boardgamegeek.com/boardgame/342942/ark-nova' target='_blank' rel='noopener'><b>Ark Nova</b></a>. Unlike the official solo mode, this simulates additional opponent(s) similar to a multi-player game.",
     "play2": "To play the solo mode you only need the base game. This helper application replaces the ARNO card deck and the dice and tracks ARNO's progression.",
     "feedback": "Discussion and Feedback:"
+  },
+  "setup": {
+    "title": "Setup Game",
+    "players": {
+      "title": "Player",
+      "playerCount": "Human Players",
+      "playerCountItem": "{count} Player | {count} Players",
+      "botCount": "ARNO Bots",
+      "botCountItem": "{count} ARNO Bot | {count} ARNO Bots"
+    },
+    "difficultyLevel": {
+      "title": "Difficulty Level",
+      "easy": "Easy",
+      "hard": "Hard"
+    }
   },
   "notfound": {
     "title": "Not Found"
