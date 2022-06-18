@@ -28,6 +28,13 @@
   "roundBot": {
     "title": "ARNO #{bot}"
   },
+  "cardType": {
+    "animals": "Animals",
+    "association": "Association",
+    "build": "Build",
+    "cards": "Cards",
+    "sponsors": "Sponsors"    
+  },
   "notfound": {
     "title": "Not Found"
   },

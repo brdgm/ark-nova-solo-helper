@@ -28,6 +28,13 @@
   "roundBot": {
     "title": "ARNO #{bot}"
   },
+  "cardType": {
+    "animals": "Tiere",
+    "association": "Verband",
+    "build": "Bauen",
+    "cards": "Karten",
+    "sponsors": "Sponsoren"    
+  },
   "notfound": {
     "title": "Nicht Gefunden"
   },
