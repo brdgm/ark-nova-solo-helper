@@ -1,0 +1,38 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - uses: actions/setup-node@v2
+      with:
+        node-version: '16'
+        cache: 'npm'
+
+    - run: npm install
+    - run: npm run test:unit
+    - run: npm run build
+
+    - name: Copy to Site
+      uses: cpina/github-action-push-to-another-repository@v1.4.1
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.GH_SITE_DEPLOY_PAT }}
+      with:
+        source-directory: dist
+        destination-repository-username: brdgm
+        destination-repository-name: brdgm.github.io
+        destination-github-username: ${{ secrets.GH_SITE_DEPLOY_USERNAME }}
+        user-email: ${{ secrets.GH_SITE_DEPLOY_EMAIL }}
+        user-name: ${{ secrets.GH_SITE_DEPLOY_NAME }}
+        target-branch: main
+        commit-message: deploy application
+        target-directory: ark-nova
