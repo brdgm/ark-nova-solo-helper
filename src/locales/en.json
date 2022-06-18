@@ -21,6 +21,13 @@
       "hard": "Hard"
     }
   },
+  "roundPlayer": {
+    "title": "Player #{player}",
+    "info": "Take your turn."
+  },
+  "roundBot": {
+    "title": "ARNO #{bot}"
+  },
   "notfound": {
     "title": "Not Found"
   },

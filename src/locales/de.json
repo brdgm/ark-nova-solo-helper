@@ -21,6 +21,13 @@
       "hard": "Schwer"
     }
   },
+  "roundPlayer": {
+    "title": "Spieler #{player}",
+    "info": "Führe Deinen Zug aus."
+  },
+  "roundBot": {
+    "title": "ARNO #{bot}"
+  },
   "notfound": {
     "title": "Nicht Gefunden"
   },
