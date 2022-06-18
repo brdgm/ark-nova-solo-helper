@@ -13,7 +13,7 @@
 
   <hr/>
 
-  <p v-if="isAssociation(botActions.activeCard)" v-html="t('roundBot.associationWorker')"></p>
+  <p v-if="isAssociation(botActions.activeCard)" class="actionHelp" v-html="t('roundBot.associationWorker')" data-bs-toggle="modal" data-bs-target="#actionHelpAssociationWorker"></p>
   <div class="actions">
     <div v-for="(action, index) in actionsWithAmounts" :key="index" class="action amount">
       <div class="value" :data-action="action.action">{{action.amount}}</div>
@@ -23,7 +23,8 @@
   <div class="actions">
     <div v-for="(action, index) in actionsWithoutAmounts" :key="index" class="action">
       <Icon :name="action.action" class="icon"/>
-      <div class="label" v-html="t(`cardAction.${action.action}`,{number:getRandomNumber(action.action)})"></div>
+      <div v-if="isConservationProjectWork(action.action)" class="label actionHelp" v-html="t(`cardAction.${action.action}`)" data-bs-toggle="modal" data-bs-target="#actionHelpProjectConservationWork"></div>
+      <div v-else class="label" v-html="t(`cardAction.${action.action}`,{number:getRandomNumber(action.action)})"></div>
       <button v-if="allowReroll(action.action)" type="button" class="upgrade btn btn-outline-secondary btn-sm ms-2" @click="$forceUpdate()">
         {{t('roundBot.reroll')}}
       </button>
@@ -38,6 +39,43 @@
   </div>
 
   <hr/>
+
+  <div class="modal" id="actionHelpAssociationWorker" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">{{t('roundBot.actionHelpAssociationWorker.title')}}</h5>
+          <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p v-html="t('roundBot.actionHelpAssociationWorker.text')"></p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">{{t('action.close')}}</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="actionHelpProjectConservationWork" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">{{t('roundBot.actionHelpProjectConservationWork.title')}}</h5>
+          <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p v-html="t('roundBot.actionHelpProjectConservationWork.text1')"></p>
+          <p v-html="t('roundBot.actionHelpProjectConservationWork.text2')"></p>
+          <p v-html="t('roundBot.actionHelpProjectConservationWork.text3')"></p>
+          <p v-html="t('roundBot.actionHelpProjectConservationWork.text4')"></p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">{{t('action.close')}}</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </template>
 
@@ -110,6 +148,9 @@ export default defineComponent({
     },
     isAssociation(card : Card) {
       return card.name == CardName.ASSOCIATION
+    },
+    isConservationProjectWork(action : Action) : boolean {
+      return action == Action.CONSERVATION_PROJECT_WORK
     },
     getRandomNumber(action : Action) : number {
       switch(action) {
@@ -261,5 +302,10 @@ export default defineComponent({
     font-style: italic;
   }
 }
-
+.actionHelp {
+  cursor: help;
+  :deep(b) {
+    text-decoration: underline dotted;
+  }
+}
 </style>

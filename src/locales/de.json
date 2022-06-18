@@ -30,7 +30,18 @@
     "upgrade": "Aufwerten",
     "reroll": "Neu würfeln",
     "associationWorker": "ARNO setzt einen <b>Arbeiter</b> ein:",
-    "fallbackText": "Alternative, falls nicht verfügbar:"
+    "fallbackText": "Alternative, falls nicht verfügbar:",
+    "actionHelpAssociationWorker": {
+      "title": "Arbeiter Einsetzen",
+      "text": "Hat ARNO auf dieser Verbandsaktion bereits einen Arbeiter platziert, wählt er die nächsthöhere Verbandsaktion, auf der sich noch keiner seiner Arbeiter befindet (er nutzt quasi einen virtuellen X-Marker) und platziert in keinem Fall zwei Arbeiter auf einer Aktion. Ist keine höhere Aktion mehr frei, wählt er die nächste verfügbare schwächere Aktion. Falls kein Verbandsarbeiter mehr verfügbar ist, erhält ARNO Artenschutz +2 und Pause +2."
+    },
+    "actionHelpProjectConservationWork": {
+      "title": "Projektarbeit Artenschutz",
+      "text1": "Beim Artenschutzprojekt ist der Auswahlprozess wie folgt: Hat ARNO selbst keine Karte mehr mit Artenschutzprojekt auf seinem Plan, unterstützt er ein ausliegendes Projekt, das er noch nicht unterstützt hat. Falls möglich, bevorzugt er ein komplett freies Projekt. Sind bereits alle Projekte belegt, wird zufällig eines ohne seinen Markierungsstein bestimmt, das noch über mindestens eine freie Stufe verfügt.",
+      "text2": "ARNO platziert seinen Markierungsstein im leichten Level auf der untersten Stufe, im mittleren Level auf der mittleren und im schwersten Level auf der höchsten. Ist die entsprechende Stufe bereits belegt, platziert er ihn auf der nächsthöheren Stufe. Falls auch das nicht möglich ist, auf der nächstniedrigeren Stufe.",
+      "text3": "Hat ARNO noch genau eine Karte mit Artenschutzprojekt, wird zunächst zufällig entschieden, ob ARNO seine Karte ausspielt und unterstützt oder ein bereits ausliegendes Projekt unterstützt wird. Beide Fälle erhalten eine 50%-Wahrscheinlichkeit vor dem Würfeln zugewiesen. Spielt ARNO seine Karte aus, platziert er seinen Markierungsstein entsprechend seiner Schwierigkeitsstufe. Ansonsten wird wie oben erläutert vorgegangen.",
+      "text4": "Hat ARNO noch mehr als eine Karte mit Artenschutzprojekt, bringt er in jedem Fall eine dieser Karten ins Spiel und platziert seinen Markierungsstein entsprechend seiner Schwierigkeitsstufe. Die auszuspielende Karte wird zufällig bestimmt."
+    }
   },
   "cardType": {
     "animals": "Tiere",
@@ -42,7 +53,7 @@
   "cardAction": {
     "gain-partner-zoo": "<b>Partnerzoo #{number}</b> gewinnen.",
     "gain-partner-university": "<b>Partneruniversität #{number}</b> gewinnen.",
-    "conservation-project-work": "Projektarbeit Artenschutz.",
+    "conservation-project-work": "<b>Projektarbeit Artenschutz</b>.",
     "take-card-display": "Schnappe <b>Karte #{number}</b> aus der Auslage.",
     "token-scoring-card": "Lege einen ARNO Zählstein auf seine <b>Endwertungskarte</b>.<br/>Falls bereits 6 vorhanden, Artenschutz +2.",
     "token-notepad": "Lege einen ARNO Zählstein auf seinen <b>Notizzettel</b> (Endwertungseffekt).",

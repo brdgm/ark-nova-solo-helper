@@ -30,7 +30,18 @@
     "upgrade": "Upgrade",
     "reroll": "Reroll",
     "associationWorker": "ARNO places one <b>Association Worker</b>:",
-    "fallbackText": "Alternative, if not possible:"
+    "fallbackText": "Alternative, if not possible:",
+    "actionHelpAssociationWorker": {
+      "title": "Place Worker",
+      "text": "If ARNO already has one of his workers on this association task, he selects the next higher task where none of his workers is placed yet. Basically he is using X-markers to enhance the action; he never places two workers on the same action. If no higher task is available, he selects the next available lower task. If ARNO has no available worker anymore, he receives conservation points +2 and advances the Break token +2."
+    },
+    "actionHelpProjectConservationWork": {
+      "title": "Conservation project work",
+      "text1": "The selection of the supported Conservation Project is as follows: If ARNO has no remaining Conservation Project cards on his zoo map, he supports a project next to the Association board he has not supported yet. If possible, he prefers a project without any player tokens. If none exist, he randomly selects a project without his token, but with at least one free slot.",
+      "text2": "ARNO places his token on the easy level at the rightmost slot, on medium in the middle and on the high level at the leftmost slot of the chosen project. If this slot is already covered by another player, he places it on the next level to the left. If that’s not possible as well, on the next available level to the right.",
+      "text3": "If ARNO still has exactly one Conservation Project card on his zoo map, determine at first if ARNO plays this card or supports a project that was already placed next to the Association board. Both possibilities get a 50%-chance based on a die roll. If ARNO plays his card, place his player token according to his difficulty level. Otherwise proceed as described above.",
+      "text4": "If ARNO has more than one Conservation Project card on his map, he plays one of those cards and places his player token according to the difficulty level. Randomly determine which card he chooses. In any case, afterwards ARNO receives the corresponding points of the supported project."
+    }
   },
   "cardType": {
     "animals": "Animals",
@@ -42,7 +53,7 @@
   "cardAction": {
     "gain-partner-zoo": "Gain <b>partner zoo #{number}</b>.",
     "gain-partner-university": "Gain <b>partner university #{number}</b>.",
-    "conservation-project-work": "Conservation project work.",
+    "conservation-project-work": "<b>Conservation project work</b>.",
     "take-card-display": "Snap <b>card #{number}</b> from display.",
     "token-scoring-card": "Place one ARNO player token on his <b>final scoring card</b>.<br/>If there are already 6 tokens, conservation +2.",
     "token-notepad": "Place one ARNO player token on his <b>notepad</b> (for final scoring effect).",
