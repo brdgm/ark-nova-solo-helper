@@ -136,7 +136,6 @@ const cards = [
         action: Action.TOKEN_NOTEPAD,
         amount: 1
       },
-      
     ]
   },
   {

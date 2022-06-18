@@ -20,13 +20,13 @@ export default class CardSlots {
 
   /**
    * Get card at slot position.
-   * @param slot Slot number (0-based)
+   * @param slot Slot number (1-based)
    */
   public get(slot : number) : Card {
-    if (slot < 0 || slot > this._slots.length - 1) {
-      throw new Error("Invalid slot number: " + slot)
+    if (slot < 1 || slot > this._slots.length) {
+      throw new Error(`Invalid slot number: ${slot}`)
     }
-    return this._slots[slot]
+    return this._slots[slot - 1]
   }
 
   /**
@@ -41,7 +41,7 @@ export default class CardSlots {
    */
   public upgradeCard(card : Card) : void {
     if (this.isUpgraded(card)) {      
-      throw new Error('Card is already upgraded: ' + card.name)
+      throw new Error(`Card is already upgraded: ${card.name}`)
     }
     this._upgradedCards.push(card.name)
   }
