@@ -10,10 +10,17 @@
 
   <hr/>
 
-  <div v-for="(action, index) in botActions.actions" :key="index">
-    {{action.action}} x {{action.amount}}
+  <div v-for="(action, index) in botActions.actions" :key="index" class="action">
+    <div v-if="hasAmount(action.action)">
+      <div class="value" :data-action="action.action">{{action.amount}}</div>
+      <Icon :name="action.action" class="icon amount"/>
+    </div>
+    <div v-else>
+      <Icon :name="action.action" class="icon"/> {{action.action}}
+    </div>
   </div>
 
+  <hr/>
 
 </template>
 
@@ -24,12 +31,15 @@ import { BotRound, useStore } from '@/store'
 import NavigationState from '@/util/NavigationState'
 import CardSlots from '@/services/CardSlots'
 import BotActions from '@/services/BotActions'
+import Icon from '../structure/Icon.vue'
 import CardTypeIcon from '../structure/CardTypeIcon.vue'
 import Card from '@/services/Card'
+import Action from '@/services/enum/Action'
 
 export default defineComponent({
   name: 'BotActions',
   components: {
+    Icon,
     CardTypeIcon
   },
   setup() {
@@ -60,6 +70,17 @@ export default defineComponent({
     },
     isUpgraded(card : Card) : boolean {
       return this.cardSlots.isUpgraded(card)
+    },
+    hasAmount(action : Action) : boolean {
+      switch(action) {
+        case Action.APPEAL:
+        case Action.REPUTATION:
+        case Action.CONSERVATION:
+        case Action.BREAK:
+          return true;
+        default:
+          return false;
+      }
     }
   }
 })
@@ -111,6 +132,35 @@ export default defineComponent({
     }
     &.upgrade.active {
       border-color: #a5247b;
+    }
+  }
+}
+.action {
+  display: inline-block;
+  position: relative;
+  width: 4rem;
+  margin-right: 1rem;
+  .icon {
+    width: 4rem;
+  }
+  .value {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-weight: bold;
+    color: #fff;
+    font-size: 2rem;
+    &[data-action="break"] {
+      padding-right: 0.75rem;
+    }
+    &[data-action="appeal"] {
+      color: #000;
+    }
+    &[data-action="reputation"] {
+      padding-bottom: 0.5rem;
     }
   }
 }
