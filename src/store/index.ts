@@ -1,3 +1,4 @@
+import CardName from '@/services/enum/CardName'
 import DifficultyLevel from '@/services/enum/DifficultyLevel'
 import { InjectionKey } from 'vue'
 import { createStore, useStore as baseUseStore, Store } from 'vuex'
@@ -17,6 +18,10 @@ export interface Setup {
 }
 export interface Round {
   round: number
+}
+export interface CardSlotsPersistence {
+  slots: CardName[]
+  upgradedCards: CardName[]
 }
 
 declare module '@vue/runtime-core' {

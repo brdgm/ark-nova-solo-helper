@@ -150,19 +150,19 @@ const cards = [
       {
         action: Action.APPEAL,
         amount: 2,
-        slotFilter: 3,        
+        slotFilter: 3,
         difficultyLevelFilter: DifficultyLevel.EASY
       },
       {
         action: Action.APPEAL,
         amount: 3,
-        slotFilter: 3,        
+        slotFilter: 3,
         difficultyLevelFilter: DifficultyLevel.MEDIUM
       },
       {
         action: Action.APPEAL,
         amount: 4,
-        slotFilter: 3,        
+        slotFilter: 3,
         difficultyLevelFilter: DifficultyLevel.HARD
       },
       {
@@ -198,19 +198,19 @@ const cards = [
       {
         action: Action.APPEAL,
         amount: 3,
-        slotFilter: 3,        
+        slotFilter: 3,
         difficultyLevelFilter: DifficultyLevel.EASY
       },
       {
         action: Action.APPEAL,
         amount: 4,
-        slotFilter: 3,        
+        slotFilter: 3,
         difficultyLevelFilter: DifficultyLevel.MEDIUM
       },
       {
         action: Action.APPEAL,
         amount: 5,
-        slotFilter: 3,        
+        slotFilter: 3,
         difficultyLevelFilter: DifficultyLevel.HARD
       },
       {
@@ -290,8 +290,8 @@ cards.forEach(card => cardsMap.set(card.name, card))
 export default {
 
   /**
-   * Get card by id
-   * @param id id
+   * Get card by name
+   * @param name name
    * @returns Card
    */
   get(name: CardName) : Card {
