@@ -18,6 +18,10 @@ export interface Setup {
 }
 export interface Round {
   round: number
+  cardSlots: CardSlotsPersistence
+  slotNumber: number
+  tokenScoringCardCount: number
+  tokenNotepadCount: number
 }
 export interface CardSlotsPersistence {
   slots: CardName[]
@@ -63,6 +67,9 @@ export const store = createStore<State>({
     },
     setupDifficultyLevel(state : State, level: number) {
       state.setup.difficultyLevel = level
+    },
+    round(state : State, round : Round) {
+      state.rounds[round.round - 1] = round
     },
     endGame(state : State) {
       state.rounds = []

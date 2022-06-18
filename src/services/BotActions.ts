@@ -2,6 +2,7 @@ import rollDice from "brdgm-commons/src/util/random/rollDice"
 import BotAction from "./BotAction"
 import Card, { CardAction } from "./Card"
 import CardSlots from "./CardSlots"
+import Action from "./enum/Action"
 import DifficultyLevel from "./enum/DifficultyLevel"
 
 /**
@@ -15,26 +16,21 @@ export default class BotActions {
   private _actions : BotAction[]
   private _fallbackActions : BotAction[]
 
-  /**
-   * @param cardSlots Card slots
-   * @param difficultyLevel Difficulty level
-   * @param slotNumber Slot number - only used for testing. If omitted, number is determined randomly.
-   */
-  public constructor(cardSlots : CardSlots, difficultyLevel : DifficultyLevel, slotNumber? : number) {
-    this._slotNumber = slotNumber ? slotNumber : this.determineSlotNumber()
+  private constructor(cardSlots : CardSlots, difficultyLevel : DifficultyLevel, slotNumber : number) {
+    this._slotNumber = slotNumber
     this._activeCard = cardSlots.get(this._slotNumber)
     this._cardUpgraded = cardSlots.isUpgraded(this._activeCard)
-
     // determine actions
     this._actions = this.getActions(difficultyLevel)
     this._fallbackActions = this.getActions(difficultyLevel, true)
-
-    // move card to first position for next turn
-    cardSlots.moveFirst(this._activeCard)
   }
 
   public get activeCard() : Card {
     return this._activeCard
+  }
+
+  public get slotNumber() : number {
+    return this._slotNumber
   }
 
   public get actions() : readonly BotAction[] {
@@ -47,14 +43,6 @@ export default class BotActions {
 
   public get hasFallback() : boolean {
     return this._fallbackActions.length > 0
-  }
-
-  /**
-   * Randomly determine next slot to play by rolling a D4
-   * @returns Slot 2..5
-   */
-  private determineSlotNumber() : number {
-    return rollDice(4) + 1
   }
 
   private getActions(difficultyLevel : DifficultyLevel, fallback? : boolean) : BotAction[] {
@@ -78,6 +66,31 @@ export default class BotActions {
       action: action.action,
       amount: amount
     }
+  }
+
+  public getTokenScoringCardCount() : number {
+    return this.getAmountSum(Action.TOKEN_SCORING_CARD)
+  }
+
+  public getTokenNotepadCount() : number {
+    return this.getAmountSum(Action.TOKEN_NOTEPAD)
+  }
+
+  private getAmountSum(action : Action) : number {
+    return this._actions
+        .filter(item => item.action == action)
+        .map(action => action.amount)
+        .reduce((previous, current) => previous + current, 0);
+  }
+
+  public static newRandomSlot(cardSlots : CardSlots, difficultyLevel : DifficultyLevel) : BotActions {
+    // randomly determine next slot 2..5 to play by rolling a D4
+    const slotNumber = rollDice(4) + 1
+    return new BotActions(cardSlots, difficultyLevel, slotNumber)
+  }
+
+  public static newWithSlot(cardSlots : CardSlots, difficultyLevel : DifficultyLevel, slotNumber : number) : BotActions {
+    return new BotActions(cardSlots, difficultyLevel, slotNumber)
   }
 
 }

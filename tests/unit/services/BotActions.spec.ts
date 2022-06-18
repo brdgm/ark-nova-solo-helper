@@ -9,11 +9,12 @@ import { expect } from 'chai'
 describe('BotActions', () => {
   it('randomPick', () => {
     const cardSlots = CardSlots.new()
-    const botActions = new BotActions(cardSlots, DifficultyLevel.EASY)
+    const botActions = BotActions.newRandomSlot(cardSlots, DifficultyLevel.EASY)
 
     expect(botActions.activeCard).not.to.undefined
+    expect(botActions.slotNumber).to.greaterThanOrEqual(2)
+    expect(botActions.slotNumber).to.lessThanOrEqual(5)
     expect(botActions.actions.length, 'has actions').not.to.eq(0)
-    expect(cardSlots.get(1).name, 'moved to first').to.eq(botActions.activeCard.name)
   })
 
   it('animals-standard-5-easy', () => {
@@ -67,6 +68,19 @@ describe('BotActions', () => {
     ])
   })
 
+  it('sponsors-standard-2-medium', () => {
+    const botActions = setup(CardName.SPONSORS, false, 2, DifficultyLevel.MEDIUM)
+
+    expect(botActions.activeCard.name).to.eq(CardName.SPONSORS)
+    expect(botActions.actions).to.eql([
+      {action: Action.BREAK, amount: 2},
+      {action: Action.TOKEN_SCORING_CARD, amount: 1}
+    ])
+    expect(botActions.hasFallback).to.false
+    expect(botActions.getTokenScoringCardCount()).to.eq(1)
+    expect(botActions.getTokenNotepadCount()).to.eq(0)
+  })
+
   it('sponsors-upgraded-3-medium', () => {
     const botActions = setup(CardName.SPONSORS, true, 3, DifficultyLevel.MEDIUM)
 
@@ -77,6 +91,8 @@ describe('BotActions', () => {
       {action: Action.TOKEN_NOTEPAD, amount: 1}
     ])
     expect(botActions.hasFallback).to.false
+    expect(botActions.getTokenScoringCardCount()).to.eq(0)
+    expect(botActions.getTokenNotepadCount()).to.eq(1)
   })
 
   it('build-standard-5-hard', () => {
@@ -115,5 +131,5 @@ function setup(card : CardName, upgraded : boolean, slot : number, difficultyLev
     slots: [...otherCards.slice(0,slot-1), card, ...otherCards.slice(slot-1,4)],
     upgradedCards: upgraded ? [ card ] : []
   })
-  return new BotActions(cardSlots, difficultyLevel, slot)
+  return BotActions.newWithSlot(cardSlots, difficultyLevel, slot)
 }
