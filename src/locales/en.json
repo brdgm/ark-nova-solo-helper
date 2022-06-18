@@ -27,6 +27,9 @@
   },
   "roundBot": {
     "title": "ARNO #{bot}",
+    "upgrade": "Upgrade",
+    "reroll": "Reroll",
+    "associationWorker": "ARNO places one <b>Association Worker</b>:",
     "fallbackText": "Alternative, if not possible:"
   },
   "cardType": {
@@ -37,10 +40,10 @@
     "sponsors": "Sponsors"    
   },
   "cardAction": {
-    "gain-partner-zoo": "Gain partner zoo.",
-    "gain-partner-university": "Gain partner university.",
+    "gain-partner-zoo": "Gain <b>partner zoo #{number}</b>.",
+    "gain-partner-university": "Gain <b>partner university #{number}</b>.",
     "conservation-project-work": "Conservation project work.",
-    "take-card-display": "Snap <b>card #{card}</b> from display.",
+    "take-card-display": "Snap <b>card #{number}</b> from display.",
     "token-scoring-card": "Place one ARNO player token on his <b>final scoring card</b>.<br/>If there are already 6 tokens, conservation +2.",
     "token-notepad": "Place one ARNO player token on his <b>notepad</b> (for final scoring effect).",
     "donate": "ARNO donates."

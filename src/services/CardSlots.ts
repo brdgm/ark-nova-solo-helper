@@ -47,6 +47,14 @@ export default class CardSlots {
   }
 
   /**
+   * ARNO can upgrade max. 3 cards.
+   * @return true if less then 3 cards are upgraded.
+   */
+  public canUpgradeCard() : boolean {
+    return this._upgradedCards.length < 3;
+  }
+
+  /**
    * Move card to first position after usage.
    */
   public moveFirst(card : Card) : void {

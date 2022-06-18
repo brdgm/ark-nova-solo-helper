@@ -27,6 +27,9 @@
   },
   "roundBot": {
     "title": "ARNO #{bot}",
+    "upgrade": "Aufwerten",
+    "reroll": "Neu würfeln",
+    "associationWorker": "ARNO setzt einen <b>Arbeiter</b> ein:",
     "fallbackText": "Alternative, falls nicht verfügbar:"
   },
   "cardType": {
@@ -37,10 +40,10 @@
     "sponsors": "Sponsoren"    
   },
   "cardAction": {
-    "gain-partner-zoo": "Partnerzoo gewinnen.",
-    "gain-partner-university": "Partneruniversität gewinnen.",
+    "gain-partner-zoo": "<b>Partnerzoo #{number}</b> gewinnen.",
+    "gain-partner-university": "<b>Partneruniversität #{number}</b> gewinnen.",
     "conservation-project-work": "Projektarbeit Artenschutz.",
-    "take-card-display": "Schnappe <b>Karte #{card}</b> aus der Auslage.",
+    "take-card-display": "Schnappe <b>Karte #{number}</b> aus der Auslage.",
     "token-scoring-card": "Lege einen ARNO Zählstein auf seine <b>Endwertungskarte</b>.<br/>Falls bereits 6 vorhanden, Artenschutz +2.",
     "token-notepad": "Lege einen ARNO Zählstein auf seinen <b>Notizzettel</b> (Endwertungseffekt).",
     "donate": "ARNO spendet."

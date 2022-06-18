@@ -7,9 +7,13 @@
       <div class="cardLabel">{{t(`cardType.${card.name}`)}}</div>
     </div>
   </div>
+  <button v-if="cardSlots.canUpgradeCard()" type="button" class="upgrade btn btn-outline-secondary btn-sm" @click="upgradeCard()">
+    <Icon name="upgrade" class="icon"/> {{t('roundBot.upgrade')}}
+  </button>
 
   <hr/>
 
+  <p v-if="isAssociation(botActions.activeCard)" v-html="t('roundBot.associationWorker')"></p>
   <div class="actions">
     <div v-for="(action, index) in actionsWithAmounts" :key="index" class="action amount">
       <div class="value" :data-action="action.action">{{action.amount}}</div>
@@ -19,7 +23,10 @@
   <div class="actions">
     <div v-for="(action, index) in actionsWithoutAmounts" :key="index" class="action">
       <Icon :name="action.action" class="icon"/>
-      <div class="label" v-html="t(`cardAction.${action.action}`,{card:rollD6()})"></div>
+      <div class="label" v-html="t(`cardAction.${action.action}`,{number:getRandomNumber(action.action)})"></div>
+      <button v-if="allowReroll(action.action)" type="button" class="upgrade btn btn-outline-secondary btn-sm ms-2" @click="$forceUpdate()">
+        {{t('roundBot.reroll')}}
+      </button>
     </div>
   </div>
   <div class="actions" v-if="botActions.hasFallback">
@@ -47,6 +54,7 @@ import CardTypeIcon from '../structure/CardTypeIcon.vue'
 import Card from '@/services/Card'
 import Action from '@/services/enum/Action'
 import BotAction from '@/services/BotAction'
+import CardName from "@/services/enum/CardName"
 
 export default defineComponent({
   name: 'BotActions',
@@ -100,14 +108,48 @@ export default defineComponent({
           return false;
       }
     },
-    rollD6() : number {
-      return rollDice(6)
+    isAssociation(card : Card) {
+      return card.name == CardName.ASSOCIATION
+    },
+    getRandomNumber(action : Action) : number {
+      switch(action) {
+        case Action.GAIN_PARTNER_UNIVERSITY:
+          return rollDice(3)
+        case Action.GAIN_PARTNER_ZOO:
+          return rollDice(5)
+        case Action.TAKE_CARD_DISPLAY:
+          return rollDice(6)
+        default:
+          return 0;
+      }
+    },
+    allowReroll(action : Action) : boolean {
+      switch(action) {
+        case Action.GAIN_PARTNER_UNIVERSITY:
+        case Action.GAIN_PARTNER_ZOO:
+          return true
+        default:
+          return false;
+      }
+    },
+    upgradeCard() : void {
+      const standardCards = this.cardSlots.slots.filter(card => !this.cardSlots.isUpgraded(card))
+      const upgradeCardNo = rollDice(standardCards.length)
+      this.cardSlots.upgradeCard(standardCards[upgradeCardNo-1])
+      this.botRound.cardSlots = this.cardSlots.toPersistence()
+      this.$store.commit('round', this.botRound)
+      this.$forceUpdate()
     }
   }
 })
 </script>
 
 <style lang="scss" scoped>
+.upgrade.btn {
+  .icon {
+    width: 1.5rem;
+  }
+}
 .slot {
   display: inline-block;
   width: 8rem;
