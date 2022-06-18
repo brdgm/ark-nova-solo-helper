@@ -117,7 +117,7 @@ describe('BotActions', () => {
     expect(botActions.activeCard.name).to.eq(CardName.CARDS)
     expect(botActions.actions).to.eql([
       {action: Action.BREAK, amount: 1},
-      {action: Action.TAKE_CARD_DISPLAY, amount: 1},
+      {action: Action.TAKE_CARD_DISPLAY, amount: 0},
       {action: Action.APPEAL, amount: 2},
     ])
     expect(botActions.hasFallback).to.false
