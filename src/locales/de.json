@@ -26,7 +26,8 @@
     "info": "Führe Deinen Zug aus."
   },
   "roundBot": {
-    "title": "ARNO #{bot}"
+    "title": "ARNO #{bot}",
+    "fallbackText": "Alternative, falls nicht verfügbar:"
   },
   "cardType": {
     "animals": "Tiere",
@@ -34,6 +35,15 @@
     "build": "Bauen",
     "cards": "Karten",
     "sponsors": "Sponsoren"    
+  },
+  "cardAction": {
+    "gain-partner-zoo": "Partnerzoo gewinnen.",
+    "gain-partner-university": "Partneruniversität gewinnen.",
+    "conservation-project-work": "Projektarbeit Artenschutz.",
+    "take-card-display": "Schnappe <b>Karte #{card}</b> aus der Auslage.",
+    "token-scoring-card": "Lege einen ARNO Zählstein auf seine <b>Endwertungskarte</b>.<br/>Falls bereits 6 vorhanden, Artenschutz +2.",
+    "token-notepad": "Lege einen ARNO Zählstein auf seinen <b>Notizzettel</b> (Endwertungseffekt).",
+    "donate": "ARNO spendet."
   },
   "notfound": {
     "title": "Nicht Gefunden"

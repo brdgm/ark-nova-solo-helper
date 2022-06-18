@@ -3,7 +3,7 @@
 
   <BotActions :navigationState="navigationState"/>
 
-  <router-link :to="nextButtonRouteTo" class="btn btn-primary btn-lg mt-4">
+  <router-link :to="nextButtonRouteTo" class="btn btn-primary btn-lg mt-2">
     {{t('action.next')}}
   </router-link>
 

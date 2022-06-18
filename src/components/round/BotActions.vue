@@ -10,13 +10,23 @@
 
   <hr/>
 
-  <div v-for="(action, index) in botActions.actions" :key="index" class="action">
-    <div v-if="hasAmount(action.action)">
+  <div class="actions">
+    <div v-for="(action, index) in actionsWithAmounts" :key="index" class="action amount">
       <div class="value" :data-action="action.action">{{action.amount}}</div>
       <Icon :name="action.action" class="icon amount"/>
     </div>
-    <div v-else>
-      <Icon :name="action.action" class="icon"/> {{action.action}}
+  </div>
+  <div class="actions">
+    <div v-for="(action, index) in actionsWithoutAmounts" :key="index" class="action">
+      <Icon :name="action.action" class="icon"/>
+      <div class="label" v-html="t(`cardAction.${action.action}`,{card:rollD6()})"></div>
+    </div>
+  </div>
+  <div class="actions" v-if="botActions.hasFallback">
+    <p class="fallbackText">{{t('roundBot.fallbackText')}}</p>
+    <div v-for="(action, index) in botActions.fallbackActions" :key="index" class="action amount fallback">
+      <div class="value" :data-action="action.action">{{action.amount}}</div>
+      <Icon :name="action.action" class="icon amount"/>
     </div>
   </div>
 
@@ -25,6 +35,7 @@
 </template>
 
 <script lang="ts">
+import rollDice from "brdgm-commons/src/util/random/rollDice"
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { BotRound, useStore } from '@/store'
@@ -35,6 +46,7 @@ import Icon from '../structure/Icon.vue'
 import CardTypeIcon from '../structure/CardTypeIcon.vue'
 import Card from '@/services/Card'
 import Action from '@/services/enum/Action'
+import BotAction from '@/services/BotAction'
 
 export default defineComponent({
   name: 'BotActions',
@@ -61,7 +73,13 @@ export default defineComponent({
       return CardSlots.fromPersistence(this.botRound.cardSlots)
     },
     botActions() : BotActions {
-      return BotActions.newWithSlot(this.cardSlots, this.botRound.slotNumber, this.navigationState.difficultyLevel)
+      return BotActions.newWithSlot(this.cardSlots, this.navigationState.difficultyLevel, this.botRound.slotNumber)
+    },
+    actionsWithAmounts() : readonly BotAction[] {
+      return this.botActions.actions.filter(item => this.hasAmount(item.action))
+    },
+    actionsWithoutAmounts() : BotAction[] {
+      return this.botActions.actions.filter(item => !this.hasAmount(item.action))
     }
   },
   methods: {
@@ -81,6 +99,9 @@ export default defineComponent({
         default:
           return false;
       }
+    },
+    rollD6() : number {
+      return rollDice(6)
     }
   }
 })
@@ -135,33 +156,67 @@ export default defineComponent({
     }
   }
 }
-.action {
-  display: inline-block;
-  position: relative;
-  width: 4rem;
-  margin-right: 1rem;
-  .icon {
-    width: 4rem;
+.actions {
+  .action {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    &.amount {
+      display: inline-block;
+      position: relative;
+      width: 4rem;
+      margin-right: 1rem;
+    }
+    .icon {
+      width: 4rem;
+    }
+    .value {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      font-weight: bold;
+      color: #fff;
+      font-size: 2rem;
+      &[data-action="break"] {
+        padding-right: 0.75rem;
+      }
+      &[data-action="appeal"] {
+        color: #000;
+      }
+      &[data-action="reputation"] {
+        padding-bottom: 0.5rem;
+        padding-right: 0.25rem;
+      }
+      &[data-action="conservation"] {
+        color: #000;
+        padding-bottom: 0.25rem;
+      }
+    }
+    .label {
+      display: inline-block;
+      margin-left: 1rem;
+    }
+    &.fallback {
+      margin-top: 0;
+      &.amount {
+        width: 2rem;
+        margin-right: 0.5rem;
+      }
+      .icon {
+        width: 2rem;
+      }
+      .value {
+        font-size: 1.2rem;
+        &[data-action="break"] {
+          padding-right: 0.5rem;
+        }
+      }
+    }
   }
-  .value {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    font-weight: bold;
-    color: #fff;
-    font-size: 2rem;
-    &[data-action="break"] {
-      padding-right: 0.75rem;
-    }
-    &[data-action="appeal"] {
-      color: #000;
-    }
-    &[data-action="reputation"] {
-      padding-bottom: 0.5rem;
-    }
+  .fallbackText {
+    font-style: italic;
   }
 }
 

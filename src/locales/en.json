@@ -26,7 +26,8 @@
     "info": "Take your turn."
   },
   "roundBot": {
-    "title": "ARNO #{bot}"
+    "title": "ARNO #{bot}",
+    "fallbackText": "Alternative, if not possible:"
   },
   "cardType": {
     "animals": "Animals",
@@ -34,6 +35,15 @@
     "build": "Build",
     "cards": "Cards",
     "sponsors": "Sponsors"    
+  },
+  "cardAction": {
+    "gain-partner-zoo": "Gain partner zoo.",
+    "gain-partner-university": "Gain partner university.",
+    "conservation-project-work": "Conservation project work.",
+    "take-card-display": "Snap <b>card #{card}</b> from display.",
+    "token-scoring-card": "Place one ARNO player token on his <b>final scoring card</b>.<br/>If there are already 6 tokens, conservation +2.",
+    "token-notepad": "Place one ARNO player token on his <b>notepad</b> (for final scoring effect).",
+    "donate": "ARNO donates."
   },
   "notfound": {
     "title": "Not Found"

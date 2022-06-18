@@ -166,7 +166,6 @@ const cards = [
       },
       {
         action: Action.TAKE_CARD_DISPLAY,
-        amount: 1,
         slotFilter: 4
       },
       {
@@ -258,8 +257,7 @@ const cards = [
         amount: 1
       },
       {
-        action: Action.TAKE_CARD_DISPLAY,
-        amount: 1
+        action: Action.TAKE_CARD_DISPLAY
       },
       {
         action: Action.APPEAL,
@@ -272,8 +270,7 @@ const cards = [
         amount: 1
       },
       {
-        action: Action.TAKE_CARD_DISPLAY,
-        amount: 1
+        action: Action.TAKE_CARD_DISPLAY
       },
       {
         action: Action.CONSERVATION,
