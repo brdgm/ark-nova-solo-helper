@@ -1,6 +1,8 @@
 <template>
   <h1>{{t('roundBot.title', {bot:bot})}}</h1>
 
+  <BotActions :navigationState="navigationState"/>
+
   <router-link :to="nextButtonRouteTo" class="btn btn-primary btn-lg mt-4">
     {{t('action.next')}}
   </router-link>
@@ -11,6 +13,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
+import BotActions from '@/components/round/BotActions.vue'
 import FooterButtons from '@/components/structure/FooterButtons.vue'
 import { useRoute } from 'vue-router'
 import { useStore } from '@/store'
@@ -19,6 +22,7 @@ import NavigationState from '@/util/NavigationState'
 export default defineComponent({
   name: 'RoundBot',
   components: {
+    BotActions,
     FooterButtons
   },
   setup() {
@@ -32,7 +36,7 @@ export default defineComponent({
     const botCount = navigationState.botCount
     const bot = navigationState.bot
 
-    return { t, round, playerCount, botCount, bot }
+    return { t, navigationState, round, playerCount, botCount, bot }
   },
   computed: {
     nextButtonRouteTo() : string {

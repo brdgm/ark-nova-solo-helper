@@ -79,7 +79,7 @@ export default class BotActions {
   private getAmountSum(action : Action) : number {
     return this._actions
         .filter(item => item.action == action)
-        .map(action => action.amount)
+        .map(item => item.amount)
         .reduce((previous, current) => previous + current, 0);
   }
 
