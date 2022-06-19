@@ -56,7 +56,7 @@
     "conservation-project-work": "<b>Projektarbeit Artenschutz</b>.",
     "take-card-display": "Schnappe <b>Karte #{number}</b> aus der Auslage.",
     "token-scoring-card": "Lege einen ARNO Zählstein auf seine <b>Endwertungskarte</b>.<br/>Falls bereits 6 vorhanden, Artenschutz +2.",
-    "token-notepad": "Lege einen ARNO Zählstein auf seinen <b>Notizzettel</b> (Endwertungseffekt).",
+    "token-notepad": "Lege <b>{amount}</b> ARNO Zählstein auf seinen <b>Notizzettel</b> (Endwertungseffekt). | Lege <b>{amount}</b> ARNO Zählsteine auf seinen <b>Notizzettel</b> (Endwertungseffekt).",
     "donate": "ARNO spendet."
   },
   "notfound": {

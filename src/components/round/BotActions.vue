@@ -15,16 +15,16 @@
 
   <p v-if="isAssociation(botActions.activeCard)" class="actionHelp" v-html="t('roundBot.associationWorker')" data-bs-toggle="modal" data-bs-target="#actionHelpAssociationWorker"></p>
   <div class="actions">
-    <div v-for="(action, index) in actionsWithAmounts" :key="index" class="action amount">
+    <div v-for="(action, index) in actionsIconOnly" :key="index" class="action amount">
       <div class="value" :data-action="action.action">{{action.amount}}</div>
       <Icon :name="action.action" class="icon amount"/>
     </div>
   </div>
   <div class="actions">
-    <div v-for="(action, index) in actionsWithoutAmounts" :key="index" class="action">
+    <div v-for="(action, index) in actionsWithDescription" :key="index" class="action">
       <Icon :name="action.action" class="icon"/>
       <div v-if="isConservationProjectWork(action.action)" class="label actionHelp" v-html="t(`cardAction.${action.action}`)" data-bs-toggle="modal" data-bs-target="#actionHelpProjectConservationWork"></div>
-      <div v-else class="label" v-html="t(`cardAction.${action.action}`,{number:getRandomNumber(action.action)})"></div>
+      <div v-else class="label" v-html="t(`cardAction.${action.action}`,{number:getRandomNumber(action.action),amount:action.amount},action.amount)"></div>
       <button v-if="allowReroll(action.action)" type="button" class="upgrade btn btn-outline-secondary btn-sm ms-2" @click="$forceUpdate()">
         {{t('roundBot.reroll')}}
       </button>
@@ -121,11 +121,11 @@ export default defineComponent({
     botActions() : BotActions {
       return BotActions.newWithSlot(this.cardSlots, this.navigationState.difficultyLevel, this.botRound.slotNumber)
     },
-    actionsWithAmounts() : readonly BotAction[] {
-      return this.botActions.actions.filter(item => this.hasAmount(item.action))
+    actionsIconOnly() : readonly BotAction[] {
+      return this.botActions.actions.filter(item => this.isIconOnly(item.action))
     },
-    actionsWithoutAmounts() : BotAction[] {
-      return this.botActions.actions.filter(item => !this.hasAmount(item.action))
+    actionsWithDescription() : BotAction[] {
+      return this.botActions.actions.filter(item => !this.isIconOnly(item.action))
     }
   },
   methods: {
@@ -135,7 +135,7 @@ export default defineComponent({
     isUpgraded(card : Card) : boolean {
       return this.cardSlots.isUpgraded(card)
     },
-    hasAmount(action : Action) : boolean {
+    isIconOnly(action : Action) : boolean {
       switch(action) {
         case Action.APPEAL:
         case Action.REPUTATION:
