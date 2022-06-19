@@ -1,30 +1,27 @@
 <template>
   <AboutARNO/>
-  <h1>{{t('setup.title')}}</h1>
+  <h1>{{t('setupARNO.title')}}</h1>
 
-  <Players/>
-  <DifficultyLevel/>
+  <SetupARNOInstructions/>
 
-  <router-link to="/setupARNO" class="btn btn-primary btn-lg mt-4">
-    {{t('setupARNO.title')}}
+  <router-link to="/round/1/player/1" class="btn btn-primary btn-lg mt-4">
+    {{t('action.startGame')}}
   </router-link>
 
-  <FooterButtons endGameButtonType="abortGame"/>
+  <FooterButtons backButtonRouteTo="/setupGame"  endGameButtonType="abortGame"/>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
-import DifficultyLevel from '@/components/setup/DifficultyLevel.vue'
 import FooterButtons from '@/components/structure/FooterButtons.vue'
-import Players from '@/components/setup/Players.vue'
+import SetupARNOInstructions from '@/components/setup/SetupARNOInstructions.vue'
 import AboutARNO from '@/components/structure/AboutARNO.vue'
 
 export default defineComponent({
-  name: 'SetupGame',
+  name: 'SetupARNO',
   components: {
-    Players,
-    DifficultyLevel,
+    SetupARNOInstructions,
     FooterButtons,
     AboutARNO
   },

@@ -21,6 +21,20 @@
       "hard": "Schwer"
     }
   },
+  "setupARNO": {
+    "title": "ARNO Spielaufbau",
+    "text1": "Baue das Spiel entsprechend der Spieleranzahl (inklusive ARNO(s)) auf. Ein menschlicher Spieler ist Startspieler.",
+    "text2": "Jeder ARNO beginnt mit <b>1 Artenschutzpunkt</B> und Attraktion entsprechend der Reihenfolge. Ist ARNO z.B. der dritte Spieler, startet er mit 2 Attraktionspunkten.",
+    "text3": "Jeder ARNO erhält die Komponenten einer Farbe, einen Zooplan A, eine verdeckte Endwertungskarte sowie 8 zufällige Zookarten.",
+    "text4": "Lege alle Markierungssteine neben den Zooplan von ARNO.",
+    "text5": "ARNO startet mit einem Verbandsarbeiter auf dem Notizzettel. Lege die anderen 3 auf die entsprechenden Felder des Zooplans von ARNO.",
+    "text6": "Platziere die Endwertungskarte verdeckt auf der linken Seite des Zooplans. Der Grundriss wird dadurch überdeckt, aber wird für ARNO nicht benötigt.",
+    "text7": "Sortiere ARNOs 8 Zookarten nach dem Typ:",
+    "text7-1": "Werfe alle Sponsorenkarten ab.",
+    "text7-2": "Bilde aus allen Tierkarten einen Stapel, so dass die Angaben oben rechts gelesen werden können. Platziere diesen Stapel am besten neben die Endwertungskarte.",
+    "text7-3": "Bilde einen dritten Stapel mit allen Artenschutzkarten, falls bereits vorhanden. Ansonsten wird dieser bei Bedarf während der Partie angelegt.",
+    "text8": "Es werden keine Würfel oder Aktionskarten benötigt."
+  },
   "roundPlayer": {
     "title": "Spieler #{player}",
     "info": "Führe Deinen Zug aus."
@@ -55,12 +69,12 @@
     "gain-partner-university": "<b>Partneruniversität #{number}</b> gewinnen.",
     "conservation-project-work": "<b>Projektarbeit Artenschutz</b>.",
     "take-card-display": "Schnappe <b>Karte #{number}</b> aus der Auslage.",
-    "token-scoring-card": "Lege einen ARNO Zählstein auf seine <b>Endwertungskarte</b>.<br/>Falls bereits 6 vorhanden, Artenschutz +2.",
-    "token-notepad": "Lege <b>{amount}</b> ARNO Zählstein auf seinen <b>Notizzettel</b> (Endwertungseffekt). | Lege <b>{amount}</b> ARNO Zählsteine auf seinen <b>Notizzettel</b> (Endwertungseffekt).",
+    "token-scoring-card": "Lege <b>1</b> ARNO Markierungsstein auf seine <b>Endwertungskarte</b>.<br/>Falls bereits 6 vorhanden, Artenschutz +2.",
+    "token-notepad": "Lege <b>{amount}</b> ARNO Markierungsstein auf seinen <b>Notizzettel</b> (Endwertungseffekt). | Lege <b>{amount}</b> ARNO Markierungssteine auf seinen <b>Notizzettel</b> (Endwertungseffekt).",
     "donate": "ARNO spendet."
   },
   "aboutARNO": {
-    "link": "Über ANRO",
+    "link": "Über ARNO",
     "title": "A.R.N.O. Regel-Zusammenfassung",
     "text1": "ARNO <b>nutzt kein Geld</b>, d.h. für alle Aktionen, die er ausführt, muss er kein Geld ausgeben. Er erhält während den Pausen etc. auch keine Einnahmen.",
     "text2": "ARNO <b>nutzt nur den rechten Bereich seines Zooplans</b>. Hier legt er wie die menschlichen Spieler seine Partnerzoos und -universitäten ab bzw. nimmt seine Verbandsarbeiter. Er erhält auch die verschiedenen Boni, sobald er sie aufdeckt. Der linke Bereich wird von ARNO nicht berücksichtigt und nur für die Ablage seiner Zookarten und Endwertungskarte verwendet.",
