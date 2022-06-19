@@ -90,12 +90,10 @@
           <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <p v-html="t('roundBot.actionHelpProjectConservationWork.text1')"></p>
-          <p v-html="t('roundBot.actionHelpProjectConservationWork.text2')"></p>
-          <p v-html="t('roundBot.actionHelpProjectConservationWork.text3')"></p>
-          <p v-html="t('roundBot.actionHelpProjectConservationWork.text4')"></p>
+          <PickConservationProject ref="pickConservationProject"/>
         </div>
         <div class="modal-footer">
+          <button class="btn btn-outline-secondary" @click="pickConservationProject.reset()">{{t('roundBot.actionHelpProjectConservationWork.reset')}}</button>
           <button class="btn btn-secondary" data-bs-dismiss="modal">{{t('action.close')}}</button>
         </div>
       </div>
@@ -106,7 +104,7 @@
 
 <script lang="ts">
 import rollDice from "brdgm-commons/src/util/random/rollDice"
-import { defineComponent } from 'vue'
+import { defineComponent, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { BotRound, useStore } from '@/store'
 import NavigationState from '@/util/NavigationState'
@@ -114,6 +112,7 @@ import CardSlots from '@/services/CardSlots'
 import BotActions from '@/services/BotActions'
 import Icon from '../structure/Icon.vue'
 import CardTypeIcon from '../structure/CardTypeIcon.vue'
+import PickConservationProject from './PickConservationProject.vue'
 import Card from '@/services/Card'
 import Action from '@/services/enum/Action'
 import BotAction from '@/services/BotAction'
@@ -123,12 +122,14 @@ export default defineComponent({
   name: 'BotActions',
   components: {
     Icon,
-    CardTypeIcon
+    CardTypeIcon,
+    PickConservationProject
   },
   setup() {
     const { t } = useI18n()
     useStore()
-    return { t }
+    const pickConservationProject = ref()
+    return { t, pickConservationProject }
   },
   props: {
     navigationState: {

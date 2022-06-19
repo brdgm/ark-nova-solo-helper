@@ -59,10 +59,22 @@
     },
     "actionHelpProjectConservationWork": {
       "title": "Projektarbeit Artenschutz",
-      "text1": "Beim Artenschutzprojekt ist der Auswahlprozess wie folgt: Hat ARNO selbst keine Karte mehr mit Artenschutzprojekt auf seinem Plan, unterstützt er ein ausliegendes Projekt, das er noch nicht unterstützt hat. Falls möglich, bevorzugt er ein komplett freies Projekt. Sind bereits alle Projekte belegt, wird zufällig eines ohne seinen Markierungsstein bestimmt, das noch über mindestens eine freie Stufe verfügt.",
-      "text2": "ARNO platziert seinen Markierungsstein im leichten Level auf der untersten Stufe, im mittleren Level auf der mittleren und im schwersten Level auf der höchsten. Ist die entsprechende Stufe bereits belegt, platziert er ihn auf der nächsthöheren Stufe. Falls auch das nicht möglich ist, auf der nächstniedrigeren Stufe.",
-      "text3": "Hat ARNO noch genau eine Karte mit Artenschutzprojekt, wird zunächst zufällig entschieden, ob ARNO seine Karte ausspielt und unterstützt oder ein bereits ausliegendes Projekt unterstützt wird. Beide Fälle erhalten eine 50%-Wahrscheinlichkeit vor dem Würfeln zugewiesen. Spielt ARNO seine Karte aus, platziert er seinen Markierungsstein entsprechend seiner Schwierigkeitsstufe. Ansonsten wird wie oben erläutert vorgegangen.",
-      "text4": "Hat ARNO noch mehr als eine Karte mit Artenschutzprojekt, bringt er in jedem Fall eine dieser Karten ins Spiel und platziert seinen Markierungsstein entsprechend seiner Schwierigkeitsstufe. Die auszuspielende Karte wird zufällig bestimmt."
+      "reset": "Zurücksetzen"
+    },
+    "pickConservationProject": {
+      "conservationProjectSelection": "Artenschutzprojekt-Auswahl",
+      "conservationProjectsHand": "Wie viele Artenschutzprojekte hat ARNO auf seinem Zooplan?",
+      "conservationProjectsBoardNoToken": "Wie viele Artenschutzprojekte liegen aus, die noch keine Markierungssteine haben (komplett frei)?",
+      "conservationProjectsBoardAvailable": "Wie viele Artenschutprojekte liegen aus, die ARNO noch unterstützen kann?",
+      "pick": "Artenschutzprojekt ermitteln",
+      "pickFromHand": "ARNO unterstützt das {number}. Artenschutzprojekt von seinem Zooplan.",
+      "pickFromBoardNoToken": "ARNO unterstützt das {number}. ausliegende Artenschutzprojekt, das noch keine Markierungssteine hat.",
+      "pickFromBoardAvailable": "ARNO unterstützt das {number}. ausliegende Artenschutzprojekt, welches für ARNO noch verfügbar ist.",
+      "tokenPlacement": "Platzierung des Markierungssteins",
+      "projectSlotLeftMost": "ARNO platziert seinen Markierungsstein auf der höchsten Stufe (links).",
+      "projectSlotMiddle": "ARNO platziert seinen Markierungsstein auf der mittleren Stufe.",
+      "projectSlotRightMost": "ARNO platziert seinen Markierungsstein auf der untersten Stufe (rechts).",
+      "projectSlotAlternatives": "Ist die entsprechende Stufe bereits belegt, platziert er ihn auf der nächsthöheren Stufe. Falls auch das nicht möglich ist, auf der nächstniedrigeren Stufe."
     }
   },
   "cardType": {

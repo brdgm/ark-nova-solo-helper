@@ -59,10 +59,22 @@
     },
     "actionHelpProjectConservationWork": {
       "title": "Conservation project work",
-      "text1": "The selection of the supported Conservation Project is as follows: If ARNO has no remaining Conservation Project cards on his zoo map, he supports a project next to the Association board he has not supported yet. If possible, he prefers a project without any player tokens. If none exist, he randomly selects a project without his token, but with at least one free slot.",
-      "text2": "ARNO places his token on the easy level at the rightmost slot, on medium in the middle and on the high level at the leftmost slot of the chosen project. If this slot is already covered by another player, he places it on the next level to the left. If that’s not possible as well, on the next available level to the right.",
-      "text3": "If ARNO still has exactly one Conservation Project card on his zoo map, determine at first if ARNO plays this card or supports a project that was already placed next to the Association board. Both possibilities get a 50%-chance based on a die roll. If ARNO plays his card, place his player token according to his difficulty level. Otherwise proceed as described above.",
-      "text4": "If ARNO has more than one Conservation Project card on his map, he plays one of those cards and places his player token according to the difficulty level. Randomly determine which card he chooses. In any case, afterwards ARNO receives the corresponding points of the supported project."
+      "reset": "Reset"
+    },
+    "pickConservationProject": {
+      "conservationProjectSelection": "Conservation Project Selection",
+      "conservationProjectsHand": "How many Conservation Project cards has ARNO on his zoo mat?",
+      "conservationProjectsBoardNoToken": "How many Conservation Project cards are available next to the Association board without any player tokens?",
+      "conservationProjectsBoardAvailable": "How many Conservation Project cards are available next to the Association board which ARNO did not support yet?",
+      "pick": "Pick Conservation Project",
+      "pickFromHand": "ARNO supports the {number}. Conservation Project card from his zoo mat.",
+      "pickFromBoardNoToken": "ARNO supports the {number}. Conservation Project next to the Association board without any player token.",
+      "pickFromBoardAvailable": "ARNO supports the {number}. Conservation Project next to the Association board which is available for him.",
+      "tokenPlacement": "Token Placement",
+      "projectSlotLeftMost": "ARNO prefers to place his token on the leftmost slot.",
+      "projectSlotMiddle": "ARNO prefers to place his token on the middle slot.",
+      "projectSlotRightMost": "ARNO prefers to place his token on the rightmost slot.",
+      "projectSlotAlternatives": "If this slot is already covered by another player, he places it on the next level to the left. If that’s not possible as well, on the next available level to the right."
     }
   },
   "cardType": {
