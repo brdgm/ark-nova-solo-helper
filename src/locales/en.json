@@ -54,7 +54,8 @@
     },
     "actionHelpAssociationWorker": {
       "title": "Place Worker",
-      "text": "If ARNO already has one of his workers on this association task, he selects the next higher task where none of his workers is placed yet. Basically he is using X-markers to enhance the action; he never places two workers on the same action. If no higher task is available, he selects the next available lower task. If ARNO has no available worker anymore, he receives conservation points +2 and advances the Break token +2."
+      "text": "If ARNO already has one of his workers on this association task, he selects the next higher task where none of his workers is placed yet. Basically he is using X-markers to enhance the action; he never places two workers on the same action. If no higher task is available, he selects the next available lower task. If ARNO has no available worker anymore, he receives conservation points +2 and advances the Break token +2.",
+      "chooseDifferent": "Choose a different association action:"
     },
     "actionHelpProjectConservationWork": {
       "title": "Conservation project work",

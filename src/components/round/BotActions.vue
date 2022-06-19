@@ -68,6 +68,12 @@
         </div>
         <div class="modal-body">
           <p v-html="t('roundBot.actionHelpAssociationWorker.text')"></p>
+          <p v-html="t('roundBot.actionHelpAssociationWorker.chooseDifferent')"></p>
+          <div class="actions overwriteAssociation">
+            <div v-for="(action, index) in getUnusedAssociationActions()" :key="index" class="action amount">
+              <Icon :name="action" class="icon amount" @click="overwriteAssociationAction(action)" data-bs-dismiss="modal"/>
+            </div>
+          </div>
         </div>
         <div class="modal-footer">
           <button class="btn btn-secondary" data-bs-dismiss="modal">{{t('action.close')}}</button>
@@ -130,6 +136,11 @@ export default defineComponent({
       required: true
     }
   },
+  data() {
+    return {
+      overwriteBotActions: [] as BotAction[]
+    }
+  },
   computed: {
     botRound() : BotRound {
       return this.navigationState.botRound as BotRound
@@ -140,11 +151,14 @@ export default defineComponent({
     botActions() : BotActions {
       return BotActions.newWithSlot(this.cardSlots, this.navigationState.difficultyLevel, this.botRound.slotNumber)
     },
+    actionsAll() : BotAction[] {
+      return this.overwriteBotActions.length > 0 ? this.overwriteBotActions : this.botActions.actions as BotAction[]
+    },
     actionsIconOnly() : readonly BotAction[] {
-      return this.botActions.actions.filter(item => this.isIconOnly(item.action))
+      return this.actionsAll.filter(item => this.isIconOnly(item.action))
     },
     actionsWithDescription() : BotAction[] {
-      return this.botActions.actions.filter(item => !this.isIconOnly(item.action))
+      return this.actionsAll.filter(item => !this.isIconOnly(item.action))
     }
   },
   methods: {
@@ -167,6 +181,25 @@ export default defineComponent({
     },
     isAssociation(card : Card) {
       return card.name == CardName.ASSOCIATION
+    },
+    isAssociationAction(action : Action) : boolean {
+      switch(action) {
+        case Action.REPUTATION:
+        case Action.GAIN_PARTNER_ZOO:
+        case Action.GAIN_PARTNER_UNIVERSITY:
+        case Action.CONSERVATION_PROJECT_WORK:
+          return true;
+        default:
+          return false;
+      }
+    },
+    getUnusedAssociationActions() : Action[] {
+      const currentAssociationActions = this.actionsAll
+          .map(item => item.action)
+          .filter(action => this.isAssociationAction(action))
+      return Object.values(Action)
+        .filter(action => this.isAssociationAction(action))
+        .filter(action => !currentAssociationActions.includes(action))
     },
     isConservationProjectWork(action : Action) : boolean {
       return action == Action.CONSERVATION_PROJECT_WORK
@@ -191,6 +224,18 @@ export default defineComponent({
         default:
           return false;
       }
+    },
+    overwriteAssociationAction(action : Action) : void {
+      this.overwriteBotActions = this.botActions.actions
+          .map(botAction => {
+            if (this.isAssociationAction(botAction.action)) {
+              return {
+                action: action,
+                amount: action==Action.REPUTATION ? 2 : 0
+              }
+            }
+            return botAction;
+          })
     },
     upgradeCard() : void {
       const standardCards = this.cardSlots.slots.filter(card => !this.cardSlots.isUpgraded(card))
@@ -325,6 +370,11 @@ export default defineComponent({
   cursor: help;
   :deep(b) {
     text-decoration: underline dotted;
+  }
+}
+.overwriteAssociation.actions {
+  .icon {
+    cursor: pointer;
   }
 }
 </style>
