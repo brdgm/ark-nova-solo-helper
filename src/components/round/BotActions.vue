@@ -7,13 +7,13 @@
       <div class="cardLabel">{{t(`cardType.${card.name}`)}}</div>
     </div>
   </div>
-  <button v-if="cardSlots.canUpgradeCard()" type="button" class="upgrade btn btn-outline-secondary btn-sm" @click="upgradeCard()">
+  <button v-if="cardSlots.canUpgradeCard()" type="button" class="upgrade btn btn-outline-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#upgradeCardModal">
     <Icon name="upgrade" class="icon"/> {{t('roundBot.upgrade')}}
   </button>
 
   <hr/>
 
-  <p v-if="isAssociation(botActions.activeCard)" class="actionHelp" v-html="t('roundBot.associationWorker')" data-bs-toggle="modal" data-bs-target="#actionHelpAssociationWorker"></p>
+  <p v-if="isAssociation(botActions.activeCard)" class="actionHelp" v-html="t('roundBot.associationWorker')" data-bs-toggle="modal" data-bs-target="#actionHelpAssociationWorkerModal"></p>
   <div class="actions">
     <div v-for="(action, index) in actionsIconOnly" :key="index" class="action amount">
       <div class="value" :data-action="action.action">{{action.amount}}</div>
@@ -23,7 +23,7 @@
   <div class="actions">
     <div v-for="(action, index) in actionsWithDescription" :key="index" class="action">
       <Icon :name="action.action" class="icon"/>
-      <div v-if="isConservationProjectWork(action.action)" class="label actionHelp" v-html="t(`cardAction.${action.action}`)" data-bs-toggle="modal" data-bs-target="#actionHelpProjectConservationWork"></div>
+      <div v-if="isConservationProjectWork(action.action)" class="label actionHelp" v-html="t(`cardAction.${action.action}`)" data-bs-toggle="modal" data-bs-target="#actionHelpProjectConservationWorkModal"></div>
       <div v-else class="label" v-html="t(`cardAction.${action.action}`,{number:getRandomNumber(action.action),amount:action.amount},action.amount)"></div>
       <button v-if="allowReroll(action.action)" type="button" class="upgrade btn btn-outline-secondary btn-sm ms-2" @click="$forceUpdate()">
         {{t('roundBot.reroll')}}
@@ -40,7 +40,26 @@
 
   <hr/>
 
-  <div class="modal" id="actionHelpAssociationWorker" tabindex="-1">
+  <div class="modal" id="upgradeCardModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">{{t('roundBot.upgradeCard.title')}}</h5>
+          <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p v-html="t('roundBot.upgradeCard.text')"></p>
+          <p class="fst-italic small" v-html="t('roundBot.upgradeCard.note')"></p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" data-bs-dismiss="modal" @click="upgradeCard()">{{t('roundBot.upgrade')}}</button>
+          <button class="btn btn-secondary" data-bs-dismiss="modal">{{t('action.cancel')}}</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="actionHelpAssociationWorkerModal" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
@@ -57,7 +76,7 @@
     </div>
   </div>
 
-  <div class="modal" id="actionHelpProjectConservationWork" tabindex="-1">
+  <div class="modal" id="actionHelpProjectConservationWorkModal" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
       <div class="modal-content">
         <div class="modal-header">

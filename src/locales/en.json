@@ -47,6 +47,11 @@
     "reroll": "Reroll",
     "associationWorker": "ARNO places one <b>Association Worker</b>:",
     "fallbackText": "Alternative, if not possible:",
+    "upgradeCard": {
+      "title": "Upgrade Card",
+      "text": "Upgrade an action card from ARNO?",
+      "note": "Please note: Once ARNO reaches 2 conservation points, he always chooses to take an additional association worker, not a card upgrade."
+    },
     "actionHelpAssociationWorker": {
       "title": "Place Worker",
       "text": "If ARNO already has one of his workers on this association task, he selects the next higher task where none of his workers is placed yet. Basically he is using X-markers to enhance the action; he never places two workers on the same action. If no higher task is available, he selects the next available lower task. If ARNO has no available worker anymore, he receives conservation points +2 and advances the Break token +2."
