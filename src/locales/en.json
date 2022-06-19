@@ -12,8 +12,10 @@
       "title": "Player",
       "playerCount": "Human Players",
       "playerCountItem": "{count} Player | {count} Players",
+      "playerColor": "Player Color | Player {index} Color",
       "botCount": "ARNO Bots",
-      "botCountItem": "{count} ARNO Bot | {count} ARNO Bots"
+      "botCountItem": "{count} ARNO Bot | {count} ARNO Bots",
+      "botColor": "ARNO Color | ARNO {index} Color"
     },
     "difficultyLevel": {
       "title": "Difficulty Level",

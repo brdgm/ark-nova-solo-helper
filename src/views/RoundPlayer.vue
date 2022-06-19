@@ -1,6 +1,6 @@
 <template>
-  <AboutARNO/>
-  <h1>{{t('roundPlayer.title', {player:player})}}</h1>
+  <AboutARNO/>  
+  <h1><PlayerColorDisplay :playerColor="playerColor"/>{{t('roundPlayer.title', {player:player})}}</h1>
 
   <p class="mt-4">{{t('roundPlayer.info')}}</p>
 
@@ -14,6 +14,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
+import PlayerColorDisplay from '@/components/structure/PlayerColorDisplay.vue'
 import FooterButtons from '@/components/structure/FooterButtons.vue'
 import NavigationState from '@/util/NavigationState'
 import { useStore } from '@/store'
@@ -23,6 +24,7 @@ import AboutARNO from '@/components/structure/AboutARNO.vue'
 export default defineComponent({
   name: 'RoundPlayer',
   components: {
+    PlayerColorDisplay,
     FooterButtons,
     AboutARNO
   },
@@ -36,8 +38,9 @@ export default defineComponent({
     const playerCount = navigationState.playerCount
     const botCount = navigationState.botCount
     const player = navigationState.player
+    const playerColor = navigationState.playerColor
 
-    return { t, round, playerCount, botCount, player }
+    return { t, round, playerCount, botCount, player, playerColor }
   },
   computed: {
     nextButtonRouteTo() : string {

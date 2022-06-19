@@ -1,5 +1,6 @@
 import CardName from '@/services/enum/CardName'
 import DifficultyLevel from '@/services/enum/DifficultyLevel'
+import PlayerColor from '@/services/enum/PlayerColor'
 import { InjectionKey } from 'vue'
 import { createStore, useStore as baseUseStore, Store } from 'vuex'
 
@@ -12,9 +13,13 @@ export interface State {
   rounds: Round[]
 }
 export interface Setup {
+  playerSetup: PlayerSetup
+  difficultyLevel: DifficultyLevel
+}
+export interface PlayerSetup {
   playerCount: number
   botCount: number
-  difficultyLevel: DifficultyLevel
+  playerColors: PlayerColor[]
 }
 export interface Round {
   round: number
@@ -47,8 +52,11 @@ export const store = createStore<State>({
     language: "en",
     baseFontSize: 1.0,
     setup: {
-      playerCount: 1,
-      botCount: 1,
+      playerSetup: {
+        playerCount: 1,
+        botCount: 1,
+        playerColors: [PlayerColor.BLUE,PlayerColor.RED,PlayerColor.YELLOW,PlayerColor.BLACK]
+      },
       difficultyLevel: DifficultyLevel.EASY
     },
     rounds: []
@@ -64,11 +72,8 @@ export const store = createStore<State>({
     language(state : State, language: string) {
       state.language = language
     },
-    setupPlayerCount(state : State, playerCount: number) {
-      state.setup.playerCount = playerCount
-    },
-    setupBotCount(state : State, botCount: number) {
-      state.setup.botCount = botCount
+    setupPlayer(state : State, playerSetup: PlayerSetup) {
+      state.setup.playerSetup = playerSetup
     },
     setupDifficultyLevel(state : State, level: number) {
       state.setup.difficultyLevel = level
