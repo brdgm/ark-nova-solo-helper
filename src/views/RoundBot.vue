@@ -1,4 +1,5 @@
 <template>
+  <AboutARNO/>
   <h1>{{t('roundBot.title', {bot:bot})}}</h1>
 
   <BotActions :navigationState="navigationState"/>
@@ -18,12 +19,14 @@ import FooterButtons from '@/components/structure/FooterButtons.vue'
 import { useRoute } from 'vue-router'
 import { useStore } from '@/store'
 import NavigationState from '@/util/NavigationState'
+import AboutARNO from '@/components/structure/AboutARNO.vue'
 
 export default defineComponent({
   name: 'RoundBot',
   components: {
     BotActions,
-    FooterButtons
+    FooterButtons,
+    AboutARNO
   },
   setup() {
     const { t } = useI18n()

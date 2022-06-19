@@ -1,4 +1,5 @@
 <template>
+  <AboutARNO/>
   <h1>{{t('roundPlayer.title', {player:player})}}</h1>
 
   <p class="mt-4">{{t('roundPlayer.info')}}</p>
@@ -17,11 +18,13 @@ import FooterButtons from '@/components/structure/FooterButtons.vue'
 import NavigationState from '@/util/NavigationState'
 import { useStore } from '@/store'
 import { useRoute } from 'vue-router'
+import AboutARNO from '@/components/structure/AboutARNO.vue'
 
 export default defineComponent({
   name: 'RoundPlayer',
   components: {
-    FooterButtons
+    FooterButtons,
+    AboutARNO
   },
   setup() {
     const { t } = useI18n()
