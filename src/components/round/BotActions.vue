@@ -1,4 +1,5 @@
 <template>
+  <BonusTile/>
 
   <div v-for="(card, index) in cardSlots.slots" :key="index" class="slot">
     <div class="slotLabel">{{index+1}}</div>
@@ -93,7 +94,7 @@
           <PickConservationProject ref="pickConservationProject"/>
         </div>
         <div class="modal-footer">
-          <button class="btn btn-outline-secondary" @click="pickConservationProject.reset()">{{t('roundBot.actionHelpProjectConservationWork.reset')}}</button>
+          <button class="btn btn-outline-secondary" @click="pickConservationProject.reset()">{{t('action.reset')}}</button>
           <button class="btn btn-secondary" data-bs-dismiss="modal">{{t('action.close')}}</button>
         </div>
       </div>
@@ -113,6 +114,7 @@ import BotActions from '@/services/BotActions'
 import Icon from '../structure/Icon.vue'
 import CardTypeIcon from '../structure/CardTypeIcon.vue'
 import PickConservationProject from './PickConservationProject.vue'
+import BonusTile from "./BonusTile.vue"
 import Card from '@/services/Card'
 import Action from '@/services/enum/Action'
 import BotAction from '@/services/BotAction'
@@ -123,7 +125,8 @@ export default defineComponent({
   components: {
     Icon,
     CardTypeIcon,
-    PickConservationProject
+    PickConservationProject,
+    BonusTile
   },
   setup() {
     const { t } = useI18n()

@@ -58,8 +58,7 @@
       "chooseDifferent": "Choose a different association action:"
     },
     "actionHelpProjectConservationWork": {
-      "title": "Conservation project work",
-      "reset": "Reset"
+      "title": "Conservation project work"      
     },
     "pickConservationProject": {
       "conservationProjectSelection": "Conservation Project Selection",
@@ -103,6 +102,13 @@
     "text5": "ARNO can <b>never be the target of an interactive effect</b>. Please use the alternative solo play effects of those cards instead.",
     "text6": "Every time ARNO <b>receives cards</b> during the game, discard all sponsor cards and stack animal and conservation project cards on his zoo mat."
   },
+  "bonusTile": {
+    "link": "Bonus Tile",
+    "text": "ARNO never picks the pre-printed bonus.",
+    "pick": "Pick Bonus Tile",
+    "left": "ARNO takes the <b>left</b> bonus tile.",
+    "right": "ARNO takes the <b>right</b> bonus tile."
+  },
   "notfound": {
     "title": "Not Found"
   },
@@ -117,7 +123,8 @@
     "cancel": "Cancel",
     "backToHome": "Back to Home",
     "back": "Back",
-    "close": "Close"
+    "close": "Close",
+    "reset": "Reset"
   },
   "footer": {
     "credits": "Credits"

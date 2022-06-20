@@ -58,8 +58,7 @@
       "chooseDifferent": "Wähle eine andere Verbands-Aktion:"
     },
     "actionHelpProjectConservationWork": {
-      "title": "Projektarbeit Artenschutz",
-      "reset": "Zurücksetzen"
+      "title": "Projektarbeit Artenschutz"
     },
     "pickConservationProject": {
       "conservationProjectSelection": "Artenschutzprojekt-Auswahl",
@@ -103,6 +102,13 @@
     "text5": "ARNO kann <b>nicht Opfer von interaktiven Effekten</b> werden, nutze stattdessen den abweichenden Effekt für das Solospiel.",
     "text6": "Immer wenn ARNO <b>Karten erhält</b>, werfe alle Sponsoren-Karten ab und lege Tier- und Artenschutzkarten auf die Kartenstapel auf dem Zooplan."
   },
+  "bonusTile": {
+    "link": "Bonusplättchen",
+    "text": "ARNO wählt niemals den vorgedruckten Bonus.",
+    "pick": "Bonusplättchen auswählen",
+    "left": "ARNO nimmt das <b>linke</b> Bonusplättchen.",
+    "right": "ARNO nimmt das <b>rechte</b> Bonusplättchen."
+  },
   "notfound": {
     "title": "Nicht Gefunden"
   },
@@ -117,7 +123,8 @@
     "cancel": "Abbrechen",
     "backToHome": "Zurück zum Anfang",
     "back": "Zurück",
-    "close": "Schließen"
+    "close": "Schließen",
+    "reset": "Zurücksetzen"
   },
   "footer": {
     "credits": "Credits"
