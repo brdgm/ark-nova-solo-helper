@@ -2,7 +2,7 @@
   "gameTitle": "Arche Nova",
   "home": {
     "title": "Arche Nova Solo Helper",
-    "play1": "Spiele den <a href='https://boardgamegeek.com/thread/2823056/rno-alternative-solo-mode' target='_blank' rel='noopener'><b>A.R.N.O. Solo-Modus</b></a> (inoffiziel) von <a href='https://boardgamegeek.com/boardgame/342942/ark-nova' target='_blank' rel='noopener'><b>Arche Nova</b></a>. Im Unterschied zum offiziellen Solo-Modus werden ein oder mehrere zusätzliche Gegner simuliert wie in einem Mehrspieler-Spiel.",
+    "play1": "Spiele den <a href='https://boardgamegeek.com/thread/2823056/rno-alternative-solo-mode' target='_blank' rel='noopener'><b>A.R.N.O. Solo-Modus</b></a> (inoffiziell) von <a href='https://boardgamegeek.com/boardgame/342942/ark-nova' target='_blank' rel='noopener'><b>Arche Nova</b></a>. Im Unterschied zum offiziellen Solo-Modus werden ein oder mehrere zusätzliche Gegner simuliert wie in einem Mehrspieler-Spiel.",
     "play2": "Um den Solo-Modus zu spielen benötigst Du nur das Basis-Spiel. Diese Applikation ersetzt das ARNO Karten-Deck und die Würfel und kontrolliert den Fortschritt von ARNO.",
     "feedback": "Discussion and Feedback:"
   },
@@ -12,35 +12,73 @@
       "title": "Spieler",
       "playerCount": "Menschliche Spieler",
       "playerCountItem": "{count} Spieler",
+      "playerColor": "Spieler-Farbe | Spieler {index} Farbe",
       "botCount": "ARNO Bots",
-      "botCountItem": "{count} ARNO Bot | {count} ARNO Bots"
+      "botCountItem": "{count} ARNO Bot | {count} ARNO Bots",
+      "botColor": "ARNO-Farbe | ARNO {index} Farbe"
     },
     "difficultyLevel": {
       "title": "Schwierigkeitsgrad",
       "easy": "Leicht",
       "hard": "Schwer"
+    },
+    "actionCardDistribution": {
+      "title": "Aktionskarten-Verteilung",
+      "schema": "Wahrscheinlichkeit (%)",
+      "text": "Experimentelle Option. Die Auswahl '0-25-25-25-25' entspricht den ARNO-Regeln."
     }
   },
+  "setupARNO": {
+    "title": "ARNO Spielaufbau",
+    "text1": "Baue das Spiel entsprechend der Spieleranzahl (inklusive ARNO(s)) auf. Ein menschlicher Spieler ist Startspieler.",
+    "text2": "Jeder ARNO beginnt mit <b>1 Artenschutzpunkt</B> und Attraktion entsprechend der Reihenfolge. Ist ARNO z.B. der dritte Spieler, startet er mit 2 Attraktionspunkten.",
+    "text3": "Jeder ARNO erhält die Komponenten einer Farbe, einen Zooplan A, eine verdeckte Endwertungskarte sowie 8 zufällige Zookarten.",
+    "text4": "Lege alle Markierungssteine neben den Zooplan von ARNO.",
+    "text5": "ARNO startet mit einem Verbandsarbeiter auf dem Notizzettel. Lege die anderen 3 auf die entsprechenden Felder des Zooplans von ARNO.",
+    "text6": "Platziere die Endwertungskarte verdeckt auf der linken Seite des Zooplans. Der Grundriss wird dadurch überdeckt, aber wird für ARNO nicht benötigt.",
+    "text7": "Sortiere ARNOs 8 Zookarten nach dem Typ:",
+    "text7-1": "Werfe alle Sponsorenkarten ab.",
+    "text7-2": "Bilde aus allen Tierkarten einen Stapel, so dass die Angaben oben rechts gelesen werden können. Platziere diesen Stapel am besten neben die Endwertungskarte.",
+    "text7-3": "Bilde einen dritten Stapel mit allen Artenschutzkarten, falls bereits vorhanden. Ansonsten wird dieser bei Bedarf während der Partie angelegt.",
+    "text8": "Es werden keine Würfel oder Aktionskarten benötigt."
+  },
   "roundPlayer": {
-    "title": "Spieler #{player}",
-    "info": "Führe Deinen Zug aus."
+    "title": "Spieler | Spieler #{player}",
+    "info": "Führe deinen Zug aus."
   },
   "roundBot": {
-    "title": "ARNO #{bot}",
+    "title": "ARNO | ARNO #{bot}",
     "upgrade": "Aufwerten",
     "reroll": "Neu würfeln",
     "associationWorker": "ARNO setzt einen <b>Arbeiter</b> ein:",
     "fallbackText": "Alternative, falls nicht verfügbar:",
+    "upgradeCard": {
+      "title": "Karte Aufwerten",
+      "text": "Eine Aktionskarte von ARNO aufwerten?",
+      "note": "Bitte beachten: Erreicht ARNO den 2 Punkte-Bonus der Artenschutzleiste wählt er immer einen zusätzlichen Arbeiter, keine Karten-Aufwertung."
+    },
     "actionHelpAssociationWorker": {
       "title": "Arbeiter Einsetzen",
-      "text": "Hat ARNO auf dieser Verbandsaktion bereits einen Arbeiter platziert, wählt er die nächsthöhere Verbandsaktion, auf der sich noch keiner seiner Arbeiter befindet (er nutzt quasi einen virtuellen X-Marker) und platziert in keinem Fall zwei Arbeiter auf einer Aktion. Ist keine höhere Aktion mehr frei, wählt er die nächste verfügbare schwächere Aktion. Falls kein Verbandsarbeiter mehr verfügbar ist, erhält ARNO Artenschutz +2 und Pause +2."
+      "text": "Hat ARNO auf dieser Verbandsaktion bereits einen Arbeiter platziert, wählt er die nächsthöhere Verbandsaktion, auf der sich noch keiner seiner Arbeiter befindet (er nutzt quasi einen virtuellen X-Marker) und platziert in keinem Fall zwei Arbeiter auf einer Aktion. Ist keine höhere Aktion mehr frei, wählt er die nächste verfügbare schwächere Aktion. Falls kein Verbandsarbeiter mehr verfügbar ist, erhält ARNO Artenschutz +2 und Pause +2.",
+      "chooseDifferent": "Wähle eine andere Verbands-Aktion:"
     },
     "actionHelpProjectConservationWork": {
-      "title": "Projektarbeit Artenschutz",
-      "text1": "Beim Artenschutzprojekt ist der Auswahlprozess wie folgt: Hat ARNO selbst keine Karte mehr mit Artenschutzprojekt auf seinem Plan, unterstützt er ein ausliegendes Projekt, das er noch nicht unterstützt hat. Falls möglich, bevorzugt er ein komplett freies Projekt. Sind bereits alle Projekte belegt, wird zufällig eines ohne seinen Markierungsstein bestimmt, das noch über mindestens eine freie Stufe verfügt.",
-      "text2": "ARNO platziert seinen Markierungsstein im leichten Level auf der untersten Stufe, im mittleren Level auf der mittleren und im schwersten Level auf der höchsten. Ist die entsprechende Stufe bereits belegt, platziert er ihn auf der nächsthöheren Stufe. Falls auch das nicht möglich ist, auf der nächstniedrigeren Stufe.",
-      "text3": "Hat ARNO noch genau eine Karte mit Artenschutzprojekt, wird zunächst zufällig entschieden, ob ARNO seine Karte ausspielt und unterstützt oder ein bereits ausliegendes Projekt unterstützt wird. Beide Fälle erhalten eine 50%-Wahrscheinlichkeit vor dem Würfeln zugewiesen. Spielt ARNO seine Karte aus, platziert er seinen Markierungsstein entsprechend seiner Schwierigkeitsstufe. Ansonsten wird wie oben erläutert vorgegangen.",
-      "text4": "Hat ARNO noch mehr als eine Karte mit Artenschutzprojekt, bringt er in jedem Fall eine dieser Karten ins Spiel und platziert seinen Markierungsstein entsprechend seiner Schwierigkeitsstufe. Die auszuspielende Karte wird zufällig bestimmt."
+      "title": "Projektarbeit Artenschutz"
+    },
+    "pickConservationProject": {
+      "conservationProjectSelection": "Artenschutzprojekt-Auswahl",
+      "conservationProjectsHand": "Wie viele Artenschutzprojekte hat ARNO auf seinem Zooplan?",
+      "conservationProjectsBoardNoToken": "Wie viele Artenschutzprojekte liegen aus, die noch keine Markierungssteine haben (komplett frei)?",
+      "conservationProjectsBoardAvailable": "Wie viele Artenschutprojekte liegen aus, die ARNO noch unterstützen kann?",
+      "pick": "Artenschutzprojekt ermitteln",
+      "pickFromHand": "ARNO unterstützt das {number}. Artenschutzprojekt von seinem Zooplan.",
+      "pickFromBoardNoToken": "ARNO unterstützt das {number}. ausliegende Artenschutzprojekt, das noch keine Markierungssteine hat.",
+      "pickFromBoardAvailable": "ARNO unterstützt das {number}. ausliegende Artenschutzprojekt, welches für ARNO noch verfügbar ist.",
+      "tokenPlacement": "Platzierung des Markierungssteins",
+      "projectSlotLeftMost": "ARNO platziert seinen Markierungsstein auf der höchsten Stufe (links).",
+      "projectSlotMiddle": "ARNO platziert seinen Markierungsstein auf der mittleren Stufe.",
+      "projectSlotRightMost": "ARNO platziert seinen Markierungsstein auf der untersten Stufe (rechts).",
+      "projectSlotAlternatives": "Ist die entsprechende Stufe bereits belegt, platziert er ihn auf der nächsthöheren Stufe. Falls auch das nicht möglich ist, auf der nächstniedrigeren Stufe."
     }
   },
   "cardType": {
@@ -55,9 +93,35 @@
     "gain-partner-university": "<b>Partneruniversität #{number}</b> gewinnen.",
     "conservation-project-work": "<b>Projektarbeit Artenschutz</b>.",
     "take-card-display": "Schnappe <b>Karte #{number}</b> aus der Auslage.",
-    "token-scoring-card": "Lege einen ARNO Zählstein auf seine <b>Endwertungskarte</b>.<br/>Falls bereits 6 vorhanden, Artenschutz +2.",
-    "token-notepad": "Lege einen ARNO Zählstein auf seinen <b>Notizzettel</b> (Endwertungseffekt).",
+    "token-scoring-card": "Lege <b>1</b> ARNO Markierungsstein auf seine <b>Endwertungskarte</b>.<br/>Falls bereits 6 vorhanden, Artenschutz +2.",
+    "token-notepad": "Lege <b>{amount}</b> ARNO Markierungsstein auf seinen <b>Notizzettel</b> (Endwertungseffekt). | Lege <b>{amount}</b> ARNO Markierungssteine auf seinen <b>Notizzettel</b> (Endwertungseffekt).",
     "donate": "ARNO spendet."
+  },
+  "aboutARNO": {
+    "link": "Über ARNO",
+    "title": "A.R.N.O. Regel-Zusammenfassung",
+    "text1": "ARNO <b>nutzt kein Geld</b>, d.h. für alle Aktionen, die er ausführt, muss er kein Geld ausgeben. Er erhält während den Pausen etc. auch keine Einnahmen.",
+    "text2": "ARNO <b>nutzt nur den rechten Bereich seines Zooplans</b>. Hier legt er wie die menschlichen Spieler seine Partnerzoos und -universitäten ab bzw. nimmt seine Verbandsarbeiter. Er erhält auch die verschiedenen Boni, sobald er sie aufdeckt. Der linke Bereich wird von ARNO nicht berücksichtigt und nur für die Ablage seiner Zookarten und Endwertungskarte verwendet.",
+    "text3": "ARNO erhält die folgenden <b>Boni</b> von den Spielbrettern: <b>Artenschutzpunkte, Kartenaufwertungen, Rufpunkte und Verbandsarbeiter</b>. Neben Geld erhält auch keine Boni von Tier- oder Sponsorenkarten, Gebäude, Gehege, X-Marker oder Pausenboni.",
+    "text4": "Die Tierkarten, die ARNO in seinem Zoo gestapelt hat, dienen als <b>Referenzwerte für mögliche Karteneffekte</b> der menschlichen Spieler. Wann immer ARNO eine weitere Karte auf seinem Stapel platziert, gelten diese Eigenschaften für Effekte der Karten der anderen Spieler.",
+    "text5": "ARNO kann <b>nicht Opfer von interaktiven Effekten</b> werden, nutze stattdessen den abweichenden Effekt für das Solospiel.",
+    "text6": "Immer wenn ARNO <b>Karten erhält</b>, werfe alle Sponsoren-Karten ab und lege Tier- und Artenschutzkarten auf die Kartenstapel auf dem Zooplan."
+  },
+  "bonusTile": {
+    "link": "Bonusplättchen",
+    "text": "ARNO wählt niemals den vorgedruckten Bonus.",
+    "pick": "Bonusplättchen auswählen",
+    "left": "ARNO nimmt das <b>linke</b> Bonusplättchen.",
+    "right": "ARNO nimmt das <b>rechte</b> Bonusplättchen."
+  },
+  "scoring": {
+    "title": "Auswertung",
+    "humanPlayers": "Menschliche Spieler",
+    "humanPlayersText": "Erhalte Artenschutzpunkte oder Attraktion durch deine <b>Endwertungskarte(n)</b> sowie durch alle deine ausliegenden Karten mit dem <b>Spielende-Symbol</b>.",
+    "botText": "Erhält <b>{conservationPoints} Artenschutzpunkt(e)</b> für {tokenScoringCardCount} Markierungsstein(e) auf der Endwertungskarte und {tokenNotepadCount} Markierungsstein(e) auf dem Notizzettel.",
+    "conservationPoints": "Artenschutzpunkte",
+    "appeal": "Attraktion",
+    "victoryPoints": "Siegpunkte"
   },
   "notfound": {
     "title": "Nicht Gefunden"
@@ -68,12 +132,15 @@
     "next": "Weiter",
     "abortGame": "Spiel abbrechen",
     "abortGameConfirm": "Das aktuelle Spiel wird abgebrochen - bist Du sicher?",
+    "finishGame": "Spiel abschließen",
+    "finishGameConfirm": "Spiel abschließen und die Auswertung aufrufen - bist Du sicher?",
     "endGame": "Spiel beenden",
     "endGameConfirm": "Dieses Spiel wird beendet - bist Du sicher?",
     "cancel": "Abbrechen",
     "backToHome": "Zurück zum Anfang",
     "back": "Zurück",
-    "close": "Schließen"
+    "close": "Schließen",
+    "reset": "Zurücksetzen"
   },
   "footer": {
     "credits": "Credits"

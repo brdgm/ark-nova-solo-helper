@@ -1,5 +1,6 @@
 <template>
-  <h1>{{t('roundPlayer.title', {player:player})}}</h1>
+  <AboutARNO/>  
+  <h1><PlayerColorDisplay :playerColor="playerColor" class="me-2"/>{{t('roundPlayer.title', {player:player}, playerCount)}}</h1>
 
   <p class="mt-4">{{t('roundPlayer.info')}}</p>
 
@@ -7,21 +8,25 @@
     {{t('action.next')}}
   </router-link>
 
-  <FooterButtons :backButtonRouteTo="backButtonRouteTo" endGameButtonType="endGame"/>
+  <FooterButtons :backButtonRouteTo="backButtonRouteTo" endGameButtonType="finishGame"/>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
+import PlayerColorDisplay from '@/components/structure/PlayerColorDisplay.vue'
 import FooterButtons from '@/components/structure/FooterButtons.vue'
 import NavigationState from '@/util/NavigationState'
 import { useStore } from '@/store'
 import { useRoute } from 'vue-router'
+import AboutARNO from '@/components/structure/AboutARNO.vue'
 
 export default defineComponent({
   name: 'RoundPlayer',
   components: {
-    FooterButtons
+    PlayerColorDisplay,
+    FooterButtons,
+    AboutARNO
   },
   setup() {
     const { t } = useI18n()
@@ -33,8 +38,9 @@ export default defineComponent({
     const playerCount = navigationState.playerCount
     const botCount = navigationState.botCount
     const player = navigationState.player
+    const playerColor = navigationState.playerColor
 
-    return { t, round, playerCount, botCount, player }
+    return { t, round, playerCount, botCount, player, playerColor }
   },
   computed: {
     nextButtonRouteTo() : string {

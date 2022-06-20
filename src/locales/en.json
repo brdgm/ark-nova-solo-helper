@@ -12,35 +12,73 @@
       "title": "Player",
       "playerCount": "Human Players",
       "playerCountItem": "{count} Player | {count} Players",
+      "playerColor": "Player Color | Player {index} Color",
       "botCount": "ARNO Bots",
-      "botCountItem": "{count} ARNO Bot | {count} ARNO Bots"
+      "botCountItem": "{count} ARNO Bot | {count} ARNO Bots",
+      "botColor": "ARNO Color | ARNO {index} Color"
     },
     "difficultyLevel": {
       "title": "Difficulty Level",
       "easy": "Easy",
       "hard": "Hard"
+    },
+    "actionCardDistribution": {
+      "title": "Action Card Distribution",
+      "schema": "Probability (%)",
+      "text": "Experimental option. The option '0-25-25-25-25' follows the ARNO ruleset."
     }
   },
+  "setupARNO": {
+    "title": "ARNO Setup",
+    "text1": "Set up the game according to player count (including ARNO(s)). A human player will be the starting player.",
+    "text2": "Every ARNO starts with <b>1 conservation point</b> and appeal points according to the player order. E.g. if ARNO is the 3rd player, he starts with 2 appeal points.",
+    "text3": "Every ARNO receives the components of one color, a zoo mat (map A), one face-down Final Scoring card and 8 random Zoo cards.",
+    "text4": "Place all player tokens of ARNO’s color next to his zoo mat.",
+    "text5": "ARNO starts with one association worker on his notepad. Place the remaining 3 on the designated spaces below the notepad on his zoo mat.",
+    "text6": "Place the Final Scoring card on the left area of the zoo mat. This will cover the building area which is not needed for ARNO.",
+    "text7": "Sort ARNO‘s 8 Zoo cards according to type:",
+    "text7-1": "Discard all Sponsor cards.",
+    "text7-2": "Stack all Animal cards next to ARNO’s Final Scoring card, so you can still see the information in the upper right corners of each card.",
+    "text7-3": "Build another stack with all Conservation Project cards ARNO has. If ARNO starts with none, begin the stack when he receives his first Project card.",
+    "text8": "You do not need dice or action cards."
+  },
   "roundPlayer": {
-    "title": "Player #{player}",
+    "title": "Player | Player #{player}",
     "info": "Take your turn."
   },
   "roundBot": {
-    "title": "ARNO #{bot}",
+    "title": "ARNO | ARNO #{bot}",
     "upgrade": "Upgrade",
     "reroll": "Reroll",
     "associationWorker": "ARNO places one <b>Association Worker</b>:",
     "fallbackText": "Alternative, if not possible:",
+    "upgradeCard": {
+      "title": "Upgrade Card",
+      "text": "Upgrade an action card from ARNO?",
+      "note": "Please note: Once ARNO reaches 2 conservation points, he always chooses to take an additional association worker, not a card upgrade."
+    },
     "actionHelpAssociationWorker": {
       "title": "Place Worker",
-      "text": "If ARNO already has one of his workers on this association task, he selects the next higher task where none of his workers is placed yet. Basically he is using X-markers to enhance the action; he never places two workers on the same action. If no higher task is available, he selects the next available lower task. If ARNO has no available worker anymore, he receives conservation points +2 and advances the Break token +2."
+      "text": "If ARNO already has one of his workers on this association task, he selects the next higher task where none of his workers is placed yet. Basically he is using X-markers to enhance the action; he never places two workers on the same action. If no higher task is available, he selects the next available lower task. If ARNO has no available worker anymore, he receives conservation points +2 and advances the Break token +2.",
+      "chooseDifferent": "Choose a different association action:"
     },
     "actionHelpProjectConservationWork": {
-      "title": "Conservation project work",
-      "text1": "The selection of the supported Conservation Project is as follows: If ARNO has no remaining Conservation Project cards on his zoo map, he supports a project next to the Association board he has not supported yet. If possible, he prefers a project without any player tokens. If none exist, he randomly selects a project without his token, but with at least one free slot.",
-      "text2": "ARNO places his token on the easy level at the rightmost slot, on medium in the middle and on the high level at the leftmost slot of the chosen project. If this slot is already covered by another player, he places it on the next level to the left. If that’s not possible as well, on the next available level to the right.",
-      "text3": "If ARNO still has exactly one Conservation Project card on his zoo map, determine at first if ARNO plays this card or supports a project that was already placed next to the Association board. Both possibilities get a 50%-chance based on a die roll. If ARNO plays his card, place his player token according to his difficulty level. Otherwise proceed as described above.",
-      "text4": "If ARNO has more than one Conservation Project card on his map, he plays one of those cards and places his player token according to the difficulty level. Randomly determine which card he chooses. In any case, afterwards ARNO receives the corresponding points of the supported project."
+      "title": "Conservation project work"      
+    },
+    "pickConservationProject": {
+      "conservationProjectSelection": "Conservation Project Selection",
+      "conservationProjectsHand": "How many Conservation Project cards has ARNO on his zoo mat?",
+      "conservationProjectsBoardNoToken": "How many Conservation Project cards are available next to the Association board without any player tokens?",
+      "conservationProjectsBoardAvailable": "How many Conservation Project cards are available next to the Association board which ARNO did not support yet?",
+      "pick": "Pick Conservation Project",
+      "pickFromHand": "ARNO supports the {number}. Conservation Project card from his zoo mat.",
+      "pickFromBoardNoToken": "ARNO supports the {number}. Conservation Project next to the Association board without any player token.",
+      "pickFromBoardAvailable": "ARNO supports the {number}. Conservation Project next to the Association board which is available for him.",
+      "tokenPlacement": "Token Placement",
+      "projectSlotLeftMost": "ARNO prefers to place his token on the leftmost slot.",
+      "projectSlotMiddle": "ARNO prefers to place his token on the middle slot.",
+      "projectSlotRightMost": "ARNO prefers to place his token on the rightmost slot.",
+      "projectSlotAlternatives": "If this slot is already covered by another player, he places it on the next level to the left. If that’s not possible as well, on the next available level to the right."
     }
   },
   "cardType": {
@@ -55,9 +93,35 @@
     "gain-partner-university": "Gain <b>partner university #{number}</b>.",
     "conservation-project-work": "<b>Conservation project work</b>.",
     "take-card-display": "Snap <b>card #{number}</b> from display.",
-    "token-scoring-card": "Place one ARNO player token on his <b>final scoring card</b>.<br/>If there are already 6 tokens, conservation +2.",
-    "token-notepad": "Place one ARNO player token on his <b>notepad</b> (for final scoring effect).",
+    "token-scoring-card": "Place <b>1</b> ARNO player token on his <b>final scoring card</b>.<br/>If there are already 6 tokens, conservation +2.",
+    "token-notepad": "Place <b>{amount}</b> ARNO player token on his <b>notepad</b> (for final scoring effect). | Place <b>{amount}</b> ARNO player tokens on his <b>notepad</b> (for final scoring effect).",
     "donate": "ARNO donates."
+  },
+  "aboutARNO": {
+    "link": "About ARNO",
+    "title": "A.R.N.O. Rules Summary",
+    "text1": "ARNO <b>doesn‘t use money</b>. He doesn‘t spend money for actions, and never receives money (for example during breaks or from Animal cards).",
+    "text2": "ARNO <b>only uses the right area of his zoo mat</b>. This is where he places his partner zoos and universities and where he takes his association workers from. He also receives the bonuses once he uncovers them. The left area of his zoo plan will not be considered and only be used to place his Zoo cards and Final Scoring card.",
+    "text3": "ARNO receives the following <b>bonuses</b> from his zoo plan and the general boards: <b>Conservation points, card upgrades, reputation points and association workers</b>. Besides money he also doesn’t receive any bonuses from Animal or Sponsor cards, buildings, enclosures, X-markers or during breaks.",
+    "text4": "The Animal cards that are stacked on ARNO’s zoo mat provide <b>reference values for certain card effects</b> of the human players. Whenever ARNO places another Animal card on his stack, its icons will trigger the card effects of the other player(s).",
+    "text5": "ARNO can <b>never be the target of an interactive effect</b>. Please use the alternative solo play effects of those cards instead.",
+    "text6": "Every time ARNO <b>receives cards</b> during the game, discard all sponsor cards and stack animal and conservation project cards on his zoo mat."
+  },
+  "bonusTile": {
+    "link": "Bonus Tile",
+    "text": "ARNO never picks the pre-printed bonus.",
+    "pick": "Pick Bonus Tile",
+    "left": "ARNO takes the <b>left</b> bonus tile.",
+    "right": "ARNO takes the <b>right</b> bonus tile."
+  },
+  "scoring": {
+    "title": "Scoring",
+    "humanPlayers": "Human Players",
+    "humanPlayersText": "Get conservation points or appeal from <b>Final Scoring card(s)</b> and from all cards with <b>end-of-game icon</b>.",
+    "botText": "Get <b>{conservationPoints} conservation point(s)</b> for {tokenScoringCardCount} token(s) on the final scoring card and {tokenNotepadCount} token(s) on the notepad.",
+    "conservationPoints": "Conservation Points",
+    "appeal": "Appeal",
+    "victoryPoints": "Victory Points"
   },
   "notfound": {
     "title": "Not Found"
@@ -68,12 +132,15 @@
     "next": "Next",
     "abortGame": "Abort Game",
     "abortGameConfirm": "Aborting the running game - are you sure?",
+    "finishGame": "Finish Game",
+    "finishGameConfirm": "Finishing this game and go to scoring - are you sure?",
     "endGame": "End Game",
     "endGameConfirm": "End this game and return to home screen - are you sure?",
     "cancel": "Cancel",
     "backToHome": "Back to Home",
     "back": "Back",
-    "close": "Close"
+    "close": "Close",
+    "reset": "Reset"
   },
   "footer": {
     "credits": "Credits"

@@ -1,4 +1,5 @@
 <template>
+  <BonusTile/>
 
   <div v-for="(card, index) in cardSlots.slots" :key="index" class="slot">
     <div class="slotLabel">{{index+1}}</div>
@@ -7,24 +8,24 @@
       <div class="cardLabel">{{t(`cardType.${card.name}`)}}</div>
     </div>
   </div>
-  <button v-if="cardSlots.canUpgradeCard()" type="button" class="upgrade btn btn-outline-secondary btn-sm" @click="upgradeCard()">
+  <button v-if="cardSlots.canUpgradeCard()" type="button" class="upgrade btn btn-outline-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#upgradeCardModal">
     <Icon name="upgrade" class="icon"/> {{t('roundBot.upgrade')}}
   </button>
 
   <hr/>
 
-  <p v-if="isAssociation(botActions.activeCard)" class="actionHelp" v-html="t('roundBot.associationWorker')" data-bs-toggle="modal" data-bs-target="#actionHelpAssociationWorker"></p>
+  <p v-if="isAssociation(botActions.activeCard)" class="actionHelp" v-html="t('roundBot.associationWorker')" data-bs-toggle="modal" data-bs-target="#actionHelpAssociationWorkerModal"></p>
   <div class="actions">
-    <div v-for="(action, index) in actionsWithAmounts" :key="index" class="action amount">
+    <div v-for="(action, index) in actionsIconOnly" :key="index" class="action amount">
       <div class="value" :data-action="action.action">{{action.amount}}</div>
       <Icon :name="action.action" class="icon amount"/>
     </div>
   </div>
   <div class="actions">
-    <div v-for="(action, index) in actionsWithoutAmounts" :key="index" class="action">
+    <div v-for="(action, index) in actionsWithDescription" :key="index" class="action">
       <Icon :name="action.action" class="icon"/>
-      <div v-if="isConservationProjectWork(action.action)" class="label actionHelp" v-html="t(`cardAction.${action.action}`)" data-bs-toggle="modal" data-bs-target="#actionHelpProjectConservationWork"></div>
-      <div v-else class="label" v-html="t(`cardAction.${action.action}`,{number:getRandomNumber(action.action)})"></div>
+      <div v-if="isConservationProjectWork(action.action)" class="label actionHelp" v-html="t(`cardAction.${action.action}`)" data-bs-toggle="modal" data-bs-target="#actionHelpProjectConservationWorkModal"></div>
+      <div v-else class="label" v-html="t(`cardAction.${action.action}`,{number:getRandomNumber(action.action),amount:action.amount},action.amount)"></div>
       <button v-if="allowReroll(action.action)" type="button" class="upgrade btn btn-outline-secondary btn-sm ms-2" @click="$forceUpdate()">
         {{t('roundBot.reroll')}}
       </button>
@@ -40,7 +41,26 @@
 
   <hr/>
 
-  <div class="modal" id="actionHelpAssociationWorker" tabindex="-1">
+  <div class="modal" id="upgradeCardModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">{{t('roundBot.upgradeCard.title')}}</h5>
+          <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p v-html="t('roundBot.upgradeCard.text')"></p>
+          <p class="fst-italic small" v-html="t('roundBot.upgradeCard.note')"></p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" data-bs-dismiss="modal" @click="upgradeCard()">{{t('roundBot.upgrade')}}</button>
+          <button class="btn btn-secondary" data-bs-dismiss="modal">{{t('action.cancel')}}</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="actionHelpAssociationWorkerModal" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
@@ -49,6 +69,12 @@
         </div>
         <div class="modal-body">
           <p v-html="t('roundBot.actionHelpAssociationWorker.text')"></p>
+          <p v-html="t('roundBot.actionHelpAssociationWorker.chooseDifferent')"></p>
+          <div class="actions overwriteAssociation">
+            <div v-for="(action, index) in getUnusedAssociationActions()" :key="index" class="action amount">
+              <Icon :name="action" class="icon amount" @click="overwriteAssociationAction(action)" data-bs-dismiss="modal"/>
+            </div>
+          </div>
         </div>
         <div class="modal-footer">
           <button class="btn btn-secondary" data-bs-dismiss="modal">{{t('action.close')}}</button>
@@ -57,7 +83,7 @@
     </div>
   </div>
 
-  <div class="modal" id="actionHelpProjectConservationWork" tabindex="-1">
+  <div class="modal" id="actionHelpProjectConservationWorkModal" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
       <div class="modal-content">
         <div class="modal-header">
@@ -65,12 +91,10 @@
           <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <p v-html="t('roundBot.actionHelpProjectConservationWork.text1')"></p>
-          <p v-html="t('roundBot.actionHelpProjectConservationWork.text2')"></p>
-          <p v-html="t('roundBot.actionHelpProjectConservationWork.text3')"></p>
-          <p v-html="t('roundBot.actionHelpProjectConservationWork.text4')"></p>
+          <PickConservationProject ref="pickConservationProject"/>
         </div>
         <div class="modal-footer">
+          <button class="btn btn-outline-secondary" @click="pickConservationProject.reset()">{{t('action.reset')}}</button>
           <button class="btn btn-secondary" data-bs-dismiss="modal">{{t('action.close')}}</button>
         </div>
       </div>
@@ -81,7 +105,7 @@
 
 <script lang="ts">
 import rollDice from "brdgm-commons/src/util/random/rollDice"
-import { defineComponent } from 'vue'
+import { defineComponent, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { BotRound, useStore } from '@/store'
 import NavigationState from '@/util/NavigationState'
@@ -89,6 +113,8 @@ import CardSlots from '@/services/CardSlots'
 import BotActions from '@/services/BotActions'
 import Icon from '../structure/Icon.vue'
 import CardTypeIcon from '../structure/CardTypeIcon.vue'
+import PickConservationProject from './PickConservationProject.vue'
+import BonusTile from "./BonusTile.vue"
 import Card from '@/services/Card'
 import Action from '@/services/enum/Action'
 import BotAction from '@/services/BotAction'
@@ -98,17 +124,25 @@ export default defineComponent({
   name: 'BotActions',
   components: {
     Icon,
-    CardTypeIcon
+    CardTypeIcon,
+    PickConservationProject,
+    BonusTile
   },
   setup() {
     const { t } = useI18n()
     useStore()
-    return { t }
+    const pickConservationProject = ref()
+    return { t, pickConservationProject }
   },
   props: {
     navigationState: {
       type: NavigationState,
       required: true
+    }
+  },
+  data() {
+    return {
+      overwriteBotActions: [] as BotAction[]
     }
   },
   computed: {
@@ -121,11 +155,14 @@ export default defineComponent({
     botActions() : BotActions {
       return BotActions.newWithSlot(this.cardSlots, this.navigationState.difficultyLevel, this.botRound.slotNumber)
     },
-    actionsWithAmounts() : readonly BotAction[] {
-      return this.botActions.actions.filter(item => this.hasAmount(item.action))
+    actionsAll() : BotAction[] {
+      return this.overwriteBotActions.length > 0 ? this.overwriteBotActions : this.botActions.actions as BotAction[]
     },
-    actionsWithoutAmounts() : BotAction[] {
-      return this.botActions.actions.filter(item => !this.hasAmount(item.action))
+    actionsIconOnly() : readonly BotAction[] {
+      return this.actionsAll.filter(item => this.isIconOnly(item.action))
+    },
+    actionsWithDescription() : BotAction[] {
+      return this.actionsAll.filter(item => !this.isIconOnly(item.action))
     }
   },
   methods: {
@@ -135,7 +172,7 @@ export default defineComponent({
     isUpgraded(card : Card) : boolean {
       return this.cardSlots.isUpgraded(card)
     },
-    hasAmount(action : Action) : boolean {
+    isIconOnly(action : Action) : boolean {
       switch(action) {
         case Action.APPEAL:
         case Action.REPUTATION:
@@ -148,6 +185,25 @@ export default defineComponent({
     },
     isAssociation(card : Card) {
       return card.name == CardName.ASSOCIATION
+    },
+    isAssociationAction(action : Action) : boolean {
+      switch(action) {
+        case Action.REPUTATION:
+        case Action.GAIN_PARTNER_ZOO:
+        case Action.GAIN_PARTNER_UNIVERSITY:
+        case Action.CONSERVATION_PROJECT_WORK:
+          return true;
+        default:
+          return false;
+      }
+    },
+    getUnusedAssociationActions() : Action[] {
+      const currentAssociationActions = this.actionsAll
+          .map(item => item.action)
+          .filter(action => this.isAssociationAction(action))
+      return Object.values(Action)
+        .filter(action => this.isAssociationAction(action))
+        .filter(action => !currentAssociationActions.includes(action))
     },
     isConservationProjectWork(action : Action) : boolean {
       return action == Action.CONSERVATION_PROJECT_WORK
@@ -172,6 +228,18 @@ export default defineComponent({
         default:
           return false;
       }
+    },
+    overwriteAssociationAction(action : Action) : void {
+      this.overwriteBotActions = this.botActions.actions
+          .map(botAction => {
+            if (this.isAssociationAction(botAction.action)) {
+              return {
+                action: action,
+                amount: action==Action.REPUTATION ? 2 : 0
+              }
+            }
+            return botAction;
+          })
     },
     upgradeCard() : void {
       const standardCards = this.cardSlots.slots.filter(card => !this.cardSlots.isUpgraded(card))
@@ -306,6 +374,11 @@ export default defineComponent({
   cursor: help;
   :deep(b) {
     text-decoration: underline dotted;
+  }
+}
+.overwriteAssociation.actions {
+  .icon {
+    cursor: pointer;
   }
 }
 </style>

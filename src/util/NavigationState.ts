@@ -4,27 +4,33 @@ import { BotRound, State } from "@/store"
 import { RouteLocation } from "vue-router"
 import { Store } from "vuex"
 import BotActions from "@/services/BotActions"
+import PlayerColor from "@/services/enum/PlayerColor"
+import ActionCardDistributionSchema from "@/services/enum/ActionCardDistributionSchema"
 
 export default class NavigationState {
 
   readonly difficultyLevel : DifficultyLevel
+  readonly actionCardDistribution : ActionCardDistributionSchema
   readonly playerCount : number
   readonly botCount : number
   readonly round : number
   readonly player : number
   readonly bot : number
-  readonly botRound? : BotRound  
+  readonly botRound? : BotRound
+  readonly playerColor : PlayerColor
 
   constructor(route : RouteLocation, store : Store<State>) {    
     const setup = store.state.setup
     this.difficultyLevel = setup.difficultyLevel
-    this.playerCount = setup.playerCount
-    this.botCount = setup.botCount
+    this.actionCardDistribution = setup.actionCardDistribution
+    this.playerCount = setup.playerSetup.playerCount
+    this.botCount = setup.playerSetup.botCount
 
     this.round = parseInt(route.params['round'] as string)
     this.player = (route.name == 'RoundPlayer') ? parseInt(route.params['player'] as string) : 0
     this.bot = (route.name == 'RoundBot') ? parseInt(route.params['bot'] as string) : 0
     this.botRound = this.getBotRound(store, this.round, this.bot)
+    this.playerColor = this.getPlayerColor(setup.playerSetup.playerColors)
   }
 
   private getBotRound(store : Store<State>, roundNumber : number, botNumber : number) : BotRound | undefined {
@@ -43,7 +49,7 @@ export default class NavigationState {
       if (roundNumber == 1) {
         // start new game
         cardSlots = CardSlots.new()
-        botActions = BotActions.newRandomSlot(cardSlots, this.difficultyLevel)
+        botActions = BotActions.newRandomSlot(cardSlots, this.difficultyLevel, this.actionCardDistribution)
       }
       else {
         // continue with cards from previous round
@@ -56,7 +62,7 @@ export default class NavigationState {
         tokenNotepadCount = previousRound.tokenNotepadCount
         // move previous card to first position
         cardSlots.moveFirst(cardSlots.get(previousRound.slotNumber))
-        botActions = BotActions.newRandomSlot(cardSlots, this.difficultyLevel)
+        botActions = BotActions.newRandomSlot(cardSlots, this.difficultyLevel, this.actionCardDistribution)
       }
       botRound = {
         round: roundNumber,
@@ -69,6 +75,17 @@ export default class NavigationState {
       store.commit('round', botRound)
     }
     return botRound
+  }
+
+  private getPlayerColor(playerColors : PlayerColor[]) : PlayerColor {
+    let playerColor
+    if (this.player > 0) {
+      playerColor = playerColors[this.player - 1]
+    }
+    if (this.bot > 0) {
+      playerColor = playerColors[this.playerCount + this.bot - 1]
+    }
+    return playerColor || PlayerColor.BLUE
   }
 
 }
