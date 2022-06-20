@@ -38,11 +38,11 @@
     "text8": "You do not need dice or action cards."
   },
   "roundPlayer": {
-    "title": "Player #{player}",
+    "title": "Player | Player #{player}",
     "info": "Take your turn."
   },
   "roundBot": {
-    "title": "ARNO #{bot}",
+    "title": "ARNO | ARNO #{bot}",
     "upgrade": "Upgrade",
     "reroll": "Reroll",
     "associationWorker": "ARNO places one <b>Association Worker</b>:",
@@ -109,6 +109,15 @@
     "left": "ARNO takes the <b>left</b> bonus tile.",
     "right": "ARNO takes the <b>right</b> bonus tile."
   },
+  "scoring": {
+    "title": "Scoring",
+    "humanPlayers": "Human Players",
+    "humanPlayersText": "Get conservation points or appeal from <b>Final Scoring card(s)</b> and from all cards with <b>end-of-game icon</b>.",
+    "botText": "Get <b>{conservationPoints} conservation point(s)</b> for {tokenScoringCardCount} token(s) on the final scoring card and {tokenNotepadCount} token(s) on the notepad.",
+    "conservationPoints": "Conservation Points",
+    "appeal": "Appeal",
+    "victoryPoints": "Victory Points"
+  },
   "notfound": {
     "title": "Not Found"
   },
@@ -118,6 +127,8 @@
     "next": "Next",
     "abortGame": "Abort Game",
     "abortGameConfirm": "Aborting the running game - are you sure?",
+    "finishGame": "Finish Game",
+    "finishGameConfirm": "Finishing this game and go to scoring - are you sure?",
     "endGame": "End Game",
     "endGameConfirm": "End this game and return to home screen - are you sure?",
     "cancel": "Cancel",

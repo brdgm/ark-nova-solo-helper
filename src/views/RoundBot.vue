@@ -1,6 +1,6 @@
 <template>
   <AboutARNO/>
-  <h1><PlayerColorDisplay :playerColor="playerColor"/>{{t('roundBot.title', {bot:bot})}}</h1>
+  <h1><PlayerColorDisplay :playerColor="playerColor" class="me-2"/>{{t('roundBot.title', {bot:bot}, botCount)}}</h1>
 
   <BotActions :navigationState="navigationState"/>
 
@@ -8,7 +8,7 @@
     {{t('action.next')}}
   </router-link>
 
-  <FooterButtons :backButtonRouteTo="backButtonRouteTo" endGameButtonType="endGame"/>
+  <FooterButtons :backButtonRouteTo="backButtonRouteTo" endGameButtonType="finishGame"/>
 </template>
 
 <script lang="ts">

@@ -8,6 +8,7 @@ import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useStore } from '@/store'
 import CommonsFooterButtons from 'brdgm-commons/src/components/structure/FooterButtons.vue'
+import router from '@/router'
 
 export default defineComponent({
   name: 'FooterButtons',
@@ -31,8 +32,13 @@ export default defineComponent({
   },
   methods: {
     endGame() {
-      this.$store.commit('endGame')
-      this.$router.push("/")
+      if (this.$route.name == 'Scoring') {
+        this.$store.commit('endGame')
+        this.$router.push("/")
+      }
+      else {
+        this.$router.push("/scoring")
+      }
     }
   }
 })

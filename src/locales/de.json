@@ -38,11 +38,11 @@
     "text8": "Es werden keine Würfel oder Aktionskarten benötigt."
   },
   "roundPlayer": {
-    "title": "Spieler #{player}",
-    "info": "Führe Deinen Zug aus."
+    "title": "Spieler | Spieler #{player}",
+    "info": "Führe deinen Zug aus."
   },
   "roundBot": {
-    "title": "ARNO #{bot}",
+    "title": "ARNO | ARNO #{bot}",
     "upgrade": "Aufwerten",
     "reroll": "Neu würfeln",
     "associationWorker": "ARNO setzt einen <b>Arbeiter</b> ein:",
@@ -109,6 +109,15 @@
     "left": "ARNO nimmt das <b>linke</b> Bonusplättchen.",
     "right": "ARNO nimmt das <b>rechte</b> Bonusplättchen."
   },
+  "scoring": {
+    "title": "Auswertung",
+    "humanPlayers": "Menschliche Spieler",
+    "humanPlayersText": "Erhalte Artenschutzpunkte oder Attraktion durch deine <b>Endwertungskarte(n)</b> sowie durch alle deine ausliegenden Karten mit dem <b>Spielende-Symbol</b>.",
+    "botText": "Erhält <b>{conservationPoints} Artenschutzpunkt(e)</b> für {tokenScoringCardCount} Markierungsstein(e) auf der Endwertungskarte und {tokenNotepadCount} Markierungsstein(e) auf dem Notizzettel.",
+    "conservationPoints": "Artenschutzpunkte",
+    "appeal": "Attraktion",
+    "victoryPoints": "Siegpunkte"
+  },
   "notfound": {
     "title": "Nicht Gefunden"
   },
@@ -118,6 +127,8 @@
     "next": "Weiter",
     "abortGame": "Spiel abbrechen",
     "abortGameConfirm": "Das aktuelle Spiel wird abgebrochen - bist Du sicher?",
+    "finishGame": "Spiel abschließen",
+    "finishGameConfirm": "Spiel abschließen und die Auswertung aufrufen - bist Du sicher?",
     "endGame": "Spiel beenden",
     "endGameConfirm": "Dieses Spiel wird beendet - bist Du sicher?",
     "cancel": "Abbrechen",
