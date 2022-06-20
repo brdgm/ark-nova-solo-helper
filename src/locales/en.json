@@ -21,6 +21,11 @@
       "title": "Difficulty Level",
       "easy": "Easy",
       "hard": "Hard"
+    },
+    "actionCardDistribution": {
+      "title": "Action Card Distribution",
+      "schema": "Probability (%)",
+      "text": "Experimental option. The option '0-25-25-25-25' follows the ARNO ruleset."
     }
   },
   "setupARNO": {

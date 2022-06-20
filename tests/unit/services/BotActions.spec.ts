@@ -2,6 +2,7 @@ import BotActions from '@/services/BotActions'
 import Cards from '@/services/Cards'
 import CardSlots from '@/services/CardSlots'
 import Action from '@/services/enum/Action'
+import ActionCardDistributionSchema from '@/services/enum/ActionCardDistributionSchema'
 import CardName from '@/services/enum/CardName'
 import DifficultyLevel from '@/services/enum/DifficultyLevel'
 import { expect } from 'chai'
@@ -9,7 +10,7 @@ import { expect } from 'chai'
 describe('BotActions', () => {
   it('randomPick', () => {
     const cardSlots = CardSlots.new()
-    const botActions = BotActions.newRandomSlot(cardSlots, DifficultyLevel.EASY)
+    const botActions = BotActions.newRandomSlot(cardSlots, DifficultyLevel.EASY, ActionCardDistributionSchema.P0_25_25_25_25)
 
     expect(botActions.activeCard).not.to.undefined
     expect(botActions.slotNumber).to.greaterThanOrEqual(2)

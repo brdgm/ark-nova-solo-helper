@@ -4,6 +4,7 @@
 
   <Players/>
   <DifficultyLevel/>
+  <ActionCardDistribution/>
 
   <router-link to="/setupARNO" class="btn btn-primary btn-lg mt-4">
     {{t('setupARNO.title')}}
@@ -15,9 +16,10 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
-import DifficultyLevel from '@/components/setup/DifficultyLevel.vue'
-import FooterButtons from '@/components/structure/FooterButtons.vue'
 import Players from '@/components/setup/Players.vue'
+import DifficultyLevel from '@/components/setup/DifficultyLevel.vue'
+import ActionCardDistribution from '@/components/setup/ActionCardDistribution.vue'
+import FooterButtons from '@/components/structure/FooterButtons.vue'
 import AboutARNO from '@/components/structure/AboutARNO.vue'
 
 export default defineComponent({
@@ -25,6 +27,7 @@ export default defineComponent({
   components: {
     Players,
     DifficultyLevel,
+    ActionCardDistribution,
     FooterButtons,
     AboutARNO
   },

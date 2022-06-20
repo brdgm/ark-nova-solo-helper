@@ -5,10 +5,12 @@ import { RouteLocation } from "vue-router"
 import { Store } from "vuex"
 import BotActions from "@/services/BotActions"
 import PlayerColor from "@/services/enum/PlayerColor"
+import ActionCardDistributionSchema from "@/services/enum/ActionCardDistributionSchema"
 
 export default class NavigationState {
 
   readonly difficultyLevel : DifficultyLevel
+  readonly actionCardDistribution : ActionCardDistributionSchema
   readonly playerCount : number
   readonly botCount : number
   readonly round : number
@@ -20,6 +22,7 @@ export default class NavigationState {
   constructor(route : RouteLocation, store : Store<State>) {    
     const setup = store.state.setup
     this.difficultyLevel = setup.difficultyLevel
+    this.actionCardDistribution = setup.actionCardDistribution
     this.playerCount = setup.playerSetup.playerCount
     this.botCount = setup.playerSetup.botCount
 
@@ -46,7 +49,7 @@ export default class NavigationState {
       if (roundNumber == 1) {
         // start new game
         cardSlots = CardSlots.new()
-        botActions = BotActions.newRandomSlot(cardSlots, this.difficultyLevel)
+        botActions = BotActions.newRandomSlot(cardSlots, this.difficultyLevel, this.actionCardDistribution)
       }
       else {
         // continue with cards from previous round
@@ -59,7 +62,7 @@ export default class NavigationState {
         tokenNotepadCount = previousRound.tokenNotepadCount
         // move previous card to first position
         cardSlots.moveFirst(cardSlots.get(previousRound.slotNumber))
-        botActions = BotActions.newRandomSlot(cardSlots, this.difficultyLevel)
+        botActions = BotActions.newRandomSlot(cardSlots, this.difficultyLevel, this.actionCardDistribution)
       }
       botRound = {
         round: roundNumber,

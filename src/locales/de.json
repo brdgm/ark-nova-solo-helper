@@ -21,6 +21,11 @@
       "title": "Schwierigkeitsgrad",
       "easy": "Leicht",
       "hard": "Schwer"
+    },
+    "actionCardDistribution": {
+      "title": "Aktionskarten-Verteilung",
+      "schema": "Wahrscheinlichkeit (%)",
+      "text": "Experimentelle Option. Die Auswahl '0-25-25-25-25' entspricht den ARNO-Regeln."
     }
   },
   "setupARNO": {

@@ -3,6 +3,7 @@ import BotAction from "./BotAction"
 import Card, { CardAction } from "./Card"
 import CardSlots from "./CardSlots"
 import Action from "./enum/Action"
+import ActionCardDistributionSchema from "./enum/ActionCardDistributionSchema"
 import DifficultyLevel from "./enum/DifficultyLevel"
 
 /**
@@ -83,10 +84,48 @@ export default class BotActions {
         .reduce((previous, current) => previous + current, 0);
   }
 
-  public static newRandomSlot(cardSlots : CardSlots, difficultyLevel : DifficultyLevel) : BotActions {
-    // randomly determine next slot 2..5 to play by rolling a D4
-    const slotNumber = rollDice(4) + 1
+  public static newRandomSlot(cardSlots : CardSlots, difficultyLevel : DifficultyLevel,
+        actionCardDistribution: ActionCardDistributionSchema) : BotActions {
+    const slotNumber = BotActions.determineRandomSlot(actionCardDistribution)
     return new BotActions(cardSlots, difficultyLevel, slotNumber)
+  }
+
+  private static determineRandomSlot(schema: ActionCardDistributionSchema) : number {
+    if (schema == ActionCardDistributionSchema.P0_20_20_30_30) {
+      switch (rollDice(10)) {
+        case 1:
+        case 2:
+          return 2
+        case 3:
+        case 4:
+          return 3
+        case 5:
+        case 6:
+        case 7:
+          return 4
+        default: // 8,9,10
+          return 5
+      }
+    }
+    else if (schema == ActionCardDistributionSchema.P0_10_20_30_40) {
+      switch (rollDice(10)) {
+        case 1:
+          return 2
+        case 2:
+        case 3:
+          return 3
+        case 4:
+        case 5:
+        case 6:
+          return 4
+        default: // 7,8,9,10
+          return 5
+      }
+    }
+    else {
+      // same probability for slots 2..5
+      return rollDice(4) + 1
+    }
   }
 
   public static newWithSlot(cardSlots : CardSlots, difficultyLevel : DifficultyLevel, slotNumber : number) : BotActions {

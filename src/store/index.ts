@@ -1,3 +1,4 @@
+import ActionCardDistributionSchema from '@/services/enum/ActionCardDistributionSchema'
 import CardName from '@/services/enum/CardName'
 import DifficultyLevel from '@/services/enum/DifficultyLevel'
 import PlayerColor from '@/services/enum/PlayerColor'
@@ -15,6 +16,7 @@ export interface State {
 export interface Setup {
   playerSetup: PlayerSetup
   difficultyLevel: DifficultyLevel
+  actionCardDistribution: ActionCardDistributionSchema
 }
 export interface PlayerSetup {
   playerCount: number
@@ -57,7 +59,8 @@ export const store = createStore<State>({
         botCount: 1,
         playerColors: [PlayerColor.BLUE,PlayerColor.RED,PlayerColor.YELLOW,PlayerColor.BLACK]
       },
-      difficultyLevel: DifficultyLevel.EASY
+      difficultyLevel: DifficultyLevel.EASY,
+      actionCardDistribution: ActionCardDistributionSchema.P0_25_25_25_25
     },
     rounds: []
   },
@@ -77,6 +80,9 @@ export const store = createStore<State>({
     },
     setupDifficultyLevel(state : State, level: number) {
       state.setup.difficultyLevel = level
+    },
+    setupActionCardDistribution(state : State, schema: ActionCardDistributionSchema) {
+      state.setup.actionCardDistribution = schema
     },
     round(state : State, botRound : BotRound) {
       let round = state.rounds[botRound.round - 1]
