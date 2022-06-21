@@ -43,11 +43,11 @@
     "text8": "Es werden keine Würfel oder Aktionskarten benötigt."
   },
   "roundPlayer": {
-    "title": "Spieler | Spieler #{player}",
+    "title": "Spieler | Spieler {player}",
     "info": "Führe deinen Zug aus."
   },
   "roundBot": {
-    "title": "ARNO | ARNO #{bot}",
+    "title": "ARNO | ARNO {bot}",
     "upgrade": "Aufwerten",
     "reroll": "Neu würfeln",
     "associationWorker": "ARNO setzt einen <b>Arbeiter</b> ein:",

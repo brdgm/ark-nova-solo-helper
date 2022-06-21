@@ -43,11 +43,11 @@
     "text8": "You do not need dice or action cards."
   },
   "roundPlayer": {
-    "title": "Player | Player #{player}",
+    "title": "Player | Player {player}",
     "info": "Take your turn."
   },
   "roundBot": {
-    "title": "ARNO | ARNO #{bot}",
+    "title": "ARNO | ARNO {bot}",
     "upgrade": "Upgrade",
     "reroll": "Reroll",
     "associationWorker": "ARNO places one <b>Association Worker</b>:",
