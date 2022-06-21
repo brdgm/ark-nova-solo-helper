@@ -111,8 +111,9 @@
     "link": "Bonusplättchen",
     "text": "ARNO wählt niemals den vorgedruckten Bonus.",
     "pick": "Bonusplättchen auswählen",
-    "left": "ARNO nimmt das <b>linke</b> Bonusplättchen.",
-    "right": "ARNO nimmt das <b>rechte</b> Bonusplättchen."
+    "left": "ARNO nimmt das <b>linke</b> Bonusplättchen aus der Auslage.",
+    "right": "ARNO nimmt das <b>rechte</b> Bonusplättchen aus der Auslage.",
+    "usage": "Diese drei Bonusplättchen kann ARNO nutzen. Bei allen anderen erhält ARNO keinen Bonus."
   },
   "scoring": {
     "title": "Auswertung",

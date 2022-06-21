@@ -111,8 +111,9 @@
     "link": "Bonus Tile",
     "text": "ARNO never picks the pre-printed bonus.",
     "pick": "Pick Bonus Tile",
-    "left": "ARNO takes the <b>left</b> bonus tile.",
-    "right": "ARNO takes the <b>right</b> bonus tile."
+    "left": "ARNO takes the <b>left</b> bonus tile from the display.",
+    "right": "ARNO takes the <b>right</b> bonus tile from the display.",
+    "usage": "ARNO can only use these three bonus tiles. He does not receive any bonus from the others."
   },
   "scoring": {
     "title": "Scoring",
