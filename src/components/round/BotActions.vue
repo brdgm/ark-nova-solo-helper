@@ -13,9 +13,9 @@
   </div>
   <div class="actions">
     <div v-for="(action, index) in actionsWithDescription" :key="index" class="action">
-      <Icon :name="action.action" class="icon"/>
-      <div v-if="isConservationProjectWork(action.action)" class="label actionHelp" v-html="t(`cardAction.${action.action}`)" data-bs-toggle="modal" data-bs-target="#actionHelpProjectConservationWorkModal"></div>
-      <div v-else class="label" v-html="t(`cardAction.${action.action}`,{number:getRandomNumber(action.action),amount:action.amount},action.amount)"></div>
+      <Icon :name="action.action" class="icon float-start me-3 mb-3"/>
+      <span v-if="isConservationProjectWork(action.action)" class="actionHelp" v-html="t(`cardAction.${action.action}`)" data-bs-toggle="modal" data-bs-target="#actionHelpProjectConservationWorkModal"></span>
+      <span v-else v-html="t(`cardAction.${action.action}`,{number:getRandomNumber(action.action),amount:action.amount},action.amount)"></span>
       <button v-if="allowReroll(action.action)" type="button" class="upgrade btn btn-outline-secondary btn-sm ms-2" @click="$forceUpdate()">
         {{t('roundBot.reroll')}}
       </button>
@@ -211,16 +211,11 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-@import "bootstrap/scss/functions";
-@import "bootstrap/scss/variables";
-@import "bootstrap/scss/utilities";
-@import "bootstrap/scss/mixins";
-@import "bootstrap/scss/grid";
-
 .actions {
   .action {
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
+    clear: both;
     &.amount {
       display: inline-block;
       position: relative;
@@ -278,6 +273,7 @@ export default defineComponent({
   }
   .fallbackText {
     font-style: italic;
+    clear: both;
   }
 }
 .actionHelp {
@@ -290,5 +286,8 @@ export default defineComponent({
   .icon {
     cursor: pointer;
   }
+}
+hr {
+  clear: both;
 }
 </style>

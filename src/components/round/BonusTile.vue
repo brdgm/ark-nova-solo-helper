@@ -1,11 +1,11 @@
 <template>
-  <a id="bonusTile" data-bs-toggle="modal" href="#getBonusTileModal">{{t('bonusTile.link')}}</a>
+  <a id="bonusTile" data-bs-toggle="modal" href="#getBonusTileModal" v-html="t('bonusTile.link')"></a>
 
   <div class="modal" id="getBonusTileModal" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title">{{t('bonusTile.link')}}</h5>
+          <h5 class="modal-title" v-html="t('bonusTile.link')"></h5>
           <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -79,6 +79,8 @@ export default defineComponent({
   float: right;
   text-decoration: underline dotted;
   color: #000;
+  max-width: 20%;
+  text-align: right;
 }
 .bonusTileImage {
   display: inline-block;
