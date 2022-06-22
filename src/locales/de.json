@@ -108,7 +108,7 @@
     "text6": "Immer wenn ARNO <b>Karten erhält</b>, werfe alle Sponsoren-Karten ab und lege Tier- und Artenschutzkarten auf die Kartenstapel auf dem Zooplan."
   },
   "bonusTile": {
-    "link": "Bonusplättchen",
+    "link": "Bonus&shy;plättchen",
     "text": "ARNO wählt niemals den vorgedruckten Bonus.",
     "pick": "Bonusplättchen auswählen",
     "left": "ARNO nimmt das <b>linke</b> Bonusplättchen aus der Auslage.",
@@ -120,9 +120,9 @@
     "humanPlayers": "Menschliche Spieler",
     "humanPlayersText": "Erhalte Artenschutzpunkte oder Attraktion durch deine <b>Endwertungskarte(n)</b> sowie durch alle deine ausliegenden Karten mit dem <b>Spielende-Symbol</b>.",
     "botText": "Erhält <b>{conservationPoints} Artenschutzpunkt(e)</b> für {tokenScoringCardCount} Markierungsstein(e) auf der Endwertungskarte und {tokenNotepadCount} Markierungsstein(e) auf dem Notizzettel.",
-    "conservationPoints": "Artenschutzpunkte",
+    "conservationPoints": "Arten&shy;schutz&shy;punkte",
     "appeal": "Attraktion",
-    "victoryPoints": "Siegpunkte"
+    "victoryPoints": "Sieg&shy;punkte"
   },
   "notfound": {
     "title": "Nicht Gefunden"
