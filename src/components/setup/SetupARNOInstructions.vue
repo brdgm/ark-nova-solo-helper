@@ -33,9 +33,26 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/utilities";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/grid";
+
 .zoomat {
   width: 60%;
 }
+@include media-breakpoint-down(lg) {
+  .zoomat {
+    width: 75%;
+  }
+}
+@include media-breakpoint-down(sm) {
+  .zoomat {
+    width: 100%;
+  }
+}
+
 li {
   margin-top: 0.5rem;
   &::marker {
