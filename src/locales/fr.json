@@ -89,8 +89,8 @@
       "sponsors": "Mécènes"    
     },
     "cardAction": {
-      "gain-partner-zoo": "Gagne <b>un zoo partenaire#{number}</b>.",
-      "gain-partner-university": "Gagne <b> une université#{number}</b>.",
+      "gain-partner-zoo": "Gagne <b>un zoo partenaire #{number}</b>.",
+      "gain-partner-university": "Gagne <b> une université #{number}</b>.",
       "conservation-project-work": "<b>Projet de conservation</b>.",
       "take-card-display": "ARNO prend la <b>carte #{number}</b> de la rivière.",
       "token-scoring-card": "Placez <b>1</b> des cubes d'ARNO sur <b>fcarte de Décompte final</b>.<br/>S'il y a déjà 6 cubes, conservation +2.",
