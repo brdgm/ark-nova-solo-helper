@@ -80,6 +80,7 @@ describe('BotActions', () => {
     expect(botActions.hasFallback).to.false
     expect(botActions.getTokenScoringCardCount()).to.eq(1)
     expect(botActions.getTokenNotepadCount()).to.eq(0)
+    expect(botActions.getAppealCount()).to.eq(0)
   })
 
   it('sponsors-upgraded-3-medium', () => {
@@ -94,6 +95,7 @@ describe('BotActions', () => {
     expect(botActions.hasFallback).to.false
     expect(botActions.getTokenScoringCardCount()).to.eq(0)
     expect(botActions.getTokenNotepadCount()).to.eq(1)
+    expect(botActions.getAppealCount()).to.eq(3)
   })
 
   it('build-standard-5-hard', () => {
