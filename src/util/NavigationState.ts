@@ -46,6 +46,7 @@ export default class NavigationState {
       let cardSlots, botActions
       let tokenScoringCardCount = 0
       let tokenNotepadCount = 0
+      let appealCount = 0
       if (roundNumber == 1) {
         // start new game
         cardSlots = CardSlots.new()
@@ -60,6 +61,7 @@ export default class NavigationState {
         cardSlots = CardSlots.fromPersistence(previousRound.cardSlots)
         tokenScoringCardCount = previousRound.tokenScoringCardCount
         tokenNotepadCount = previousRound.tokenNotepadCount
+        appealCount = previousRound.appealCount || 0
         // move previous card to first position
         cardSlots.moveFirst(cardSlots.get(previousRound.slotNumber))
         botActions = BotActions.newRandomSlot(cardSlots, this.difficultyLevel, this.actionCardDistribution)
@@ -70,7 +72,8 @@ export default class NavigationState {
         cardSlots: cardSlots.toPersistence(),
         slotNumber: botActions.slotNumber,
         tokenScoringCardCount: tokenScoringCardCount + botActions.getTokenScoringCardCount(),
-        tokenNotepadCount: tokenNotepadCount + botActions.getTokenNotepadCount() 
+        tokenNotepadCount: tokenNotepadCount + botActions.getTokenNotepadCount(),
+        appealCount: appealCount + botActions.getAppealCount()
       }
       store.commit('round', botRound)
     }

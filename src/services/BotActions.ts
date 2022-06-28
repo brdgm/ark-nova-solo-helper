@@ -77,6 +77,10 @@ export default class BotActions {
     return this.getAmountSum(Action.TOKEN_NOTEPAD)
   }
 
+  public getAppealCount() : number {
+    return this.getAmountSum(Action.APPEAL)
+  }
+
   private getAmountSum(action : Action) : number {
     return this._actions
         .filter(item => item.action == action)

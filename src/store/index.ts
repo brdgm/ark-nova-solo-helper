@@ -34,6 +34,7 @@ export interface BotRound {
   slotNumber: number
   tokenScoringCardCount: number
   tokenNotepadCount: number
+  appealCount?: number
 }
 export interface CardSlotsPersistence {
   slots: CardName[]

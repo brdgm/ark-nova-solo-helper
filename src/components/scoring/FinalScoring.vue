@@ -64,7 +64,7 @@ export default defineComponent({
   data() {
     return {
       conservationPoints: [] as number[],
-      appeal: [] as number[]
+      appeal: this.getInitialAppealArray()
     }
   },
   computed: {
@@ -86,6 +86,16 @@ export default defineComponent({
     },
     getTokenNotepadCount(bot : number) : number {
       return this.lastBotRound[bot - 1]?.tokenNotepadCount || 0
+    },
+    getAppealCount(bot : number) : number {
+      return this.lastBotRound[bot - 1]?.appealCount || 0
+    },
+    getInitialAppealArray() : number[] {
+      let result = [] as number[]
+      for (let bot=1; bot<=this.botCount; bot++) {
+        result[this.playerCount + bot - 1] = this.getAppealCount(bot)
+      }
+      return result
     },
     getBotConservationPoints(bot : number) : number {
       let scoringCardPoints = this.getTokenScoringCardCount(bot) - 2
