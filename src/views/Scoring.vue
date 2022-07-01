@@ -1,5 +1,4 @@
 <template>
-  <AboutARNO/>  
   <h1>{{t('scoring.title')}}</h1>
 
   <FinalScoring/>

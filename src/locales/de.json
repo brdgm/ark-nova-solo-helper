@@ -107,6 +107,9 @@
     "text5": "ARNO kann <b>nicht Opfer von interaktiven Effekten</b> werden, nutze stattdessen den abweichenden Effekt für das Solospiel.",
     "text6": "Immer wenn ARNO <b>Karten erhält</b>, werfe alle Sponsoren-Karten ab und lege Tier- und Artenschutzkarten auf die Kartenstapel auf dem Zooplan."
   },
+  "roundDisplay": {
+    "round": "Runde {round}"
+  },
   "bonusTile": {
     "link": "Bonus&shy;plättchen",
     "text": "ARNO wählt niemals den vorgedruckten Bonus.",

@@ -1,5 +1,8 @@
 <template>
-  <AboutARNO/>  
+  <div class="float-end text-end">
+    <AboutARNO/>
+    <RoundDisplay :round="round"/>
+  </div>
   <h1><PlayerColorDisplay :playerColor="playerColor" class="me-2"/>{{t('roundPlayer.title', {player:player}, playerCount)}}</h1>
 
   <p class="mt-4">{{t('roundPlayer.info')}}</p>
@@ -20,13 +23,15 @@ import NavigationState from '@/util/NavigationState'
 import { useStore } from '@/store'
 import { useRoute } from 'vue-router'
 import AboutARNO from '@/components/structure/AboutARNO.vue'
+import RoundDisplay from '@/components/structure/RoundDisplay.vue'
 
 export default defineComponent({
   name: 'RoundPlayer',
   components: {
     PlayerColorDisplay,
     FooterButtons,
-    AboutARNO
+    AboutARNO,
+    RoundDisplay
   },
   setup() {
     const { t } = useI18n()

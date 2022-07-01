@@ -1,5 +1,7 @@
 <template>
-  <AboutARNO/>
+  <div class="float-end text-end">
+    <AboutARNO/>
+  </div>
   <h1>{{t('setup.title')}}</h1>
 
   <Players/>

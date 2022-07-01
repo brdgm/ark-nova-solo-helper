@@ -107,6 +107,9 @@
       "text5": "ARNO <b>ne peut jamais être la cible d’effets d’interaction de cartes</b>. A la place, il faut utiliser l’effet présent dans la bande bleue en bas de la carte.",
       "text6": "Chaque fois qu'ARNO <b>reçoit des cartes</b> pendant la partie, défaussez toutes les cartes de Mécènes et empilez les cartes Animaux et de Projets de conservation sur son plateau zoo."
     },
+    "roundDisplay": {
+      "round": "Tour {round}"
+    },  
     "bonusTile": {
       "link": "Tuile bonus",
       "text": "ARNO ne choisit jamais le bonus pré-imprimé.",
