@@ -1,7 +1,7 @@
 <template>
-  <a id="aboutARNO" data-bs-toggle="modal" href="#aboutARNOModal">{{t('aboutARNO.link')}}</a>
+  <a data-bs-toggle="modal" href="#aboutARNOModal">{{t('aboutARNO.link')}}</a>
 
-  <div class="modal" id="aboutARNOModal" tabindex="-1">
+  <div class="modal text-start" id="aboutARNOModal" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
       <div class="modal-content">
         <div class="modal-header">
@@ -39,8 +39,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-#aboutARNO {
-  float: right;
+a {
   text-decoration: underline dotted;
   color: #000;
 }

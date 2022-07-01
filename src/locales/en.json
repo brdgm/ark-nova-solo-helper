@@ -107,6 +107,9 @@
     "text5": "ARNO can <b>never be the target of an interactive effect</b>. Please use the alternative solo play effects of those cards instead.",
     "text6": "Every time ARNO <b>receives cards</b> during the game, discard all sponsor cards and stack animal and conservation project cards on his zoo mat."
   },
+  "roundDisplay": {
+    "round": "Round {round}"
+  },
   "bonusTile": {
     "link": "Bonus Tile",
     "text": "ARNO never picks the pre-printed bonus.",

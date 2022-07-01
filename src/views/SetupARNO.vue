@@ -1,5 +1,7 @@
 <template>
-  <AboutARNO/>
+  <div class="float-end text-end">
+    <AboutARNO/>
+  </div>
   <h1>{{t('setupARNO.title')}}</h1>
 
   <SetupARNOInstructions/>
