@@ -14,8 +14,8 @@
   <div class="actions">
     <div v-for="(action, index) in actionsWithDescription" :key="index" class="action">
       <Icon :name="action.action" class="icon float-start me-3 mb-3"/>
-      <template v-if="isGainPartnerZoo(action.action)"><GainPartnerZoo :amount="action.amount"/></template>
-      <template v-else-if="isGainPartnerUniversity(action.action)"><GainPartnerUniversity :amount="action.amount"/></template>
+      <template v-if="isGainPartnerZoo(action.action)"><GainPartnerZoo/></template>
+      <template v-else-if="isGainPartnerUniversity(action.action)"><GainPartnerUniversity/></template>
       <span v-else-if="isConservationProjectWork(action.action)" class="actionHelp" v-html="t(`cardAction.${action.action}`)" data-bs-toggle="modal" data-bs-target="#actionHelpProjectConservationWorkModal"></span>
       <span v-else v-html="t(`cardAction.${action.action}`,{number:getRandomNumber(action.action),amount:action.amount},action.amount)"></span>
     </div>

@@ -116,7 +116,9 @@
       "pick": "Choisir une tuile bonus",
       "left": "ARNO prend la tuile bonus <b>gauche</b>.",
       "right": "AARNO prend la tuile bonus <b>droite</b>.",
-      "usage": "ARNO ne peut utiliser que ces trois tuiles bonus. Il ne reçoit aucun bonus des autres tuiles."
+      "usage": "ARNO ne peut utiliser que ces trois tuiles bonus. Il ne reçoit aucun bonus des autres tuiles.",
+      "pickPartnerZoo": "Choisir un zoo partenaire",
+      "pickPartnerUniversity": "Choisir une université"
     },
     "scoring": {
       "title": "Décompte final",
