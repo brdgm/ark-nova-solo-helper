@@ -14,11 +14,10 @@
   <div class="actions">
     <div v-for="(action, index) in actionsWithDescription" :key="index" class="action">
       <Icon :name="action.action" class="icon float-start me-3 mb-3"/>
-      <span v-if="isConservationProjectWork(action.action)" class="actionHelp" v-html="t(`cardAction.${action.action}`)" data-bs-toggle="modal" data-bs-target="#actionHelpProjectConservationWorkModal"></span>
+      <template v-if="isGainPartnerZoo(action.action)"><GainPartnerZoo :amount="action.amount"/></template>
+      <template v-else-if="isGainPartnerUniversity(action.action)"><GainPartnerUniversity :amount="action.amount"/></template>
+      <span v-else-if="isConservationProjectWork(action.action)" class="actionHelp" v-html="t(`cardAction.${action.action}`)" data-bs-toggle="modal" data-bs-target="#actionHelpProjectConservationWorkModal"></span>
       <span v-else v-html="t(`cardAction.${action.action}`,{number:getRandomNumber(action.action),amount:action.amount},action.amount)"></span>
-      <button v-if="allowReroll(action.action)" type="button" class="upgrade btn btn-outline-secondary btn-sm ms-2" @click="$forceUpdate()">
-        {{t('roundBot.reroll')}}
-      </button>
     </div>
   </div>
   <div class="actions" v-if="botActions.hasFallback">
@@ -90,14 +89,18 @@ import Card from '@/services/Card'
 import Action from '@/services/enum/Action'
 import BotAction from '@/services/BotAction'
 import CardName from "@/services/enum/CardName"
+import GainPartnerUniversity from "./GainPartnerUniversity.vue"
+import GainPartnerZoo from "./GainPartnerZoo.vue"
 
 export default defineComponent({
   name: 'BotActions',
   components: {
     Icon,
     ActionCards,
-    PickConservationProject,
-    BonusTile
+    BonusTile,
+    GainPartnerZoo,
+    GainPartnerUniversity,
+    PickConservationProject
   },
   setup() {
     const { t } = useI18n()
@@ -170,28 +173,21 @@ export default defineComponent({
         .filter(action => this.isAssociationAction(action))
         .filter(action => !currentAssociationActions.includes(action))
     },
+    isGainPartnerZoo(action : Action) : boolean {
+      return action == Action.GAIN_PARTNER_ZOO
+    },
+    isGainPartnerUniversity(action : Action) : boolean {
+      return action == Action.GAIN_PARTNER_UNIVERSITY
+    },
     isConservationProjectWork(action : Action) : boolean {
       return action == Action.CONSERVATION_PROJECT_WORK
     },
     getRandomNumber(action : Action) : number {
       switch(action) {
-        case Action.GAIN_PARTNER_UNIVERSITY:
-          return rollDice(3)
-        case Action.GAIN_PARTNER_ZOO:
-          return rollDice(5)
         case Action.TAKE_CARD_DISPLAY:
           return rollDice(6)
         default:
           return 0;
-      }
-    },
-    allowReroll(action : Action) : boolean {
-      switch(action) {
-        case Action.GAIN_PARTNER_UNIVERSITY:
-        case Action.GAIN_PARTNER_ZOO:
-          return true
-        default:
-          return false;
       }
     },
     overwriteAssociationAction(action : Action) : void {
