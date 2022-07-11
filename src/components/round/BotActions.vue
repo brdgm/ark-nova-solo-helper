@@ -183,12 +183,10 @@ export default defineComponent({
       return action == Action.CONSERVATION_PROJECT_WORK
     },
     getRandomNumber(action : Action) : number {
-      switch(action) {
-        case Action.TAKE_CARD_DISPLAY:
-          return rollDice(6)
-        default:
-          return 0;
+      if (action == Action.TAKE_CARD_DISPLAY) {
+        return rollDice(6)
       }
+      return 0
     },
     overwriteAssociationAction(action : Action) : void {
       this.overwriteBotActions = this.botActions.actions
