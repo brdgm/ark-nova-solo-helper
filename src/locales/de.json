@@ -116,7 +116,9 @@
     "pick": "Bonusplättchen auswählen",
     "left": "ARNO nimmt das <b>linke</b> Bonusplättchen aus der Auslage.",
     "right": "ARNO nimmt das <b>rechte</b> Bonusplättchen aus der Auslage.",
-    "usage": "Diese drei Bonusplättchen kann ARNO nutzen. Bei allen anderen erhält ARNO keinen Bonus."
+    "usage": "Diese drei Bonusplättchen kann ARNO nutzen. Bei allen anderen erhält ARNO keinen Bonus.",
+    "pickPartnerZoo": "Partnerzoo auswählen",
+    "pickPartnerUniversity": "Partneruniversität auswählen"
   },
   "scoring": {
     "title": "Auswertung",

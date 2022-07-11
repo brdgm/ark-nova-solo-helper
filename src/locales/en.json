@@ -116,7 +116,9 @@
     "pick": "Pick Bonus Tile",
     "left": "ARNO takes the <b>left</b> bonus tile from the display.",
     "right": "ARNO takes the <b>right</b> bonus tile from the display.",
-    "usage": "ARNO can only use these three bonus tiles. He does not receive any bonus from the others."
+    "usage": "ARNO can only use these three bonus tiles. He does not receive any bonus from the others.",
+    "pickPartnerZoo": "Pick Partner Zoo",
+    "pickPartnerUniversity": "Pick Partner University"
   },
   "scoring": {
     "title": "Scoring",
