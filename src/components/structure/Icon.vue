@@ -11,6 +11,10 @@ export default defineComponent({
     return { images }
   },
   props: {
+    type: {
+      type: String,
+      required: false
+    },
     name: {
       type: String,
       required: true
@@ -18,7 +22,12 @@ export default defineComponent({
   },
   computed: {
     imageUrl() : string {
-      return this.images(`./${this.name}.png`)
+      if (this.type) {
+        return this.images(`./${this.type}/${this.name}.png`)
+      }
+      else {
+        return this.images(`./${this.name}.png`)
+      }
     }
   }
 })

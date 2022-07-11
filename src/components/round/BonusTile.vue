@@ -15,24 +15,9 @@
           <p v-if="bonusTilePosition==2" v-html="t('bonusTile.right')"></p>
           <hr/>
           <p v-html="t('bonusTile.usage')"></p>
-          <div class="bonusTileImage">
-            <Icon name="gain-partner-zoo" class="icon"/>
-            <svg width="4rem" height="4rem" version="1.1" xmlns="http://www.w3.org/2000/svg">
-              <polygon transform="matrix(.08179966 0 0 .08170869 7.9509581 10.240202)" points="585.24612 214.60269 474 556.98304 114 556.98304 2.753882 214.60269 294 3" fill="#f7ee58" stroke="#555" stroke-width="10"/>
-            </svg>
-          </div>
-          <div class="bonusTileImage">
-            <Icon name="gain-partner-university" class="icon university"/>
-            <svg width="4rem" height="4rem" version="1.1" xmlns="http://www.w3.org/2000/svg">
-              <polygon transform="matrix(.08179966 0 0 .08170869 7.9509581 10.240202)" points="585.24612 214.60269 474 556.98304 114 556.98304 2.753882 214.60269 294 3" fill="#f7ee58" stroke="#555" stroke-width="10"/>
-            </svg>
-          </div>
-          <div class="bonusTileImage">
-            <Icon name="reputation" class="icon"/>
-            <svg width="4rem" height="4rem" version="1.1" xmlns="http://www.w3.org/2000/svg">
-              <polygon transform="matrix(.08179966 0 0 .08170869 7.9509581 10.240202)" points="585.24612 214.60269 474 556.98304 114 556.98304 2.753882 214.60269 294 3" fill="#f7ee58" stroke="#555" stroke-width="10"/>
-            </svg>
-          </div>
+          <Icon type="bonus-tile" name="partner-zoo" class="bonusTileImage"/>
+          <Icon type="bonus-tile" name="partner-university" class="bonusTileImage"/>
+          <Icon type="bonus-tile" name="reputation" class="bonusTileImage"/>
         </div>
         <div class="modal-footer">
           <button class="btn btn-secondary" @click="reset()" data-bs-dismiss="modal">{{t('action.close')}}</button>
@@ -85,20 +70,8 @@ export default defineComponent({
 .bonusTileImage {
   display: inline-block;
   position: relative;
-  svg {
-    position: relative;
-    top: 0;
-    left: 0;
-  }
-  .icon {
-    position: absolute;
-    top: 1.4rem;
-    left: 1rem;
-    width: 2rem;
-    z-index: 10;
-    &.university {
-      top: 1.25rem;
-    }
-  }
+  width: 3.5rem;
+  filter: drop-shadow(2px 2px 3px #888);
+  margin-right: 0.5rem;
 }
 </style>
