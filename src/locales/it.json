@@ -1,0 +1,154 @@
+{
+  "gameTitle": "Ark Nova",
+  "home": {
+    "title": "Aiutante Ark Nova Solo",
+    "play1": "Gioca la <a href='https://boardgamegeek.com/thread/2823056/rno-alternative-solo-mode' target='_blank' rel='noopener'><b>modalità in solitaria (non ufficiale) A.R.N.O.</b></a> di <a href='https://boardgamegeek.com/boardgame/342942/ark-nova' target='_blank' rel='noopener'><b>Ark Nova</b></a>. A differenza della modalità in solitario ufficiale ARNO simula avversari addizionali, in maniera simile ad una partita a più giocatori.",
+    "play2": "Per giocare alla modalità solitario hai bisogno solo del gioco base. Questa applicazione sostituisce il mazzo di carte ARNO e i dadi, oltre a tener traccia dei progressi di ARNO.",
+    "feedback": "Discussioni e Feedback:"
+  },
+  "setup": {
+    "title": "Setup",
+    "players": {
+      "title": "Giocatore",
+      "playerCount": "Giocatori Umani",
+      "playerCountItem": "{count} Giocatore | {count} Giocatori",
+      "playerColor": "Colore Giocatore | Colore Giocatore {index}",
+      "botCount": "Bot ARNO",
+      "botCountItem": "{count} Bot ARNO | {count} Bot ARNO",
+      "botColor": "Colore ARNO | Colore ARNO {index}"
+    },
+    "difficultyLevel": {
+      "title": "Livello Difficoltà",
+      "easy": "Facile",
+      "hard": "Difficile"
+    },
+    "actionCardDistribution": {
+      "title": "Distribuzione Delle Carte Azione",
+      "schema": "Probabilità (%)",
+      "text": "Opzione sperimentale. L'opzione '0-25-25-25-25' segue il regolamento di ARNO."
+    }
+  },
+  "setupARNO": {
+    "title": "Setup di ARNO",
+    "text1": "Prepara il gioco in base al numero di giocatori (compresi gli ARNO). Un giocatore umano sarà il giocatore iniziale.",
+    "text2": "Ogni ARNO inizia con <b>un punto conservazione</b> e punti attrattiva a seconda dell'ordine di partenza. Per esempio, se ARNO è il 3° giocatore, inizia con 2 punti attrattiva.",
+    "text3": "Ogni ARNO riceve i componenti di un colore, una mappa zoo (mappa A), una carta Punteggio Finale a faccia in giù e 8 carte Zoo casuali.",
+    "text4": "Metti tutti i segnalini giocatore del colore di ARNO accanto alla sua mappa zoo.",
+    "text5": "ARNO inizia con un lavoratore delle associazioni sul suo taccuino. Posiziona i restanti 3 negli spazi designati sotto il taccuino della mappa zoo.",
+    "text6": "Posiziona la carta Punteggio Finale nell'area sinistra della mappa zoo. Coprirà l’area di costruzione che non è necessaria per ARNO.",
+    "text7": "Ordina le 8 carte Zoo di ARNO in base al tipo:",
+    "text7-1": "Scarta tutte le carte Sponsor.",
+    "text7-2": "Impila tutte le carte Animale accanto alla carta Punteggio Finale di ARNO, in modo da lasciare visibili le icone in alto a destra di ogni carta.",
+    "text7-3": "Fai un'altra pila con le carte Progetto di Conservazione di ARNO. Se ARNO non ne riceve a inizio partita, comincia la pila quando riceve la sua prima carta Progetto.",
+    "text8": "Non hai bisogno di dadi o delle carte azione."
+  },
+  "roundPlayer": {
+    "title": "Giocatore | Giocatore {player}",
+    "info": "Svolgi il tuo turno."
+  },
+  "roundBot": {
+    "title": "ARNO | ARNO {bot}",
+    "upgrade": "Migliora",
+    "reroll": "Ritira",
+    "associationWorker": "ARNO piazza un <b>Lavoratore delle associazioni</b>:",
+    "fallbackText": "In alternativa, se non è possibile:",
+    "upgradeCard": {
+      "title": "Migliora Carta",
+      "text": "Migliora una carta di ARNO?",
+      "note": "Nota bene: Quando ARNO raggiunge 2 punti conservazione, sceglie sempre il lavoratore dell'associazione, non il miglioramento della carta."
+    },
+    "actionHelpAssociationWorker": {
+      "title": "Piazza Lavoratore",
+      "text": "Se ARNO ha già uno dei suoi lavoratori in questo compito presso le associazioni, seleziona il successivo compito più alto dove nessuno dei suoi lavoratori è ancora piazzato. Fondamentalmente sta usando segnalini X per migliorare l'azione; non mette mai due lavoratori nello stesso compito. Se non è disponibile alcun compito superiore, seleziona il compito successivo inferiore disponibile. Se ARNO non ha più un lavoratore disponibile, riceve +2 punti conservazione e avanza il segnalino pausa +2.",
+      "chooseDifferent": "Scegli un compito Associazione differente:"
+    },
+    "actionHelpProjectConservationWork": {
+      "title": "Progetto di conservazione"
+    },
+    "pickConservationProject": {
+      "conservationProjectSelection": "Scelta del Progetto di Conservazione",
+      "conservationProjectsHand": "Quanti Progetti di Conservazione ha ARNO sulla sua mappa zoo?",
+      "conservationProjectsBoardNoToken": "Quanti Progetti di Conservazione sono presenti sulla plancia delle Associazioni e privi di segnalini giocatore?",
+      "conservationProjectsBoardAvailable": "Quanti Progetti di Conservazione sono presenti sulla plancia delle Associazioni che ARNO ancora non ha sostenuto?",
+      "pick": "Scegli Progetto di Conservazione",
+      "pickFromHand": "ARNO sostiene il Progetto di Conservazione {number}. della sua mappa zoo.",
+      "pickFromBoardNoToken": "ARNO sostiene il Progetto di Conservazione {number}. sulla plancia delle Associazioni senza segnalini giocatore.",
+      "pickFromBoardAvailable": "ARNO sostiene il Progetto di Conservazione {number}. sulla plancia delle Associazioni che per lui è ancora disponibile.",
+      "tokenPlacement": "Piazzamento Segnalino",
+      "projectSlotLeftMost": "ARNO preferisce piazzare il suo segnalino sullo spazio più a sinistra.",
+      "projectSlotMiddle": "ARNO preferisce piazzare il suo segnalino sullo spazio al centro.",
+      "projectSlotRightMost": "ARNO preferisce piazzare il suo segnalino sullo spazio più a destra.",
+      "projectSlotAlternatives": "Se questo spazio è già stato coperto, allora piazza il segnalino al livello successivo a sinistra. Se anche questo è occupato, al livello successivo disponibile a destra."
+    }
+  },
+  "cardType": {
+    "animals": "Animali",
+    "association": "Associazione",
+    "build": "Costruzione",
+    "cards": "Carte",
+    "sponsors": "Sponsor"
+  },
+  "cardAction": {
+    "gain-partner-zoo": "Ottiene <b>zoo partner #{number}</b>.",
+    "gain-partner-university": "Ottiene <b>università partner #{number}</b>.",
+    "conservation-project-work": "<b>Progetto di conservazione</b>.",
+    "take-card-display": "Aggancia la <b>carta #{number}</b> dalla vetrina.",
+    "token-scoring-card": "Posiziona <b>1</b> segnalino giocatore ARNO sulla sua <b>carta punteggio finale</b>.<br/>Se ci sono già 6 segnalini, conservazione +2.",
+    "token-notepad": "Piazza <b>{amount}</b> segnalino giocatore di ARNO sul suo <b>taccuino</b> (per il punteggio finale). | Piazza <b>{amount}</b> segnalini giocatore di ARNO sul suo <b>taccuino</b> (per il punteggio finale).",
+    "donate": "ARNO dona."
+  },
+  "aboutARNO": {
+    "link": "Informazioni su ARNO",
+    "title": "Riassunto delle Regole A.R.N.O.",
+    "text1": "ARNO <b>non usa soldi</b>. Non spende soldi per le azioni e non riceve mai soldi (ad esempio durante le pause o dalle carte Animali).",
+    "text2": "ARNO <b>usa solo l’area destra della sua mappa zoo</b>. È dove piazza i suoi zoo partner e le università, ed anche dove prende i lavoratori delle associazioni. Riceve anche i bonus una volta scoperti. L’area sinistra del suo zoo non verrà considerata ed usata solamente per piazzare le carte Zoo e la carta Punteggio Finale.",
+    "text3": "ARNO riceve i seguenti <b>bonus</b> dalla sua mappa zoo e dalla plancia generale: <b>punti Conservazione, miglioramenti delle carte, punti reputazione e lavoratori delle associazioni.</b> Oltre ai soldi non riceve nemmeno i bonus dalle carte Animali o Sponsor, edifici, recinti, segnalini X o durante le pause.",
+    "text4": "Le carte Animale impilate sulla mappa zoo di ARNO offrono <b>icone di riferimento per alcuni effetti delle carte</b> dei giocatori umani. Quando ARNO piazza un altro Animale sulla sua pila, le icone innescano gli effetti sulle carte degli altri giocatori.",
+    "text5": "ARNO <b>non è mai il bersaglio di un effetto interattivo</b>. Per favore usate gli effetti alternativi per il solitario su quelle carte.",
+    "text6": "Ogni volta che ARNO <b>riceve carte</b> durante il gioco, scarta tutti gli sponsor e impila le carte animali e progetti di conservazione sulla sua mappa zoo."
+  },
+  "roundDisplay": {
+    "round": "Round {round}"
+  },
+  "bonusTile": {
+    "link": "Tessera Bonus",
+    "text": "ARNO sceglie sempre una delle due tessere bonus variabili e non quelle prestampate.",
+    "pick": "Scegli Tessera Bonus",
+    "left": "ARNO prende la tessera bonus a <b>sinistra</b>.",
+    "right": "ARNO prende la tessera bonus a <b>destra</b>.",
+    "usage": "ARNO può usare solo queste 3 tessere bonus. Non riceve benefici dalle altre.",
+    "pickPartnerZoo": "Scegli Zoo Partner",
+    "pickPartnerUniversity": "Scegli Università Partner"
+  },
+  "scoring": {
+    "title": "Punteggio",
+    "humanPlayers": "Giocatori Umani",
+    "humanPlayersText": "Ottieni punti conservazione e attrattiva dalla(e) <b>carta(e) Punteggio Finale</b> e da tutte le carte con un <b>effetto di fine partita</b>.",
+    "botText": "Ottiene <b>{conservationPoints} punto(i) conservazione</b> per {tokenScoringCardCount} segnalino(i) sulla carta punteggio finale e {tokenNotepadCount} segnalino(i) sul taccuino.",
+    "conservationPoints": "Punti Conservazione",
+    "appeal": "Attrattiva",
+    "victoryPoints": "Punti Vittoria"
+  },
+  "notfound": {
+    "title": "Non Trovato"
+  },
+  "action": {
+    "playGame": "Gioca Partita",
+    "startGame": "Inizia Partita",
+    "next": "Avanti",
+    "abortGame": "Annulla Partita",
+    "abortGameConfirm": "Stai per interrompere la partita corrente - sei sicuro?",
+    "finishGame": "Finisci Partita",
+    "finishGameConfirm": "Finisci la partita e vai al calcolo del punteggio - sei sicuro?",
+    "endGame": "Termina Partita",
+    "endGameConfirm": "Finisci la partita e torna alla schermata iniziale - sei sicuro?",
+    "cancel": "Annulla",
+    "backToHome": "Torna alla Home",
+    "back": "Indietro",
+    "close": "Chiudi",
+    "reset": "Reset"
+  },
+  "footer": {
+    "credits": "Credits"
+  }
+}
