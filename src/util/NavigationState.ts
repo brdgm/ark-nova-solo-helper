@@ -51,6 +51,8 @@ export default class NavigationState {
         // start new game
         cardSlots = CardSlots.new()
         botActions = BotActions.newRandomSlot(cardSlots, this.difficultyLevel, this.actionCardDistribution)
+        // start appeal depending on player order
+        appealCount = botNumber + this.playerCount - 1
       }
       else {
         // continue with cards from previous round
