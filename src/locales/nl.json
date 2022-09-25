@@ -1,0 +1,154 @@
+{
+  "gameTitle": "Ark Nova",
+  "home": {
+    "title": "Ark Nova Solo Helper",
+    "play1": "Speel de <a href='https://boardgamegeek.com/thread/2823056/rno-alternative-solo-mode' target='_blank' rel='noopener'><b>A.R.N.O. Solo Mode</b></a> (Niet officieel) of <a href='https://boardgamegeek.com/boardgame/342942/ark-nova' target='_blank' rel='noopener'><b>Ark Nova</b></a>. In tegenstelling tot de officiële solo mode, simuleert deze aanvullend(e) tegenstander(s) zoals bij een multi-player spel.",
+    "play2": "Om de solo mode te kunnen spelen heb je alleen het basisspel nodig. Deze helper-app vervangt de ARNO spelkaarten en de dobbelsteen en houdt ARNO's voortgang bij.",
+    "feedback": "Discussie en Feedback:"
+  },
+  "setup": {
+    "title": "Spel instellen",
+    "players": {
+      "title": "Speler",
+      "playerCount": "Menselijke Spelers",
+      "playerCountItem": "{aantal} Speler | {aantal} Spelers",
+      "playerColor": "Spelerskleur | Speler {index} Kleur",
+      "botCount": "ARNO Bots",
+      "botCountItem": "{aantal} ARNO Bot | {aantal} ARNO Bots",
+      "botColor": "ARNO Kleur | ARNO {index} Kleur"
+    },
+    "difficultyLevel": {
+      "title": "Moeilijksheidsgraad",
+      "easy": "Makkelijk",
+      "hard": "Moeilijk"
+    },
+    "actionCardDistribution": {
+      "title": "Actie Kaartverdeling",
+      "schema": "Verdeling (%)",
+      "text": "Experimentele optie. De optie '0-25-25-25-25' volgt de ARNO regels."
+    }
+  },
+  "setupARNO": {
+    "title": "ARNO Setup",
+    "text1": "ZEt het spel klaar volgens het aantal spelers (inclusief ARNO(s)). Een menselijke speler zal de startspeler zijn.",
+    "text2": "Elke ARNO start met <b>1 conservatie punt</b> en populariteitspunten volgens de spelersvolgorde. Bijvoorbeeld: is ARNO de 3e speler, dan start hij met 2 populariteitspunten.",
+    "text3": "Elke ARNO ontvangt de spelonderdelen van één kleur, een dierentuinkaart (map A), één gesloten Eindtellingskaart en 8 willekeurige Dierentuinkaarten.",
+    "text4": "Plaats alle spelerstokens van ARNO’s kleur naast zijn dierentuinkaart.",
+    "text5": "ARNO start met één medewerker op zijn notitieboek. Plaats de overige 3 op de daarvoor bestemde plaatsen onder het notitieboek op zijn dierentuinkaart.",
+    "text6": "Plaats de Eindtellingskaart op het linker gebied van de dierentuinkaart. Deze verbergt het bouwgebied welke niet nodig is voor ARNO.",
+    "text7": "Sorteer ARNO‘s 8 Dierenuinkaarten volgens het soort:",
+    "text7-1": "Verwijder alle sponsorkaarten.",
+    "text7-2": "Stapel alle dierenkaarten naast de  Eindtellingskaart zo, dat je nogsteeds de informatie in de rechter bovenhoek van elke kaart kan zien.",
+    "text7-3": "Bouw nog een stapel met alle Conservatiekaarten die ARNO heeft. Als ARNO start zonder Conservatiekaarten, begin de stapel als hij zijn eerste conservatiekaart krijgt.",
+    "text8": "Je heb de dobbelsteen en actiekaarten niet nodig."
+  },
+  "roundPlayer": {
+    "title": "Speler | Speler {player}",
+    "info": "Speel je beurt."
+  },
+  "roundBot": {
+    "title": "ARNO | ARNO {bot}",
+    "upgrade": "Upgrade",
+    "reroll": "Reroll",
+    "associationWorker": "ARNO plaatst één <b>Medewerker</b>:",
+    "fallbackText": "Alternatief, wanneer onmogelijk:",
+    "upgradeCard": {
+      "title": "Upgrade kaart",
+      "text": "Upgrade een actiekaart van ARNO?",
+      "note": "Let op: Wanneer ARNO 2 conservatiepunten bereikt, kiest hij er altijd voor een extra medewerker, niet voor een kaartupgrade."
+    },
+    "actionHelpAssociationWorker": {
+      "title": "Plaast Werker",
+      "text": "Als ARNO al één van zijn medewerkers op deze samenwerkingsopdracht heeft, selecteert hij de volgende hogere opdracht waar nog geen van zijn werkers staat. Eigenlijk gebruikt hij X-markers om de actie te verbeteren; hij plaatst nooit twee werkers op dezelfde actie. Als er geen hogere opdracht beschikbaar is, kiest hij de eerstvolgende beschikbare lagere opdracht. Als ARNO geen beschikbare werker meer heeft, ontvangt hij +2 conservatiepunten en bevordert het pauzetoken met +2.",
+      "chooseDifferent": "Kies een andere samenwerkingsactie:"
+    },
+    "actionHelpProjectConservationWork": {
+      "title": "Conservatieproject"      
+    },
+    "pickConservationProject": {
+      "conservationProjectSelection": "Conservatieproject Selectie",
+      "conservationProjectsHand": "Hoeveel ConservatieProject Kaarten heeft ARNO op zijn dierentuinkaart?",
+      "conservationProjectsBoardNoToken": "Hoeveel ConservatieProject Kaarten zijn beschikbaar naast het samenwerkingsbord zonder spelerstokens?",
+      "conservationProjectsBoardAvailable": "Hoeveel ConservatieProject Kaarten zijn beschikbaar naast het samenwerkingsbord welke ARNO nog niet gesupport heeft?",
+      "pick": "Kies Conservatie Project",
+      "pickFromHand": "ARNO support de {number}. ConservatieProject Kaart van zijn dierentuinkaart.",
+      "pickFromBoardNoToken": "ARNO support de {number}. ConservatieProject naast het samenwerkingsbord zonder spelerstoken.",
+      "pickFromBoardAvailable": "ARNO support de {number}. ConservatieProject naast het samenwerkingsbord welke beschikbaar is voor hem.",
+      "tokenPlacement": "Token Plaatsen",
+      "projectSlotLeftMost": "ARNO wil zijn token op het meest linkse vakje plaatsen.",
+      "projectSlotMiddle": "ARNO wil zijn token op het middelste vakje plaatsen.",
+      "projectSlotRightMost": "ARNO wil zijn token op het meest rechtse vakje plaatsen.",
+      "projectSlotAlternatives": "Als dit vakje al in gebruik is door een andere speler, plaats hij het op het volgend level aan de linker kant. Als dat ook niet mogelijk is, op het volgende level aan de rechter kant."
+    }
+  },
+  "cardType": {
+    "animals": "Dieren",
+    "association": "Associatie",
+    "build": "Bouwen",
+    "cards": "kaarten",
+    "sponsors": "Sponsors"    
+  },
+  "cardAction": {
+    "gain-partner-zoo": "verkrijg <b>partnerdierentuin #{number}</b>.",
+    "gain-partner-university": "verkrijg <b>partneruniversiteit #{number}</b>.",
+    "conservation-project-work": "<b>Conservatie project werk</b>.",
+    "take-card-display": "Pak <b>card #{number}</b> van het scherm.",
+    "token-scoring-card": "Plaats <b>1</b> ARNO spelertoken op zijn <b>Eindscorekaart</b>.<br/>Als daar al 6 tokens zijn, conservatie +2.",
+    "token-notepad": "Plaats <b>{amount}</b> ARNO spelerstoken(s) op zijn <b>notitiepad</b> (voor eindscore effect). | Plaats <b>{amount}</b> ARNO spelertokens op zijn <b>notitiepad</b> (voor eindscore effect).",
+    "donate": "ARNO doneert."
+  },
+  "aboutARNO": {
+    "link": "About ARNO",
+    "title": "A.R.N.O. Regels Overzicht",
+    "text1": "ARNO <b>spendeert geen geld</b>. Hij spendeert nooit geld voor acties, en krijgt nooit geld (bijvoorbeeld tijdens pauzes of van dierenkaarten).",
+    "text2": "ARNO <b>gebruikt alleen de rechterkant van zijn dierentuinkaart</b>. Hier plaatst hij zijn parterdierentuinen en universiteiten en hier haalt hij zijn medewerkers vandaan. Hij ontvangt ook de bonussen als hij ze ondekt. De linkerkant van zijn dierentuin wordt niet gebruikt en dient alleen als plek voor zijn dierentuinkaarten en eindscorekaart.",
+    "text3": "ARNO ontvangt de volgende <b>bonussen</b> van zijn dierentuinkaart algemene borden: <b>Conservatiepunten, kaartupgrades, reputatiepunten en medewerkers</b>. Naast geld ontvang hij ook geen bonussen van Dier- of Sponsorkaarten, gebouwen, verblijven, X-markers of tijdens pauzes.",
+    "text4": "De dierenkaarten die gestapeld zijn op ARNO’s dierentuinkaart geven <b>reference waardes voor bepaalde kaarteffecten</b> van de menselijke spelers. Telkens wanneer ARNO een andere dierenkaart op zijn stapel legt, activeert zijn symbool de kaarteffecten van de andere speler(s).",
+    "text5": "ARNO kan <b>kan nooit het slachtoffer zijn van een interactief effect</b>. Gebruik in plaats daarvan de alternatieve solo play effecten van deze kaarten.",
+    "text6": "Elke keer als ARNO <b>kaarten ontvangt</b> tijdens het spel, verwijder alle sponsorkaarten en stapel dier- en conservatieprojectkaarten op zijn dierentuinkaart."
+  },
+  "roundDisplay": {
+    "round": "Ronde {round}"
+  },
+  "bonusTile": {
+    "link": "Bonustegel",
+    "text": "ARNO neemt nooit de voorgedrukte bonus.",
+    "pick": "Kies Bonustegel",
+    "left": "ARNO neemt de <b>linker</b> bonustegel van het scherm.",
+    "right": "ARNO neemt de <b>rechter</b> bonustegel van het scherm.",
+    "usage": "ARNO kan alleen deze drie bonustegels gebruiken. Hij ontvangt geen enkele bonus van de andere.",
+    "pickPartnerZoo": "Kies Partner Dierentuin",
+    "pickPartnerUniversity": "Kies Partner Universiteit"
+  },
+  "scoring": {
+    "title": "Score",
+    "humanPlayers": "Menselijke Spelers",
+    "humanPlayersText": "Krijg conservatiepunten of populariteit van <b>Eindscorekaart(en)</b> en van alle kaarten met <b>end-of-game icon</b>.",
+    "botText": "Krijg <b>{ConservatiePunten} conservatiepunt(en)</b> voor {tokenScoringCardCount} token(s) op de eindscorekaart en {tokenNotepadCount} token(s) op het notitieboek.",
+    "conservationPoints": "Conservatie Punten",
+    "appeal": "Appeal",
+    "victoryPoints": "Overwinningspunten"
+  },
+  "notfound": {
+    "title": "Niet gevonden"
+  },
+  "action": {
+    "playGame": "Speel Spel",
+    "startGame": "Start Spel",
+    "next": "Volgende",
+    "abortGame": "Stop spel",
+    "abortGameConfirm": "verlaat het huidige spel - weet je het zeker?",
+    "finishGame": "Finish spel",
+    "finishGameConfirm": "Finish dit spel en ga naar eindscore - weet je het zeker?",
+    "endGame": "Beëindig spel",
+    "endGameConfirm": "Beëindig dit spel en keer terug naar startscherm - weet je het zeker?",
+    "cancel": "Annuleren",
+    "backToHome": "Terug naar startscherm",
+    "back": "terug",
+    "close": "Sluiten",
+    "reset": "Reset"
+  },
+  "footer": {
+    "credits": "Credits"
+  }
+}
