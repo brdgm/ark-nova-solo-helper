@@ -31,15 +31,14 @@
   "setupARNO": {
     "title": "Setup di ARNO",
     "text1": "Prepara il gioco in base al numero di giocatori (compresi gli ARNO). Un giocatore umano sarà il giocatore iniziale.",
-    "text2": "Ogni ARNO inizia con <b>un punto conservazione</b> e punti attrattiva a seconda dell'ordine di partenza. Per esempio, se ARNO è il 3° giocatore, inizia con 2 punti attrattiva.",
+    "text2": "Ogni ARNO inizia con <b>-3 punti conservazione</b> e punti attrattiva a seconda dell'ordine di partenza.",
+    "text2-appeal": "Per esempio, se ARNO è il 3° giocatore, inizia con 2 punti attrattiva.",
     "text3": "Ogni ARNO riceve i componenti di un colore, una mappa zoo (mappa A), una carta Punteggio Finale a faccia in giù e 8 carte Zoo casuali.",
     "text4": "Metti tutti i segnalini giocatore del colore di ARNO accanto alla sua mappa zoo.",
     "text5": "ARNO inizia con un lavoratore delle associazioni sul suo taccuino. Posiziona i restanti 3 negli spazi designati sotto il taccuino della mappa zoo.",
     "text6": "Posiziona la carta Punteggio Finale nell'area sinistra della mappa zoo. Coprirà l’area di costruzione che non è necessaria per ARNO.",
     "text7": "Ordina le 8 carte Zoo di ARNO in base al tipo:",
     "text7-1": "Scarta tutte le carte Sponsor.",
-    "text7-2": "Impila tutte le carte Animale accanto alla carta Punteggio Finale di ARNO, in modo da lasciare visibili le icone in alto a destra di ogni carta.",
-    "text7-3": "Fai un'altra pila con le carte Progetto di Conservazione di ARNO. Se ARNO non ne riceve a inizio partita, comincia la pila quando riceve la sua prima carta Progetto.",
     "text8": "Non hai bisogno di dadi o delle carte azione."
   },
   "roundPlayer": {

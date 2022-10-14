@@ -31,15 +31,14 @@
   "setupARNO": {
     "title": "ARNO Setup",
     "text1": "ZEt het spel klaar volgens het aantal spelers (inclusief ARNO(s)). Een menselijke speler zal de startspeler zijn.",
-    "text2": "Elke ARNO start met <b>1 conservatie punt</b> en populariteitspunten volgens de spelersvolgorde. Bijvoorbeeld: is ARNO de 3e speler, dan start hij met 2 populariteitspunten.",
+    "text2": "Elke ARNO start met <b>-3 conservatie punten</b> en populariteitspunten volgens de spelersvolgorde.",
+    "text2-appeal": "Bijvoorbeeld: is ARNO de 3e speler, dan start hij met 2 populariteitspunten.",
     "text3": "Elke ARNO ontvangt de spelonderdelen van één kleur, een dierentuinkaart (map A), één gesloten Eindtellingskaart en 8 willekeurige Dierentuinkaarten.",
     "text4": "Plaats alle spelerstokens van ARNO’s kleur naast zijn dierentuinkaart.",
     "text5": "ARNO start met één medewerker op zijn notitieboek. Plaats de overige 3 op de daarvoor bestemde plaatsen onder het notitieboek op zijn dierentuinkaart.",
     "text6": "Plaats de Eindtellingskaart op het linker gebied van de dierentuinkaart. Deze verbergt het bouwgebied welke niet nodig is voor ARNO.",
     "text7": "Sorteer ARNO‘s 8 Dierenuinkaarten volgens het soort:",
     "text7-1": "Verwijder alle sponsorkaarten.",
-    "text7-2": "Stapel alle dierenkaarten naast de  Eindtellingskaart zo, dat je nogsteeds de informatie in de rechter bovenhoek van elke kaart kan zien.",
-    "text7-3": "Bouw nog een stapel met alle Conservatiekaarten die ARNO heeft. Als ARNO start zonder Conservatiekaarten, begin de stapel als hij zijn eerste conservatiekaart krijgt.",
     "text8": "Je heb de dobbelsteen en actiekaarten niet nodig."
   },
   "roundPlayer": {

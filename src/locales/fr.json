@@ -31,15 +31,14 @@
     "setupARNO": {
       "title": "Mise en place d'ARNO",
       "text1": "Organisez le jeu en fonction du nombre de joueurs (y compris ARNO). Un joueur humain sera toujours le premier joueur.",
-      "text2": "Chaque ARNO commence avec <b>1 point de conservation</b> et des points d'attrait selon l'ordre des joueurs. Par exemple, si ARNO est le 3ème joueur, il commence avec 2 points d'attraits.",
+      "text2": "Chaque ARNO commence avec <b>-3 points de conservation</b> et des points d'attrait selon l'ordre des joueurs.",
+      "text2-appeal": "Par exemple, si ARNO est le 3ème joueur, il commence avec 2 points d'attraits.",
       "text3": "Chaque ARNO reçoit les composants d'une couleur, un plateau zoo (carte A), une carte de score final face cachée et 8 cartes Zoo aléatoires.",
       "text4": "Placez tous les jetons de joueur de la couleur d'ARNO à côté de son plateau zoo.",
       "text5": "ARNO commence avec un bénévole sur son bloc-notes. Placez les 3 autres sur les espaces dédiés en dessous du bloc-notes sur son plateau zoo.",
       "text6": "Placez la carte de score final sur la partie gauche du plateau zoo. Cela permet de couvrir la zone des bâtiment qui n'est pas nécessaire pour ARNO.",
       "text7": "Triez les 8 cartes Zoo d'ARNO en fonction de leur type :",
       "text7-1": "Défaussez toutes les cartes de Mécènes.",
-      "text7-2": "Empilez toutes les cartes Animaux à côté de la carte score final d'ARNO, de manière à ce que vous puissiez toujours voir les informations (îcones) dans les coins supérieurs droits de chaque carte.",
-      "text7-3": "Construisez une autre pile avec toutes les cartes Projet de conservation que possède ARNO. Si ARNO commence sans aucune carte, commencez la pile lorsqu'il reçoit sa première carte Projet.",
       "text8": "Vous n'avez pas besoin de dés ou de cartes d'action."
     },
     "roundPlayer": {

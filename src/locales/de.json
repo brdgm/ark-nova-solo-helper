@@ -31,15 +31,17 @@
   "setupARNO": {
     "title": "ARNO Spielaufbau",
     "text1": "Baue das Spiel entsprechend der Spieleranzahl (inklusive ARNO(s)) auf. Ein menschlicher Spieler ist Startspieler.",
-    "text2": "Jeder ARNO beginnt mit <b>1 Artenschutzpunkt</B> und Attraktion entsprechend der Reihenfolge. Ist ARNO z.B. der dritte Spieler, startet er mit 2 Attraktionspunkten.",
+    "text2": "Jeder ARNO beginnt mit <b>-3 Artenschutzpunkten</B> und Attraktion entsprechend der Reihenfolge.",
+    "text2-conservation": "Lege z.B. drei Zählsteine neben ARNOs Artenschutzmarker und entferne sie nach und nach, sobald ARNO seine ersten Artenschutzpunkte während des Spiels gesammelt hat.",
+    "text2-appeal": "Ist ARNO z.B. der dritte Spieler, startet er mit 2 Attraktionspunkten.",
     "text3": "Jeder ARNO erhält die Komponenten einer Farbe, einen Zooplan A, eine verdeckte Endwertungskarte sowie 8 zufällige Zookarten.",
     "text4": "Lege alle Markierungssteine neben den Zooplan von ARNO.",
     "text5": "ARNO startet mit einem Verbandsarbeiter auf dem Notizzettel. Lege die anderen 3 auf die entsprechenden Felder des Zooplans von ARNO.",
     "text6": "Platziere die Endwertungskarte verdeckt auf der linken Seite des Zooplans. Der Grundriss wird dadurch überdeckt, aber wird für ARNO nicht benötigt.",
     "text7": "Sortiere ARNOs 8 Zookarten nach dem Typ:",
     "text7-1": "Werfe alle Sponsorenkarten ab.",
-    "text7-2": "Bilde aus allen Tierkarten einen Stapel, so dass die Angaben oben rechts gelesen werden können. Platziere diesen Stapel am besten neben die Endwertungskarte.",
-    "text7-3": "Bilde einen dritten Stapel mit allen Artenschutzkarten, falls bereits vorhanden. Ansonsten wird dieser bei Bedarf während der Partie angelegt.",
+    "text7-2": "ARNO behält insgesamt maximal vier Karten. Zunächst behält er alle Artenschutzkarten (maximal vier).",
+    "text7-3": "Hat ARNO nun weniger als vier Karten auf seinem Zooplan, behält er zusätzlich bis zu vier Tierkarten.",
     "text8": "Es werden keine Würfel oder Aktionskarten benötigt."
   },
   "roundPlayer": {
