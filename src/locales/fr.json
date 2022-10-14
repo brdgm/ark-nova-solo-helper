@@ -58,7 +58,7 @@
       },
       "actionHelpAssociationWorker": {
         "title": "Placez un Bénévole",
-        "text": "Si ARNO a déjà un de ses bénévoles sur cette tâche d'association, il sélectionne la tâche immédiatement supérieure où aucun de ses bénévoles n'est encore placé. Normalement, il utilise les marqueurs X pour améliorer l'action ; il ne place jamais deux bénévoles sur la même action. Si aucune tâche associative supérieure n'est disponible, il sélectionne la prochaine tâche associative inférieure disponible. Si ARNO n'a plus de bénévole disponible, il reçoit +2 points de conservation et avance de +2 le jeton pause.",
+        "text": "Si ARNO a déjà un de ses bénévoles sur cette tâche d'association, il sélectionne la tâche immédiatement supérieure où aucun de ses bénévoles n'est encore placé. Normalement, il utilise les marqueurs X pour améliorer l'action ; il ne place jamais deux bénévoles sur la même action. Si aucune tâche associative supérieure n'est disponible, il sélectionne la prochaine tâche associative inférieure disponible.",
         "chooseDifferent": "Choisissez une autre tâche d'association :"
       },
       "actionHelpProjectConservationWork": {

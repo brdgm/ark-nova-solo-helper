@@ -58,7 +58,7 @@
     },
     "actionHelpAssociationWorker": {
       "title": "Piazza Lavoratore",
-      "text": "Se ARNO ha già uno dei suoi lavoratori in questo compito presso le associazioni, seleziona il successivo compito più alto dove nessuno dei suoi lavoratori è ancora piazzato. Fondamentalmente sta usando segnalini X per migliorare l'azione; non mette mai due lavoratori nello stesso compito. Se non è disponibile alcun compito superiore, seleziona il compito successivo inferiore disponibile. Se ARNO non ha più un lavoratore disponibile, riceve +2 punti conservazione e avanza il segnalino pausa +2.",
+      "text": "Se ARNO ha già uno dei suoi lavoratori in questo compito presso le associazioni, seleziona il successivo compito più alto dove nessuno dei suoi lavoratori è ancora piazzato. Fondamentalmente sta usando segnalini X per migliorare l'azione; non mette mai due lavoratori nello stesso compito. Se non è disponibile alcun compito superiore, seleziona il compito successivo inferiore disponibile.",
       "chooseDifferent": "Scegli un compito Associazione differente:"
     },
     "actionHelpProjectConservationWork": {

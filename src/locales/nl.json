@@ -58,7 +58,7 @@
     },
     "actionHelpAssociationWorker": {
       "title": "Plaast Werker",
-      "text": "Als ARNO al één van zijn medewerkers op deze samenwerkingsopdracht heeft, selecteert hij de volgende hogere opdracht waar nog geen van zijn werkers staat. Eigenlijk gebruikt hij X-markers om de actie te verbeteren; hij plaatst nooit twee werkers op dezelfde actie. Als er geen hogere opdracht beschikbaar is, kiest hij de eerstvolgende beschikbare lagere opdracht. Als ARNO geen beschikbare werker meer heeft, ontvangt hij +2 conservatiepunten en bevordert het pauzetoken met +2.",
+      "text": "Als ARNO al één van zijn medewerkers op deze samenwerkingsopdracht heeft, selecteert hij de volgende hogere opdracht waar nog geen van zijn werkers staat. Eigenlijk gebruikt hij X-markers om de actie te verbeteren; hij plaatst nooit twee werkers op dezelfde actie. Als er geen hogere opdracht beschikbaar is, kiest hij de eerstvolgende beschikbare lagere opdracht.",
       "chooseDifferent": "Kies een andere samenwerkingsactie:"
     },
     "actionHelpProjectConservationWork": {

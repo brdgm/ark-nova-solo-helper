@@ -23,8 +23,13 @@
   <div class="actions" v-if="botActions.hasFallback">
     <p class="fallbackText">{{t('roundBot.fallbackText')}}</p>
     <div v-for="(action, index) in botActions.fallbackActions" :key="index" class="action amount fallback">
-      <div class="value" :data-action="action.action">{{action.amount}}</div>
-      <Icon :name="action.action" class="icon amount"/>
+      <v-template v-if="isGainPartnerZooOrUniversity(action.action)">
+        <a data-bs-toggle="modal" data-bs-target="#actionHelpProjectConservationWorkModal" href="#"><Icon :name="action.action" class="icon"/></a>
+      </v-template>
+      <v-template v-else>
+        <div class="value" :data-action="action.action">{{action.amount}}</div>
+        <Icon :name="action.action" class="icon amount"/>
+      </v-template>
     </div>
   </div>
 
@@ -39,6 +44,7 @@
         </div>
         <div class="modal-body">
           <p v-html="t('roundBot.actionHelpAssociationWorker.text')"></p>
+          <p v-html="t('roundBot.actionHelpAssociationWorker.text-fallback')"></p>
           <p v-html="t('roundBot.actionHelpAssociationWorker.chooseDifferent')"></p>
           <div class="actions overwriteAssociation">
             <div v-for="(action, index) in getUnusedAssociationActions()" :key="index" class="action amount">
@@ -178,6 +184,9 @@ export default defineComponent({
     },
     isGainPartnerUniversity(action : Action) : boolean {
       return action == Action.GAIN_PARTNER_UNIVERSITY
+    },
+    isGainPartnerZooOrUniversity(action : Action) : boolean {
+      return action == Action.GAIN_PARTNER_ZOO_OR_UNIVERSITY
     },
     isConservationProjectWork(action : Action) : boolean {
       return action == Action.CONSERVATION_PROJECT_WORK

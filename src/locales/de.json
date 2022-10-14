@@ -61,7 +61,8 @@
     },
     "actionHelpAssociationWorker": {
       "title": "Arbeiter Einsetzen",
-      "text": "Hat ARNO auf dieser Verbandsaktion bereits einen Arbeiter platziert, wählt er die nächsthöhere Verbandsaktion, auf der sich noch keiner seiner Arbeiter befindet (er nutzt quasi einen virtuellen X-Marker) und platziert in keinem Fall zwei Arbeiter auf einer Aktion. Ist keine höhere Aktion mehr frei, wählt er die nächste verfügbare schwächere Aktion. Falls kein Verbandsarbeiter mehr verfügbar ist, erhält ARNO Artenschutz +2 und Pause +2.",
+      "text": "Hat ARNO auf dieser Verbandsaktion bereits einen Arbeiter platziert, wählt er die nächsthöhere Verbandsaktion, auf der sich noch keiner seiner Arbeiter befindet (er nutzt quasi einen virtuellen X-Marker) und platziert in keinem Fall zwei Arbeiter auf einer Aktion. Ist keine höhere Aktion mehr frei, wählt er die nächste verfügbare schwächere Aktion.",
+      "text-fallback": "Falls kein Verbandsarbeiter mehr verfügbar ist, erhält ARNO Artenschutz +2 und Pause +2. Zusätzlich erhält er eine(n) neue(n) Partneruni bzw. -zoo. Er bevorzugt die Art, von der ihm noch am meisten fehlt.",
       "chooseDifferent": "Wähle eine andere Verbands-Aktion:"
     },
     "actionHelpProjectConservationWork": {
