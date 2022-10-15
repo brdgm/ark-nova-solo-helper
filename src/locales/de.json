@@ -68,6 +68,9 @@
     "actionHelpProjectConservationWork": {
       "title": "Projektarbeit Artenschutz"
     },
+    "actionFallbackPickPartnerZooOrUniversity": {
+      "title": "Erhalte Partnerzoo oder Partneruniversität"
+    },
     "pickConservationProject": {
       "conservationProjectSelection": "Artenschutzprojekt-Auswahl",
       "conservationProjectsHand": "Wie viele Artenschutzprojekte hat ARNO auf seinem Zooplan?",
@@ -82,6 +85,12 @@
       "projectSlotMiddle": "ARNO platziert seinen Markierungsstein auf der mittleren Stufe.",
       "projectSlotRightMost": "ARNO platziert seinen Markierungsstein auf der untersten Stufe (rechts).",
       "projectSlotAlternatives": "Ist die entsprechende Stufe bereits belegt, platziert er ihn auf der nächsthöheren Stufe. Falls auch das nicht möglich ist, auf der nächstniedrigeren Stufe."
+    },
+    "gainPartnerZooOrUniversity": {
+      "missingMost": "Von welcher Art fehlt ARNO am meisten?",
+      "partnerZoo": "Partnerzoo",
+      "partnerUniversity": "Partneruniversität",
+      "pickRandom": "Zufällig wählen"
     }
   },
   "difficultyLevel": {

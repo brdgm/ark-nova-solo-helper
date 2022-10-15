@@ -24,7 +24,7 @@
     <p class="fallbackText">{{t('roundBot.fallbackText')}}</p>
     <div v-for="(action, index) in botActions.fallbackActions" :key="index" class="action amount fallback">
       <v-template v-if="isGainPartnerZooOrUniversity(action.action)">
-        <a data-bs-toggle="modal" data-bs-target="#actionHelpProjectConservationWorkModal" href="#"><Icon :name="action.action" class="icon"/></a>
+        <a data-bs-toggle="modal" data-bs-target="#actionFallbackPickPartnerZooOrUniversity" href="#"><Icon :name="action.action" class="icon"/></a>
       </v-template>
       <v-template v-else>
         <div class="value" :data-action="action.action">{{action.amount}}</div>
@@ -40,7 +40,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title">{{t('roundBot.actionHelpAssociationWorker.title')}}</h5>
-          <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button class="btn-close" data-bs-dismiss="modal" :aria-label="t('action.close')"></button>
         </div>
         <div class="modal-body">
           <p v-html="t('roundBot.actionHelpAssociationWorker.text')"></p>
@@ -64,13 +64,31 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title">{{t('roundBot.actionHelpProjectConservationWork.title')}}</h5>
-          <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button class="btn-close" data-bs-dismiss="modal" :aria-label="t('action.close')"></button>
         </div>
         <div class="modal-body">
           <PickConservationProject ref="pickConservationProject"/>
         </div>
         <div class="modal-footer">
           <button class="btn btn-outline-secondary" @click="pickConservationProject.reset()">{{t('action.reset')}}</button>
+          <button class="btn btn-secondary" data-bs-dismiss="modal">{{t('action.close')}}</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="actionFallbackPickPartnerZooOrUniversity" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">{{t('roundBot.actionFallbackPickPartnerZooOrUniversity.title')}}</h5>
+          <button class="btn-close" data-bs-dismiss="modal" :aria-label="t('action.close')"></button>
+        </div>
+        <div class="modal-body">
+          <GainPartnerZooOrUniversity ref="gainPartnerZooOrUniversity"/>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-outline-secondary" @click="gainPartnerZooOrUniversity.reset()">{{t('action.reset')}}</button>
           <button class="btn btn-secondary" data-bs-dismiss="modal">{{t('action.close')}}</button>
         </div>
       </div>
@@ -97,6 +115,7 @@ import BotAction from '@/services/BotAction'
 import CardName from "@/services/enum/CardName"
 import GainPartnerUniversity from "./GainPartnerUniversity.vue"
 import GainPartnerZoo from "./GainPartnerZoo.vue"
+import GainPartnerZooOrUniversity from "./GainPartnerZooOrUniversity.vue"
 
 export default defineComponent({
   name: 'BotActions',
@@ -106,13 +125,15 @@ export default defineComponent({
     BonusTile,
     GainPartnerZoo,
     GainPartnerUniversity,
-    PickConservationProject
+    PickConservationProject,
+    GainPartnerZooOrUniversity
   },
   setup() {
     const { t } = useI18n()
     useStore()
     const pickConservationProject = ref()
-    return { t, pickConservationProject }
+    const gainPartnerZooOrUniversity = ref()
+    return { t, pickConservationProject, gainPartnerZooOrUniversity }
   },
   props: {
     navigationState: {

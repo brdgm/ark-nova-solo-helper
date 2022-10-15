@@ -68,6 +68,9 @@
     "actionHelpProjectConservationWork": {
       "title": "Conservation project work"      
     },
+    "actionFallbackPickPartnerZooOrUniversity": {
+      "title": "Gain Partner Zoo or University"
+    },
     "pickConservationProject": {
       "conservationProjectSelection": "Conservation Project Selection",
       "conservationProjectsHand": "How many Conservation Project cards has ARNO on his zoo mat?",
@@ -82,6 +85,12 @@
       "projectSlotMiddle": "ARNO prefers to place his token on the middle slot.",
       "projectSlotRightMost": "ARNO prefers to place his token on the rightmost slot.",
       "projectSlotAlternatives": "If this slot is already covered by another player, he places it on the next level to the left. If that’s not possible as well, on the next available level to the right."
+    },
+    "gainPartnerZooOrUniversity": {
+      "missingMost": "What is ARNO missing most?",
+      "partnerZoo": "Partner Zoo",
+      "partnerUniversity": "Partner University",
+      "pickRandom": "Pick Random"
     }
   },
   "difficultyLevel": {
