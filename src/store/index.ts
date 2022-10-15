@@ -16,6 +16,7 @@ export interface State {
 export interface Setup {
   playerSetup: PlayerSetup
   difficultyLevel: DifficultyLevel
+  zooMap?: string
   actionCardDistribution: ActionCardDistributionSchema
 }
 export interface PlayerSetup {
@@ -84,6 +85,9 @@ export const store = createStore<State>({
     },
     setupActionCardDistribution(state : State, schema: ActionCardDistributionSchema) {
       state.setup.actionCardDistribution = schema
+    },
+    setupZooMap(state : State, zooMap: string) {
+      state.setup.zooMap = zooMap
     },
     round(state : State, botRound : BotRound) {
       let round = state.rounds[botRound.round - 1]

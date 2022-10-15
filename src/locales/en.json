@@ -22,6 +22,15 @@
       "easy": "Easy",
       "hard": "Hard"
     },
+    "pickZooMap": {
+      "title": "Zoo Map",
+      "pickRandom": "Pick Random (advanced)",
+      "pleaseSelect": "(Please select)",
+      "mapA": "Map A (easy)",
+      "map0": "Map 0 (intermediate)",
+      "mapAdvanced": "Map {id} (advanced)",
+      "mapAdvancedMapPack": "Map {id} (advanced, Map Pack {mapPack})"
+    },
     "actionCardDistribution": {
       "title": "Action Card Distribution",
       "schema": "Probability (%)",
