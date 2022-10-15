@@ -113,7 +113,7 @@
     "gain-partner-university": "Gain <b>partner university #{number}</b>.",
     "conservation-project-work": "<b>Conservation project work</b>.",
     "take-card-display": "Snap <b>card #{number}</b> from display.",
-    "token-scoring-card": "Place <b>1</b> ARNO player token on his <b>final scoring card</b>.<br/>If there are already 6 tokens, conservation +2.",
+    "token-scoring-card": "Place <b>1</b> ARNO player token on his <b>final scoring card</b>.",
     "token-notepad": "Place <b>{amount}</b> ARNO player token on his <b>notepad</b> (for final scoring effect). | Place <b>{amount}</b> ARNO player tokens on his <b>notepad</b> (for final scoring effect).",
     "donate": "ARNO donates."
   },

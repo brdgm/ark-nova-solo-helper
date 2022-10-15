@@ -18,6 +18,7 @@ export default class NavigationState {
   readonly bot : number
   readonly botRound? : BotRound
   readonly playerColor : PlayerColor
+  readonly previousBotRound? : BotRound
 
   constructor(route : RouteLocation, store : Store<State>) {    
     const setup = store.state.setup
@@ -29,6 +30,7 @@ export default class NavigationState {
     this.round = parseInt(route.params['round'] as string)
     this.player = (route.name == 'RoundPlayer') ? parseInt(route.params['player'] as string) : 0
     this.bot = (route.name == 'RoundBot') ? parseInt(route.params['bot'] as string) : 0
+    this.previousBotRound = this.getBotRound(store, this.round - 1, this.bot)
     this.botRound = this.getBotRound(store, this.round, this.bot)
     this.playerColor = this.getPlayerColor(setup.playerSetup.playerColors)
   }
@@ -50,23 +52,22 @@ export default class NavigationState {
       if (roundNumber == 1) {
         // start new game
         cardSlots = CardSlots.new()
-        botActions = BotActions.newRandomSlot(cardSlots, this.difficultyLevel, this.actionCardDistribution)
+        botActions = BotActions.newRandomSlot(cardSlots, this.difficultyLevel, this.actionCardDistribution, tokenScoringCardCount)
         // start appeal depending on player order
         appealCount = botNumber + this.playerCount - 1
       }
       else {
         // continue with cards from previous round
-        const previousRound = this.getBotRound(store, roundNumber - 1, botNumber)
-        if (!previousRound) {
+        if (!this.previousBotRound) {
           throw new Error('No previous round.')
         }
-        cardSlots = CardSlots.fromPersistence(previousRound.cardSlots)
-        tokenScoringCardCount = previousRound.tokenScoringCardCount
-        tokenNotepadCount = previousRound.tokenNotepadCount
-        appealCount = previousRound.appealCount || 0
+        cardSlots = CardSlots.fromPersistence(this.previousBotRound.cardSlots)
+        tokenScoringCardCount = this.previousBotRound.tokenScoringCardCount
+        tokenNotepadCount = this.previousBotRound.tokenNotepadCount
+        appealCount = this.previousBotRound.appealCount || 0
         // move previous card to first position
-        cardSlots.moveFirst(cardSlots.get(previousRound.slotNumber))
-        botActions = BotActions.newRandomSlot(cardSlots, this.difficultyLevel, this.actionCardDistribution)
+        cardSlots.moveFirst(cardSlots.get(this.previousBotRound.slotNumber))
+        botActions = BotActions.newRandomSlot(cardSlots, this.difficultyLevel, this.actionCardDistribution, tokenScoringCardCount)
       }
       botRound = {
         round: roundNumber,

@@ -113,7 +113,7 @@
     "gain-partner-university": "<b>Partneruniversität #{number}</b> gewinnen.",
     "conservation-project-work": "<b>Projektarbeit Artenschutz</b>.",
     "take-card-display": "Schnappe <b>Karte #{number}</b> aus der Auslage.",
-    "token-scoring-card": "Lege <b>1</b> ARNO Markierungsstein auf seine <b>Endwertungskarte</b>.<br/>Falls bereits 6 vorhanden, Artenschutz +2.",
+    "token-scoring-card": "Lege <b>1</b> ARNO Markierungsstein auf seine <b>Endwertungskarte</b>.",
     "token-notepad": "Lege <b>{amount}</b> ARNO Markierungsstein auf seinen <b>Notizzettel</b> (Endwertungseffekt). | Lege <b>{amount}</b> ARNO Markierungssteine auf seinen <b>Notizzettel</b> (Endwertungseffekt).",
     "donate": "ARNO spendet."
   },

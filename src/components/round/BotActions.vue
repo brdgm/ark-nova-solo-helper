@@ -150,11 +150,15 @@ export default defineComponent({
     botRound() : BotRound {
       return this.navigationState.botRound as BotRound
     },
+    previousBotRound() : BotRound|undefined {
+      return this.navigationState.previousBotRound
+    },
     cardSlots() : CardSlots {
       return CardSlots.fromPersistence(this.botRound.cardSlots)
     },
     botActions() : BotActions {
-      return BotActions.newWithSlot(this.cardSlots, this.navigationState.difficultyLevel, this.botRound.slotNumber)
+      return BotActions.newWithSlot(this.cardSlots, this.navigationState.difficultyLevel, this.botRound.slotNumber,
+          this.previousBotRound?.tokenScoringCardCount ?? 0)
     },
     actionsAll() : BotAction[] {
       return this.overwriteBotActions.length > 0 ? this.overwriteBotActions : this.botActions.actions as BotAction[]

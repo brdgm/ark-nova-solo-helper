@@ -92,7 +92,7 @@
     "gain-partner-university": "verkrijg <b>partneruniversiteit #{number}</b>.",
     "conservation-project-work": "<b>Conservatie project werk</b>.",
     "take-card-display": "Pak <b>card #{number}</b> van het scherm.",
-    "token-scoring-card": "Plaats <b>1</b> ARNO spelertoken op zijn <b>Eindscorekaart</b>.<br/>Als daar al 6 tokens zijn, conservatie +2.",
+    "token-scoring-card": "Plaats <b>1</b> ARNO spelertoken op zijn <b>Eindscorekaart</b>.",
     "token-notepad": "Plaats <b>{amount}</b> ARNO spelerstoken(s) op zijn <b>notitiepad</b> (voor eindscore effect). | Plaats <b>{amount}</b> ARNO spelertokens op zijn <b>notitiepad</b> (voor eindscore effect).",
     "donate": "ARNO doneert."
   },

@@ -10,7 +10,7 @@ import { expect } from 'chai'
 describe('BotActions', () => {
   it('randomPick', () => {
     const cardSlots = CardSlots.new()
-    const botActions = BotActions.newRandomSlot(cardSlots, DifficultyLevel.L1_BEGINNER, ActionCardDistributionSchema.P0_25_25_25_25)
+    const botActions = BotActions.newRandomSlot(cardSlots, DifficultyLevel.L1_BEGINNER, ActionCardDistributionSchema.P0_25_25_25_25, 0)
 
     expect(botActions.activeCard).not.to.undefined
     expect(botActions.slotNumber).to.greaterThanOrEqual(2)
@@ -72,7 +72,7 @@ describe('BotActions', () => {
   })
 
   it('sponsors-standard-2-easy', () => {
-    const botActions = setup(CardName.SPONSORS, false, 2, DifficultyLevel.L3_EASY)
+    const botActions = setup(CardName.SPONSORS, false, 2, DifficultyLevel.L3_EASY, 3)
 
     expect(botActions.activeCard.name).to.eq(CardName.SPONSORS)
     expect(botActions.actions).to.eql([
@@ -82,6 +82,21 @@ describe('BotActions', () => {
     ])
     expect(botActions.hasFallback).to.false
     expect(botActions.getTokenScoringCardCount()).to.eq(1)
+    expect(botActions.getTokenNotepadCount()).to.eq(0)
+    expect(botActions.getAppealCount()).to.eq(0)
+  })
+
+  it('sponsors-standard-2-easy-tokencount-scoringcard-6', () => {
+    const botActions = setup(CardName.SPONSORS, false, 2, DifficultyLevel.L3_EASY, 6)
+
+    expect(botActions.activeCard.name).to.eq(CardName.SPONSORS)
+    expect(botActions.actions).to.eql([
+      {action: Action.REPUTATION, amount: 1},
+      {action: Action.CONSERVATION, amount: 2},
+      {action: Action.BREAK, amount: 2}
+    ])
+    expect(botActions.hasFallback).to.false
+    expect(botActions.getTokenScoringCardCount()).to.eq(0)
     expect(botActions.getTokenNotepadCount()).to.eq(0)
     expect(botActions.getAppealCount()).to.eq(0)
   })
@@ -132,11 +147,11 @@ describe('BotActions', () => {
 
 })
 
-function setup(card : CardName, upgraded : boolean, slot : number, difficultyLevel : DifficultyLevel) : BotActions {
+function setup(card : CardName, upgraded : boolean, slot : number, difficultyLevel : DifficultyLevel, tokenScoringCardCount = 0) : BotActions {
   const otherCards = Cards.getAll().filter(item => item.name != card).map(item => item.name)
   const cardSlots = CardSlots.fromPersistence({
     slots: [...otherCards.slice(0,slot-1), card, ...otherCards.slice(slot-1,4)],
     upgradedCards: upgraded ? [ card ] : []
   })
-  return BotActions.newWithSlot(cardSlots, difficultyLevel, slot)
+  return BotActions.newWithSlot(cardSlots, difficultyLevel, slot, tokenScoringCardCount)
 }

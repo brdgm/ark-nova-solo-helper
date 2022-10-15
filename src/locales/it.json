@@ -92,7 +92,7 @@
     "gain-partner-university": "Ottiene <b>università partner #{number}</b>.",
     "conservation-project-work": "<b>Progetto di conservazione</b>.",
     "take-card-display": "Aggancia la <b>carta #{number}</b> dalla vetrina.",
-    "token-scoring-card": "Posiziona <b>1</b> segnalino giocatore ARNO sulla sua <b>carta punteggio finale</b>.<br/>Se ci sono già 6 segnalini, conservazione +2.",
+    "token-scoring-card": "Posiziona <b>1</b> segnalino giocatore ARNO sulla sua <b>carta punteggio finale</b>.",
     "token-notepad": "Piazza <b>{amount}</b> segnalino giocatore di ARNO sul suo <b>taccuino</b> (per il punteggio finale). | Piazza <b>{amount}</b> segnalini giocatore di ARNO sul suo <b>taccuino</b> (per il punteggio finale).",
     "donate": "ARNO dona."
   },
