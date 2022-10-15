@@ -1,6 +1,7 @@
 <template>
   <div class="float-end text-end">
     <AboutARNO/>
+    <BreakInfo/>
     <RoundDisplay :round="round"/>
   </div>
   <h1><PlayerColorDisplay :playerColor="playerColor" class="me-2"/>{{t('roundBot.title', {bot:bot}, botCount)}}</h1>
@@ -25,6 +26,7 @@ import { useStore } from '@/store'
 import NavigationState from '@/util/NavigationState'
 import AboutARNO from '@/components/structure/AboutARNO.vue'
 import RoundDisplay from '@/components/structure/RoundDisplay.vue'
+import BreakInfo from '../components/structure/BreakInfo.vue'
 
 export default defineComponent({
   name: 'RoundBot',
@@ -33,7 +35,8 @@ export default defineComponent({
     BotActions,
     FooterButtons,
     AboutARNO,
-    RoundDisplay
+    RoundDisplay,
+    BreakInfo
   },
   setup() {
     const { t } = useI18n()

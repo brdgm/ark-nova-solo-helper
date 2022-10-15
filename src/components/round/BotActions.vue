@@ -23,8 +23,13 @@
   <div class="actions" v-if="botActions.hasFallback">
     <p class="fallbackText">{{t('roundBot.fallbackText')}}</p>
     <div v-for="(action, index) in botActions.fallbackActions" :key="index" class="action amount fallback">
-      <div class="value" :data-action="action.action">{{action.amount}}</div>
-      <Icon :name="action.action" class="icon amount"/>
+      <v-template v-if="isGainPartnerZooOrUniversity(action.action)">
+        <a data-bs-toggle="modal" data-bs-target="#actionFallbackPickPartnerZooOrUniversity" href="#"><Icon :name="action.action" class="icon"/></a>
+      </v-template>
+      <v-template v-else>
+        <div class="value" :data-action="action.action">{{action.amount}}</div>
+        <Icon :name="action.action" class="icon amount"/>
+      </v-template>
     </div>
   </div>
 
@@ -35,10 +40,11 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title">{{t('roundBot.actionHelpAssociationWorker.title')}}</h5>
-          <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button class="btn-close" data-bs-dismiss="modal" :aria-label="t('action.close')"></button>
         </div>
         <div class="modal-body">
           <p v-html="t('roundBot.actionHelpAssociationWorker.text')"></p>
+          <p v-html="t('roundBot.actionHelpAssociationWorker.text-fallback')"></p>
           <p v-html="t('roundBot.actionHelpAssociationWorker.chooseDifferent')"></p>
           <div class="actions overwriteAssociation">
             <div v-for="(action, index) in getUnusedAssociationActions()" :key="index" class="action amount">
@@ -58,13 +64,31 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title">{{t('roundBot.actionHelpProjectConservationWork.title')}}</h5>
-          <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button class="btn-close" data-bs-dismiss="modal" :aria-label="t('action.close')"></button>
         </div>
         <div class="modal-body">
           <PickConservationProject ref="pickConservationProject"/>
         </div>
         <div class="modal-footer">
           <button class="btn btn-outline-secondary" @click="pickConservationProject.reset()">{{t('action.reset')}}</button>
+          <button class="btn btn-secondary" data-bs-dismiss="modal">{{t('action.close')}}</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="actionFallbackPickPartnerZooOrUniversity" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">{{t('roundBot.actionFallbackPickPartnerZooOrUniversity.title')}}</h5>
+          <button class="btn-close" data-bs-dismiss="modal" :aria-label="t('action.close')"></button>
+        </div>
+        <div class="modal-body">
+          <GainPartnerZooOrUniversity ref="gainPartnerZooOrUniversity"/>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-outline-secondary" @click="gainPartnerZooOrUniversity.reset()">{{t('action.reset')}}</button>
           <button class="btn btn-secondary" data-bs-dismiss="modal">{{t('action.close')}}</button>
         </div>
       </div>
@@ -91,6 +115,7 @@ import BotAction from '@/services/BotAction'
 import CardName from "@/services/enum/CardName"
 import GainPartnerUniversity from "./GainPartnerUniversity.vue"
 import GainPartnerZoo from "./GainPartnerZoo.vue"
+import GainPartnerZooOrUniversity from "./GainPartnerZooOrUniversity.vue"
 
 export default defineComponent({
   name: 'BotActions',
@@ -100,13 +125,15 @@ export default defineComponent({
     BonusTile,
     GainPartnerZoo,
     GainPartnerUniversity,
-    PickConservationProject
+    PickConservationProject,
+    GainPartnerZooOrUniversity
   },
   setup() {
     const { t } = useI18n()
     useStore()
     const pickConservationProject = ref()
-    return { t, pickConservationProject }
+    const gainPartnerZooOrUniversity = ref()
+    return { t, pickConservationProject, gainPartnerZooOrUniversity }
   },
   props: {
     navigationState: {
@@ -123,11 +150,15 @@ export default defineComponent({
     botRound() : BotRound {
       return this.navigationState.botRound as BotRound
     },
+    previousBotRound() : BotRound|undefined {
+      return this.navigationState.previousBotRound
+    },
     cardSlots() : CardSlots {
       return CardSlots.fromPersistence(this.botRound.cardSlots)
     },
     botActions() : BotActions {
-      return BotActions.newWithSlot(this.cardSlots, this.navigationState.difficultyLevel, this.botRound.slotNumber)
+      return BotActions.newWithSlot(this.cardSlots, this.navigationState.difficultyLevel, this.botRound.slotNumber,
+          this.previousBotRound?.tokenScoringCardCount ?? 0)
     },
     actionsAll() : BotAction[] {
       return this.overwriteBotActions.length > 0 ? this.overwriteBotActions : this.botActions.actions as BotAction[]
@@ -178,6 +209,9 @@ export default defineComponent({
     },
     isGainPartnerUniversity(action : Action) : boolean {
       return action == Action.GAIN_PARTNER_UNIVERSITY
+    },
+    isGainPartnerZooOrUniversity(action : Action) : boolean {
+      return action == Action.GAIN_PARTNER_ZOO_OR_UNIVERSITY
     },
     isConservationProjectWork(action : Action) : boolean {
       return action == Action.CONSERVATION_PROJECT_WORK

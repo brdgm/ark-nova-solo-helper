@@ -2,7 +2,7 @@
   "gameTitle": "Ark Nova",
   "home": {
     "title": "Ark Nova Solo Helper",
-    "play1": "Play the <a href='https://boardgamegeek.com/thread/2823056/rno-alternative-solo-mode' target='_blank' rel='noopener'><b>A.R.N.O. Solo Mode</b></a> (unofficial) of <a href='https://boardgamegeek.com/boardgame/342942/ark-nova' target='_blank' rel='noopener'><b>Ark Nova</b></a>. Unlike the official solo mode, this simulates additional opponent(s) similar to a multi-player game.",
+    "play1": "Play the <a href='https://boardgamegeek.com/thread/2823056/rno-alternative-solo-mode' target='_blank' rel='noopener'><b>A.R.N.O. 2.0 Solo Mode</b></a> (unofficial) of <a href='https://boardgamegeek.com/boardgame/342942/ark-nova' target='_blank' rel='noopener'><b>Ark Nova</b></a>. Unlike the official solo mode, this simulates additional opponent(s) similar to a multi-player game.",
     "play2": "To play the solo mode you only need the base game. This helper application replaces the ARNO card deck and the dice and tracks ARNO's progression.",
     "feedback": "Discussion and Feedback:"
   },
@@ -22,6 +22,15 @@
       "easy": "Easy",
       "hard": "Hard"
     },
+    "pickZooMap": {
+      "title": "Zoo Map",
+      "pickRandom": "Pick Random (advanced)",
+      "pleaseSelect": "(Please select)",
+      "mapA": "Map A (easy)",
+      "map0": "Map 0 (intermediate)",
+      "mapAdvanced": "Map {id} (advanced)",
+      "mapAdvancedMapPack": "Map {id} (advanced, Map Pack {mapPack})"
+    },
     "actionCardDistribution": {
       "title": "Action Card Distribution",
       "schema": "Probability (%)",
@@ -31,15 +40,17 @@
   "setupARNO": {
     "title": "ARNO Setup",
     "text1": "Set up the game according to player count (including ARNO(s)). A human player will be the starting player.",
-    "text2": "Every ARNO starts with <b>1 conservation point</b> and appeal points according to the player order. E.g. if ARNO is the 3rd player, he starts with 2 appeal points.",
+    "text2": "Every ARNO starts with <b>-3 conservation points</b> and appeal points according to the player order.",
+    "text2-conservation": "Place three player tokens as a reminder next to ARNO’s conservation points counter and remove them one by one as soon as ARNO scored his first conservation points.",
+    "text2-appeal": "E.g. if ARNO is the 3rd player, he starts with 2 appeal points.",
     "text3": "Every ARNO receives the components of one color, a zoo mat (map A), one face-down Final Scoring card and 8 random Zoo cards.",
     "text4": "Place all player tokens of ARNO’s color next to his zoo mat.",
     "text5": "ARNO starts with one association worker on his notepad. Place the remaining 3 on the designated spaces below the notepad on his zoo mat.",
     "text6": "Place the Final Scoring card on the left area of the zoo mat. This will cover the building area which is not needed for ARNO.",
-    "text7": "Sort ARNO‘s 8 Zoo cards according to type:",
+    "text7": "Sort ARNO’s 8 Zoo cards according to type:",
     "text7-1": "Discard all Sponsor cards.",
-    "text7-2": "Stack all Animal cards next to ARNO’s Final Scoring card, so you can still see the information in the upper right corners of each card.",
-    "text7-3": "Build another stack with all Conservation Project cards ARNO has. If ARNO starts with none, begin the stack when he receives his first Project card.",
+    "text7-2": "ARNO keeps a maximum of four cards. He keeps all Conservation Project cards (maximum of four).",
+    "text7-3": "If ARNO now has kept less than four cards, he additionally keeps Animals cards (up to four total).",
     "text8": "You do not need dice or action cards."
   },
   "roundPlayer": {
@@ -59,11 +70,15 @@
     },
     "actionHelpAssociationWorker": {
       "title": "Place Worker",
-      "text": "If ARNO already has one of his workers on this association task, he selects the next higher task where none of his workers is placed yet. Basically he is using X-markers to enhance the action; he never places two workers on the same action. If no higher task is available, he selects the next available lower task. If ARNO has no available worker anymore, he receives conservation points +2 and advances the Break token +2.",
+      "text": "If ARNO already has one of his workers on this association task, he selects the next higher task where none of his workers is placed yet. Basically he is using X-markers to enhance the action; he never places two workers on the same action. If no higher task is available, he selects the next available lower task.",
+      "text-fallback": "If ARNO has no available worker anymore, he receives conservation points +2 and advances the Break token +2. Additionally he receives a new partner zoo or university. He prefers the kind he is missing the most.",
       "chooseDifferent": "Choose a different association action:"
     },
     "actionHelpProjectConservationWork": {
       "title": "Conservation project work"      
+    },
+    "actionFallbackPickPartnerZooOrUniversity": {
+      "title": "Gain Partner Zoo or University"
     },
     "pickConservationProject": {
       "conservationProjectSelection": "Conservation Project Selection",
@@ -79,7 +94,21 @@
       "projectSlotMiddle": "ARNO prefers to place his token on the middle slot.",
       "projectSlotRightMost": "ARNO prefers to place his token on the rightmost slot.",
       "projectSlotAlternatives": "If this slot is already covered by another player, he places it on the next level to the left. If that’s not possible as well, on the next available level to the right."
+    },
+    "gainPartnerZooOrUniversity": {
+      "missingMost": "What is ARNO missing most?",
+      "partnerZoo": "Partner Zoo",
+      "partnerUniversity": "Partner University",
+      "pickRandom": "Pick Random"
     }
+  },
+  "difficultyLevel": {
+    "1": "Level 1: Beginner",
+    "2": "Level 2: Very Easy",
+    "3": "Level 3: Easy",
+    "4": "Level 4: Medium",
+    "5": "Level 5: Hard",
+    "6": "Level 6: Very Hard"
   },
   "cardType": {
     "animals": "Animals",
@@ -93,7 +122,7 @@
     "gain-partner-university": "Gain <b>partner university #{number}</b>.",
     "conservation-project-work": "<b>Conservation project work</b>.",
     "take-card-display": "Snap <b>card #{number}</b> from display.",
-    "token-scoring-card": "Place <b>1</b> ARNO player token on his <b>final scoring card</b>.<br/>If there are already 6 tokens, conservation +2.",
+    "token-scoring-card": "Place <b>1</b> ARNO player token on his <b>final scoring card</b>.",
     "token-notepad": "Place <b>{amount}</b> ARNO player token on his <b>notepad</b> (for final scoring effect). | Place <b>{amount}</b> ARNO player tokens on his <b>notepad</b> (for final scoring effect).",
     "donate": "ARNO donates."
   },
@@ -109,6 +138,11 @@
   },
   "roundDisplay": {
     "round": "Round {round}"
+  },
+  "breakInfo": {
+    "link": "Break",
+    "text1": "During the breaks, ARNO draws <b>three cards</b> from the deck. He keeps the first Conservation Project card and plays the first Animal Card to his zoo mat.",
+    "text2": "The played Animal card might trigger a bonus effect for the human player(s). The other cards are discarded."
   },
   "bonusTile": {
     "link": "Bonus Tile",

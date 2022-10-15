@@ -12,13 +12,15 @@ import DifficultyLevel from "./enum/DifficultyLevel"
 export default class BotActions {
 
   private _slotNumber : number
+  private _tokenScoringCardCount : number
   private _activeCard : Card
   private _cardUpgraded : boolean
   private _actions : BotAction[]
   private _fallbackActions : BotAction[]
 
-  private constructor(cardSlots : CardSlots, difficultyLevel : DifficultyLevel, slotNumber : number) {
+  private constructor(cardSlots : CardSlots, difficultyLevel : DifficultyLevel, slotNumber : number, tokenScoringCardCount : number) {
     this._slotNumber = slotNumber
+    this._tokenScoringCardCount = tokenScoringCardCount
     this._activeCard = cardSlots.get(this._slotNumber)
     this._cardUpgraded = cardSlots.isUpgraded(this._activeCard)
     // determine actions
@@ -52,10 +54,18 @@ export default class BotActions {
         .filter(action => !action.slotFilter || action.slotFilter == this._slotNumber)
         .filter(action => !action.difficultyLevelFilter || action.difficultyLevelFilter == difficultyLevel)
         .filter(action => action.fallback == fallback)
-        .map(action => BotActions.toBotAction(action, this._slotNumber))
+        .map(action => this.toBotAction(action, this._slotNumber))
   }
 
-  private static toBotAction(action : CardAction, slotNumber : number) : BotAction {
+  private toBotAction(action : CardAction, slotNumber : number) : BotAction {
+    // special case: if there are already 6 tokens on the scoring card, take 2 conservation instead
+    if (action.action == Action.TOKEN_SCORING_CARD && this._tokenScoringCardCount >= 6) {
+      return {
+        action: Action.CONSERVATION,
+        amount: 2
+      }
+    }
+
     let amount = 0
     if (action.amount) {
       amount += action.amount
@@ -89,9 +99,9 @@ export default class BotActions {
   }
 
   public static newRandomSlot(cardSlots : CardSlots, difficultyLevel : DifficultyLevel,
-        actionCardDistribution: ActionCardDistributionSchema) : BotActions {
+        actionCardDistribution: ActionCardDistributionSchema, tokenScoringCardCount : number) : BotActions {
     const slotNumber = BotActions.determineRandomSlot(actionCardDistribution)
-    return new BotActions(cardSlots, difficultyLevel, slotNumber)
+    return new BotActions(cardSlots, difficultyLevel, slotNumber, tokenScoringCardCount)
   }
 
   private static determineRandomSlot(schema: ActionCardDistributionSchema) : number {
@@ -132,8 +142,9 @@ export default class BotActions {
     }
   }
 
-  public static newWithSlot(cardSlots : CardSlots, difficultyLevel : DifficultyLevel, slotNumber : number) : BotActions {
-    return new BotActions(cardSlots, difficultyLevel, slotNumber)
+  public static newWithSlot(cardSlots : CardSlots, difficultyLevel : DifficultyLevel, slotNumber : number,
+      tokenScoringCardCount : number) : BotActions {
+    return new BotActions(cardSlots, difficultyLevel, slotNumber, tokenScoringCardCount)
   }
 
 }

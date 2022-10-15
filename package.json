@@ -1,6 +1,6 @@
 {
   "name": "@brdgm/ark-nova-solo-helper",
-  "version": "1.2.4",
+  "version": "2.0.0",
   "private": true,
   "description": "Ark Nova Solo Helper",
   "scripts": {

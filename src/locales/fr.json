@@ -2,7 +2,7 @@
     "gameTitle": "Ark Nova",
     "home": {
       "title": "Aide de jeu Solo - Ark Nova",
-      "play1": "Jouez au <a href='https://boardgamegeek.com/thread/2823056/rno-alternative-solo-mode' target='_blank' rel='noopener'><b>Mode Solo A.R.N.O. </b></a> (non-officielle) d'<a href='https://boardgamegeek.com/boardgame/342942/ark-nova' target='_blank' rel='noopener'><b>Ark Nova</b></a>. Contrairement au mode solo officiel, ce mode simule un ou plusieurs adversaires supplémentaires, comme dans un jeu multi-joueurs.",
+      "play1": "Jouez au <a href='https://boardgamegeek.com/thread/2823056/rno-alternative-solo-mode' target='_blank' rel='noopener'><b>Mode Solo A.R.N.O. 2.0 </b></a> (non-officielle) d'<a href='https://boardgamegeek.com/boardgame/342942/ark-nova' target='_blank' rel='noopener'><b>Ark Nova</b></a>. Contrairement au mode solo officiel, ce mode simule un ou plusieurs adversaires supplémentaires, comme dans un jeu multi-joueurs.",
       "play2": "Pour jouer en mode solo, il vous suffit d'avoir le jeu de base. Cette application remplace le jeu de cartes ARNO et les dés et suit la progression d'ARNO durant la partie.",
       "feedback": "Discussion et Retour:"
     },
@@ -31,15 +31,14 @@
     "setupARNO": {
       "title": "Mise en place d'ARNO",
       "text1": "Organisez le jeu en fonction du nombre de joueurs (y compris ARNO). Un joueur humain sera toujours le premier joueur.",
-      "text2": "Chaque ARNO commence avec <b>1 point de conservation</b> et des points d'attrait selon l'ordre des joueurs. Par exemple, si ARNO est le 3ème joueur, il commence avec 2 points d'attraits.",
+      "text2": "Chaque ARNO commence avec <b>-3 points de conservation</b> et des points d'attrait selon l'ordre des joueurs.",
+      "text2-appeal": "Par exemple, si ARNO est le 3ème joueur, il commence avec 2 points d'attraits.",
       "text3": "Chaque ARNO reçoit les composants d'une couleur, un plateau zoo (carte A), une carte de score final face cachée et 8 cartes Zoo aléatoires.",
       "text4": "Placez tous les jetons de joueur de la couleur d'ARNO à côté de son plateau zoo.",
       "text5": "ARNO commence avec un bénévole sur son bloc-notes. Placez les 3 autres sur les espaces dédiés en dessous du bloc-notes sur son plateau zoo.",
       "text6": "Placez la carte de score final sur la partie gauche du plateau zoo. Cela permet de couvrir la zone des bâtiment qui n'est pas nécessaire pour ARNO.",
       "text7": "Triez les 8 cartes Zoo d'ARNO en fonction de leur type :",
       "text7-1": "Défaussez toutes les cartes de Mécènes.",
-      "text7-2": "Empilez toutes les cartes Animaux à côté de la carte score final d'ARNO, de manière à ce que vous puissiez toujours voir les informations (îcones) dans les coins supérieurs droits de chaque carte.",
-      "text7-3": "Construisez une autre pile avec toutes les cartes Projet de conservation que possède ARNO. Si ARNO commence sans aucune carte, commencez la pile lorsqu'il reçoit sa première carte Projet.",
       "text8": "Vous n'avez pas besoin de dés ou de cartes d'action."
     },
     "roundPlayer": {
@@ -59,7 +58,7 @@
       },
       "actionHelpAssociationWorker": {
         "title": "Placez un Bénévole",
-        "text": "Si ARNO a déjà un de ses bénévoles sur cette tâche d'association, il sélectionne la tâche immédiatement supérieure où aucun de ses bénévoles n'est encore placé. Normalement, il utilise les marqueurs X pour améliorer l'action ; il ne place jamais deux bénévoles sur la même action. Si aucune tâche associative supérieure n'est disponible, il sélectionne la prochaine tâche associative inférieure disponible. Si ARNO n'a plus de bénévole disponible, il reçoit +2 points de conservation et avance de +2 le jeton pause.",
+        "text": "Si ARNO a déjà un de ses bénévoles sur cette tâche d'association, il sélectionne la tâche immédiatement supérieure où aucun de ses bénévoles n'est encore placé. Normalement, il utilise les marqueurs X pour améliorer l'action ; il ne place jamais deux bénévoles sur la même action. Si aucune tâche associative supérieure n'est disponible, il sélectionne la prochaine tâche associative inférieure disponible.",
         "chooseDifferent": "Choisissez une autre tâche d'association :"
       },
       "actionHelpProjectConservationWork": {
@@ -93,7 +92,7 @@
       "gain-partner-university": "Gagne <b> une université #{number}</b>.",
       "conservation-project-work": "<b>Projet de conservation</b>.",
       "take-card-display": "ARNO prend la <b>carte #{number}</b> de la rivière.",
-      "token-scoring-card": "Placez <b>1</b> des cubes d'ARNO sur <b>fcarte de Décompte final</b>.<br/>S'il y a déjà 6 cubes, conservation +2.",
+      "token-scoring-card": "Placez <b>1</b> des cubes d'ARNO sur <b>fcarte de Décompte final</b>.",
       "token-notepad": "Placez <b>{amount}</b> cube d'ARNO sur le <b>bloc-notes</b> (compte pour le décompte final). | Placez <b>{amount}</b> cubes d'ARNO sur le <b>bloc-notes</b> (compte pour le décompte final).",
       "donate": "ARNO fait un don."
     },
