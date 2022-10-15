@@ -37,8 +37,8 @@ export default defineComponent({
     GainPartnerUniversity
   },
   setup() {
-    const { t } = useI18n();
-    return { t };
+    const { t } = useI18n()
+    return { t }
   },
   data() {
     return {

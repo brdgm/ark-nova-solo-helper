@@ -130,6 +130,11 @@
   "roundDisplay": {
     "round": "Runde {round}"
   },
+  "breakInfo": {
+    "link": "Pause",
+    "text1": "Während den Pausen zieht ARNO <b>drei Karten</b> vom Nachziehstapel und legt, falls verfügbar, jeweils die erste Artenschutzprojekt- und Tierkarte auf seinen Zooplan.",
+    "text2": "Die Tierkarte kann dabei einen Effekt beim menschlichen Spieler auslösen. Die anderen Karten werden abgeworfen."
+  },
   "bonusTile": {
     "link": "Bonus&shy;plättchen",
     "text": "ARNO wählt niemals den vorgedruckten Bonus.",
