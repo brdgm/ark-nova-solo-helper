@@ -1,7 +1,13 @@
 <template>
   <ol>
     <li v-html="t('setupARNO.text1')"></li>
-    <li v-html="t('setupARNO.text2')"></li>
+    <li>
+      <span v-html="t('setupARNO.text2')"></span>
+      <ul>
+        <li v-html="t('setupARNO.text2-conservation')"></li>
+        <li v-html="t('setupARNO.text2-appeal')"></li>
+      </ul>
+    </li>
     <li v-html="t('setupARNO.text3')"></li>
     <li v-html="t('setupARNO.text4')"></li>
     <li v-html="t('setupARNO.text5')"></li>

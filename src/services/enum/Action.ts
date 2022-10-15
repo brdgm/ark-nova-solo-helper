@@ -8,6 +8,7 @@ enum Action {
   BREAK = 'break',
   GAIN_PARTNER_ZOO = 'gain-partner-zoo',
   GAIN_PARTNER_UNIVERSITY = 'gain-partner-university',
+  GAIN_PARTNER_ZOO_OR_UNIVERSITY = 'gain-partner-zoo-or-university',
   CONSERVATION_PROJECT_WORK = 'conservation-project-work',
   TAKE_CARD_DISPLAY = 'take-card-display',
   TOKEN_SCORING_CARD = 'token-scoring-card',

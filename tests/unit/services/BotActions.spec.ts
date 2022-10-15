@@ -10,7 +10,7 @@ import { expect } from 'chai'
 describe('BotActions', () => {
   it('randomPick', () => {
     const cardSlots = CardSlots.new()
-    const botActions = BotActions.newRandomSlot(cardSlots, DifficultyLevel.EASY, ActionCardDistributionSchema.P0_25_25_25_25)
+    const botActions = BotActions.newRandomSlot(cardSlots, DifficultyLevel.L1_BEGINNER, ActionCardDistributionSchema.P0_25_25_25_25)
 
     expect(botActions.activeCard).not.to.undefined
     expect(botActions.slotNumber).to.greaterThanOrEqual(2)
@@ -18,16 +18,16 @@ describe('BotActions', () => {
     expect(botActions.actions.length, 'has actions').not.to.eq(0)
   })
 
-  it('animals-standard-5-easy', () => {
-    const botActions = setup(CardName.ANIMALS, false, 5, DifficultyLevel.EASY)
+  it('animals-standard-5-beginner', () => {
+    const botActions = setup(CardName.ANIMALS, false, 5, DifficultyLevel.L1_BEGINNER)
 
     expect(botActions.activeCard.name).to.eq(CardName.ANIMALS)
     expect(botActions.actions).to.eql([{action: Action.APPEAL, amount: 5}])
     expect(botActions.hasFallback).to.false
   })
 
-  it('animals-standard-2-medium', () => {
-    const botActions = setup(CardName.ANIMALS, false, 2, DifficultyLevel.MEDIUM)
+  it('animals-standard-2-easy', () => {
+    const botActions = setup(CardName.ANIMALS, false, 2, DifficultyLevel.L3_EASY)
 
     expect(botActions.activeCard.name).to.eq(CardName.ANIMALS)
     expect(botActions.actions).to.eql([{action: Action.APPEAL, amount: 3}])
@@ -35,27 +35,28 @@ describe('BotActions', () => {
   })
 
   it('animals-upgrade-3-hard', () => {
-    const botActions = setup(CardName.ANIMALS, true, 3, DifficultyLevel.HARD)
+    const botActions = setup(CardName.ANIMALS, true, 3, DifficultyLevel.L5_HARD)
 
     expect(botActions.activeCard.name).to.eq(CardName.ANIMALS)
     expect(botActions.actions).to.eql([{action: Action.APPEAL, amount: 6}])
     expect(botActions.hasFallback).to.false
   })
 
-  it('association-standard-4-medium', () => {
-    const botActions = setup(CardName.ASSOCIATION, false, 4, DifficultyLevel.MEDIUM)
+  it('association-standard-4-easy', () => {
+    const botActions = setup(CardName.ASSOCIATION, false, 4, DifficultyLevel.L3_EASY)
 
     expect(botActions.activeCard.name).to.eq(CardName.ASSOCIATION)
-    expect(botActions.actions).to.eql([{action: Action.GAIN_PARTNER_UNIVERSITY, amount: 0}])
+    expect(botActions.actions).to.eql([{action: Action.GAIN_PARTNER_ZOO, amount: 0}])
     expect(botActions.hasFallback).to.true
     expect(botActions.fallbackActions).to.eql([
       {action: Action.CONSERVATION, amount: 2},
-      {action: Action.BREAK, amount: 2}
+      {action: Action.BREAK, amount: 2},
+      {action: Action.GAIN_PARTNER_ZOO_OR_UNIVERSITY, amount: 0}
     ])
   })
 
-  it('association-upgraded-5-medium', () => {
-    const botActions = setup(CardName.ASSOCIATION, true, 5, DifficultyLevel.MEDIUM)
+  it('association-upgraded-5-easy', () => {
+    const botActions = setup(CardName.ASSOCIATION, true, 5, DifficultyLevel.L3_EASY)
 
     expect(botActions.activeCard.name).to.eq(CardName.ASSOCIATION)
     expect(botActions.actions).to.eql([
@@ -65,17 +66,19 @@ describe('BotActions', () => {
     expect(botActions.hasFallback).to.true
     expect(botActions.fallbackActions).to.eql([
       {action: Action.CONSERVATION, amount: 2},
-      {action: Action.BREAK, amount: 2}
+      {action: Action.BREAK, amount: 2},
+      {action: Action.GAIN_PARTNER_ZOO_OR_UNIVERSITY, amount: 0}
     ])
   })
 
-  it('sponsors-standard-2-medium', () => {
-    const botActions = setup(CardName.SPONSORS, false, 2, DifficultyLevel.MEDIUM)
+  it('sponsors-standard-2-easy', () => {
+    const botActions = setup(CardName.SPONSORS, false, 2, DifficultyLevel.L3_EASY)
 
     expect(botActions.activeCard.name).to.eq(CardName.SPONSORS)
     expect(botActions.actions).to.eql([
-      {action: Action.BREAK, amount: 2},
-      {action: Action.TOKEN_SCORING_CARD, amount: 1}
+      {action: Action.REPUTATION, amount: 1},
+      {action: Action.TOKEN_SCORING_CARD, amount: 1},
+      {action: Action.BREAK, amount: 2}
     ])
     expect(botActions.hasFallback).to.false
     expect(botActions.getTokenScoringCardCount()).to.eq(1)
@@ -83,14 +86,14 @@ describe('BotActions', () => {
     expect(botActions.getAppealCount()).to.eq(0)
   })
 
-  it('sponsors-upgraded-3-medium', () => {
-    const botActions = setup(CardName.SPONSORS, true, 3, DifficultyLevel.MEDIUM)
+  it('sponsors-upgraded-3-easy', () => {
+    const botActions = setup(CardName.SPONSORS, true, 3, DifficultyLevel.L3_EASY)
 
     expect(botActions.activeCard.name).to.eq(CardName.SPONSORS)
     expect(botActions.actions).to.eql([
-      {action: Action.BREAK, amount: 3},
       {action: Action.APPEAL, amount: 3},
-      {action: Action.TOKEN_NOTEPAD, amount: 1}
+      {action: Action.TOKEN_NOTEPAD, amount: 1},
+      {action: Action.BREAK, amount: 3}
     ])
     expect(botActions.hasFallback).to.false
     expect(botActions.getTokenScoringCardCount()).to.eq(0)
@@ -99,29 +102,30 @@ describe('BotActions', () => {
   })
 
   it('build-standard-5-hard', () => {
-    const botActions = setup(CardName.BUILD, false, 5, DifficultyLevel.HARD)
+    const botActions = setup(CardName.BUILD, false, 5, DifficultyLevel.L5_HARD)
 
     expect(botActions.activeCard.name).to.eq(CardName.BUILD)
     expect(botActions.actions).to.eql([{action: Action.CONSERVATION, amount: 4}])
     expect(botActions.hasFallback).to.false
   })
 
-  it('build-upgraded-2-medium', () => {
-    const botActions = setup(CardName.BUILD, true, 2, DifficultyLevel.MEDIUM)
+  it('build-upgraded-2-easy', () => {
+    const botActions = setup(CardName.BUILD, true, 2, DifficultyLevel.L3_EASY)
 
     expect(botActions.activeCard.name).to.eq(CardName.BUILD)
     expect(botActions.actions).to.eql([{action: Action.REPUTATION, amount: 2}])
     expect(botActions.hasFallback).to.false
   })
 
-  it('cards-standard-3-medium', () => {
-    const botActions = setup(CardName.CARDS, false, 3, DifficultyLevel.MEDIUM)
+  it('cards-standard-3-easy', () => {
+    const botActions = setup(CardName.CARDS, false, 3, DifficultyLevel.L3_EASY)
 
     expect(botActions.activeCard.name).to.eq(CardName.CARDS)
     expect(botActions.actions).to.eql([
-      {action: Action.BREAK, amount: 1},
+      {action: Action.CONSERVATION, amount: 1},
       {action: Action.TAKE_CARD_DISPLAY, amount: 0},
-      {action: Action.APPEAL, amount: 2},
+      {action: Action.BREAK, amount: 1},
+      {action: Action.APPEAL, amount: 2}
     ])
     expect(botActions.hasFallback).to.false
   })

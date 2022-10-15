@@ -6,7 +6,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" v-html="t('bonusTile.link')"></h5>
-          <button class="btn-close" data-bs-dismiss="modal" aria-label="Close" @click="reset()"></button>
+          <button class="btn-close" data-bs-dismiss="modal" :aria-label="t('action.close')" @click="reset()"></button>
         </div>
         <div class="modal-body">
           <p v-html="t('bonusTile.text')"></p>
@@ -54,7 +54,7 @@ export default defineComponent({
     Icon,
     GainPartnerZoo,
     GainPartnerUniversity
-},
+  },
   setup() {
     const { t } = useI18n()
     return { t }
@@ -87,10 +87,12 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 #bonusTile {
-  float: right;
+  position: absolute;
+  right: 0;
+  top: 8.25rem;
+  margin-right: 0.75rem;
   text-decoration: underline dotted;
   color: #000;
-  max-width: 20%;
   text-align: right;
 }
 .bonusTileImage {
