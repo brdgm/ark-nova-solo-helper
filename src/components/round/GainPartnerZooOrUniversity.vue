@@ -45,7 +45,6 @@ export default defineComponent({
       missingMostPartnerZooOrUniversity: 0
     };
   },
-  computed: {},
   methods: {
     pickRandom() : void {
       this.missingMostPartnerZooOrUniversity = rollDice(2)
