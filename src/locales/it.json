@@ -22,6 +22,15 @@
       "easy": "Facile",
       "hard": "Difficile"
     },
+    "pickZooMap": {
+      "title": "Mappa Zoo",
+      "pickRandom": "Scegli a caso (avanzata)",
+      "pleaseSelect": "(Per favore scegli)",
+      "mapA": "Mappa A (facile)",
+      "map0": "Mappa 0 (intermedia)",
+      "mapAdvanced": "Mappa {id} (avanzata)",
+      "mapAdvancedMapPack": "Mappa {id} (avanzata, Pacchetto Mappe {mapPack})"
+    },
     "actionCardDistribution": {
       "title": "Distribuzione Delle Carte Azione",
       "schema": "Probabilità (%)",
@@ -32,6 +41,7 @@
     "title": "Setup di ARNO",
     "text1": "Prepara il gioco in base al numero di giocatori (compresi gli ARNO). Un giocatore umano sarà il giocatore iniziale.",
     "text2": "Ogni ARNO inizia con <b>-3 punti conservazione</b> e punti attrattiva a seconda dell'ordine di partenza.",
+    "text2-conservation": "Metti tre segnalini giocatore come promemoria accanto al segnalino punti conservazione di ARNO e rimuovili uno per uno non appena ARNO ha segnato i suoi primi punti conservazione.",
     "text2-appeal": "Per esempio, se ARNO è il 3° giocatore, inizia con 2 punti attrattiva.",
     "text3": "Ogni ARNO riceve i componenti di un colore, una mappa zoo (mappa A), una carta Punteggio Finale a faccia in giù e 8 carte Zoo casuali.",
     "text4": "Metti tutti i segnalini giocatore del colore di ARNO accanto alla sua mappa zoo.",
@@ -39,6 +49,8 @@
     "text6": "Posiziona la carta Punteggio Finale nell'area sinistra della mappa zoo. Coprirà l’area di costruzione che non è necessaria per ARNO.",
     "text7": "Ordina le 8 carte Zoo di ARNO in base al tipo:",
     "text7-1": "Scarta tutte le carte Sponsor.",
+    "text7-2": "ARNO tiene un massimo di quattro carte. Mantiene tutte le carte Progetto di Conservazione (massimo quattro).",
+    "text7-3": "Se ARNO ora ha meno di quattro carte, allora tiene carte Animali (fino a quattro carte totali).",
     "text8": "Non hai bisogno di dadi o delle carte azione."
   },
   "roundPlayer": {
@@ -59,10 +71,14 @@
     "actionHelpAssociationWorker": {
       "title": "Piazza Lavoratore",
       "text": "Se ARNO ha già uno dei suoi lavoratori in questo compito presso le associazioni, seleziona il successivo compito più alto dove nessuno dei suoi lavoratori è ancora piazzato. Fondamentalmente sta usando segnalini X per migliorare l'azione; non mette mai due lavoratori nello stesso compito. Se non è disponibile alcun compito superiore, seleziona il compito successivo inferiore disponibile.",
+      "text-fallback": "Se ARNO non ha più lavoratori disponibili, allora riceve +2 punti conservazione e avanza il segnalino Pausa +2. Inoltre riceve un nuovo zoo o università partner. Preferisce il tipo tra cui ne mancano di più.",
       "chooseDifferent": "Scegli un compito Associazione differente:"
     },
     "actionHelpProjectConservationWork": {
       "title": "Progetto di conservazione"
+    },
+    "actionFallbackPickPartnerZooOrUniversity": {
+        "title": "Ottiene uno Zoo o Università Partner."
     },
     "pickConservationProject": {
       "conservationProjectSelection": "Scelta del Progetto di Conservazione",
@@ -78,7 +94,21 @@
       "projectSlotMiddle": "ARNO preferisce piazzare il suo segnalino sullo spazio al centro.",
       "projectSlotRightMost": "ARNO preferisce piazzare il suo segnalino sullo spazio più a destra.",
       "projectSlotAlternatives": "Se questo spazio è già stato coperto, allora piazza il segnalino al livello successivo a sinistra. Se anche questo è occupato, al livello successivo disponibile a destra."
-    }
+    },
+    "gainPartnerZooOrUniversity": {
+        "missingMost": "Cosa manca di più ad ARNO?",
+        "partnerZoo": "Zoo Partner",
+        "partnerUniversity": "University Partner",
+        "pickRandom": "Scegli A Caso"
+    },
+  },
+  "difficultyLevel": {
+    "1": "Livello 1: Principiante",
+    "2": "Livello 2: Molto Facile",
+    "3": "Livello 3: Facile",
+    "4": "Livello 4: Medio",
+    "5": "Livello 5: Difficile",
+    "6": "Livello 6: Molto  Difficile"
   },
   "cardType": {
     "animals": "Animali",
@@ -108,6 +138,11 @@
   },
   "roundDisplay": {
     "round": "Round {round}"
+  },
+  "breakInfo": {
+    "link": "Pausa",
+    "text1": "Durante le pause, ARNO pesca <b>tre carte</b> dal mazzo. Tiene la prima crta Progetto di Conservazione e gioca la prima carta Animale sulla sua mappa zoo.",
+    "text2": "La carta Animale giocata potrebbe attivare un effetto bonus per i giocatori umani. Le altre carte vengono scartate."
   },
   "bonusTile": {
     "link": "Tessera Bonus",
