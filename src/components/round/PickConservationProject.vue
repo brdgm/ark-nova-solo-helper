@@ -61,13 +61,13 @@ export default defineComponent({
       return this.pickFromHand || this.pickFromBoardNoToken || this.pickFromBoardAvailable
     },
     projectSlotLeftMost() : boolean {
-      return this.difficultyLevel == DifficultyLevel.L1_BEGINNER || this.difficultyLevel == DifficultyLevel.L2_VERY_EASY
+      return this.difficultyLevel == DifficultyLevel.L5_HARD || this.difficultyLevel == DifficultyLevel.L6_VERY_HARD
     },
     projectSlotMiddle() : boolean {
       return this.difficultyLevel == DifficultyLevel.L3_EASY || this.difficultyLevel == DifficultyLevel.L4_MEDIUM
     },
     projectSlotRightMost() : boolean {
-      return this.difficultyLevel == DifficultyLevel.L5_HARD || this.difficultyLevel == DifficultyLevel.L6_VERY_HARD
+      return this.difficultyLevel == DifficultyLevel.L1_BEGINNER || this.difficultyLevel == DifficultyLevel.L2_VERY_EASY
     }
   },
   methods: {
