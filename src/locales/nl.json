@@ -22,6 +22,15 @@
       "easy": "Makkelijk",
       "hard": "Moeilijk"
     },
+    "pickZooMap": {
+      "title": "Dierentuinkaart",
+      "pickRandom": "Kies willekeurig (advanced)",
+      "pleaseSelect": "(seleceer)",
+      "mapA": "Map A (makkelijk)",
+      "map0": "Map 0 (gemiddeld)",
+      "mapAdvanced": "Map {id} (moeilijk)",
+      "mapAdvancedMapPack": "Map {id} (advanced, Map Pack {mapPack})"
+    },
     "actionCardDistribution": {
       "title": "Actie Kaartverdeling",
       "schema": "Verdeling (%)",
@@ -31,7 +40,8 @@
   "setupARNO": {
     "title": "ARNO Setup",
     "text1": "ZEt het spel klaar volgens het aantal spelers (inclusief ARNO(s)). Een menselijke speler zal de startspeler zijn.",
-    "text2": "Elke ARNO start met <b>-3 conservatie punten</b> en populariteitspunten volgens de spelersvolgorde.",
+    "text2": "Elke ARNO start met <b>-3 conservatie punten</b> en met populariteitspunten volgens de spelersvolgorde.",
+    "text2-conservation": "Plaats 3 spelerstokens als reminder naast Arno's conservatiespoor en verwijder ze 1 voor 1 als Arno zijn eerste conservatiepunten scoort.",
     "text2-appeal": "Bijvoorbeeld: is ARNO de 3e speler, dan start hij met 2 populariteitspunten.",
     "text3": "Elke ARNO ontvangt de spelonderdelen van één kleur, een dierentuinkaart (map A), één gesloten Eindtellingskaart en 8 willekeurige Dierentuinkaarten.",
     "text4": "Plaats alle spelerstokens van ARNO’s kleur naast zijn dierentuinkaart.",
@@ -39,6 +49,8 @@
     "text6": "Plaats de Eindtellingskaart op het linker gebied van de dierentuinkaart. Deze verbergt het bouwgebied welke niet nodig is voor ARNO.",
     "text7": "Sorteer ARNO‘s 8 Dierenuinkaarten volgens het soort:",
     "text7-1": "Verwijder alle sponsorkaarten.",
+    "text7-2": "ARNO houdt maximaal 4 kaarten. Hij houdt alle conservatieprojectkaarten (maximaal 4).",
+    "text7-3": "Als Arno nu minder dan 4 kaarten heeft, houdt hij daarnaast dierenkaarten (maximaal 4 kaarten totaal).",
     "text8": "Je heb de dobbelsteen en actiekaarten niet nodig."
   },
   "roundPlayer": {
@@ -59,10 +71,14 @@
     "actionHelpAssociationWorker": {
       "title": "Plaast Werker",
       "text": "Als ARNO al één van zijn medewerkers op deze samenwerkingsopdracht heeft, selecteert hij de volgende hogere opdracht waar nog geen van zijn werkers staat. Eigenlijk gebruikt hij X-markers om de actie te verbeteren; hij plaatst nooit twee werkers op dezelfde actie. Als er geen hogere opdracht beschikbaar is, kiest hij de eerstvolgende beschikbare lagere opdracht.",
+      "text-fallback": "Als ARNO geen beschikbare medewerker meer heeft, ontvangt hij +2 conservatiepunten en zet 2 stappen op het pauzespoor. Ook ontvangt hij een nieuwe partnerdierentuin of universiteit. Hij kiest daarvoor, waar hij de minste van heeft ",
       "chooseDifferent": "Kies een andere samenwerkingsactie:"
     },
     "actionHelpProjectConservationWork": {
-      "title": "Conservatieproject"      
+      "title": "Conservatieproject" 
+    },
+    "actionFallbackPickPartnerZooOrUniversity": {
+      "title": "Ontvang partnerdierentuin of universiteit"
     },
     "pickConservationProject": {
       "conservationProjectSelection": "Conservatieproject Selectie",
@@ -78,7 +94,21 @@
       "projectSlotMiddle": "ARNO wil zijn token op het middelste vakje plaatsen.",
       "projectSlotRightMost": "ARNO wil zijn token op het meest rechtse vakje plaatsen.",
       "projectSlotAlternatives": "Als dit vakje al in gebruik is door een andere speler, plaats hij het op het volgend level aan de linker kant. Als dat ook niet mogelijk is, op het volgende level aan de rechter kant."
+    },
+    "gainPartnerZooOrUniversity": {
+      "missingMost": "Waar heeft Arno de minste van?",
+      "partnerZoo": "Parterdierentuin",
+      "partnerUniversity": "Partneruniversiteit",
+      "pickRandom": "Kies willekeurig"
     }
+  },
+  "difficultyLevel": {
+    "1": "Level 1: Beginner",
+    "2": "Level 2: Erg makkelijk",
+    "3": "Level 3: Makkelijk",
+    "4": "Level 4: Gemiddeld",
+    "5": "Level 5: Moeilijk",
+    "6": "Level 6: Zeer moeilijk"
   },
   "cardType": {
     "animals": "Dieren",
@@ -108,6 +138,11 @@
   },
   "roundDisplay": {
     "round": "Ronde {round}"
+  },
+  "breakInfo": {
+    "link": "Pauze",
+    "text1": "Tijdens pauzes, ARNO trekt <b>drie kaarten</b> van de trekstapel. Hij houdt de eerste conservatieprojectkaart en speelt de eerste dierenkaart in zijn dierentuin.",
+    "text2": "De gespeelde dierenkaart kan een bonus voor de menselijke spelers activeren. De andere kaarten worden afgelegd."
   },
   "bonusTile": {
     "link": "Bonustegel",
