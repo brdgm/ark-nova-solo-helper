@@ -54,7 +54,7 @@ const router = createRouter({
 
 // store last used route path in local storage
 router.afterEach(to => {
-  localStorage.setItem(LOCALSTORAGE_KEY, to.fullPath as string)
+  localStorage.setItem(LOCALSTORAGE_KEY, to.fullPath)
 })
 // redirect to lase used route path
 let isFirstTransition = true
