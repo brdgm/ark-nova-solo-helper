@@ -7,6 +7,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
+    "test:coverage": "nyc vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
     "i18n:report": "vue-cli-service i18n:report --src \"./src/**/*.?(js|vue)\" --locales \"./src/locales/**/*.json\""
   },
@@ -24,6 +25,7 @@
   },
   "devDependencies": {
     "@intlify/vue-i18n-loader": "^4.2.0",
+    "@istanbuljs/nyc-config-typescript": "^1.0.2",
     "@types/bootstrap": "^5.2.2",
     "@types/chai": "^4.3.3",
     "@types/lodash": "^4.14.182",
@@ -41,11 +43,15 @@
     "@vue/compiler-sfc": "^3.2.37",
     "@vue/eslint-config-typescript": "^7.0.0",
     "@vue/test-utils": "^2.0.2",
+    "babel-plugin-istanbul": "^6.1.1",
     "chai": "^4.3.6",
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^7.20.0",
+    "nyc": "^15.1.0",
     "sass": "^1.54.4",
     "sass-loader": "^13.0.2",
+    "source-map-support": "^0.5.21",
+    "ts-node": "^10.9.1",
     "typescript": "~4.7.4",
     "vue-cli-plugin-i18n": "~2.3.1"
   }
