@@ -120,6 +120,7 @@ export default defineComponent({
 <style lang="scss">
 @import "bootstrap/scss/functions";
 @import "bootstrap/scss/variables";
+@import "bootstrap/scss/maps";
 @import "bootstrap/scss/utilities";
 #content-container {
   font-size: calc(v-bind(baseFontSize) * $font-size-base);
