@@ -8,12 +8,12 @@
   <div class="actions">
     <div v-for="(action, index) in actionsIconOnly" :key="index" class="action amount">
       <div class="value" :data-action="action.action">{{action.amount}}</div>
-      <Icon :name="action.action" class="icon amount"/>
+      <AppIcon :name="action.action" class="icon amount"/>
     </div>
   </div>
   <div class="actions">
     <div v-for="(action, index) in actionsWithDescription" :key="index" class="action">
-      <Icon :name="action.action" class="icon float-start me-3 mb-3"/>
+      <AppIcon :name="action.action" class="icon float-start me-3 mb-3"/>
       <template v-if="isGainPartnerZoo(action.action)"><GainPartnerZoo/></template>
       <template v-else-if="isGainPartnerUniversity(action.action)"><GainPartnerUniversity/></template>
       <span v-else-if="isConservationProjectWork(action.action)" class="actionHelp" v-html="t(`cardAction.${action.action}`)" data-bs-toggle="modal" data-bs-target="#actionHelpProjectConservationWorkModal"></span>
@@ -24,11 +24,11 @@
     <p class="fallbackText">{{t('roundBot.fallbackText')}}</p>
     <div v-for="(action, index) in botActions.fallbackActions" :key="index" class="action amount fallback">
       <v-template v-if="isGainPartnerZooOrUniversity(action.action)">
-        <a data-bs-toggle="modal" data-bs-target="#actionFallbackPickPartnerZooOrUniversity" href="#"><Icon :name="action.action" class="icon"/></a>
+        <a data-bs-toggle="modal" data-bs-target="#actionFallbackPickPartnerZooOrUniversity" href="#"><AppIcon :name="action.action" class="icon"/></a>
       </v-template>
       <v-template v-else>
         <div class="value" :data-action="action.action">{{action.amount}}</div>
-        <Icon :name="action.action" class="icon amount"/>
+        <AppIcon :name="action.action" class="icon amount"/>
       </v-template>
     </div>
   </div>
@@ -48,7 +48,7 @@
           <p v-html="t('roundBot.actionHelpAssociationWorker.chooseDifferent')"></p>
           <div class="actions overwriteAssociation">
             <div v-for="(action, index) in getUnusedAssociationActions()" :key="index" class="action amount">
-              <Icon :name="action" class="icon amount" @click="overwriteAssociationAction(action)" data-bs-dismiss="modal"/>
+              <AppIcon :name="action" class="icon amount" @click="overwriteAssociationAction(action)" data-bs-dismiss="modal"/>
             </div>
           </div>
         </div>
@@ -104,7 +104,7 @@ import { useI18n } from 'vue-i18n'
 import { BotRound, useStore } from '@/store'
 import NavigationState from '@/util/NavigationState'
 import BotActions from '@/services/BotActions'
-import Icon from '../structure/Icon.vue'
+import AppIcon from '../structure/AppIcon.vue'
 import ActionCards from './ActionCards.vue'
 import CardSlots from "@/services/CardSlots"
 import PickConservationProject from './PickConservationProject.vue'
@@ -120,7 +120,7 @@ import GainPartnerZooOrUniversity from "./GainPartnerZooOrUniversity.vue"
 export default defineComponent({
   name: 'BotActions',
   components: {
-    Icon,
+    AppIcon,
     ActionCards,
     BonusTile,
     GainPartnerZoo,

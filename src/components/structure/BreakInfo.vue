@@ -1,7 +1,7 @@
 <template>
   <div>
     <a id="breakInfo" data-bs-toggle="modal" href="#breakInfoModal">
-      <Icon name="break" class="icon"/>{{t('breakInfo.link')}}
+      <AppIcon name="break" class="icon"/>{{t('breakInfo.link')}}
     </a>
   </div>
 
@@ -28,12 +28,12 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
-import Icon from './Icon.vue'
+import AppIcon from './AppIcon.vue'
 
 export default defineComponent({
   name: "AboutARNO",
   components: {
-    Icon
+    AppIcon
   },
   setup() {
     const { t } = useI18n()

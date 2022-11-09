@@ -7,7 +7,7 @@
     </div>
   </div>
   <button v-if="cardSlots.canUpgradeCard()" type="button" class="upgrade btn btn-outline-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#upgradeCardModal">
-    <Icon name="upgrade" class="icon"/> {{t('roundBot.upgrade')}}
+    <AppIcon name="upgrade" class="icon"/> {{t('roundBot.upgrade')}}
   </button>
 
   <div class="modal" id="upgradeCardModal" tabindex="-1">
@@ -37,14 +37,14 @@ import { useI18n } from 'vue-i18n'
 import { BotRound, useStore } from '@/store'
 import NavigationState from '@/util/NavigationState'
 import CardSlots from '@/services/CardSlots'
-import Icon from '../structure/Icon.vue'
+import AppIcon from '../structure/AppIcon.vue'
 import CardTypeIcon from '../structure/CardTypeIcon.vue'
 import Card from '@/services/Card'
 
 export default defineComponent({
   name: 'ActionCards',
   components: {
-    Icon,
+    AppIcon,
     CardTypeIcon
   },
   setup() {
