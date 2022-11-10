@@ -23,13 +23,13 @@
   <div class="actions" v-if="botActions.hasFallback">
     <p class="fallbackText">{{t('roundBot.fallbackText')}}</p>
     <div v-for="(action, index) in botActions.fallbackActions" :key="index" class="action amount fallback">
-      <v-template v-if="isGainPartnerZooOrUniversity(action.action)">
+      <template v-if="isGainPartnerZooOrUniversity(action.action)">
         <a data-bs-toggle="modal" data-bs-target="#actionFallbackPickPartnerZooOrUniversity" href="#"><AppIcon :name="action.action" class="icon"/></a>
-      </v-template>
-      <v-template v-else>
+      </template>
+      <template v-else>
         <div class="value" :data-action="action.action">{{action.amount}}</div>
         <AppIcon :name="action.action" class="icon amount"/>
-      </v-template>
+      </template>
     </div>
   </div>
 
