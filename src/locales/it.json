@@ -96,11 +96,11 @@
       "projectSlotAlternatives": "Se questo spazio è già stato coperto, allora piazza il segnalino al livello successivo a sinistra. Se anche questo è occupato, al livello successivo disponibile a destra."
     },
     "gainPartnerZooOrUniversity": {
-        "missingMost": "Cosa manca di più ad ARNO?",
-        "partnerZoo": "Zoo Partner",
-        "partnerUniversity": "University Partner",
-        "pickRandom": "Scegli A Caso"
-    },
+      "missingMost": "Cosa manca di più ad ARNO?",
+      "partnerZoo": "Zoo Partner",
+      "partnerUniversity": "University Partner",
+      "pickRandom": "Scegli A Caso"
+    }
   },
   "difficultyLevel": {
     "1": "Livello 1: Principiante",
@@ -127,7 +127,7 @@
     "donate": "ARNO dona."
   },
   "aboutARNO": {
-    "link": "Informazioni su ARNO",
+    "link": "Regole ARNO",
     "title": "Riassunto delle Regole A.R.N.O.",
     "text1": "ARNO <b>non usa soldi</b>. Non spende soldi per le azioni e non riceve mai soldi (ad esempio durante le pause o dalle carte Animali).",
     "text2": "ARNO <b>usa solo l’area destra della sua mappa zoo</b>. È dove piazza i suoi zoo partner e le università, ed anche dove prende i lavoratori delle associazioni. Riceve anche i bonus una volta scoperti. L’area sinistra del suo zoo non verrà considerata ed usata solamente per piazzare le carte Zoo e la carta Punteggio Finale.",
