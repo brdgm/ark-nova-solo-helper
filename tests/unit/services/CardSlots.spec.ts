@@ -21,6 +21,7 @@ describe('CardSlots', () => {
 
     expect(cardSlots.isUpgraded(cardSlots.get(3)), `card 'build' upgraded`).to.true
     expect(cardSlots.isUpgraded(cardSlots.get(1)), `card 'association' upgraded`).to.false
+    expect(cardSlots.canUpgradeCard(), `can upgrade card`).to.true
 
     // upgrade first card
     cardSlots.upgradeCard(cardSlots.get(1))
@@ -32,5 +33,21 @@ describe('CardSlots', () => {
     const persistence = cardSlots.toPersistence()
     expect(persistence.slots).to.eql([CardName.SPONSORS, CardName.ASSOCIATION, CardName.ANIMALS, CardName.BUILD, CardName.CARDS])
     expect(persistence.upgradedCards).to.eql([CardName.BUILD, CardName.ASSOCIATION])
+  })
+
+  it('revertUpgradedCard', () => {
+    const cardSlots = CardSlots.fromPersistence({
+      slots: [CardName.ASSOCIATION, CardName.ANIMALS, CardName.BUILD, CardName.SPONSORS, CardName.CARDS],
+      upgradedCards: [CardName.BUILD,CardName.ASSOCIATION]
+    })
+    expect(cardSlots.canRevertUpgradeCard(), `can revert upgrade card`).to.true
+
+    expect(cardSlots.isUpgraded(cardSlots.get(1)), `card 'association' upgraded`).to.true
+    expect(cardSlots.isUpgraded(cardSlots.get(3)), `card 'build' upgraded`).to.true
+
+    // revert upgrade
+    cardSlots.revertUpgradeCard(cardSlots.get(3))
+    expect(cardSlots.isUpgraded(cardSlots.get(1)), `card 'association' upgraded`).to.true
+    expect(cardSlots.isUpgraded(cardSlots.get(3)), `card 'build' not upgraded`).to.false
   })
 })

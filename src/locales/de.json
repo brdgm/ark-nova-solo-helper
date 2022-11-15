@@ -60,6 +60,7 @@
   "roundBot": {
     "title": "ARNO | ARNO {bot}",
     "upgrade": "Aufwerten",
+    "revertUpgrade": "Rückgängig",
     "reroll": "Neu würfeln",
     "associationWorker": "ARNO setzt einen <b>Arbeiter</b> ein:",
     "fallbackText": "Alternative, falls nicht verfügbar:",
@@ -67,6 +68,11 @@
       "title": "Karte Aufwerten",
       "text": "Eine Aktionskarte von ARNO aufwerten?",
       "note": "Bitte beachten: Erreicht ARNO den 2 Punkte-Bonus der Artenschutzleiste wählt er immer einen zusätzlichen Arbeiter, keine Karten-Aufwertung."
+    },
+    "revertUpgradeCard": {
+      "title": "Karten-Aufwertung rückgängig machen",
+      "text": "Du kannst eine Karten-Aufwertung rückgängig machen wenn du diese <i>versehentlich</i> vorgenommen hast.",
+      "choose": "(Auswählen)"
     },
     "actionHelpAssociationWorker": {
       "title": "Arbeiter Einsetzen",

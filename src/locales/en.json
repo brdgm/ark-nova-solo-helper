@@ -60,6 +60,7 @@
   "roundBot": {
     "title": "ARNO | ARNO {bot}",
     "upgrade": "Upgrade",
+    "revertUpgrade": "Revert",
     "reroll": "Reroll",
     "associationWorker": "ARNO places one <b>Association Worker</b>:",
     "fallbackText": "Alternative, if not possible:",
@@ -67,6 +68,11 @@
       "title": "Upgrade Card",
       "text": "Upgrade an action card from ARNO?",
       "note": "Please note: Once ARNO reaches 2 conservation points, he always chooses to take an additional association worker, not a card upgrade."
+    },
+    "revertUpgradeCard": {
+      "title": "Revert Upgrade Card",
+      "text": "Your can revert an upgraded card in case you <i>accidentally</i> upgraded it.",
+      "choose": "(Choose)"
     },
     "actionHelpAssociationWorker": {
       "title": "Place Worker",
