@@ -35,7 +35,7 @@ export default defineComponent({
   },
   methods: {
     updateDifficultyLevel(event: Event) {
-      let level = parseInt((event.target as HTMLInputElement).value)
+      const level = parseInt((event.target as HTMLInputElement).value)
       this.$store.commit('setupDifficultyLevel', level)
     }
   }

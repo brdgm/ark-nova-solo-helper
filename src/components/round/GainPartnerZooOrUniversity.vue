@@ -5,13 +5,13 @@
   <p>
     <input class="form-radio-input" type="radio" id="missingMostPartnerZoo" v-model="missingMostPartnerZooOrUniversity" :value="1">
     <label class="form-radio-label" for="missingMostPartnerZoo">
-      <Icon name="gain-partner-zoo" class="icon"/>
+      <AppIcon name="gain-partner-zoo" class="icon"/>
       {{t('roundBot.gainPartnerZooOrUniversity.partnerZoo')}}
     </label>
     
     <input class="form-radio-input" type="radio" id="missingMostPartnerUniversity" v-model="missingMostPartnerZooOrUniversity" :value="2">
     <label class="form-radio-label" for="missingMostPartnerUniversity">
-      <Icon name="gain-partner-university" class="icon"/>
+      <AppIcon name="gain-partner-university" class="icon"/>
       {{t('roundBot.gainPartnerZooOrUniversity.partnerUniversity')}}
     </label>
 
@@ -25,14 +25,14 @@
 import rollDice from "brdgm-commons/src/util/random/rollDice"
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
-import Icon from "../structure/Icon.vue"
+import AppIcon from "../structure/AppIcon.vue"
 import GainPartnerZoo from "./GainPartnerZoo.vue"
 import GainPartnerUniversity from "./GainPartnerUniversity.vue"
 
 export default defineComponent({
   name: "GainPartnerZooOrUniversity",
   components: {
-    Icon,
+    AppIcon,
     GainPartnerZoo,
     GainPartnerUniversity
   },

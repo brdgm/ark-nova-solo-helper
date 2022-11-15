@@ -41,6 +41,10 @@ export interface CardSlotsPersistence {
   slots: CardName[]
   upgradedCards: CardName[]
 }
+export interface BotRevertUpgradeCard {
+  bot: number
+  cardName: CardName
+}
 
 declare module '@vue/runtime-core' {
   // provide typings for `this.$store`
@@ -99,6 +103,16 @@ export const store = createStore<State>({
       }
       round.botRound[botRound.bot - 1] = botRound
       state.rounds[botRound.round - 1] = round
+    },
+    revertUpgradeCard(state : State, payload : BotRevertUpgradeCard) {
+      // revert upgraded card for this bot in all rounds
+      for (const round of state.rounds) {
+        round.botRound
+            .filter(botRound => botRound.bot==payload.bot)
+            .forEach(botRound => {
+              botRound.cardSlots.upgradedCards = botRound.cardSlots.upgradedCards.filter(cardName => cardName != payload.cardName)
+            })
+      }
     },
     endGame(state : State) {
       state.rounds = []

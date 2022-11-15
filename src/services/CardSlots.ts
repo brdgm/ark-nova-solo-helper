@@ -47,11 +47,28 @@ export default class CardSlots {
   }
 
   /**
+   * Revert upgraded card.
+   */
+   public revertUpgradeCard(card : Card) : void {
+    if (!this.isUpgraded(card)) {      
+      throw new Error(`Card is not upgraded: ${card.name}`)
+    }
+    this._upgradedCards = this._upgradedCards.filter(item => item != card.name)
+  }
+
+  /**
    * ARNO can upgrade max. 3 cards.
    * @return true if less then 3 cards are upgraded.
    */
   public canUpgradeCard() : boolean {
     return this._upgradedCards.length < 3;
+  }
+
+  /**
+   * @returns Whether upgrade cards can be reverted (at least one is upgraded).
+   */
+  public canRevertUpgradeCard() : boolean {
+    return this._upgradedCards.length > 0
   }
 
   /**

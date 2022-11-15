@@ -6,9 +6,15 @@
       <div class="cardLabel">{{t(`cardType.${card.name}`)}}</div>
     </div>
   </div>
-  <button v-if="cardSlots.canUpgradeCard()" type="button" class="upgrade btn btn-outline-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#upgradeCardModal">
-    <Icon name="upgrade" class="icon"/> {{t('roundBot.upgrade')}}
-  </button>
+
+  <div class="buttonContainer">
+    <button v-if="cardSlots.canUpgradeCard()" type="button" class="upgrade btn btn-outline-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#upgradeCardModal">
+      <AppIcon name="upgrade" class="icon"/> {{t('roundBot.upgrade')}}
+    </button>
+    <button v-if="cardSlots.canRevertUpgradeCard()" type="button" class="btn btn-light btn-sm ms-2" data-bs-toggle="modal" data-bs-target="#revertUpgradeCardModal">
+      {{t('roundBot.revertUpgrade')}}
+    </button>
+  </div>
 
   <div class="modal" id="upgradeCardModal" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
@@ -28,6 +34,28 @@
       </div>
     </div>
   </div>
+
+  <div class="modal" id="revertUpgradeCardModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">{{t('roundBot.revertUpgradeCard.title')}}</h5>
+          <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p v-html="t('roundBot.revertUpgradeCard.text')"></p>
+          <select class="form-select" v-model="revertCard">
+            <option value="">{{t('roundBot.revertUpgradeCard.choose')}}</option>
+            <option v-for="card of upgradedCards" :value="card.name as string" :key="card.name">{{t(`cardType.${card.name}`)}}</option>
+          </select>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" data-bs-dismiss="modal" @click="revertUpgradedCard()" :disabled="revertCard==''">{{t('roundBot.revertUpgrade')}}</button>
+          <button class="btn btn-secondary" data-bs-dismiss="modal">{{t('action.cancel')}}</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script lang="ts">
@@ -37,14 +65,16 @@ import { useI18n } from 'vue-i18n'
 import { BotRound, useStore } from '@/store'
 import NavigationState from '@/util/NavigationState'
 import CardSlots from '@/services/CardSlots'
-import Icon from '../structure/Icon.vue'
+import AppIcon from '../structure/AppIcon.vue'
 import CardTypeIcon from '../structure/CardTypeIcon.vue'
 import Card from '@/services/Card'
+import Cards from "@/services/Cards"
+import CardName from "@/services/enum/CardName"
 
 export default defineComponent({
   name: 'ActionCards',
   components: {
-    Icon,
+    AppIcon,
     CardTypeIcon
   },
   setup() {
@@ -59,12 +89,21 @@ export default defineComponent({
       required: true
     }
   },
+  data() {
+    return {
+      revertCard: ''
+    }
+  },
   computed: {
     botRound() : BotRound {
       return this.navigationState.botRound as BotRound
     },
     cardSlots() : CardSlots {
       return CardSlots.fromPersistence(this.botRound.cardSlots)
+    },
+    upgradedCards() : readonly Card[] {
+      return this.cardSlots.slots
+          .filter(slot => this.cardSlots.isUpgraded(slot))
     }
   },
   methods: {
@@ -81,6 +120,12 @@ export default defineComponent({
       this.botRound.cardSlots = this.cardSlots.toPersistence()
       this.$store.commit('round', this.botRound)
       this.$forceUpdate()
+    },
+    revertUpgradedCard() : void {
+      const revertCardName = this.revertCard as CardName
+      this.cardSlots.revertUpgradeCard(Cards.get(revertCardName))
+      this.$store.commit('revertUpgradeCard', {bot:this.botRound.bot, cardName:revertCardName})
+      this.revertCard = ''
     }
   }
 })
@@ -89,6 +134,7 @@ export default defineComponent({
 <style lang="scss" scoped>
 @import "bootstrap/scss/functions";
 @import "bootstrap/scss/variables";
+@import "bootstrap/scss/maps";
 @import "bootstrap/scss/utilities";
 @import "bootstrap/scss/mixins";
 @import "bootstrap/scss/grid";
@@ -145,6 +191,9 @@ export default defineComponent({
       border-color: #a5247b;
     }
   }
+}
+.buttonContainer {
+  display: inline-block;
 }
 
 @include media-breakpoint-down(md) {

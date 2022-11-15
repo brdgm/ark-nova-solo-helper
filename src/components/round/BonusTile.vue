@@ -19,15 +19,15 @@
           <template v-else>
             <p v-html="t('bonusTile.usage')"></p>
             <div>
-              <Icon type="bonus-tile" name="partner-zoo" class="bonusTileImage"/>
+              <AppIcon type="bonus-tile" name="partner-zoo" class="bonusTileImage"/>
               <button v-if="!gainPartnerZoo" type="button" class="btn btn-outline-secondary btn-sm ms-2" @click="pickPartnerZoo()">{{t('bonusTile.pickPartnerZoo')}}</button>
             </div>
             <div>
-              <Icon type="bonus-tile" name="partner-university" class="bonusTileImage"/>
+              <AppIcon type="bonus-tile" name="partner-university" class="bonusTileImage"/>
               <button v-if="!gainPartnerUniversity" type="button" class="btn btn-outline-secondary btn-sm ms-2" @click="pickPartnerUniversity()">{{t('bonusTile.pickPartnerUniversity')}}</button>
             </div>
             <div>
-              <Icon type="bonus-tile" name="reputation" class="bonusTileImage"/>
+              <AppIcon type="bonus-tile" name="reputation" class="bonusTileImage"/>
             </div>
           </template>
         </div>
@@ -44,14 +44,14 @@
 import rollDice from "brdgm-commons/src/util/random/rollDice"
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
-import Icon from '../structure/Icon.vue'
+import AppIcon from '../structure/AppIcon.vue'
 import GainPartnerZoo from "./GainPartnerZoo.vue"
 import GainPartnerUniversity from "./GainPartnerUniversity.vue"
 
 export default defineComponent({
   name: 'BonusTile',
   components: {
-    Icon,
+    AppIcon,
     GainPartnerZoo,
     GainPartnerUniversity
   },

@@ -49,7 +49,7 @@ import PlayerColorPicker from './PlayerColorPicker.vue'
 import PlayerColor from '@/services/enum/PlayerColor'
 
 export default defineComponent({
-  name: 'Players',
+  name: 'PlayersSetup',
   components: {
     PlayerColorPicker
   },

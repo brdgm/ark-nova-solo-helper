@@ -91,7 +91,7 @@ export default defineComponent({
       return this.lastBotRound[bot - 1]?.appealCount || 0
     },
     getInitialAppealArray() : number[] {
-      let result = [] as number[]
+      const result = [] as number[]
       for (let bot=1; bot<=this.botCount; bot++) {
         result[this.playerCount + bot - 1] = this.getAppealCount(bot)
       }
@@ -124,6 +124,7 @@ export default defineComponent({
 <style lang="scss" scoped>
 @import "bootstrap/scss/functions";
 @import "bootstrap/scss/variables";
+@import "bootstrap/scss/maps";
 @import "bootstrap/scss/utilities";
 @import "bootstrap/scss/mixins";
 @import "bootstrap/scss/grid";
