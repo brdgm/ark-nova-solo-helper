@@ -46,7 +46,7 @@
           <p v-html="t('roundBot.revertUpgradeCard.text')"></p>
           <select class="form-select" v-model="revertCard">
             <option value="">{{t('roundBot.revertUpgradeCard.choose')}}</option>
-            <option v-for="card of upgradedCards" :value="card.name as string" :key="card.name">{{t(`cardType.${card.name}`)}}</option>
+            <option v-for="card of cardSlots.upgradedCardNames" :value="card as string" :key="card">{{t(`cardType.${card}`)}}</option>
           </select>
         </div>
         <div class="modal-footer">
@@ -100,10 +100,6 @@ export default defineComponent({
     },
     cardSlots() : CardSlots {
       return CardSlots.fromPersistence(this.botRound.cardSlots)
-    },
-    upgradedCards() : readonly Card[] {
-      return this.cardSlots.slots
-          .filter(slot => this.cardSlots.isUpgraded(slot))
     }
   },
   methods: {
