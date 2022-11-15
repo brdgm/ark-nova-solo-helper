@@ -18,6 +18,10 @@ export default class CardSlots {
     return this._slots
   }
 
+  public get upgradedCardNames() : readonly CardName[] {
+    return this._upgradedCards
+  }
+
   /**
    * Get card at slot position.
    * @param slot Slot number (1-based)
