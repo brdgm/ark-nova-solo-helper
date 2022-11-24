@@ -103,6 +103,8 @@ export const store = createStore<State>({
       }
       round.botRound[botRound.bot - 1] = botRound
       state.rounds[botRound.round - 1] = round
+      // remove persistance of all "future" rounds to ensure they are newly calculated
+      state.rounds = state.rounds.filter(item => item.round <= botRound.round)
     },
     revertUpgradeCard(state : State, payload : BotRevertUpgradeCard) {
       // revert upgraded card for this bot in all rounds
