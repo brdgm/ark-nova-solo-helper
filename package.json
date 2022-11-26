@@ -14,7 +14,7 @@
   "dependencies": {
     "@popperjs/core": "~2.11.6",
     "bootstrap": "~5.2.3",
-    "brdgm-commons": "github:brdgm/brdgm-commons#1.0.4",
+    "brdgm-commons": "github:brdgm/brdgm-commons#1.0.5",
     "core-js": "~3.26.1",
     "lodash": "~4.17.21",
     "register-service-worker": "~1.7.2",
