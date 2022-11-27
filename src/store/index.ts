@@ -116,7 +116,7 @@ export const store = createStore<State>({
             })
       }
     },
-    endGame(state : State) {
+    resetGame(state : State) {
       state.rounds = []
     },
     zoomFontSize(state : State, baseFontSize: number) {

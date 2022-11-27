@@ -32,7 +32,7 @@ export default defineComponent({
   methods: {
     endGame() {
       if (this.endGameButtonType=='abortGame' || this.$route.name == 'Scoring') {
-        this.$store.commit('endGame')
+        this.$store.commit('resetGame')
         this.$router.push("/")
       }
       else {
