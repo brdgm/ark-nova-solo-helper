@@ -1,0 +1,194 @@
+{
+  "gameTitle": "Ark Nova",
+  "home": {
+    "title": "Ark Nova Solo Helper",
+    "play1": "Juga a <a href='https://boardgamegeek.com/thread/2823056/rno-alternative-solo-mode' target='_blank' rel='noopener'><b>A.R.N.O. 2.0 Solo Mode</b></a> (no oficial) de <a href='https://boardgamegeek.com/boardgame/342942/ark-nova' target='_blank' rel='noopener'><b>Ark Nova</b></a>. A diferència del mode oficial en solitari, això simula oponents addicionals similars a un joc multijugador.",
+    "play2": "Per jugar al mode en solitari només necessiteu el joc base. Aquesta aplicació d'ajuda substitueix la baralla de cartes ARNO i els daus i fa un seguiment de la progressió de l'ARNO.",
+    "feedback": "Discussió i comentaris:"
+  },
+  "setup": {
+    "title": "Configuració del joc:",
+    "players": {
+      "title": "Jugador",
+      "playerCount": "Jugadors humans",
+      "playerCountItem": "{count} Jugador | {count} Jugadors",
+      "playerColor": "Color del jugador | Jugador {index} Color",
+      "botCount": "ARNO Bots",
+      "botCountItem": "{count} ARNO Bot | {count} ARNO Bots",
+      "botColor": "ARNO Color | ARNO {index} Color"
+    },
+    "difficultyLevel": {
+      "title": "Nivell de dificultat",
+      "easy": "Fàcil",
+      "hard": "Difícil"
+    },
+    "pickZooMap": {
+      "title": "Mapa del Zoo",
+      "pickRandom": "Tria aleatori (avançat)",
+      "pleaseSelect": "(Selecciona, si et plau)",
+      "mapA": "Mapa A (fàcil)",
+      "map0": "Mapa 0 (normal)",
+      "mapAdvanced": "Mapa {id} (avançat)",
+      "mapAdvancedMapPack": "Mapa {id} (avançat, Mapa Pack {mapPack})"
+    },
+    "actionCardDistribution": {
+      "title": "Acció Distribució de cartes",
+      "schema": "Probabilitat (%)",
+      "text": "Opció experimental. L'opció '0-25-25-25-25' segueix el reglament ARNO."
+    }
+  },
+  "setupARNO": {
+    "title": "Configuració d'ARNO",
+    "text1": "Configureu el joc segons el recompte de jugadors (inclosos els ARNO). Un jugador humà serà el jugador titular.",
+    "text2": "Cada ARNO comença amb <b>-3 punts de conservació</b> i punts d'apel·lació segons l'ordre del jugador.",
+    "text2-conservation": "Col·loqueu tres fitxes de jugadors com a recordatori al costat del comptador de punts de conservació d'ARNO i traieu-les una a una tan bon punt ARNO anota els seus primers punts de conservació.",
+    "text2-appeal": "Per exemple, si ARNO és el 3r jugador, comença amb 2 punts d'apel·lació.",
+    "text3": "Cada ARNO rep els components d'un color, un taulell zoològic (mapa A), una carta de puntuació final cara avall i 8 cartes zoo aleatòries.",
+    "text4": "Col·loqueu totes les fitxes del jugador del color d'ARNO al costat del seu taulell de zoo.",
+    "text5": "ARNO comença amb un treballador de l'associació al seu bloc de notes. Col·loqueu els 3 restants als espais designats a sota del bloc de notes del seu taulell de zoo.",
+    "text6": "Col·loqueu la carta de puntuació final a la zona esquerra del taulell de zoo. D'aquesta manera es cobrirà la superfície edificable que no és necessària per a ARNO.",
+    "text7": "Ordena les 8 cartes Zoo de l'ARNO segons el tipus:",
+    "text7-1": "Descarta totes les cartes sponsor.",
+    "text7-2": "ARNO guarda un màxim de quatre cartes. Conserva totes les fitxes del Projecte de Conservació (màxim quatre).",
+    "text7-3": "Si ARNO ara ha guardat menys de quatre cartes, a més manté les cartes d'Animals (fins a quatre en total).",
+    "text8": "No necessites daus ni targetes d'acció."
+  },
+  "roundPlayer": {
+    "title": "Jugador | Jugador {player}",
+    "info": "Fes el teu torn."
+  },
+  "roundBot": {
+    "title": "ARNO | ARNO {bot}",
+    "upgrade": "Actualitza",
+    "revertUpgrade": "Desfés actualització",
+    "reroll": "Desfés",
+    "associationWorker": "ARNO col·loca un <b>Treballador de l'Associació</b>:",
+    "fallbackText": "Alternativa, si no és possible:",
+    "upgradeCard": {
+      "title": "Carta d'actualització",
+      "text": "Actualitzar una carta d'acció d'ARNO?",
+      "note": "Tingueu en compte: Un cop ARNO arriba als 2 punts de conservació, sempre opta per portar un treballador addicional de l'associació, no una actualització de la carta."
+    },
+    "revertUpgradeCard": {
+      "title": "Revertir la carta d'actualització",
+      "text": "Podeu revertir una carta actualitzada en cas que l'hàgiu actualitzat <i>accidentalment</i>.",
+      "choose": "(Triar)"
+    },
+    "actionHelpAssociationWorker": {
+      "title": "Treballador del lloc",
+      "text": "Si ARNO ja té un dels seus treballadors en aquesta tasca associativa, selecciona la següent tasca superior on encara no hi ha cap dels seus treballadors. Bàsicament està utilitzant marcadors X per millorar l'acció; mai col·loca dos treballadors en la mateixa acció. Si no hi ha cap tasca superior disponible, selecciona la següent tasca inferior disponible.",
+      "text-fallback": "Si ARNO ja no té cap treballador disponible, rep punts de conservació +2 i avança el break token +2. A més, rep una nova parella zoològica o universitària. Prefereix el tipus que més li falta.",
+      "chooseDifferent": "Tria una acció associativa diferent:"
+    },
+    "actionHelpProjectConservationWork": {
+      "title": "Treballs de projectes de conservació"      
+    },
+    "actionFallbackPickPartnerZooOrUniversity": {
+      "title": "Obteniu socis del zoo o de la universitat"
+    },
+    "pickConservationProject": {
+      "conservationProjectSelection": "Selecció de projectes de conservació",
+      "conservationProjectsHand": "Quantes cartes del Projecte de Conservació té ARNO en el seu taulell de zoo?",
+      "conservationProjectsBoardNoToken": "Quantes cartes del Projecte de Conservació hi ha disponibles al costat de la junta de l'Associació sense fitxes de jugador?",
+      "conservationProjectsBoardAvailable": "Quantes cartes del Projecte de Conservació hi ha disponibles al costat de la junta de l'Associació a la qual ARNO encara no ha donat suport?",
+      "pick": "Tria Projecte de Conservació",
+      "pickFromHand": "ARNO és compatible amb el {number}. Carta de Projecte de Conservació del seu taulell de zoo.",
+      "pickFromBoardNoToken": "ARNO és compatible amb el {number}. Projecte de Conservació al costat de la junta de l'Associació sense cap fitxa de jugador.",
+      "pickFromBoardAvailable": "ARNO és compatible amb el {number}. Projecte de Conservació al costat de la junta de l'Associació que està a la seva disposició.",
+      "tokenPlacement": "Col·locació de fitxes",
+      "projectSlotLeftMost": "ARNO prefereix col·locar el seu token a l'espai més a l'esquerra.",
+      "projectSlotMiddle": "ARNO prefereix col·locar el seu token a l'espai del mig.",
+      "projectSlotRightMost": "ARNO prefereix col·locar el seu token a l'espai més a la dreta.",
+      "projectSlotAlternatives": "Si aquest espai ja està cobert per un altre jugador, el col·loca al següent nivell a l'esquerra. Si això no és possible també, al següent nivell disponible a la dreta."
+    },
+    "gainPartnerZooOrUniversity": {
+      "missingMost": "Què és el que més troba a faltar ARNO?",
+      "partnerZoo": "Soci (Sponsor) del Zoo",
+      "partnerUniversity": "Soci (Sponsor) de la Universitat",
+      "pickRandom": "Tria aleatòriament"
+    }
+  },
+  "difficultyLevel": {
+    "1": "Level 1: Novell",
+    "2": "Level 2: Molt fàcil",
+    "3": "Level 3: fàcil",
+    "4": "Level 4: normal",
+    "5": "Level 5: Difícil",
+    "6": "Level 6: Molt difícil"
+  },
+  "cardType": {
+    "animals": "Animals",
+    "association": "Associació",
+    "build": "Construir",
+    "cards": "Cartes",
+    "sponsors": "Socis (Sponsors)"    
+  },
+  "cardAction": {
+    "gain-partner-zoo": "Guanya <b>parella zoo #{number}</b>.",
+    "gain-partner-university": "Obtenir <b>sòcia d'universitat #{number}</b>.",
+    "conservation-project-work": "<b>Treballs de projectes de conservació</b>.",
+    "take-card-display": "Agarra <b>la carta #{number}</b> de la pantalla.",
+    "token-scoring-card": "Col·loca <b>1</b> fitxa del jugador ARNO a la seva <b>carta de puntuació final</b>.",
+    "token-notepad": "Col·loqueu <b>{amount}</b> fitxa del jugador ARNO al seu <b>bloc de notes</b> (per a l'efecte de puntuació final). | Col·loqueu <b>{amount}</b> fitxes del jugador ARNO al seu <b>bloc de notes</b> (per a l'efecte de puntuació final).",
+    "donate": "ARNO dóna."
+  },
+  "aboutARNO": {
+    "link": "Regles d'ARNO",
+    "title": "Llistat regles d'A.R.N.O.",
+    "text1": "ARNO <b>no utilitza diners</b>. No gasta diners per accions i mai no rep diners (per exemple, durant les pauses o de les targetes Animal).",
+    "text2": "ARNO <b>només utilitza la zona dreta del seu taulell de Zoo</b>. Aquí és on col·loca els seus socis de Zoo i Universitats i d'on treu els treballadors de la seva associació. També rep les bonificacions un cop les descobreix. No es considerarà la zona esquerra del seu taulell de zoo i només s'utilitzarà per col·locar les seves cartes Zoo i la carta de Puntuació Final.",
+    "text3": "ARNO rep les següents bonificacions del seu pla de zoo i dels <b>taulells</b> generals: <b>Punts de conservació, millores de cartes, punts de reputació i treballadors de l'associació</b>. A més dels diners, tampoc no rep cap bonificació de cartes d'animals o patrocinadors, edificis, tancaments, marcadors X o durant els descansos.",
+    "text4": "Les cartes d'Animals que s'apilen al taulell de zoo d'ARNO proporcionen <b>valors de referència per a determinats efectes de carta</b> dels jugadors humans. Sempre que ARNO col·loqui una altra carta Animal a la seva pila, les seves icones desencadenaran els efectes de cartes dels altres jugadors.",
+    "text5": "ARNO <b>mai pot ser l'objectiu d'un efecte interactiu</b>. Utilitzeu els efectes alternatius de joc en solitari d'aquestes cartes.",
+    "text6": "Cada vegada que ARNO rep cartes durant el joc, <b>descarteu</b> totes les cartes dels patrocinadors i apila cartes d'animals i projectes de conservació al seu taulell de zoo."
+  },
+  "roundDisplay": {
+    "round": "Ronda {round}"
+  },
+  "breakInfo": {
+    "link": "Pausa",
+    "text1": "Durant les pauses, ARNO treu <b>tres cartes</b> de la baralla. Conserva la primera carta del Projecte de Conservació i juga la primera Carta d'Animals al seu taulell de zoo.",
+    "text2": "La carta Animal jugada pot desencadenar un efecte de bonificació per als jugadors humans. Les altres cartes es descarten."
+  },
+  "bonusTile": {
+    "link": "Rajola de bonificació",
+    "text": "ARNO mai tria la bonificació preimpresa.",
+    "pick": "Agafa rajola de bonificació",
+    "left": "ARNO pren la rajola de bonificació <b>esquerra</b> de la pantalla.",
+    "right": "ARNO pren la rajola de bonificació <b>dreta</b> de la pantalla.",
+    "usage": "ARNO només pot utilitzar aquestes tres rajoles addicionals. No rep cap bonificació dels altres.",
+    "pickPartnerZoo": "Agafa soci del zoo",
+    "pickPartnerUniversity": "Agafa soci de la universitat"
+  },
+  "scoring": {
+    "title": "Puntuació",
+    "humanPlayers": "Jugadors humans",
+    "humanPlayersText": "Obteniu punts de conservació o apel·lació <b>des de les cartes de puntuació final</b> i des de totes les cartes amb <b>icona de final de joc</b>.",
+    "botText": "Obteniu <b>{conservationPoints} punt(s) de conservació</b> per {tokenScoringCardCount} token(s) a la carta de puntuació final i {tokenNotepadCount} token(s) al bloc de notes.",
+    "conservationPoints": "Punts de Conservació",
+    "appeal": "Apel·lació",
+    "victoryPoints": "Punts de Victòria"
+  },
+  "notfound": {
+    "title": "No es troba"
+  },
+  "action": {
+    "playGame": "Jugar al joc",
+    "startGame": "Inici de joc",
+    "next": "Proper",
+    "abortGame": "Abortar el joc",
+    "abortGameConfirm": "Avortant el joc en execució, esteu segurs?",
+    "finishGame": "Finalitzar el joc",
+    "finishGameConfirm": "Acabar aquest joc i anar a puntuar, n'estàs segur?",
+    "endGame": "Final del joc",
+    "endGameConfirm": "Finalitza aquest joc i torna a la pantalla d'inici, n'estàs segur?",
+    "cancel": "Cancelar",
+    "backToHome": "Tornar a al apantalla inicial",
+    "back": "Enrera",
+    "close": "Tanca",
+    "reset": "Reinicia"
+  },
+  "footer": {
+    "credits": "Crèdits"
+  }
+}
