@@ -2,6 +2,7 @@
   <ol>
     <li v-html="t('setupARNO.text1')"></li>
     <li>
+      <img src="@/assets/arno-conservation-start-setup.jpg" class="conservation-start-setup float-end ms-2 me-2 mt-2"/>
       <span v-html="t('setupARNO.text2')"></span>
       <ul>
         <li v-html="t('setupARNO.text2-conservation')"></li>
@@ -22,7 +23,9 @@
     </li>
     <li v-html="t('setupARNO.text8')"></li>
   </ol>
-  <p><img src="@/assets/arno-zoo-mat.jpg" class="zoomat"/></p>
+  <p>
+    <img src="@/assets/arno-zoo-mat.jpg" class="zoomat"/>
+  </p>
 </template>
 
 <script lang="ts">
@@ -46,8 +49,15 @@ export default defineComponent({
 @import "bootstrap/scss/mixins";
 @import "bootstrap/scss/grid";
 
+img {
+  border-radius: 0.25rem;
+  filter: drop-shadow(2px 2px 3px #888);
+}
 .zoomat {
   width: 60%;
+}
+.conservation-start-setup {
+  width: 20%;
 }
 @include media-breakpoint-down(lg) {
   .zoomat {
