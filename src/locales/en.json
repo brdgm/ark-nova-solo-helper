@@ -71,7 +71,7 @@
     },
     "revertUpgradeCard": {
       "title": "Revert Upgrade Card",
-      "text": "Your can revert an upgraded card in case you <i>accidentally</i> upgraded it.",
+      "text": "You can revert an upgraded card in case you <i>accidentally</i> upgraded it.",
       "choose": "(Choose)"
     },
     "actionHelpAssociationWorker": {
