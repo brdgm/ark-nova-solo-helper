@@ -190,5 +190,9 @@
   },
   "footer": {
     "credits": "Credits"
+  },
+  "serviceWorkerUpdatedRefresh": {
+    "title": "Refresh Application",
+    "notice": "The application was updated - do you want to refresh to use the latest version?"
   }
 }

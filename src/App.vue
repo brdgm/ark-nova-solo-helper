@@ -23,6 +23,16 @@
     </div>
   </div>
 
+  <ModalDialog id="serviceWorkerUpdatedRefresh" :title="t('serviceWorkerUpdatedRefresh.title')">
+    <template #body>
+      <p v-html="t('serviceWorkerUpdatedRefresh.notice')"></p>
+    </template>
+    <template #footer>
+      <button class="btn btn-primary" data-bs-dismiss="modal" @click="$router.go(0)">{{t('serviceWorkerUpdatedRefresh.title')}}</button>
+      <button class="btn btn-secondary" data-bs-dismiss="modal">{{t('action.close')}}</button>
+    </template>
+  </ModalDialog>
+
   <div class="modal" id="creditsModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -69,6 +79,7 @@ import { useI18n } from 'vue-i18n'
 import { useStore } from '@/store'
 import AppHeader from 'brdgm-commons/src/components/structure/AppHeader.vue'
 import AppFooter from 'brdgm-commons/src/components/structure/AppFooter.vue'
+import ModalDialog from 'brdgm-commons/src/components/structure/ModalDialog.vue'
 import { Modal } from 'bootstrap'
 import getErrorMessage from 'brdgm-commons/src/util/error/getErrorMessage'
 
@@ -76,7 +87,8 @@ export default defineComponent({
   name: 'App',
   components: {
     AppHeader,
-    AppFooter
+    AppFooter,
+    ModalDialog
   },
   setup() {
     const { t, locale } = useI18n({
