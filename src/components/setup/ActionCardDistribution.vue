@@ -2,10 +2,10 @@
   <h3 class="mt-4 mb-3">{{t('setup.actionCardDistribution.title')}}</h3>
 
   <div class="row mt-3">
-    <div class="col-5 col-md-3">
+    <div class="col-sm-5 col-md-3">
       <label for="playerCount" class="form-label">{{t('setup.actionCardDistribution.schema')}}</label>
     </div>
-    <div class="col-5 col-md-3">
+    <div class="col-sm-5 col-md-3">
       <select class="form-select" v-model="selectedSchema">
         <option v-for="(schema,index) in schemas" :key="index" :value="schema+''">{{schema}}</option>
       </select>
