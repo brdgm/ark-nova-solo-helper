@@ -27,6 +27,9 @@ module.exports = {
 
   pwa: {
     name: process.env.VUE_APP_TITLE,
-    themeColor: '#333'
+    themeColor: '#333',
+    workboxOptions: {
+      skipWaiting: true
+    }
   }
 }

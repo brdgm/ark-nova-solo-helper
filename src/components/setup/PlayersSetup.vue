@@ -5,7 +5,7 @@
     <div class="col-5 col-md-3">
       <label for="playerCount" class="form-label">{{t('setup.players.playerCount')}}</label>
     </div>
-    <div class="col-5 col-md-3">
+    <div class="col-6 col-sm-5 col-md-3">
       <select class="form-select" id="playerCount" v-model="playerCount">
         <option v-for="i in maxPlayerCount" :key="i" :value="i">{{t('setup.players.playerCountItem', {count:i}, i)}}</option>
       </select>
@@ -24,7 +24,7 @@
     <div class="col-5 col-md-3">
       <label for="botCount" class="form-label">{{t('setup.players.botCount')}}</label>
     </div>
-    <div class="col-5 col-md-3">
+    <div class="col-6 col-sm-5 col-md-3">
       <select class="form-select" id="botCount" v-model="botCount">
         <option v-for="i in maxBotCount" :key="i" :value="i">{{t('setup.players.botCountItem', {count:i}, i)}}</option>
       </select>
