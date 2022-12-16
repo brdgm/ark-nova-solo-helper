@@ -8,7 +8,7 @@
         {{t('setup.pickZooMap.pickRandom')}}
       </button><br/>
     </div>
-    <div class="col-sm-5 col-md-3 mt-3 mt-0-sm">
+    <div class="col-sm-5 col-md-3 mt-3 mt-sm-0">
       <select class="form-select" v-model="selectedMap">
         <option :value="''">{{t('setup.pickZooMap.pleaseSelect')}}</option>
         <option :value="'A'">{{t('setup.pickZooMap.mapA')}}</option>
