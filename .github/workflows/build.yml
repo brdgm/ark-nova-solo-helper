@@ -14,6 +14,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      SONARCLOUD_TOKEN: ${{ secrets.SONARCLOUD_TOKEN }}
 
     steps:
     - uses: actions/checkout@v3
@@ -22,13 +24,14 @@ jobs:
 
     - uses: actions/setup-node@v3
       with:
-        node-version: '16'
-        cache: 'npm'
+        node-version: 18
+        cache: npm
 
     - run: npm install
     - run: npm run test:coverage
     - run: npm run build
     - uses: SonarSource/sonarcloud-github-action@master
+      if: env.SONARCLOUD_TOKEN != null
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        SONAR_TOKEN: ${{ secrets.SONARCLOUD_TOKEN }}
+        SONAR_TOKEN: ${{ env.SONARCLOUD_TOKEN }}
