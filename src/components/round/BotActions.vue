@@ -35,65 +35,40 @@
 
   <hr/>
 
-  <div class="modal" id="actionHelpAssociationWorkerModal" tabindex="-1">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">{{t('roundBot.actionHelpAssociationWorker.title')}}</h5>
-          <button class="btn-close" data-bs-dismiss="modal" :aria-label="t('action.close')"></button>
-        </div>
-        <div class="modal-body">
-          <p v-html="t('roundBot.actionHelpAssociationWorker.text')"></p>
-          <p v-html="t('roundBot.actionHelpAssociationWorker.text-fallback')"></p>
-          <p v-html="t('roundBot.actionHelpAssociationWorker.chooseDifferent')"></p>
-          <div class="actions overwriteAssociation">
-            <div v-for="(action, index) in getUnusedAssociationActions()" :key="index" class="action amount">
-              <AppIcon :name="action" class="icon amount" @click="overwriteAssociationAction(action)" data-bs-dismiss="modal"/>
-            </div>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button class="btn btn-secondary" data-bs-dismiss="modal">{{t('action.close')}}</button>
+  <ModalDialog id="actionHelpAssociationWorkerModal" :title="t('roundBot.actionHelpAssociationWorker.title')">
+    <template #body>
+      <p v-html="t('roundBot.actionHelpAssociationWorker.text')"></p>
+      <p v-html="t('roundBot.actionHelpAssociationWorker.text-fallback')"></p>
+      <p v-html="t('roundBot.actionHelpAssociationWorker.chooseDifferent')"></p>
+      <div class="actions overwriteAssociation">
+        <div v-for="(action, index) in getUnusedAssociationActions()" :key="index" class="action amount">
+          <AppIcon :name="action" class="icon amount" @click="overwriteAssociationAction(action)" data-bs-dismiss="modal"/>
         </div>
       </div>
-    </div>
-  </div>
+    </template>
+  </ModalDialog>
 
-  <div class="modal" id="actionHelpProjectConservationWorkModal" tabindex="-1">
-    <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">{{t('roundBot.actionHelpProjectConservationWork.title')}}</h5>
-          <button class="btn-close" data-bs-dismiss="modal" :aria-label="t('action.close')"></button>
-        </div>
-        <div class="modal-body">
-          <PickConservationProject ref="pickConservationProject"/>
-        </div>
-        <div class="modal-footer">
-          <button class="btn btn-outline-secondary" @click="pickConservationProject.reset()">{{t('action.reset')}}</button>
-          <button class="btn btn-secondary" data-bs-dismiss="modal">{{t('action.close')}}</button>
-        </div>
-      </div>
-    </div>
-  </div>
+  <ModalDialog id="actionHelpProjectConservationWorkModal" :title="t('roundBot.actionHelpProjectConservationWork.title')"
+      :size-lg="true">
+    <template #body>
+      <PickConservationProject ref="pickConservationProject"/>
+    </template>
+    <template #footer>
+      <button class="btn btn-outline-secondary" @click="pickConservationProject.reset()">{{t('action.reset')}}</button>
+      <button class="btn btn-secondary" data-bs-dismiss="modal">{{t('action.close')}}</button>
+    </template>
+  </ModalDialog>
 
-  <div class="modal" id="actionFallbackPickPartnerZooOrUniversity" tabindex="-1">
-    <div class="modal-dialog modal-dialog-centered modal-lg modal-dialog-scrollable">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">{{t('roundBot.actionFallbackPickPartnerZooOrUniversity.title')}}</h5>
-          <button class="btn-close" data-bs-dismiss="modal" :aria-label="t('action.close')"></button>
-        </div>
-        <div class="modal-body">
-          <GainPartnerZooOrUniversity ref="gainPartnerZooOrUniversity"/>
-        </div>
-        <div class="modal-footer">
-          <button class="btn btn-outline-secondary" @click="gainPartnerZooOrUniversity.reset()">{{t('action.reset')}}</button>
+  <ModalDialog id="actionFallbackPickPartnerZooOrUniversity" :title="t('roundBot.actionFallbackPickPartnerZooOrUniversity.title')"
+      :size-lg="true">
+    <template #body>
+      <GainPartnerZooOrUniversity ref="gainPartnerZooOrUniversity"/>
+    </template>
+    <template #footer>
+      <button class="btn btn-outline-secondary" @click="gainPartnerZooOrUniversity.reset()">{{t('action.reset')}}</button>
           <button class="btn btn-secondary" data-bs-dismiss="modal">{{t('action.close')}}</button>
-        </div>
-      </div>
-    </div>
-  </div>
+    </template>
+  </ModalDialog>
 
 </template>
 
@@ -116,6 +91,7 @@ import CardName from "@/services/enum/CardName"
 import GainPartnerUniversity from "./GainPartnerUniversity.vue"
 import GainPartnerZoo from "./GainPartnerZoo.vue"
 import GainPartnerZooOrUniversity from "./GainPartnerZooOrUniversity.vue"
+import ModalDialog from 'brdgm-commons/src/components/structure/ModalDialog.vue'
 
 export default defineComponent({
   name: 'BotActions',
@@ -126,7 +102,8 @@ export default defineComponent({
     GainPartnerZoo,
     GainPartnerUniversity,
     PickConservationProject,
-    GainPartnerZooOrUniversity
+    GainPartnerZooOrUniversity,
+    ModalDialog
   },
   setup() {
     const { t } = useI18n()
