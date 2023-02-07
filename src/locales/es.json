@@ -177,7 +177,7 @@
       "startGame": "Comenzar Partida",
       "next": "Siguiente",
       "abortGame": "Abortar Juego",
-      "abortGameConfirm": "Abortando el juego actual - ¿estás seguro?,
+      "abortGameConfirm": "Abortando el juego actual - ¿estás seguro?",
       "finishGame": "Terminar Partida",
       "finishGameConfirm": "Terminar juego y hacer la puntuación final - ¿estás seguro?",
       "endGame": "Terminar Partida",
@@ -191,5 +191,4 @@
     "footer": {
       "credits": "Créditos"
     }
-  }
-  
+}
