@@ -16,46 +16,31 @@
     </button>
   </div>
 
-  <div class="modal" id="upgradeCardModal" tabindex="-1">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">{{t('roundBot.upgradeCard.title')}}</h5>
-          <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <p v-html="t('roundBot.upgradeCard.text')"></p>
-          <p class="fst-italic small" v-html="t('roundBot.upgradeCard.note')"></p>
-        </div>
-        <div class="modal-footer">
-          <button class="btn btn-primary" data-bs-dismiss="modal" @click="upgradeCard()">{{t('roundBot.upgrade')}}</button>
-          <button class="btn btn-secondary" data-bs-dismiss="modal">{{t('action.cancel')}}</button>
-        </div>
-      </div>
-    </div>
-  </div>
+  <ModalDialog id="upgradeCardModal" :title="t('roundBot.upgradeCard.title')">
+    <template #body>
+      <p v-html="t('roundBot.upgradeCard.text')"></p>
+      <p class="fst-italic small" v-html="t('roundBot.upgradeCard.note')"></p>
+    </template>
+    <template #footer>
+      <button class="btn btn-primary" data-bs-dismiss="modal" @click="upgradeCard()">{{t('roundBot.upgrade')}}</button>
+      <button class="btn btn-secondary" data-bs-dismiss="modal">{{t('action.cancel')}}</button>
+    </template>
+  </ModalDialog>
 
-  <div class="modal" id="revertUpgradeCardModal" tabindex="-1">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">{{t('roundBot.revertUpgradeCard.title')}}</h5>
-          <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <p v-html="t('roundBot.revertUpgradeCard.text')"></p>
-          <select class="form-select" v-model="revertCard">
-            <option value="">{{t('roundBot.revertUpgradeCard.choose')}}</option>
-            <option v-for="card of cardSlots.upgradedCardNames" :value="card as string" :key="card">{{t(`cardType.${card}`)}}</option>
-          </select>
-        </div>
-        <div class="modal-footer">
-          <button class="btn btn-primary" data-bs-dismiss="modal" @click="revertUpgradedCard()" :disabled="revertCard==''">{{t('roundBot.revertUpgrade')}}</button>
-          <button class="btn btn-secondary" data-bs-dismiss="modal">{{t('action.cancel')}}</button>
-        </div>
-      </div>
-    </div>
-  </div>
+  <ModalDialog id="revertUpgradeCardModal" :title="t('roundBot.revertUpgradeCard.title')">
+    <template #body>
+      <p v-html="t('roundBot.revertUpgradeCard.text')"></p>
+      <select class="form-select" v-model="revertCard">
+        <option value="">{{t('roundBot.revertUpgradeCard.choose')}}</option>
+        <option v-for="card of cardSlots.upgradedCardNames" :value="card as string" :key="card">{{t(`cardType.${card}`)}}</option>
+      </select>
+    </template>
+    <template #footer>
+      <button class="btn btn-primary" data-bs-dismiss="modal" @click="revertUpgradedCard()" :disabled="revertCard==''">{{t('roundBot.revertUpgrade')}}</button>
+      <button class="btn btn-secondary" data-bs-dismiss="modal">{{t('action.cancel')}}</button>
+    </template>
+  </ModalDialog>
+
 </template>
 
 <script lang="ts">
@@ -67,6 +52,7 @@ import NavigationState from '@/util/NavigationState'
 import CardSlots from '@/services/CardSlots'
 import AppIcon from '../structure/AppIcon.vue'
 import CardTypeIcon from '../structure/CardTypeIcon.vue'
+import ModalDialog from 'brdgm-commons/src/components/structure/ModalDialog.vue'
 import Card from '@/services/Card'
 import Cards from "@/services/Cards"
 import CardName from "@/services/enum/CardName"
@@ -75,7 +61,8 @@ export default defineComponent({
   name: 'ActionCards',
   components: {
     AppIcon,
-    CardTypeIcon
+    CardTypeIcon,
+    ModalDialog
   },
   setup() {
     const { t } = useI18n()

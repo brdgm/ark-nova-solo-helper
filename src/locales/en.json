@@ -167,7 +167,8 @@
     "botText": "Get <b>{conservationPoints} conservation point(s)</b> for {tokenScoringCardCount} token(s) on the final scoring card and {tokenNotepadCount} token(s) on the notepad.",
     "conservationPoints": "Conservation Points",
     "appeal": "Appeal",
-    "victoryPoints": "Victory Points"
+    "victoryPoints": "Victory Points",
+    "appealReputationTrack": "The app counts the appeal ARNO receives from playing the cards. It cannot track appeal that ARNO receives instead of reputation on step 15 of the reputation track."
   },
   "notfound": {
     "title": "Not Found"

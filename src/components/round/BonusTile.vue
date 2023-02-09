@@ -1,42 +1,39 @@
 <template>
   <a id="bonusTile" data-bs-toggle="modal" href="#getBonusTileModal" v-html="t('bonusTile.link')"></a>
 
-  <div class="modal" id="getBonusTileModal" tabindex="-1">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" v-html="t('bonusTile.link')"></h5>
-          <button class="btn-close" data-bs-dismiss="modal" :aria-label="t('action.close')" @click="reset()"></button>
+  <ModalDialog id="getBonusTileModal">
+    <template #header>
+      <h5 class="modal-title" v-html="t('bonusTile.link')"></h5>
+      <button class="btn-close" data-bs-dismiss="modal" :aria-label="t('action.close')" @click="reset()"></button>
+    </template>
+    <template #body>
+      <p v-html="t('bonusTile.text')"></p>
+      <button v-if="!bonusTilePosition" type="button" class="btn btn-primary btn-sm ms-2" @click="pickBonusTilePosition()">{{t('bonusTile.pick')}}</button>
+      <p v-if="bonusTilePosition==1" v-html="t('bonusTile.left')"></p>
+      <p v-if="bonusTilePosition==2" v-html="t('bonusTile.right')"></p>
+      <p class="fst-italic small mt-3" v-html="t('roundBot.upgradeCard.note')"></p>
+      <hr/>
+      <div v-if="gainPartnerZoo" class="mt-4 mb-4"><GainPartnerZoo/></div>
+      <div v-else-if="gainPartnerUniversity" class="mt-4 mb-4"><GainPartnerUniversity/></div>
+      <template v-else>
+        <p v-html="t('bonusTile.usage')"></p>
+        <div>
+          <AppIcon type="bonus-tile" name="partner-zoo" class="bonusTileImage"/>
+          <button v-if="!gainPartnerZoo" type="button" class="btn btn-outline-secondary btn-sm ms-2" @click="pickPartnerZoo()">{{t('bonusTile.pickPartnerZoo')}}</button>
         </div>
-        <div class="modal-body">
-          <p v-html="t('bonusTile.text')"></p>
-          <button v-if="!bonusTilePosition" type="button" class="btn btn-primary btn-sm ms-2" @click="pickBonusTilePosition()">{{t('bonusTile.pick')}}</button>
-          <p v-if="bonusTilePosition==1" v-html="t('bonusTile.left')"></p>
-          <p v-if="bonusTilePosition==2" v-html="t('bonusTile.right')"></p>
-          <hr/>
-          <div v-if="gainPartnerZoo" class="mt-4 mb-4"><GainPartnerZoo/></div>
-          <div v-else-if="gainPartnerUniversity" class="mt-4 mb-4"><GainPartnerUniversity/></div>
-          <template v-else>
-            <p v-html="t('bonusTile.usage')"></p>
-            <div>
-              <AppIcon type="bonus-tile" name="partner-zoo" class="bonusTileImage"/>
-              <button v-if="!gainPartnerZoo" type="button" class="btn btn-outline-secondary btn-sm ms-2" @click="pickPartnerZoo()">{{t('bonusTile.pickPartnerZoo')}}</button>
-            </div>
-            <div>
-              <AppIcon type="bonus-tile" name="partner-university" class="bonusTileImage"/>
-              <button v-if="!gainPartnerUniversity" type="button" class="btn btn-outline-secondary btn-sm ms-2" @click="pickPartnerUniversity()">{{t('bonusTile.pickPartnerUniversity')}}</button>
-            </div>
-            <div>
-              <AppIcon type="bonus-tile" name="reputation" class="bonusTileImage"/>
-            </div>
-          </template>
+        <div>
+          <AppIcon type="bonus-tile" name="partner-university" class="bonusTileImage"/>
+          <button v-if="!gainPartnerUniversity" type="button" class="btn btn-outline-secondary btn-sm ms-2" @click="pickPartnerUniversity()">{{t('bonusTile.pickPartnerUniversity')}}</button>
         </div>
-        <div class="modal-footer">
-          <button class="btn btn-secondary" @click="reset()" data-bs-dismiss="modal">{{t('action.close')}}</button>
+        <div>
+          <AppIcon type="bonus-tile" name="reputation" class="bonusTileImage"/>
         </div>
-      </div>
-    </div>
-  </div>
+      </template>
+    </template>
+    <template #footer>
+      <button class="btn btn-secondary" @click="reset()" data-bs-dismiss="modal">{{t('action.close')}}</button>
+    </template>
+  </ModalDialog>
 
 </template>
 
@@ -47,13 +44,15 @@ import { useI18n } from 'vue-i18n'
 import AppIcon from '../structure/AppIcon.vue'
 import GainPartnerZoo from "./GainPartnerZoo.vue"
 import GainPartnerUniversity from "./GainPartnerUniversity.vue"
+import ModalDialog from 'brdgm-commons/src/components/structure/ModalDialog.vue'
 
 export default defineComponent({
   name: 'BonusTile',
   components: {
     AppIcon,
     GainPartnerZoo,
-    GainPartnerUniversity
+    GainPartnerUniversity,
+    ModalDialog
   },
   setup() {
     const { t } = useI18n()

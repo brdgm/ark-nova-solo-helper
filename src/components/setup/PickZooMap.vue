@@ -9,7 +9,7 @@
       </button><br/>
     </div>
     <div class="col-sm-5 col-md-3 mt-3 mt-sm-0">
-      <select class="form-select" v-model="selectedMap">
+      <select class="form-select" v-for="playerIndex in $store.state.setup.playerSetup.playerCount" :key="playerIndex" v-model="selectedMaps[playerIndex - 1]">
         <option :value="''">{{t('setup.pickZooMap.pleaseSelect')}}</option>
         <option :value="'A'">{{t('setup.pickZooMap.mapA')}}</option>
         <option :value="'0'">{{t('setup.pickZooMap.map0')}}</option>
@@ -33,7 +33,7 @@ export default defineComponent({
   },
   data() {
     return {
-      selectedMap: this.$store.state.setup.zooMap ?? ''
+      selectedMaps: this.$store.state.setup.zooMaps ?? ['','','']
     }
   },
   computed: {
@@ -50,19 +50,26 @@ export default defineComponent({
   },
   methods: {
     pickRandom() : void {
+      this.selectedMaps = ['','',''];
+      for (let i=0; i<this.selectedMaps.length; i++) {
+        this.selectedMaps[i] = this.pickUniqueMap();
+      }
+    },
+    pickUniqueMap() : string {
       const advancedMapNo = rollDice(this.advancedMaps.length)
       const selected = this.advancedMaps[advancedMapNo - 1].id
-      if (selected == this.selectedMap) {
-        this.pickRandom()
+      if (this.selectedMaps.includes(selected)) {
+        return this.pickUniqueMap()
       }
-      else {
-        this.selectedMap = selected
-      }
+      return selected
     }
   },
   watch: {
-    selectedMap() : void {
-      this.$store.commit('setupZooMap', this.selectedMap)
+    selectedMaps: {
+      handler() {
+        this.$store.commit('setupZooMaps', this.selectedMaps)
+      },
+      deep: true
     }
   }
 })
