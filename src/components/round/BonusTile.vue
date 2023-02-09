@@ -11,6 +11,7 @@
       <button v-if="!bonusTilePosition" type="button" class="btn btn-primary btn-sm ms-2" @click="pickBonusTilePosition()">{{t('bonusTile.pick')}}</button>
       <p v-if="bonusTilePosition==1" v-html="t('bonusTile.left')"></p>
       <p v-if="bonusTilePosition==2" v-html="t('bonusTile.right')"></p>
+      <p class="fst-italic small mt-3" v-html="t('roundBot.upgradeCard.note')"></p>
       <hr/>
       <div v-if="gainPartnerZoo" class="mt-4 mb-4"><GainPartnerZoo/></div>
       <div v-else-if="gainPartnerUniversity" class="mt-4 mb-4"><GainPartnerUniversity/></div>
