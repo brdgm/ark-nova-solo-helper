@@ -167,10 +167,11 @@
       "botText": "Ganan <b>{conservationPoints} punto(s) de conservación</b> por tener {tokenScoringCardCount} cubo(s) sobre su carta de Puntuación Final y {tokenNotepadCount} cubo(s) sobre su libreta.",
       "conservationPoints": "Puntos de Conservación",
       "appeal": "Atractivo",
-      "victoryPoints": "Puntos de Victoria"
+      "victoryPoints": "Puntos de Victoria",
+      "appealReputationTrack": "La aplicación cuenta el atractivo que ARNO recibe de jugar cartas. No puede registrar el atractivo que ARNO recibe en lugar de reputación en el espacio 15 del trayecto de reputación."
     },
     "notfound": {
-      "title": "Not Found"
+      "title": "No Encontrado"
     },
     "action": {
       "playGame": "Jugar",
