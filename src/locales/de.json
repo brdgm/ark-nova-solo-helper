@@ -167,7 +167,8 @@
     "botText": "Erhält <b>{conservationPoints} Artenschutzpunkt(e)</b> für {tokenScoringCardCount} Markierungsstein(e) auf der Endwertungskarte und {tokenNotepadCount} Markierungsstein(e) auf dem Notizzettel.",
     "conservationPoints": "Arten&shy;schutz&shy;punkte",
     "appeal": "Attraktion",
-    "victoryPoints": "Sieg&shy;punkte"
+    "victoryPoints": "Sieg&shy;punkte",
+    "appealReputationTrack": "Die App zählt die Attraktion die ARNO durch die Karten erhält. Sie kann nicht die Attraktion zählen, die ARNO anstelle von weiterem Ruf erhählt, wenn er auf Feld 15 der Rufleiste angekommen ist."
   },
   "notfound": {
     "title": "Nicht Gefunden"

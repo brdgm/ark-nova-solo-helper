@@ -30,6 +30,8 @@
       <td>{{victoryPoints[playerCount+bot-1]}}</td>
     </tr>
   </table>
+
+  <p class="fst-italic small mt-3" v-html="t('scoring.appealReputationTrack')"></p>
 </template>
 
 <script lang="ts">
