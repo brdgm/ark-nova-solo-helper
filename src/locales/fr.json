@@ -128,7 +128,7 @@
     "gain-partner-university": "Gagne <b> une université #{number}</b>.",
     "conservation-project-work": "<b>Projet de conservation</b>.",
     "take-card-display": "ARNO prend la <b>carte #{number}</b> de la rivière.",
-    "token-scoring-card": "Placez <b>1</b> des cubes d'ARNO sur <b>fcarte de Décompte final</b>.",
+    "token-scoring-card": "Placez <b>1</b> des cubes d'ARNO sur sa <b>carte de Décompte final</b>.",
     "token-notepad": "Placez <b>{amount}</b> cube d'ARNO sur le <b>bloc-notes</b> (compte pour le décompte final). | Placez <b>{amount}</b> cubes d'ARNO sur le <b>bloc-notes</b> (compte pour le décompte final).",
     "donate": "ARNO fait un don."
   },
