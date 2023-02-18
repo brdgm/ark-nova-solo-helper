@@ -72,7 +72,7 @@
     "revertUpgradeCard": {
       "title": "Annuler une carte améliorée",
       "text": "Vous pouvez annuler une carte améliorée si vous l'avez amélioré par <i>erreur</i>.",
-      "choose": "(Choose)"
+      "choose": "(Choisissez)"
     },
     "actionHelpAssociationWorker": {
       "title": "Placez un Bénévole",
@@ -168,7 +168,7 @@
     "conservationPoints": "Points de conservation",
     "appeal": "Attrait",
     "victoryPoints": "Points de victoire",
-    "appealReputationTrack": "The app counts the appeal ARNO receives from playing the cards. It cannot track appeal that ARNO receives instead of reputation on step 15 of the reputation track."
+    "appealReputationTrack": "L'application compte les points d'Attraits qu'ARNO reçoit en jouant des cartes. Elle ne peut pas comptabiliser les points d'Attraits qu'ARNO reçoit à la place de la réputation sur la case 15 de la piste de réputation."
   },
   "notfound": {
     "title": "Pas trouvé"
