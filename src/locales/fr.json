@@ -22,6 +22,15 @@
         "easy": "Facile",
         "hard": "Difficile"
       },
+      "pickZooMap": {
+        "title": "Plateau Zoo",
+        "pickRandom": "Choisir aléatoirement (avancé)",
+        "pleaseSelect": "(Veuillez selectionner)",
+        "mapA": "Plateau A (facile)",
+        "map0": "Plateau 0 (intermédiaire)",
+        "mapAdvanced": "Plateau {id} (avancé)",
+        "mapAdvancedMapPack": "Plateau {id} (avancé, pack de Plateau {mapPack})"
+      },
       "actionCardDistribution": {
         "title": "Répartition des Cartes Actions",
         "schema": "Probabilité (%)",
@@ -32,6 +41,7 @@
       "title": "Mise en place d'ARNO",
       "text1": "Organisez le jeu en fonction du nombre de joueurs (y compris ARNO). Un joueur humain sera toujours le premier joueur.",
       "text2": "Chaque ARNO commence avec <b>-3 points de conservation</b> et des points d'attrait selon l'ordre des joueurs.",
+      "text2-conservation":"Placez trois cubes de joueur en guise de rappel à côté du compteur de points de conservation d'ARNO et retirez-les un par un dès qu'ARNO a marqué ses premiers points de conservation.",
       "text2-appeal": "Par exemple, si ARNO est le 3ème joueur, il commence avec 2 points d'attraits.",
       "text3": "Chaque ARNO reçoit les composants d'une couleur, un plateau zoo (carte A), une carte de score final face cachée et 8 cartes Zoo aléatoires.",
       "text4": "Placez tous les jetons de joueur de la couleur d'ARNO à côté de son plateau zoo.",
@@ -39,6 +49,8 @@
       "text6": "Placez la carte de score final sur la partie gauche du plateau zoo. Cela permet de couvrir la zone des bâtiment qui n'est pas nécessaire pour ARNO.",
       "text7": "Triez les 8 cartes Zoo d'ARNO en fonction de leur type :",
       "text7-1": "Défaussez toutes les cartes de Mécènes.",
+      "text7-2": "ARNO peut garder un maximum de quatre cartes. Il conserve toutes les cartes de projet de conservation (quatre au maximum).",
+      "text7-3": "Si ARNO possède maintenant moins de quatre cartes, il peut également garder les cartes Animaux (jusqu'à quatre au total)",
       "text8": "Vous n'avez pas besoin de dés ou de cartes d'action."
     },
     "roundPlayer": {
@@ -48,6 +60,7 @@
     "roundBot": {
       "title": "ARNO | ARNO {bot}",
       "upgrade": "Amélioration",
+      "revertUpgrade": "Annuler une amélioration",
       "reroll": "Relancer",
       "associationWorker": "ARNO place un <b>Bénévole</b>:",
       "fallbackText": "Alternative, si ce n'est pas possible :",
@@ -56,13 +69,22 @@
         "text": "Améliorer une carte d'action d'ARNO",
         "note": "Remarque : Lorsque ARNO atteint 2 points de conservation, il choisit toujours de prendre un bénévole supplémentaire, et non une amélioration de carte."
       },
+      "revertUpgradeCard": {
+        "title": "Annuler une carte améliorée",
+        "text": "Vous pouvez annuler une carte améliorée si vous l'avez amélioré par <i>erreur</i>.",
+        "choose": "(Choose)"
+      },
       "actionHelpAssociationWorker": {
         "title": "Placez un Bénévole",
         "text": "Si ARNO a déjà un de ses bénévoles sur cette tâche d'association, il sélectionne la tâche immédiatement supérieure où aucun de ses bénévoles n'est encore placé. Normalement, il utilise les marqueurs X pour améliorer l'action ; il ne place jamais deux bénévoles sur la même action. Si aucune tâche associative supérieure n'est disponible, il sélectionne la prochaine tâche associative inférieure disponible.",
+        "text-fallback": "Si ARNO n'a plus d'ouvriers disponible, il reçoit +2 points de conservation et avance le pion de Pause de 2 cases. De plus il reçoit un nouveau zoo partenaire ou une université. Il prendra en priorité celui qu'il lui manque le plus.",
         "chooseDifferent": "Choisissez une autre tâche d'association :"
       },
       "actionHelpProjectConservationWork": {
         "title": "Projet de conservation"      
+      },
+      "actionFallbackPickPartnerZooOrUniversity": {
+        "title": "Gagner un zoo partenaire ou une université"
       },
       "pickConservationProject": {
         "conservationProjectSelection": "Sélectionnez un projet de conservation",
@@ -78,7 +100,21 @@
         "projectSlotMiddle": "ARNO préfère placer son cube sur l'emplacement au milieu",
         "projectSlotRightMost": "ARNO préfère placer son cube sur l'emplacement le plus à droite.",
         "projectSlotAlternatives": "Si cet emplacement est déjà couvert par un autre joueur, il le place sur l'emplacement suivant à gauche. Si ce n'est pas possible également, sur le prochain emplacement disponible à droite."
+      },
+      "gainPartnerZooOrUniversity": {
+        "missingMost": "Que manque-t-il le plus à Arno?",
+        "partnerZoo": "Zoo partenaire",
+        "partnerUniversity": "Université",
+        "pickRandom": "Choisir aléatoirement"
       }
+    },
+    "difficultyLevel": {
+      "1": "Niveau 1: Débutant",
+      "2": "Niveau 2: Très Facile",
+      "3": "Niveau 3: Facile",
+      "4": "Niveau 4: Moyen",
+      "5": "Niveau 5: Difficile",
+      "6": "Niveau 6: Très Difficile"
     },
     "cardType": {
       "animals": "Animaux",
@@ -108,7 +144,12 @@
     },
     "roundDisplay": {
       "round": "Tour {round}"
-    },  
+    },
+    "breakInfo": {
+      "link": "Pause",
+      "text1": "Pendant les pauses, ARNO pioche <b>trois cartes</b> depuis la pioche. Il garde la première carte Projet de Conservation et joue la première carte Animal sur son plateau zoo.",
+      "text2": "La carte Animal jouée peut déclencher un effet bonus pour le ou les joueurs humains. Les autres cartes sont défaussées."
+    },
     "bonusTile": {
       "link": "Tuile bonus",
       "text": "ARNO ne choisit jamais le bonus pré-imprimé.",
@@ -126,7 +167,8 @@
       "botText": "Gagne <b>{conservationPoints} point(s) de conservation</b> pour {tokenScoringCardCount} cube(s) sur sa carte de décompte final et {tokenNotepadCount} cube(s) présent sur son bloc-notes.",
       "conservationPoints": "Points de conservation",
       "appeal": "Attrait",
-      "victoryPoints": "Points de victoire"
+      "victoryPoints": "Points de victoire",
+      "appealReputationTrack": "The app counts the appeal ARNO receives from playing the cards. It cannot track appeal that ARNO receives instead of reputation on step 15 of the reputation track."
     },
     "notfound": {
       "title": "Pas trouvé"
@@ -149,6 +191,9 @@
     },
     "footer": {
       "credits": "Crédits"
+    },
+    "serviceWorkerUpdatedRefresh": {
+      "title": "Rafraîchir l'application",
+      "notice": "L'application a été mise à jour - voulez-vous rafraîchir pour utiliser la dernière version?"
     }
-  }
-  
+}
