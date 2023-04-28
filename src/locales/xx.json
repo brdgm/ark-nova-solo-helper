@@ -1,13 +1,13 @@
 {
-  "gameTitle": "Ark Nova",
+  "gameTitle": "Ark Nova XX",
   "home": {
-    "title": "Ark Nova Solo Helper",
+    "title": "Ark Nova Solo Helper XX",
     "play1": "Play the <a href='https://boardgamegeek.com/thread/2823056/rno-alternative-solo-mode' target='_blank' rel='noopener'><b>A.R.N.O. 2.0 Solo Mode</b></a> (unofficial) of <a href='https://boardgamegeek.com/boardgame/342942/ark-nova' target='_blank' rel='noopener'><b>Ark Nova</b></a>. Unlike the official solo mode, this simulates additional opponent(s) similar to a multi-player game.",
     "play2": "To play the solo mode you only need the base game. This helper application replaces the ARNO card deck and the dice and tracks ARNO's progression.",
     "feedback": "Discussion and Feedback:"
   },
   "setup": {
-    "title": "Setup Game",
+    "title": "Setup Game XX",
     "players": {
       "title": "Player",
       "playerCount": "Human Players",
