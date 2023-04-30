@@ -10,7 +10,7 @@ Application: https://brdgm.me/ark-nova/
 
 This application is Open Source. You can contribute by creating issues or pull requests!
 
-If you want to provide an additional translation, provide a new JSON file in the [locales](https://github.com/brdgm/ark-nova-solo-helper/tree/develop/src/locales) folder.
+If you want to provide an additional translation, provide a new JSON file in the [locales](https://github.com/brdgm/ark-nova-solo-helper/tree/develop/src/locales) folder, see [Contribute a Translation](https://github.com/brdgm/brdgm.github.io/wiki/Contribute-a-Translation).
 
 
 ## Development
