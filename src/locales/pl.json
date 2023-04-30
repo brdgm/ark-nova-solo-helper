@@ -1,0 +1,199 @@
+{
+  "gameTitle": "Ark Nova",
+  "home": {
+    "title": "Ark Nova - Pomocnik do gry Solo",
+    "play1": "Grasz w <a href='https://boardgamegeek.com/thread/2823056/rno-alternative-solo-mode' target='_blank' rel='noopener'><b>Tryb Solo A.R.N.O. 2.0 </b></a> (nieoficjalny) do gry <a href='https://boardgamegeek.com/boardgame/342942/ark-nova' target='_blank' rel='noopener'><b>Ark Nova</b></a>. W przeciwieństwie do oficjalnego trybu solo, ten symuluje dodatkowych przeciwników, podobnie jak w grze wieloosobowej.",
+    "play2": "Aby grać w trybie solo, potrzebujesz tylko podstawowej wersji gry. Ta aplikacja pomocnicza zastępuje talię kart ARNO i kości oraz śledzi postępy ARNO.",
+    "feedback": "Dyskusja i Opinie:"
+  },
+  "setup": {
+    "title": "Przygotowanie Gry",
+    "players": {
+      "title": "Gracz",
+      "playerCount": "Ludzcy Gracze",
+      "playerCountItem": "{count} Gracz | {count} Graczy",
+      "playerColor": "Kolor Gracza | {index} Kolor Gracza",
+      "botCount": "Boty ARNO",
+      "botCountItem": "{count} Bot ARNO | {count} Boty ARNO",
+      "botColor": "Kolor ARNO | {index} Kolor ARNO"
+    },
+    "difficultyLevel": {
+      "title": "Poziom Trudności",
+      "easy": "Łatwy",
+      "hard": "Trudny"
+    },
+    "pickZooMap": {
+      "title": "Mapa Zoo",
+      "pickRandom": "Wybierz Losowo (zaawansowany)",
+      "pleaseSelect": "(Proszę Wybrać)",
+      "mapA": "Mapa A (łatwy)",
+      "map0": "Mapa 0 (średniozaawansowany)",
+      "mapAdvanced": "Mapa {id} (zaawansowany)",
+      "mapAdvancedMapPack": "Mapa {id} (Zaawansowany, Pakiet Map {mapPack})"
+    },
+    "actionCardDistribution": {
+      "title": "Rozkład Kart Akcji",
+      "schema": "Prawdopodobieństwo (%)",
+      "text": "Opcja eksperymentalna. Opcja '0-25-25-25-25' podąża za oficjalnymi zasadami ARNO"
+    }
+  },
+  "setupARNO": {
+    "title": "Przygotowanie ARNO",
+    "text1": "Przygotuj grę odpowiednio do liczby graczy (wliczając ARNO). Ludzki gracz zawsze jest pierwszym graczem.",
+    "text2": "Każdy ARNO startuje z <b>-3 punktami Ochrony Przyrody</b> oraz punktami atrakcyjności zgodnie z kolejnością graczy.",
+    "text2-conservation": "Umieść trzy znaczniki gracza, jako przypomnienie, tuż obok znacznika punktacji Ochrony Przyrody ARNO. Usuwaj je jeden za drugim kiedy ARNO będzie zdobywać swoje pierwsze punkty Ochrony Przyrody.",
+    "text2-appeal": "Np. Jeśli ARNO jest trzecim graczem, rozpoczyna z dwoma punktami atrakcyjności.",
+    "text3": "Każdy ARNO otrzymuje komponenty w jednym kolorze, planszę gracza (mapa A), jedną zakrytą kartę Punktacji Końcowej oraz 8 losowych kart Zoo.",
+    "text4": "Umieść wszystkie znaczniki gracza w kolorze ARNO tuż obok jego planszy gracza.",
+    "text5": "ARNO startuje z jednym pracownikiem stowarzyszenia na swoim notatniku. Połóż pozostałych trzech pracowników na odpowiednich miejscach poniżej jego notatnika.",
+    "text6": "Umieść kartę Punktacji Końcowej po lewej stronie planszy gracza. Zakryje ona obszar budowy z którego ARNO nie korzysta.",
+    "text7": "Posortuj 8 kart Zoo ARNO według podanych typów:",
+    "text7-1": "Odrzuć wszystkie karty Sponsorów",
+    "text7-2": "ARNO zachowuje maksymalnie cztery karty. Zachowuje on wszystkie projekty Ochrony Przyrody (maksymalnie cztery).",
+    "text7-3": "Jeśli ARNO posiada teraz mniej niż cztery karty, zachowuje on karty Zwierząt (tak aby mieć cztery karty).",
+    "text8": "Nie potrzebujesz żadnych kości, ani kart akcji ARNO."
+  },
+  "roundPlayer": {
+    "title": "Gracz | Gracz {player}",
+    "info": "Wykonaj swój ruch"
+  },
+  "roundBot": {
+    "title": "ARNO | ARNO {bot}",
+    "upgrade": "Ulepsz",
+    "revertUpgrade": "Cofnij Ulepszenie",
+    "reroll": "Przerzuć",
+    "associationWorker": "ARNO umieszcza jednego <b>Pracownika Stowarzyszenia</b>:",
+    "fallbackText": "Alternatywnie, jeśli jest to niemożliwe:",
+    "upgradeCard": {
+      "title": "Ulepsz Kartę",
+      "text": "Czy chcesz ulepszyć jedną z kart akcji ARNO?",
+      "note": "Pamiętaj: Kiedy ARNO osiągnie 2 punkty Ochrony Przyrody, zawsze wybiera dodatkowego pracownika stowarzyszenia zamiast ulepszenia karty akcji."
+    },
+    "revertUpgradeCard": {
+      "title": "Cofnij Ulepszenie Karty",
+      "text": "Możesz cofnąć ulepszoną kartę akcji,  jeśli <i>przypadkowo</i> ją ulepszyłeś.",
+      "choose": "(Wybierz)"
+    },
+    "actionHelpAssociationWorker": {
+      "title": "Umieść pracownika",
+      "text": "Jeśli ARNO posiada jednego ze swoich pracowników na tym zadaniu stowarzyszenia, wybiera wtedy następne wyższe zadanie na którym nie posiada żadnego pracownika. Zasadniczo używa on żeton X do zwiększenia siły akcji; ARNO nigdy nie umieszcza dwóch pracowników na tym samym zadaniu. Jeśli żadne wyższe zadanie nie jest dostępne, wybiera wtedy następne dostępne niższe zadanie.",
+      "text-fallback": "Jeśli ARNO nie posiada dostępnego robotnika, otrzymuje +2 punkty Ochrony Przyrody oraz przesuwa znacznik przerwy o 2 pola. Dodatkowo otrzymuje nowe Zoo partnerskie lub Uniwersytet partnerski. ARNO preferuje te, których ma najmniej.",
+      "chooseDifferent": "Wybierz inne zadanie stowarzyszenia:"
+    },
+    "actionHelpProjectConservationWork": {
+      "title": "Udział w Projekcie Ochrony Przyrody"
+    },
+    "actionFallbackPickPartnerZooOrUniversity": {
+      "title": "Zdobycie Zoo partnerskiego lub Uniwersytetu partnerskiego"
+    },
+    "pickConservationProject": {
+      "conservationProjectSelection": "Wybór Projektu Ochrony Przyrody",
+      "conservationProjectsHand": "Ile Projektów Ochrony Przyrody posiada ARNO na swojej planszy gracza?",
+      "conservationProjectsBoardNoToken": "Ile Projektów Ochrony Przyrody, które nie posiadają żadnych znaczników graczy, jest dostępnych na planszy Stowarzyszenia?",
+      "conservationProjectsBoardAvailable": "Ile Projektów Ochrony Przyrody, które nie zostały wsparte przez ARNO, jest dostępnych na planszy Stowarzyszenia?",
+      "pick": "Wybierz Projekt Ochrony Przyrody",
+      "pickFromHand": "ARNO wspiera {number}. Projekt Ochrony Przyrody na swojej planszy gracza.",
+      "pickFromBoardNoToken": "ARNO wspiera {number}. Projekt Ochrony Przyrody na planszy Stowarzyszenia, który nie posiada żadnych znaczników graczy.",
+      "pickFromBoardAvailable": "ARNO wspiera {number}. Projekt Ochrony Przyrody na planszy Stowarzyszenia, który jest dostępny dla niego.",
+      "tokenPlacement": "Umiejscowienie Znacznika",
+      "projectSlotLeftMost": "ARNO preferuje położenie swojego znacznika na skrajnie lewym polu.",
+      "projectSlotMiddle": "ARNO preferuje położenie swojego znacznika na środkowym polu.",
+      "projectSlotRightMost": "ARNO preferuje położenie swojego znacznika na skrajnie prawym polu.",
+      "projectSlotAlternatives": "Jeśli to miejsce jest już zakryte przez innego gracza, umieszcza znacznik na następnym poziomie po lewej stronie. Jeśli to również nie jest możliwe, umieszcza na następnym dostępnym poziomie po prawej."
+    },
+    "gainPartnerZooOrUniversity": {
+      "missingMost": "Czego ARNO ma najmniej?",
+      "partnerZoo": "Zoo partnerskie",
+      "partnerUniversity": "Uniwersytet partnerski",
+      "pickRandom": "Wybierz Losowo"
+    }
+  },
+  "difficultyLevel": {
+    "1": "Poziom 1: Początkujący",
+    "2": "Poziom 2: Bardzo Łatwy",
+    "3": "Poziom 3: Łatwy",
+    "4": "Poziom 4: Średni",
+    "5": "Poziom 5: Trudny",
+    "6": "Poziom 6: Bardzo Trudny"
+  },
+  "cardType": {
+    "animals": "Zwierzęta",
+    "association": "Stowarzyszenie",
+    "build": "Budowa",
+    "cards": "Karty",
+    "sponsors": "Sponsorzy"
+  },
+  "cardAction": {
+    "gain-partner-zoo": "Otrzymuje <b>Zoo partnerskie #{number}</b>.",
+    "gain-partner-university": "Otrzymuje <b>Uniwersytet Partnerski #{number}</b>.",
+    "conservation-project-work": "<b>Udział w Projekcie Ochrony Przyrody</b>.",
+    "take-card-display": "Pozyskuje z ekspozycji <b>kartę #{number}</b>.",
+    "token-scoring-card": "Umieść <b>1</b> znacznik gracza ARNO na jego <b>karcie punktacji końcowej</b>.",
+    "token-notepad": "Umieść <b>{amount}</b> znacznik gracza ARNO na jego <b>notatniku</b> (dla efektu punktacji końcowej). | Umieść <b>{amount}</b> znaczniki gracza ARNO na jego <b>notatniku</b> (dla efektu punktacji końcowej).",
+    "donate": "ARNO przekazuje Dotację."
+  },
+  "aboutARNO": {
+    "link": "Zasady ARNO",
+    "title": "Podsumowanie Zasad A.R.N.O.",
+    "text1": "ARNO <b>nie używa pieniędzy</b>. Nie wydaje pieniędzy na akcje i nigdy nie otrzymuje pieniędzy (np. w czasie przerw lub z kart Zwierząt).",
+    "text2": "ARNO <b>korzysta wyłącznie z prawej strony swojej planszy gracza</b>. To tam umieszcza swoje Zoo partnerskie i Uniwersytety partnerskie oraz otrzymuje stamtąd dodatkowych pracowników. Zdobywa również bonusy, które tam odkryje. Lewy obszar jego planszy gracza nie jest brany pod uwagę. Będzie służyć wyłącznie do umieszczania kart Zoo oraz karty Punktacji Końcowej.",
+    "text3": "ARNO otrzymuje następujące <b>bonusy</b> ze swojej planszy gracza oraz planszy gry: <b>Punkty Ochrony Przyrody, ulepszenia kart, punkty reputacji oraz pracowników stowarzyszenia</b>. Oprócz pieniędzy nie otrzymuje również żadnych bonusów z kart Zwierząt, kart Sponsorów, budynków, wybiegów, żetonów X oraz podczas przerwy.",
+    "text4": "Karty Zwierząt, które układamy na planszy gracza ARNO, zapewniają <b>wszystkie wartości dla efektów kart</b> ludzkich graczy. Za każdym razem kiedy ARNO położy kartę Zwierzęcia na swojej planszy, wszystkie ikony z tej karty będą wywoływać efekty na kartach ludzkich graczy.",
+    "text5": "ARNO <b>nie może zostać celem interaktywnego efektu</b>. Zamiast tego użyj alternatywnych efektów solo z dolnej części karty.",
+    "text6": "Za każdym razem kiedy ARNO <b>otrzymuje karty</b> w czasie gry, odrzuć wszystkie karty sponsorów. Karty Zwierząt oraz karty Ochrony Przyrody połóż na planszy gracza ARNO."
+  },
+  "roundDisplay": {
+    "round": "Tura {round}"
+  },
+  "breakInfo": {
+    "link": "Przerwa",
+    "text1": "W czasie przerw, ARNO dobiera <b>trzy karty</b> z talii. Zostawia dla siebie pierwszy Projekt Ochrony Przyrody oraz zagrywa na swoją planszę gracza pierwsze zwierzę.",
+    "text2": "Zagrana karta zwierzęcia może wywołać dodatkowy efekt dla gracza (graczy).  Pozostałe karty są odrzucane."
+  },
+  "bonusTile": {
+    "link": "Kafle Bonusowe",
+    "text": "ARNO nigdy nie wybiera bonusów nadrukowanych na planszy.",
+    "pick": "Wybierz Kafel Bonusowy",
+    "left": "ARNO wybiera <b>lewy</b> kafel bonusowy z planszy.",
+    "right": "ARNO wybiera <b>prawy</b> kafel bonusowy z planszy.",
+    "usage": "ARNO używa tylko tych trzech kafli bonusowych. Z pozostałych kafli nie otrzymuje żadnych bonusów.",
+    "pickPartnerZoo": "Wybierz Zoo partnerskie",
+    "pickPartnerUniversity": "Wybierz Uniwersytet partnerski"
+  },
+  "scoring": {
+    "title": "Punktacja",
+    "humanPlayers": "Ludzcy Gracze",
+    "humanPlayersText": "Zdobądź punkty Ochrony Przyrody lub Atrakcyjności z <b>karty (kart) Punktacji Końcowej</b>, a także ze wszystkich swoich kart z <b>ikoną końca gry</b>.",
+    "botText": "Otrzymuje <b>{conservationPoints} punkt (punkty) Ochrony Przyrody </b> za {tokenScoringCardCount} znacznik (znaczniki) (znaczników) na karcie punktacji końcowej oraz {tokenNotepadCount} znacznik (znaczniki) (znaczników) na swoim notesie.",
+    "conservationPoints": "Punkty Ochrony Przyrody",
+    "appeal": "Atrakcyjność",
+    "victoryPoints": "Punkty Zwycięstwa",
+    "appealReputationTrack": "Aplikacja zlicza atrakcyjność, jaką ARNO otrzymuje zagrywając karty akcji.  Nie może śledzić atrakcyjności, którą ARNO otrzymuje zamiast reputacji powyżej 15 na torze reputacji."
+  },
+  "notfound": {
+    "title": "Nie znaleziono"
+  },
+  "action": {
+    "playGame": "Zagraj w Grę",
+    "startGame": "Rozpocznij Grę",
+    "next": "Następny",
+    "abortGame": "Anuluj Grę",
+    "abortGameConfirm": "Anulowanie obecnej gry - jesteś pewny?",
+    "finishGame": "Zakończ Grę",
+    "finishGameConfirm": "Zakończysz obecną grę i przejdziesz do punktacji końcowej - jesteś pewny?",
+    "endGame": "Koniec Gry",
+    "endGameConfirm": "Zakończysz obecną grę i przeniesiesz się do ekranu startowego - jesteś pewny?",
+    "cancel": "Anuluj",
+    "backToHome": "Wróć do ekranu startowego",
+    "back": "Cofnij",
+    "close": "Zamknij",
+    "reset": "Reset"
+  },
+  "footer": {
+    "credits": "Twórcy"
+  },
+  "serviceWorkerUpdatedRefresh": {
+    "title": "Odśwież Aplikację",
+    "notice": "Aplikacja została zaktualizowana - chcesz odświeżyć, aby używać najnowszej wersji?"
+  }
+}
