@@ -88,7 +88,7 @@ export default defineComponent({
 #bonusTile {
   position: absolute;
   right: 0;
-  top: 8.25rem;
+  top: 9.25rem;
   margin-right: 0.75rem;
   text-decoration: underline dotted;
   color: #000;
