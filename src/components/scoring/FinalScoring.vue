@@ -31,6 +31,7 @@
     </tr>
   </table>
 
+  <p>{{t('setup.difficultyLevel.title')}}: <strong>{{t(`difficultyLevel.${difficultyLevel}`)}}</strong></p>
   <p class="fst-italic small mt-3" v-html="t('scoring.appealReputationTrack')"></p>
 </template>
 
@@ -39,6 +40,7 @@ import { useStore } from '@/store'
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import PlayerColorDisplay from '@/components/structure/PlayerColorDisplay.vue'
+import DifficultyLevel from '@/services/enum/DifficultyLevel'
 
 export default defineComponent({
   name: 'FinalScoring',
@@ -76,6 +78,9 @@ export default defineComponent({
         result[i] = (this.appeal[i] || 0) - this.getAppealForConservationPoints(this.conservationPoints[i] || 0)
       }
       return result
+    },
+    difficultyLevel() : DifficultyLevel {
+      return this.$store.state.setup.difficultyLevel
     }
   },
   methods: {
