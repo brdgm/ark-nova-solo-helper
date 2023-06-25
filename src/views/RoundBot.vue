@@ -53,7 +53,7 @@ export default defineComponent({
     const botCount = navigationState.botCount
     const bot = navigationState.bot
     const playerColor = navigationState.playerColor
-    const keyDownHandler = ref((event:KeyboardEvent) => {})  // eslint-disable-line @typescript-eslint/no-empty-function, @typescript-eslint/no-unused-vars
+    const keyDownHandler = ref((_event:KeyboardEvent) => {})  // eslint-disable-line @typescript-eslint/no-empty-function, @typescript-eslint/no-unused-vars
 
     return { t, navigationState, round, playerCount, botCount, bot, playerColor, keyDownHandler }
   },
