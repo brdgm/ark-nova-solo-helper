@@ -28,11 +28,11 @@
 </template>
 
 <script lang="ts">
-import rollDice from "brdgm-commons/src/util/random/rollDice"
-import { useStore } from "@/store"
+import rollDice from 'brdgm-commons/src/util/random/rollDice'
+import { useStore } from '@/store'
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
-import DifficultyLevel from "@/services/enum/DifficultyLevel"
+import DifficultyLevel from '@/services/enum/DifficultyLevel'
 
 export default defineComponent({
   name: 'PickConservationProject',

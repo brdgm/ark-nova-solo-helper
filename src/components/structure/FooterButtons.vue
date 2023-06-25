@@ -33,10 +33,10 @@ export default defineComponent({
     endGame() {
       if (this.endGameButtonType=='abortGame' || this.$route.name == 'Scoring') {
         this.$store.commit('resetGame')
-        this.$router.push("/")
+        this.$router.push('/')
       }
       else {
-        this.$router.push("/scoring")
+        this.$router.push('/scoring')
       }
     }
   }

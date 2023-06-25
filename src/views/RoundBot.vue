@@ -12,11 +12,13 @@
     {{t('action.next')}}
   </router-link>
 
+  <BotDebugInfo :navigation-state="navigationState" v-if="$store.state.setup.debugMode"/>
+
   <FooterButtons :backButtonRouteTo="backButtonRouteTo" endGameButtonType="finishGame"/>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import PlayerColorDisplay from '@/components/structure/PlayerColorDisplay.vue'
 import BotActions from '@/components/round/BotActions.vue'
@@ -26,7 +28,8 @@ import { useStore } from '@/store'
 import NavigationState from '@/util/NavigationState'
 import AboutARNO from '@/components/structure/AboutARNO.vue'
 import RoundDisplay from '@/components/structure/RoundDisplay.vue'
-import BreakInfo from '../components/structure/BreakInfo.vue'
+import BreakInfo from '@/components/structure/BreakInfo.vue'
+import BotDebugInfo from '@/components/round/BotDebugInfo.vue'
 
 export default defineComponent({
   name: 'RoundBot',
@@ -36,7 +39,8 @@ export default defineComponent({
     FooterButtons,
     AboutARNO,
     RoundDisplay,
-    BreakInfo
+    BreakInfo,
+    BotDebugInfo
   },
   setup() {
     const { t } = useI18n()
@@ -49,8 +53,23 @@ export default defineComponent({
     const botCount = navigationState.botCount
     const bot = navigationState.bot
     const playerColor = navigationState.playerColor
+    const keyDownHandler = ref((_event:KeyboardEvent) => {})  // eslint-disable-line @typescript-eslint/no-empty-function, @typescript-eslint/no-unused-vars
 
-    return { t, navigationState, round, playerCount, botCount, bot, playerColor }
+    return { t, navigationState, round, playerCount, botCount, bot, playerColor, keyDownHandler }
+  },
+  mounted() {
+    this.keyDownHandler = (event:KeyboardEvent) => {
+      if (event.key == 'PageDown') {
+        this.$router.push(this.nextButtonRouteTo)
+      }
+      if (event.key == 'PageUp') {
+        this.$router.push(this.backButtonRouteTo)
+      }
+    }
+    window.addEventListener('keydown', this.keyDownHandler)
+  },
+  unmounted() {
+    window.removeEventListener('keydown', this.keyDownHandler)
   },
   computed: {
     nextButtonRouteTo() : string {

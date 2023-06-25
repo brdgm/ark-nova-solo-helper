@@ -23,7 +23,7 @@ export default defineComponent({
   },
   computed: {
     imageUrl() : string {
-      const suffix = this.upgrade ? "2" : "1"
+      const suffix = this.upgrade ? '2' : '1'
       return this.images(`./${this.cardName}-${suffix}.png`)
     }
   }

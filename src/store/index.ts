@@ -5,7 +5,7 @@ import PlayerColor from '@/services/enum/PlayerColor'
 import { InjectionKey } from 'vue'
 import { createStore, useStore as baseUseStore, Store } from 'vuex'
 
-const LOCALSTORAGE_KEY = process.env.VUE_APP_LOCALSTORAGE_KEY_PREFIX + "store"
+const LOCALSTORAGE_KEY = process.env.VUE_APP_LOCALSTORAGE_KEY_PREFIX + 'store'
 
 export interface State {
   language: string
@@ -18,6 +18,7 @@ export interface Setup {
   difficultyLevel: DifficultyLevel
   zooMaps?: string[]
   actionCardDistribution: ActionCardDistributionSchema
+  debugMode?: boolean
 }
 export interface PlayerSetup {
   playerCount: number
@@ -57,7 +58,7 @@ export const key: InjectionKey<Store<State>> = Symbol()
 
 export const store = createStore<State>({
   state: {
-    language: "en",
+    language: 'en',
     baseFontSize: 1.0,
     setup: {
       playerSetup: {
@@ -77,6 +78,9 @@ export const store = createStore<State>({
       if (localStorageCache) {
         this.replaceState(Object.assign(state, JSON.parse(localStorageCache)));
       }
+    },
+    debugMode(state : State, enabled: boolean) {
+      state.setup.debugMode = enabled
     },
     language(state : State, language: string) {
       state.language = language

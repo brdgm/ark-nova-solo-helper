@@ -7,7 +7,7 @@
 </template>
 
 <script lang="ts">
-import rollDice from "brdgm-commons/src/util/random/rollDice"
+import rollDice from 'brdgm-commons/src/util/random/rollDice'
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import AppIcon from '../structure/AppIcon.vue'

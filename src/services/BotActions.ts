@@ -1,10 +1,10 @@
-import rollDice from "brdgm-commons/src/util/random/rollDice"
-import BotAction from "./BotAction"
-import Card, { CardAction } from "./Card"
-import CardSlots from "./CardSlots"
-import Action from "./enum/Action"
-import ActionCardDistributionSchema from "./enum/ActionCardDistributionSchema"
-import DifficultyLevel from "./enum/DifficultyLevel"
+import rollDice from 'brdgm-commons/src/util/random/rollDice'
+import BotAction from './BotAction'
+import Card, { CardAction } from './Card'
+import CardSlots from './CardSlots'
+import Action from './enum/Action'
+import ActionCardDistributionSchema from './enum/ActionCardDistributionSchema'
+import DifficultyLevel from './enum/DifficultyLevel'
 
 /**
  * Gets next actions for ARNO bot to play.

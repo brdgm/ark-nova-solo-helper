@@ -21,7 +21,7 @@ import AppIcon from './AppIcon.vue'
 import ModalDialog from 'brdgm-commons/src/components/structure/ModalDialog.vue'
 
 export default defineComponent({
-  name: "AboutARNO",
+  name: 'BreakInfo',
   components: {
     AppIcon,
     ModalDialog

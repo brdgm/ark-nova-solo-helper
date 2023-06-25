@@ -16,7 +16,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import PlayerColorDisplay from '@/components/structure/PlayerColorDisplay.vue'
 import FooterButtons from '@/components/structure/FooterButtons.vue'
@@ -47,8 +47,23 @@ export default defineComponent({
     const botCount = navigationState.botCount
     const player = navigationState.player
     const playerColor = navigationState.playerColor
+    const keyDownHandler = ref((_event:KeyboardEvent) => {})  // eslint-disable-line @typescript-eslint/no-empty-function, @typescript-eslint/no-unused-vars
 
-    return { t, round, playerCount, botCount, player, playerColor }
+    return { t, round, playerCount, botCount, player, playerColor, keyDownHandler }
+  },
+  mounted() {
+    this.keyDownHandler = (event:KeyboardEvent) => {
+      if (event.key == 'PageDown') {
+        this.$router.push(this.nextButtonRouteTo)
+      }
+      if (event.key == 'PageUp') {
+        this.$router.push(this.backButtonRouteTo)
+      }
+    }
+    window.addEventListener('keydown', this.keyDownHandler)
+  },
+  unmounted() {
+    window.removeEventListener('keydown', this.keyDownHandler)
   },
   computed: {
     nextButtonRouteTo() : string {

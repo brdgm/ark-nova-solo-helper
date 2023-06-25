@@ -1,11 +1,11 @@
-import CardSlots from "@/services/CardSlots"
-import DifficultyLevel from "@/services/enum/DifficultyLevel"
-import { BotRound, State } from "@/store"
-import { RouteLocation } from "vue-router"
-import { Store } from "vuex"
-import BotActions from "@/services/BotActions"
-import PlayerColor from "@/services/enum/PlayerColor"
-import ActionCardDistributionSchema from "@/services/enum/ActionCardDistributionSchema"
+import CardSlots from '@/services/CardSlots'
+import DifficultyLevel from '@/services/enum/DifficultyLevel'
+import { BotRound, State } from '@/store'
+import { RouteLocation } from 'vue-router'
+import { Store } from 'vuex'
+import BotActions from '@/services/BotActions'
+import PlayerColor from '@/services/enum/PlayerColor'
+import ActionCardDistributionSchema from '@/services/enum/ActionCardDistributionSchema'
 
 export default class NavigationState {
 

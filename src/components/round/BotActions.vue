@@ -73,7 +73,7 @@
 </template>
 
 <script lang="ts">
-import rollDice from "brdgm-commons/src/util/random/rollDice"
+import rollDice from 'brdgm-commons/src/util/random/rollDice'
 import { defineComponent, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { BotRound, useStore } from '@/store'
@@ -81,16 +81,16 @@ import NavigationState from '@/util/NavigationState'
 import BotActions from '@/services/BotActions'
 import AppIcon from '../structure/AppIcon.vue'
 import ActionCards from './ActionCards.vue'
-import CardSlots from "@/services/CardSlots"
+import CardSlots from '@/services/CardSlots'
 import PickConservationProject from './PickConservationProject.vue'
-import BonusTile from "./BonusTile.vue"
+import BonusTile from './BonusTile.vue'
 import Card from '@/services/Card'
 import Action from '@/services/enum/Action'
 import BotAction from '@/services/BotAction'
-import CardName from "@/services/enum/CardName"
-import GainPartnerUniversity from "./GainPartnerUniversity.vue"
-import GainPartnerZoo from "./GainPartnerZoo.vue"
-import GainPartnerZooOrUniversity from "./GainPartnerZooOrUniversity.vue"
+import CardName from '@/services/enum/CardName'
+import GainPartnerUniversity from './GainPartnerUniversity.vue'
+import GainPartnerZoo from './GainPartnerZoo.vue'
+import GainPartnerZooOrUniversity from './GainPartnerZooOrUniversity.vue'
 import ModalDialog from 'brdgm-commons/src/components/structure/ModalDialog.vue'
 
 export default defineComponent({

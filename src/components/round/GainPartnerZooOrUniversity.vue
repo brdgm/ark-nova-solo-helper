@@ -22,15 +22,15 @@
 </template>
 
 <script lang="ts">
-import rollDice from "brdgm-commons/src/util/random/rollDice"
+import rollDice from 'brdgm-commons/src/util/random/rollDice'
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
-import AppIcon from "../structure/AppIcon.vue"
-import GainPartnerZoo from "./GainPartnerZoo.vue"
-import GainPartnerUniversity from "./GainPartnerUniversity.vue"
+import AppIcon from '../structure/AppIcon.vue'
+import GainPartnerZoo from './GainPartnerZoo.vue'
+import GainPartnerUniversity from './GainPartnerUniversity.vue'
 
 export default defineComponent({
-  name: "GainPartnerZooOrUniversity",
+  name: 'GainPartnerZooOrUniversity',
   components: {
     AppIcon,
     GainPartnerZoo,
