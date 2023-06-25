@@ -23,7 +23,7 @@
     </template>
   </ModalDialog>
 
-  <ModalDialog id="creditsModal" :title="t('footer.credits')">
+  <ModalDialog id="creditsModal" :title="t('footer.credits')" :scrollable="true">
     <template #body>
       <h4><a href="https://boardgamegeek.com/boardgame/342942/ark-nova" target="_blank" rel="noopener">{{t('gameTitle')}}</a></h4>
       <dl>
@@ -47,6 +47,10 @@
         <dt>Source Code (Apache-2.0 License)</dt>
         <dd><a href="https://github.com/brdgm/ark-nova-solo-helper" target="_blank" rel="noopener">https://github.com/brdgm/ark-nova-solo-helper</a></dd>
       </dl>
+      <div class="form-check small">
+        <input class="form-check-input" type="checkbox" id="enableDebugMode" :value="true" :checked="$store.state.setup.debugMode" @change="toggleDebugMode">
+        <label class="form-check-label" for="enableDebugMode">Debug Mode</label>
+      </div>
     </template>
   </ModalDialog>
 
@@ -98,6 +102,9 @@ export default defineComponent({
     zoomFontSize(payload: { baseFontSize: number }) {
       this.baseFontSize = payload.baseFontSize
       this.$store.commit('zoomFontSize', this.baseFontSize)
+    },
+    toggleDebugMode() {
+      this.$store.commit('debugMode', !this.$store.state.setup.debugMode)
     }
   },
   errorCaptured(err : unknown) {

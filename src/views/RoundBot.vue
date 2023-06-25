@@ -12,6 +12,8 @@
     {{t('action.next')}}
   </router-link>
 
+  <BotDebugInfo :navigation-state="navigationState" v-if="$store.state.setup.debugMode"/>
+
   <FooterButtons :backButtonRouteTo="backButtonRouteTo" endGameButtonType="finishGame"/>
 </template>
 
@@ -26,7 +28,8 @@ import { useStore } from '@/store'
 import NavigationState from '@/util/NavigationState'
 import AboutARNO from '@/components/structure/AboutARNO.vue'
 import RoundDisplay from '@/components/structure/RoundDisplay.vue'
-import BreakInfo from '../components/structure/BreakInfo.vue'
+import BreakInfo from '@/components/structure/BreakInfo.vue'
+import BotDebugInfo from '@/components/round/BotDebugInfo.vue'
 
 export default defineComponent({
   name: 'RoundBot',
@@ -36,7 +39,8 @@ export default defineComponent({
     FooterButtons,
     AboutARNO,
     RoundDisplay,
-    BreakInfo
+    BreakInfo,
+    BotDebugInfo
   },
   setup() {
     const { t } = useI18n()

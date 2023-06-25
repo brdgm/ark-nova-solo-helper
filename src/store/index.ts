@@ -18,6 +18,7 @@ export interface Setup {
   difficultyLevel: DifficultyLevel
   zooMaps?: string[]
   actionCardDistribution: ActionCardDistributionSchema
+  debugMode?: boolean
 }
 export interface PlayerSetup {
   playerCount: number
@@ -77,6 +78,9 @@ export const store = createStore<State>({
       if (localStorageCache) {
         this.replaceState(Object.assign(state, JSON.parse(localStorageCache)));
       }
+    },
+    debugMode(state : State, enabled: boolean) {
+      state.setup.debugMode = enabled
     },
     language(state : State, language: string) {
       state.language = language
