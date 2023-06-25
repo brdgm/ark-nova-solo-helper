@@ -6,7 +6,7 @@ import RoundPlayer from '@/views/RoundPlayer.vue'
 import RoundBot from '@/views/RoundBot.vue'
 import SetupARNO from '@/views/SetupARNO.vue'
 import Scoring from '@/views/Scoring.vue'
-import createRouter from "brdgm-commons/src/util/router/createRouter"
+import createRouter from 'brdgm-commons/src/util/router/createRouter'
 
 const LOCALSTORAGE_KEY = process.env.VUE_APP_LOCALSTORAGE_KEY_PREFIX + "route"
 

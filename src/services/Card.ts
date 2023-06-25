@@ -1,6 +1,6 @@
-import Action from "./enum/Action"
-import CardName from "./enum/CardName"
-import DifficultyLevel from "./enum/DifficultyLevel"
+import Action from './enum/Action'
+import CardName from './enum/CardName'
+import DifficultyLevel from './enum/DifficultyLevel'
 
 export default interface Card {
   name: CardName

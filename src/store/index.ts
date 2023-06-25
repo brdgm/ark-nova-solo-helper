@@ -5,7 +5,7 @@ import PlayerColor from '@/services/enum/PlayerColor'
 import { InjectionKey } from 'vue'
 import { createStore, useStore as baseUseStore, Store } from 'vuex'
 
-const LOCALSTORAGE_KEY = process.env.VUE_APP_LOCALSTORAGE_KEY_PREFIX + "store"
+const LOCALSTORAGE_KEY = process.env.VUE_APP_LOCALSTORAGE_KEY_PREFIX + 'store'
 
 export interface State {
   language: string
@@ -58,7 +58,7 @@ export const key: InjectionKey<Store<State>> = Symbol()
 
 export const store = createStore<State>({
   state: {
-    language: "en",
+    language: 'en',
     baseFontSize: 1.0,
     setup: {
       playerSetup: {

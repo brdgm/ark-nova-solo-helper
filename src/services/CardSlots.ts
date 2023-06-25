@@ -1,8 +1,8 @@
-import { CardSlotsPersistence } from "@/store"
-import * as _ from "lodash"
-import Card from "./Card"
-import Cards from "./Cards"
-import CardName from "./enum/CardName"
+import { CardSlotsPersistence } from '@/store'
+import * as _ from 'lodash'
+import Card from './Card'
+import Cards from './Cards'
+import CardName from './enum/CardName'
 
 export default class CardSlots {
 
