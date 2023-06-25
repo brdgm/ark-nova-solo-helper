@@ -2,7 +2,7 @@
   <div class="debugMode mt-3" v-if="botRound">
     Tokens on final scoring card: <b>{{botRound.tokenScoringCardCount}}</b>,
     Tokens on notepad: <b>{{botRound.tokenNotepadCount}}</b>, 
-    Appeal collected: <b>{{botRound.appealCount}}</b>
+    Appeal: <b>{{botRound.appealCount}}</b>
   </div>
 </template>
 
