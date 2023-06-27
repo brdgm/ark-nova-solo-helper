@@ -2,7 +2,7 @@ import CardSlots from '@/services/CardSlots'
 import CardName from '@/services/enum/CardName'
 import { expect } from 'chai'
 
-describe('CardSlots', () => {
+describe('services/CardSlots', () => {
   it('newShuffled', () => {
     const cardSlots = CardSlots.new()
 

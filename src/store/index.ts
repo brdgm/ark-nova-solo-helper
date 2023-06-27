@@ -15,7 +15,8 @@ export interface State {
 }
 export interface Setup {
   playerSetup: PlayerSetup
-  difficultyLevel: DifficultyLevel
+  difficultyLevel?: DifficultyLevel  // for backward-compatibility
+  difficultyLevels?: DifficultyLevel[]  // difficulty level per bot
   zooMaps?: string[]
   actionCardDistribution: ActionCardDistributionSchema
   debugMode?: boolean
@@ -66,7 +67,6 @@ export const store = createStore<State>({
         botCount: 1,
         playerColors: [PlayerColor.BLUE,PlayerColor.RED,PlayerColor.YELLOW,PlayerColor.BLACK]
       },
-      difficultyLevel: DifficultyLevel.L1_BEGINNER,
       actionCardDistribution: ActionCardDistributionSchema.P0_25_25_25_25
     },
     rounds: []
@@ -88,8 +88,8 @@ export const store = createStore<State>({
     setupPlayer(state : State, playerSetup: PlayerSetup) {
       state.setup.playerSetup = playerSetup
     },
-    setupDifficultyLevel(state : State, level: number) {
-      state.setup.difficultyLevel = level
+    setupDifficultyLevels(state : State, levels: number[]) {
+      state.setup.difficultyLevels = levels
     },
     setupActionCardDistribution(state : State, schema: ActionCardDistributionSchema) {
       state.setup.actionCardDistribution = schema

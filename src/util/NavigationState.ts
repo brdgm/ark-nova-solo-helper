@@ -6,6 +6,7 @@ import { Store } from 'vuex'
 import BotActions from '@/services/BotActions'
 import PlayerColor from '@/services/enum/PlayerColor'
 import ActionCardDistributionSchema from '@/services/enum/ActionCardDistributionSchema'
+import getDifficultyLevel from './getDifficultyLevel'
 
 export default class NavigationState {
 
@@ -22,7 +23,6 @@ export default class NavigationState {
 
   constructor(route : RouteLocation, store : Store<State>) {    
     const setup = store.state.setup
-    this.difficultyLevel = setup.difficultyLevel
     this.actionCardDistribution = setup.actionCardDistribution
     this.playerCount = setup.playerSetup.playerCount
     this.botCount = setup.playerSetup.botCount
@@ -30,6 +30,7 @@ export default class NavigationState {
     this.round = parseInt(route.params['round'] as string)
     this.player = (route.name == 'RoundPlayer') ? parseInt(route.params['player'] as string) : 0
     this.bot = (route.name == 'RoundBot') ? parseInt(route.params['bot'] as string) : 0
+    this.difficultyLevel = getDifficultyLevel(setup, this.bot)
     this.previousBotRound = this.getBotRound(store, this.round - 1, this.bot)
     this.botRound = this.getBotRound(store, this.round, this.bot)
     this.playerColor = this.getPlayerColor(setup.playerSetup.playerColors)
