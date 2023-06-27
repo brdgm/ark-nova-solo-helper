@@ -35,15 +35,15 @@ describe('util/getDifficultyLevel', () => {
   })
 })
 
-function mockSetup(setupDifficultyLevel?: DifficultyLevel, playerSetupDifficultyLevels?: DifficultyLevel[]) : Setup {
+function mockSetup(globalDifficultyLevel?: DifficultyLevel, botDifficultyLevels?: DifficultyLevel[]) : Setup {
   return {
     playerSetup: {
       playerCount: 3,
       botCount: 2,
-      playerColors: [PlayerColor.BLACK, PlayerColor.BLUE, PlayerColor.RED],
-      difficultyLevels: playerSetupDifficultyLevels
+      playerColors: [PlayerColor.BLACK, PlayerColor.BLUE, PlayerColor.RED]
     },
-    difficultyLevel: setupDifficultyLevel,
+    difficultyLevel: globalDifficultyLevel,
+    difficultyLevels: botDifficultyLevels,
     actionCardDistribution: ActionCardDistributionSchema.P0_10_20_30_40      
   }
 }

@@ -8,7 +8,7 @@ import { Setup } from '@/store';
  * @returns Difficulty level
  */
 export default function getDifficultyLevel(setup: Setup, bot: number) : DifficultyLevel {
-  const botDifficultyLevel = (setup.playerSetup.difficultyLevels ?? [])[bot - 1]
+  const botDifficultyLevel = (setup.difficultyLevels ?? [])[bot - 1]
   if (botDifficultyLevel) {
     return botDifficultyLevel
   }
