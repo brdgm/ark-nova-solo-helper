@@ -1,11 +1,11 @@
 <template>
-  <div>{{t('roundDisplay.round', {round:round})}}</div>
-  <div class="small text-muted">{{t(`difficultyLevel.${difficultyLevel}`)}}</div>
+  <div>{{t('roundDisplay.round', {round:navigationState.round})}}</div>
+  <div v-if="navigationState.botRound" class="small text-muted">{{t(`difficultyLevel.${navigationState.difficultyLevel}`)}}</div>
 </template>
 
 <script lang="ts">
-import DifficultyLevel from '@/services/enum/DifficultyLevel'
 import { useStore } from '@/store'
+import NavigationState from '@/util/NavigationState'
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 
@@ -17,14 +17,9 @@ export default defineComponent({
     return { t }
   },
   props: {
-    round: {
-      type: Number,
+    navigationState: {
+      type: NavigationState,
       required: true
-    }
-  },
-  computed: {
-    difficultyLevel() : DifficultyLevel {
-      return this.$store.state.setup.difficultyLevel
     }
   }
 })

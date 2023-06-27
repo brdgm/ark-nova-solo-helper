@@ -2,7 +2,7 @@
   <div class="float-end text-end">
     <AboutARNO/>
     <BreakInfo/>
-    <RoundDisplay :round="round"/>
+    <RoundDisplay :navigation-state="navigationState"/>
   </div>
   <h1><PlayerColorDisplay :playerColor="playerColor" class="me-2"/>{{t('roundPlayer.title', {player:player}, playerCount)}}</h1>
 
@@ -49,7 +49,7 @@ export default defineComponent({
     const playerColor = navigationState.playerColor
     const keyDownHandler = ref((_event:KeyboardEvent) => {})  // eslint-disable-line @typescript-eslint/no-empty-function, @typescript-eslint/no-unused-vars
 
-    return { t, round, playerCount, botCount, player, playerColor, keyDownHandler }
+    return { t, navigationState, round, playerCount, botCount, player, playerColor, keyDownHandler }
   },
   mounted() {
     this.keyDownHandler = (event:KeyboardEvent) => {
