@@ -16,22 +16,24 @@
       <th v-html="t('scoring.conservationPoints')"></th>
       <th v-html="t('scoring.appeal')"></th>
       <th v-html="t('scoring.victoryPoints')"></th>
+      <th v-html="t('setup.difficultyLevel.title')"></th>
     </tr>
     <tr v-for="player in playerCount" :key="player">
       <th class="player"><PlayerColorDisplay :playerColor="playerColors[player-1]" :sizeRem="1.5"/>{{t('roundPlayer.title', {player:player}, playerCount)}}</th>
       <td><input type="number" min="0" max="41" step="1" v-model="conservationPoints[player-1]" @focus="inputSelectAll"/></td>
       <td><input type="number" min="0" max="113" step="1" v-model="appeal[player-1]" @focus="inputSelectAll"/></td>
       <td>{{victoryPoints[player-1]}}</td>
+      <td></td>
     </tr>
     <tr v-for="bot in botCount" :key="bot">
       <th class="player"><PlayerColorDisplay :playerColor="playerColors[playerCount+bot-1]" :sizeRem="1.5"/>{{t('roundBot.title', {bot:bot}, botCount)}}</th>
       <td><input type="number" min="0" max="41" step="1" v-model="conservationPoints[playerCount+bot-1]" @focus="inputSelectAll"/></td>
       <td><input type="number" min="0" max="113" step="1" v-model="appeal[playerCount+bot-1]" @focus="inputSelectAll"/></td>
       <td>{{victoryPoints[playerCount+bot-1]}}</td>
+      <td>{{t(`difficultyLevel.${getDifficultyLevelForBot(bot)}`)}}</td>
     </tr>
   </table>
 
-  <p>{{t('setup.difficultyLevel.title')}}: <strong>{{t(`difficultyLevel.${difficultyLevel}`)}}</strong></p>
   <p class="fst-italic small mt-3" v-html="t('scoring.appealReputationTrack')"></p>
 </template>
 
@@ -41,6 +43,7 @@ import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import PlayerColorDisplay from '@/components/structure/PlayerColorDisplay.vue'
 import DifficultyLevel from '@/services/enum/DifficultyLevel'
+import getDifficultyLevel from '@/util/getDifficultyLevel'
 
 export default defineComponent({
   name: 'FinalScoring',
@@ -78,9 +81,6 @@ export default defineComponent({
         result[i] = (this.appeal[i] || 0) - this.getAppealForConservationPoints(this.conservationPoints[i] || 0)
       }
       return result
-    },
-    difficultyLevel() : DifficultyLevel {
-      return this.$store.state.setup.difficultyLevel
     }
   },
   methods: {
@@ -123,6 +123,9 @@ export default defineComponent({
         result = 114 - cp * 2
       }
       return result > 0 ? result : 0
+    },
+    getDifficultyLevelForBot(bot : number) : DifficultyLevel {
+      return getDifficultyLevel(this.$store.state.setup, bot)
     }
   }
 })

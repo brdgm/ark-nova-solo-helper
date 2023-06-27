@@ -2,7 +2,7 @@
   <div class="float-end text-end">
     <AboutARNO/>
     <BreakInfo/>
-    <RoundDisplay :round="round"/>
+    <RoundDisplay :navigation-state="navigationState"/>
   </div>
   <h1><PlayerColorDisplay :playerColor="playerColor" class="me-2"/>{{t('roundBot.title', {bot:bot}, botCount)}}</h1>
 

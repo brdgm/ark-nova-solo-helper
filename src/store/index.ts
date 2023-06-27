@@ -15,7 +15,7 @@ export interface State {
 }
 export interface Setup {
   playerSetup: PlayerSetup
-  difficultyLevel: DifficultyLevel
+  difficultyLevel?: DifficultyLevel
   zooMaps?: string[]
   actionCardDistribution: ActionCardDistributionSchema
   debugMode?: boolean
@@ -24,6 +24,7 @@ export interface PlayerSetup {
   playerCount: number
   botCount: number
   playerColors: PlayerColor[]
+  difficultyLevels?: DifficultyLevel[]
 }
 export interface Round {
   round: number

@@ -7,7 +7,7 @@ import CardName from '@/services/enum/CardName'
 import DifficultyLevel from '@/services/enum/DifficultyLevel'
 import { expect } from 'chai'
 
-describe('BotActions', () => {
+describe('services/BotActions', () => {
   it('randomPick', () => {
     const cardSlots = CardSlots.new()
     const botActions = BotActions.newRandomSlot(cardSlots, DifficultyLevel.L1_BEGINNER, ActionCardDistributionSchema.P0_25_25_25_25, 0)
