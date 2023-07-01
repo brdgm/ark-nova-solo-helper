@@ -9,6 +9,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment:
+      name: Production
+      url: "https://brdgm.me/${{ vars.APP_NAME }}"
 
     steps:
     - uses: actions/checkout@v3
@@ -23,7 +26,7 @@ jobs:
     - run: npm run build
 
     - name: Copy to Site
-      uses: cpina/github-action-push-to-another-repository@v1.4.1
+      uses: cpina/github-action-push-to-another-repository@v1.7.2
       env:
         API_TOKEN_GITHUB: ${{ secrets.GH_SITE_DEPLOY_PAT }}
       with:
@@ -34,5 +37,5 @@ jobs:
         user-email: ${{ secrets.GH_SITE_DEPLOY_EMAIL }}
         user-name: ${{ secrets.GH_SITE_DEPLOY_NAME }}
         target-branch: main
-        commit-message: deploy application
-        target-directory: ark-nova
+        commit-message: deploy ${{ vars.APP_NAME }}
+        target-directory: ${{ vars.APP_NAME }}
