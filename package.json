@@ -1,6 +1,6 @@
 {
   "name": "@brdgm/ark-nova-solo-helper",
-  "version": "2.2.2",
+  "version": "2.2.3",
   "private": true,
   "description": "Ark Nova Solo Helper",
   "appDeployName": "ark-nova",
