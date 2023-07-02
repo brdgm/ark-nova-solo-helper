@@ -28,6 +28,7 @@ jobs:
         cache: npm
 
     - run: npm install
+    - run: npm run lint
     - run: npm run test:coverage
     - run: npm run build
     - uses: SonarSource/sonarcloud-github-action@master

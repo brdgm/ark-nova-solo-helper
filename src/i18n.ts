@@ -1,9 +1,9 @@
 import { createI18n } from 'vue-i18n'
-import loadLocaleMessages from 'brdgm-commons/src/util/i18n/loadLocaleMessages'
+import messages from '@intlify/unplugin-vue-i18n/messages'
 
 export default createI18n({
   legacy: false,
-  locale: process.env.VUE_APP_I18N_LOCALE || 'en',
-  fallbackLocale: process.env.VUE_APP_I18N_FALLBACK_LOCALE || 'en',
-  messages: loadLocaleMessages()
+  locale: 'en',
+  fallbackLocale: 'en',
+  messages: messages
 })
