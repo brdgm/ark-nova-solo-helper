@@ -6,10 +6,6 @@
 import { defineComponent } from 'vue'
 export default defineComponent({
   name: 'CardTypeIcon',
-  setup() {
-    const images = require.context('@/assets/card-type', true, /\.png$/)
-    return { images }
-  },
   props: {
     cardName: {
       type: String,
@@ -24,7 +20,7 @@ export default defineComponent({
   computed: {
     imageUrl() : string {
       const suffix = this.upgrade ? '2' : '1'
-      return this.images(`./${this.cardName}-${suffix}.png`)
+      return new URL(`/src/assets/card-type/${this.cardName}-${suffix}.png`, import.meta.url).toString()
     }
   }
 })

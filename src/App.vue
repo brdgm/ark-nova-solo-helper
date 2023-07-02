@@ -18,7 +18,7 @@
       <p v-html="t('serviceWorkerUpdatedRefresh.notice')"></p>
     </template>
     <template #footer>
-      <button class="btn btn-primary" data-bs-dismiss="modal" @click="$router.go(0)">{{t('serviceWorkerUpdatedRefresh.title')}}</button>
+      <button class="btn btn-primary" data-bs-dismiss="modal" @click="updateServiceWorker()">{{t('serviceWorkerUpdatedRefresh.title')}}</button>
       <button class="btn btn-secondary" data-bs-dismiss="modal">{{t('action.close')}}</button>
     </template>
   </ModalDialog>
@@ -64,7 +64,9 @@ import AppHeader from 'brdgm-commons/src/components/structure/AppHeader.vue'
 import AppFooter from 'brdgm-commons/src/components/structure/AppFooter.vue'
 import ModalDialog from 'brdgm-commons/src/components/structure/ModalDialog.vue'
 import getErrorMessage from 'brdgm-commons/src/util/error/getErrorMessage'
-import showModal from 'brdgm-commons/src/util/modal/showModal'
+import showModal, { showModalIfExist } from 'brdgm-commons/src/util/modal/showModal'
+import { version, description } from '@/../package.json'
+import { registerSW } from 'virtual:pwa-register'
 
 export default defineComponent({
   name: 'App',
@@ -80,17 +82,24 @@ export default defineComponent({
     })
     const store = useStore()
 
+    // PWA refresh
+    const updateServiceWorker = registerSW({
+      onNeedRefresh() {
+        showModalIfExist('serviceWorkerUpdatedRefresh')
+      }
+    })
+
     store.commit('initialiseStore')
     locale.value = store.state.language
     
     const baseFontSize = ref(store.state.baseFontSize)
 
-    return { t, locale, baseFontSize }
+    return { t, locale, baseFontSize, updateServiceWorker }
   },
   data() {
     return {
-      buildNumber: process.env.VUE_APP_BUILD_NUMBER || '',
-      appTitle: process.env.VUE_APP_TITLE,
+      buildNumber: version,
+      appTitle: description,
       errorMessage: 'Error'
     }
   },
@@ -117,6 +126,7 @@ export default defineComponent({
 <style lang="scss">
 @import "bootstrap/scss/functions";
 @import "bootstrap/scss/variables";
+@import "bootstrap/scss/variables-dark";
 @import "bootstrap/scss/maps";
 @import "bootstrap/scss/utilities";
 #content-container {

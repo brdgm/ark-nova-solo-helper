@@ -117,6 +117,7 @@ export default defineComponent({
 <style lang="scss" scoped>
 @import "bootstrap/scss/functions";
 @import "bootstrap/scss/variables";
+@import "bootstrap/scss/variables-dark";
 @import "bootstrap/scss/maps";
 @import "bootstrap/scss/utilities";
 @import "bootstrap/scss/mixins";
