@@ -8,6 +8,7 @@
 
 <script lang="ts">
 import rollDice from 'brdgm-commons/src/util/random/rollDice'
+import rollDiceDifferentValue from 'brdgm-commons/src/util/random/rollDiceDifferentValue'
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import AppIcon from '../structure/AppIcon.vue'
@@ -23,19 +24,12 @@ export default defineComponent({
   },
   data() {
     return {
-      randomNumber: this.getRandomNumber()
+      randomNumber: rollDice(3)
     }
   },
   methods: {
-    getRandomNumber() : number {
-      return rollDice(3)
-    },
     reroll() : void {
-      let newNumber
-      do {
-        newNumber = this.getRandomNumber()
-      } while (newNumber == this.randomNumber)
-      this.randomNumber = newNumber
+      this.randomNumber = rollDiceDifferentValue(3, this.randomNumber)
     },
     getPartnerUniversityName(id : number) {
       switch (id) {
