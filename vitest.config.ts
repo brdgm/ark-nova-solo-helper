@@ -15,7 +15,8 @@ export default mergeConfig(
       },
       globals: true,
       coverage: {
-        provider: 'istanbul'
+        provider: 'istanbul',
+        reporter: ['lcov']
       }
     }
   })
