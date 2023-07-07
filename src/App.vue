@@ -5,7 +5,8 @@
     <router-view :key="$route.fullPath"/>
   </div>
 
-  <AppFooter :build-number="buildNumber" :credits-label="t('footer.credits')" credits-modal-id="creditsModal" zoom-enabled @zoomFontSize="zoomFontSize"/>
+  <AppFooter :build-number="buildNumber" :credits-label="t('footer.credits')" credits-modal-id="creditsModal" zoom-enabled
+      :base-font-size="baseFontSize" @zoomFontSize="zoomFontSize"/>
 
   <ModalDialog id="errorMessage">
     <template #body>
