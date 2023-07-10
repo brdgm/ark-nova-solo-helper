@@ -11,10 +11,16 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: Production
-      url: "https://brdgm.me/${{ vars.APP_NAME }}"
+      url: "https://brdgm.me/${{ steps.package_json.outputs.appDeployName }}"
 
     steps:
     - uses: actions/checkout@v3
+
+    - name: Read properties from package.json
+      id: package_json
+      uses: zoexx/github-action-json-file-properties@1.0.4
+      with:
+        file_path: package.json
 
     - uses: actions/setup-node@v3
       with:
@@ -37,5 +43,5 @@ jobs:
         user-email: ${{ secrets.GH_SITE_DEPLOY_EMAIL }}
         user-name: ${{ secrets.GH_SITE_DEPLOY_NAME }}
         target-branch: main
-        commit-message: deploy ${{ vars.APP_NAME }}
-        target-directory: ${{ vars.APP_NAME }}
+        commit-message: deploy ${{ steps.package_json.outputs.appDeployName }} ${{ steps.package_json.outputs.version }}
+        target-directory: ${{ steps.package_json.outputs.appDeployName }}
