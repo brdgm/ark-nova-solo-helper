@@ -16,6 +16,7 @@ const cards = [
       {
         action: Action.APPEAL,
         slotAmount: true,
+        amount: 1,
         difficultyLevelFilter: DifficultyLevel.L2_VERY_EASY
       },
       {
@@ -41,6 +42,12 @@ const cards = [
         slotAmount: true,
         amount: 3,
         difficultyLevelFilter: DifficultyLevel.L6_VERY_HARD
+      },
+      {
+        action: Action.APPEAL,
+        slotAmount: true,
+        amount: 3,
+        difficultyLevelFilter: DifficultyLevel.L7_EXTREME
       },
     ],
     upgradedActions: [
@@ -80,6 +87,12 @@ const cards = [
         amount: 4,
         difficultyLevelFilter: DifficultyLevel.L6_VERY_HARD
       },
+      {
+        action: Action.APPEAL,
+        slotAmount: true,
+        amount: 4,
+        difficultyLevelFilter: DifficultyLevel.L7_EXTREME
+      },
     ]
   },
   {
@@ -91,11 +104,11 @@ const cards = [
         slotFilter: 2
       },
       {
-        action: Action.GAIN_PARTNER_UNIVERSITY,
+        action: Action.GAIN_PARTNER_ZOO,
         slotFilter: 3
       },
       {
-        action: Action.GAIN_PARTNER_ZOO,
+        action: Action.GAIN_PARTNER_UNIVERSITY,
         slotFilter: 4
       },
       {
@@ -104,7 +117,7 @@ const cards = [
       },
       {
         action: Action.CONSERVATION,
-        amount: 2,
+        amount: 1,
         fallback: true
       },
       {
@@ -124,11 +137,11 @@ const cards = [
         slotFilter: 2
       },
       {
-        action: Action.GAIN_PARTNER_UNIVERSITY,
+        action: Action.GAIN_PARTNER_ZOO,
         slotFilter: 3
       },
       {
-        action: Action.GAIN_PARTNER_ZOO,
+        action: Action.GAIN_PARTNER_UNIVERSITY,
         slotFilter: 4
       },
       {
@@ -140,7 +153,7 @@ const cards = [
       },
       {
         action: Action.CONSERVATION,
-        amount: 2,
+        amount: 1,
         fallback: true
       },
       {
@@ -225,6 +238,12 @@ const cards = [
         difficultyLevelFilter: DifficultyLevel.L6_VERY_HARD
       },
       {
+        action: Action.REPUTATION,
+        amount: 2,
+        slotFilter: 2,
+        difficultyLevelFilter: DifficultyLevel.L7_EXTREME
+      },
+      {
         action: Action.APPEAL,
         amount: 2,
         slotFilter: 3,
@@ -259,6 +278,12 @@ const cards = [
         amount: 5,
         slotFilter: 3,
         difficultyLevelFilter: DifficultyLevel.L6_VERY_HARD
+      },
+      {
+        action: Action.APPEAL,
+        amount: 5,
+        slotFilter: 3,
+        difficultyLevelFilter: DifficultyLevel.L7_EXTREME
       },
       {
         action: Action.TAKE_CARD_DISPLAY,
@@ -289,59 +314,75 @@ const cards = [
       },
       {
         action: Action.CONSERVATION,
-        amount: 4,
+        amount: 3,
         slotFilter: 5,
         difficultyLevelFilter: DifficultyLevel.L4_MEDIUM
       },
       {
         action: Action.CONSERVATION,
-        amount: 4,
+        amount: 3,
         slotFilter: 5,
         difficultyLevelFilter: DifficultyLevel.L5_HARD
       },
       {
         action: Action.CONSERVATION,
-        amount: 5,
+        amount: 4,
         slotFilter: 5,
         difficultyLevelFilter: DifficultyLevel.L6_VERY_HARD
+      },
+      {
+        action: Action.CONSERVATION,
+        amount: 4,
+        slotFilter: 5,
+        difficultyLevelFilter: DifficultyLevel.L7_EXTREME
       },
     ],
     upgradedActions: [
       {
+        action: Action.TAKE_CARD_DISPLAY,
+        slotFilter: 2
+      },
+      {
         action: Action.REPUTATION,
-        amount: 2,
+        amount: 1,
         slotFilter: 2,
         difficultyLevelFilter: DifficultyLevel.L1_BEGINNER
       },
       {
         action: Action.REPUTATION,
-        amount: 2,
+        amount: 1,
         slotFilter: 2,
         difficultyLevelFilter: DifficultyLevel.L2_VERY_EASY
       },
       {
         action: Action.REPUTATION,
-        amount: 2,
+        amount: 1,
         slotFilter: 2,
         difficultyLevelFilter: DifficultyLevel.L3_EASY
       },
       {
         action: Action.REPUTATION,
-        amount: 3,
+        amount: 2,
         slotFilter: 2,
         difficultyLevelFilter: DifficultyLevel.L4_MEDIUM
       },
       {
         action: Action.REPUTATION,
-        amount: 3,
+        amount: 2,
         slotFilter: 2,
         difficultyLevelFilter: DifficultyLevel.L5_HARD
       },
       {
         action: Action.REPUTATION,
-        amount: 3,
+        amount: 2,
         slotFilter: 2,
         difficultyLevelFilter: DifficultyLevel.L6_VERY_HARD
+      },
+      {
+        action: Action.REPUTATION,
+        amount: 2,
+        slotFilter: 2,
+        difficultyLevelFilter: DifficultyLevel.L7_EXTREME
       },
       {
         action: Action.APPEAL,
@@ -378,6 +419,12 @@ const cards = [
         amount: 5,
         slotFilter: 3,
         difficultyLevelFilter: DifficultyLevel.L6_VERY_HARD
+      },
+      {
+        action: Action.APPEAL,
+        amount: 5,
+        slotFilter: 3,
+        difficultyLevelFilter: DifficultyLevel.L7_EXTREME
       },
       {
         action: Action.TAKE_CARD_DISPLAY,
@@ -420,6 +467,12 @@ const cards = [
         difficultyLevelFilter: DifficultyLevel.L6_VERY_HARD
       },
       {
+        action: Action.TOKEN_NOTEPAD,
+        amount: 2,
+        slotFilter: 4,
+        difficultyLevelFilter: DifficultyLevel.L7_EXTREME
+      },
+      {
         action: Action.CONSERVATION,
         amount: 3,
         slotFilter: 5,
@@ -433,27 +486,33 @@ const cards = [
       },
       {
         action: Action.CONSERVATION,
-        amount: 4,
+        amount: 3,
         slotFilter: 5,
         difficultyLevelFilter: DifficultyLevel.L3_EASY
       },
       {
         action: Action.CONSERVATION,
-        amount: 5,
+        amount: 4,
         slotFilter: 5,
         difficultyLevelFilter: DifficultyLevel.L4_MEDIUM
       },
       {
         action: Action.CONSERVATION,
-        amount: 5,
+        amount: 4,
         slotFilter: 5,
         difficultyLevelFilter: DifficultyLevel.L5_HARD
       },
       {
         action: Action.CONSERVATION,
-        amount: 5,
+        amount: 4,
         slotFilter: 5,
         difficultyLevelFilter: DifficultyLevel.L6_VERY_HARD
+      },
+      {
+        action: Action.CONSERVATION,
+        amount: 4,
+        slotFilter: 5,
+        difficultyLevelFilter: DifficultyLevel.L7_EXTREME
       },
     ]
   },
@@ -478,7 +537,7 @@ const cards = [
       },
       {
         action: Action.APPEAL,
-        amount: 1,
+        amount: 2,
         difficultyLevelFilter: DifficultyLevel.L2_VERY_EASY
       },
       {
@@ -500,6 +559,11 @@ const cards = [
         action: Action.APPEAL,
         amount: 3,
         difficultyLevelFilter: DifficultyLevel.L6_VERY_HARD
+      },
+      {
+        action: Action.APPEAL,
+        amount: 3,
+        difficultyLevelFilter: DifficultyLevel.L7_EXTREME
       },
     ],
     upgradedActions: [

@@ -114,7 +114,8 @@
     "3": "Level 3: Leicht",
     "4": "Level 4: Mittel",
     "5": "Level 5: Schwer",
-    "6": "Level 6: Sehr schwer"
+    "6": "Level 6: Sehr schwer",
+    "7": "Level 7: Extrem"
   },
   "cardType": {
     "animals": "Tiere",
