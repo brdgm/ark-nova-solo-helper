@@ -9,24 +9,24 @@
   </template>
   <hr/>
 
-  <h3 v-html="t('scoring.victoryPoints')"></h3>
-  <table>
+  <h3 id="headlineScoringVP" v-html="t('scoring.victoryPoints')"></h3>
+  <table aria-describedby="headlineScoringVP">
     <tr>
-      <th></th>
-      <th v-html="t('scoring.conservationPoints')"></th>
-      <th v-html="t('scoring.appeal')"></th>
-      <th v-html="t('scoring.victoryPoints')"></th>
-      <th v-html="t('setup.difficultyLevel.title')"></th>
+      <th scope="col"></th>
+      <th scope="col" v-html="t('scoring.conservationPoints')"></th>
+      <th scope="col" v-html="t('scoring.appeal')"></th>
+      <th scope="col" v-html="t('scoring.victoryPoints')"></th>
+      <th scope="col" v-html="t('setup.difficultyLevel.title')"></th>
     </tr>
     <tr v-for="player in playerCount" :key="player">
-      <th class="player"><PlayerColorDisplay :playerColor="playerColors[player-1]" :sizeRem="1.5"/>{{t('roundPlayer.title', {player:player}, playerCount)}}</th>
+      <th scope="row" class="player"><PlayerColorDisplay :playerColor="playerColors[player-1]" :sizeRem="1.5"/>{{t('roundPlayer.title', {player:player}, playerCount)}}</th>
       <td><input type="number" min="0" max="41" step="1" v-model="conservationPoints[player-1]" @focus="inputSelectAll"/></td>
       <td><input type="number" min="0" max="113" step="1" v-model="appeal[player-1]" @focus="inputSelectAll"/></td>
       <td>{{victoryPoints[player-1]}}</td>
       <td></td>
     </tr>
     <tr v-for="bot in botCount" :key="bot">
-      <th class="player"><PlayerColorDisplay :playerColor="playerColors[playerCount+bot-1]" :sizeRem="1.5"/>{{t('roundBot.title', {bot:bot}, botCount)}}</th>
+      <th scope="row" class="player"><PlayerColorDisplay :playerColor="playerColors[playerCount+bot-1]" :sizeRem="1.5"/>{{t('roundBot.title', {bot:bot}, botCount)}}</th>
       <td><input type="number" min="0" max="41" step="1" v-model="conservationPoints[playerCount+bot-1]" @focus="inputSelectAll"/></td>
       <td><input type="number" min="0" max="113" step="1" v-model="appeal[playerCount+bot-1]" @focus="inputSelectAll"/></td>
       <td>{{victoryPoints[playerCount+bot-1]}}</td>
@@ -89,13 +89,13 @@ export default defineComponent({
       input.select()
     },
     getTokenScoringCardCount(bot : number) : number {
-      return this.lastBotRound[bot - 1]?.tokenScoringCardCount || 0
+      return this.lastBotRound[bot - 1]?.tokenScoringCardCount ?? 0
     },
     getTokenNotepadCount(bot : number) : number {
-      return this.lastBotRound[bot - 1]?.tokenNotepadCount || 0
+      return this.lastBotRound[bot - 1]?.tokenNotepadCount ?? 0
     },
     getAppealCount(bot : number) : number {
-      return this.lastBotRound[bot - 1]?.appealCount || 0
+      return this.lastBotRound[bot - 1]?.appealCount ?? 0
     },
     getInitialAppealArray() : number[] {
       const result = [] as number[]

@@ -2,7 +2,7 @@
   <ol>
     <li v-html="t('setupARNO.text1')"></li>
     <li>
-      <img src="@/assets/arno-conservation-start-setup.jpg" class="conservation-start-setup float-end ms-2 me-2 mt-2"/>
+      <img src="@/assets/arno-conservation-start-setup.jpg" class="conservation-start-setup float-end ms-2 me-2 mt-2" alt=""/>
       <span v-html="t('setupARNO.text2')"></span>
       <ul>
         <li v-html="t('setupARNO.text2-conservation')"></li>
@@ -24,7 +24,7 @@
     <li v-html="t('setupARNO.text8')"></li>
   </ol>
   <p>
-    <img src="@/assets/arno-zoo-mat.jpg" class="zoomat"/>
+    <img src="@/assets/arno-zoo-mat.jpg" class="zoomat" alt=""/>
   </p>
 </template>
 

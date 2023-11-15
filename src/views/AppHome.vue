@@ -2,7 +2,7 @@
 
   <div class="float-end m-2 w-25">
     <a href="https://boardgamegeek.com/boardgame/342942/ark-nova" target="_blank" rel="noopener">
-      <img src="../assets/game-ark-nova.jpg" class="rounded shadow w-100"/>
+      <img src="../assets/game-ark-nova.jpg" class="rounded shadow w-100" alt=""/>
     </a>
   </div>
 
@@ -23,7 +23,7 @@
     This is not an official Feuerland/Capstone product and has no affiliation with <a href="https://www.feuerland-spiele.de/" target="_blank" rel="noopener">Feuerland Spiele</a> or <a href="https://capstone-games.com/" target="_blank" rel="noopener">Capstone Games</a>.
     All art in this app is from <a href="https://www.feuerland-spiele.de/spiele/arche_nova.php" target="_blank" rel="noopener">Ark Nova</a>.
     See <a href="#" data-bs-toggle="modal" data-bs-target="#creditsModal">{{t('footer.credits')}}</a>.
-    <a href="https://ko-fi.com/brdgm_me" target="_blank" rel="noopener"><img class="kofi-button" src="@/assets/kofi_button_dark.png"/></a>
+    <a href="https://ko-fi.com/brdgm_me" target="_blank" rel="noopener"><img class="kofi-button" src="@/assets/kofi_button_dark.png" alt="Support me on Ko-fi"/></a>
   </p>
 
 </template>

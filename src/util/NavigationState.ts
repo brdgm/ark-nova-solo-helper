@@ -65,7 +65,7 @@ export default class NavigationState {
         cardSlots = CardSlots.fromPersistence(this.previousBotRound.cardSlots)
         tokenScoringCardCount = this.previousBotRound.tokenScoringCardCount
         tokenNotepadCount = this.previousBotRound.tokenNotepadCount
-        appealCount = this.previousBotRound.appealCount || 0
+        appealCount = this.previousBotRound.appealCount ?? 0
         // move previous card to first position
         cardSlots.moveFirst(cardSlots.get(this.previousBotRound.slotNumber))
         botActions = BotActions.newRandomSlot(cardSlots, this.difficultyLevel, this.actionCardDistribution, tokenScoringCardCount)
@@ -92,7 +92,7 @@ export default class NavigationState {
     if (this.bot > 0) {
       playerColor = playerColors[this.playerCount + this.bot - 1]
     }
-    return playerColor || PlayerColor.BLUE
+    return playerColor ?? PlayerColor.BLUE
   }
 
 }
