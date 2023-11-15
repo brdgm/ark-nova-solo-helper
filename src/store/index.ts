@@ -5,6 +5,8 @@ import PlayerColor from '@/services/enum/PlayerColor'
 import { InjectionKey } from 'vue'
 import { createStore, useStore as baseUseStore, Store } from 'vuex'
 import { name } from '@/../package.json'
+import Expansion from '@/services/enum/Expansion'
+import toggleArrayItem from 'brdgm-commons/src/util/array/toggleArrayItem'
 
 const LOCALSTORAGE_KEY = `${name}.store`
 
@@ -20,6 +22,7 @@ export interface Setup {
   difficultyLevels?: DifficultyLevel[]  // difficulty level per bot
   zooMaps?: string[]
   actionCardDistribution: ActionCardDistributionSchema
+  expansions?: Expansion[]
   debugMode?: boolean
 }
 export interface PlayerSetup {
@@ -91,6 +94,12 @@ export const store = createStore<State>({
     },
     setupDifficultyLevels(state : State, levels: number[]) {
       state.setup.difficultyLevels = levels
+    },
+    setupToggleExpansion(state : State, expansion: Expansion) {
+      if (!state.setup.expansions) {
+        state.setup.expansions = []
+      }
+      toggleArrayItem(state.setup.expansions, expansion)
     },
     setupActionCardDistribution(state : State, schema: ActionCardDistributionSchema) {
       state.setup.actionCardDistribution = schema

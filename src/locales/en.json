@@ -22,6 +22,10 @@
       "easy": "Easy",
       "hard": "Hard"
     },
+    "expansions": {
+      "title": "Expansions",
+      "marine-worlds": "Marine Worlds"
+    },
     "pickZooMap": {
       "title": "Zoo Map",
       "pickRandom": "Pick Random (advanced)",

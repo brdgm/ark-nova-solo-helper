@@ -22,6 +22,10 @@
       "easy": "Leicht",
       "hard": "Schwer"
     },
+    "expansions": {
+      "title": "Erweiterungen",
+      "marine-worlds": "Wasserwelten"
+    },
     "pickZooMap": {
       "title": "Zooplan",
       "pickRandom": "Zufällig (fortgeschritten)",
