@@ -25,7 +25,8 @@
     },
     "expansions": {
       "title": "Erweiterungen",
-      "marine-worlds": "Wasserwelten"
+      "marine-worlds": "Wasserwelten",
+      "marineWorldsNewActionCards": "Nimm dir 3 zufällige der 20 <b>neuen Aktionskarten</b> und wähle 2 davon (mit unterschiedlichen Aktionstypen)."
     },
     "pickZooMap": {
       "title": "Zooplan",

@@ -25,7 +25,8 @@
     },
     "expansions": {
       "title": "Expansions",
-      "marine-worlds": "Marine Worlds"
+      "marine-worlds": "Marine Worlds",
+      "marineWorldsNewActionCards": "Take 3 of the <b>new Action cards</b> at random and choose 2 of those (with different action types)."
     },
     "pickZooMap": {
       "title": "Zoo Map",

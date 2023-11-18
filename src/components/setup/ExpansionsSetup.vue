@@ -11,6 +11,13 @@
       </div>
     </div>
   </div>
+
+  <div class="row mt-2" v-if="hasMarineWorldsExpansion">
+    <div class="col">
+      <span v-html="t('setup.expansions.marineWorldsNewActionCards')"></span>
+    </div>
+  </div>
+
 </template>
 
 <script lang="ts">
@@ -30,6 +37,9 @@ export default defineComponent({
     expansions() : Expansion[] {
       return Object.values(Expansion)
     },
+    hasMarineWorldsExpansion() : boolean {
+      return (this.$store.state.setup.expansions ?? []).includes(Expansion.MARINE_WORLDS)
+    },    
   },
   methods: {
     hasExpansion(expansion : Expansion) : boolean {
