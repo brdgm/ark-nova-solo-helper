@@ -44,8 +44,8 @@
   "setupARNO": {
     "title": "ARNO Setup",
     "text1": "Set up the game according to player count (including ARNO(s)). A human player will be the starting player.",
-    "text2": "Every ARNO starts with <b>-3 conservation points</b> and appeal points according to the player order.",
-    "text2-conservation": "Place three player tokens as a reminder next to ARNO’s conservation points counter and remove them one by one as soon as ARNO scored his first conservation points.",
+    "text2": "Every ARNO starts with <b>-{count} conservation points</b> and appeal points according to the player order.",
+    "text2-conservation": "Place {count} player tokens as a reminder next to ARNO’s conservation points counter and remove them one by one as soon as ARNO scored his first conservation points.",
     "text2-appeal": "E.g. if ARNO is the 3rd player, he starts with 2 appeal points.",
     "text3": "Every ARNO receives the components of one color, a zoo mat (map A), one face-down Final Scoring card and 8 random Zoo cards.",
     "text4": "Place all player tokens of ARNO’s color next to his zoo mat.",

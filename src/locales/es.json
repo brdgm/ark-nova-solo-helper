@@ -40,8 +40,8 @@
     "setupARNO": {
       "title": "Configuración de ARNO",
       "text1": "Prepara la partida para el número total de jugadores (contando los ARNO bots) con los siguientes cambios para la preparación de los ARNO. Escoge a uno de los jugadores humanos como el jugador inicial.",
-      "text2": "Cada ARNO comienza con <b>-3 puntos de conservación</b>, 0 puntos de reputación, y los puntos de atractivo correspondientes al orden del turno.",
-      "text2-conservation": "Por cada ARNO, coloca tres cubos de jugador de su color junto al medidor de puntos de conservación. Cada vez que ARNO gane uno o más puntos de conservación, retira esa misma cantidad de cubos de su color del medidor. Cuando no queden cubos de su color sobre el medidor de reputación, ARNO podrá avanzar sobre el medidor como lo haría cualquier jugador humano.",
+      "text2": "Cada ARNO comienza con <b>-{count} puntos de conservación</b>, 0 puntos de reputación, y los puntos de atractivo correspondientes al orden del turno.",
+      "text2-conservation": "Por cada ARNO, coloca {count} cubos de jugador de su color junto al medidor de puntos de conservación. Cada vez que ARNO gane uno o más puntos de conservación, retira esa misma cantidad de cubos de su color del medidor. Cuando no queden cubos de su color sobre el medidor de reputación, ARNO podrá avanzar sobre el medidor como lo haría cualquier jugador humano.",
       "text2-appeal": "Ej. Si un ARNO es el 3er jugador, comienza con 2 puntos de atractivo.",
       "text3": "Cada ARNO recibe los cubos restantes y los asistentes de su color, un tablero de zoológico A, una carta de Puntuación Final (boca abajo) y 8 cartas de zoológico aleatorias.",
       "text4": "Coloca todos los cubos de jugador de su color junto al tablero de cada ARNO. <b>Nota:</b> no coloques ningún cubo en los espacios correspondientes a las bonificaciones por apoyar los Proyectos de Conservación.",

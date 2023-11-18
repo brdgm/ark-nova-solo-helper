@@ -40,8 +40,8 @@
   "setupARNO": {
     "title": "Przygotowanie ARNO",
     "text1": "Przygotuj grę odpowiednio do liczby graczy (wliczając ARNO). Ludzki gracz zawsze jest pierwszym graczem.",
-    "text2": "Każdy ARNO startuje z <b>-3 punktami Ochrony Przyrody</b> oraz punktami atrakcyjności zgodnie z kolejnością graczy.",
-    "text2-conservation": "Umieść trzy znaczniki gracza, jako przypomnienie, tuż obok znacznika punktacji Ochrony Przyrody ARNO. Usuwaj je jeden za drugim kiedy ARNO będzie zdobywać swoje pierwsze punkty Ochrony Przyrody.",
+    "text2": "Każdy ARNO startuje z <b>-{count} punktami Ochrony Przyrody</b> oraz punktami atrakcyjności zgodnie z kolejnością graczy.",
+    "text2-conservation": "Umieść {count} znaczniki gracza, jako przypomnienie, tuż obok znacznika punktacji Ochrony Przyrody ARNO. Usuwaj je jeden za drugim kiedy ARNO będzie zdobywać swoje pierwsze punkty Ochrony Przyrody.",
     "text2-appeal": "Np. Jeśli ARNO jest trzecim graczem, rozpoczyna z dwoma punktami atrakcyjności.",
     "text3": "Każdy ARNO otrzymuje komponenty w jednym kolorze, planszę gracza (mapa A), jedną zakrytą kartę Punktacji Końcowej oraz 8 losowych kart Zoo.",
     "text4": "Umieść wszystkie znaczniki gracza w kolorze ARNO tuż obok jego planszy gracza.",

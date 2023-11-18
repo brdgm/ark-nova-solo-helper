@@ -3,9 +3,9 @@
     <li v-html="t('setupARNO.text1')"></li>
     <li>
       <img :src="conservationSetupImageFileName" class="conservation-start-setup float-end ms-2 me-2 mt-2" alt=""/>
-      <span v-html="t('setupARNO.text2')"></span>
+      <span v-html="t('setupARNO.text2', {count:conservationPointStartMinus})"></span>
       <ul>
-        <li v-html="t('setupARNO.text2-conservation')"></li>
+        <li v-html="t('setupARNO.text2-conservation', {count:conservationPointStartMinus})"></li>
         <li v-html="t('setupARNO.text2-appeal')"></li>
       </ul>
     </li>
@@ -42,12 +42,15 @@ export default defineComponent({
     return { t }
   },
   computed: {
-    hasExpansionComponents() : boolean {
+    hasMarineWorldsExpansion() : boolean {
       return (this.$store.state.setup.expansions ?? []).includes(Expansion.MARINE_WORLDS)
     },
+    conservationPointStartMinus() : number {
+      return this.hasMarineWorldsExpansion ? 3 : 5
+    },
     conservationSetupImageFileName() : string {
-      const components = this.hasExpansionComponents ? 'expansion' : 'base'
-      return new URL(`/src/assets/arno-conservation-start-setup/start-setup-${components}-3.webp`, import.meta.url).toString()
+      const components = this.hasMarineWorldsExpansion ? 'expansion' : 'base'
+      return new URL(`/src/assets/arno-conservation-start-setup/start-setup-${components}-${this.conservationPointStartMinus}.webp`, import.meta.url).toString()
     }
   }
 })

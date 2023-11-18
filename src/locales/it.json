@@ -40,8 +40,8 @@
   "setupARNO": {
     "title": "Setup di ARNO",
     "text1": "Prepara il gioco in base al numero di giocatori (compresi gli ARNO). Un giocatore umano sarà il giocatore iniziale.",
-    "text2": "Ogni ARNO inizia con <b>-3 punti conservazione</b> e punti attrattiva a seconda dell'ordine di partenza.",
-    "text2-conservation": "Metti tre segnalini giocatore come promemoria accanto al segnalino punti conservazione di ARNO e rimuovili uno per uno non appena ARNO ha segnato i suoi primi punti conservazione.",
+    "text2": "Ogni ARNO inizia con <b>-{count} punti conservazione</b> e punti attrattiva a seconda dell'ordine di partenza.",
+    "text2-conservation": "Metti {count} segnalini giocatore come promemoria accanto al segnalino punti conservazione di ARNO e rimuovili uno per uno non appena ARNO ha segnato i suoi primi punti conservazione.",
     "text2-appeal": "Per esempio, se ARNO è il 3° giocatore, inizia con 2 punti attrattiva.",
     "text3": "Ogni ARNO riceve i componenti di un colore, una mappa zoo (mappa A), una carta Punteggio Finale a faccia in giù e 8 carte Zoo casuali.",
     "text4": "Metti tutti i segnalini giocatore del colore di ARNO accanto alla sua mappa zoo.",

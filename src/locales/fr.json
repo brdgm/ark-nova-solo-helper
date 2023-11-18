@@ -40,8 +40,8 @@
   "setupARNO": {
     "title": "Mise en place d'ARNO",
     "text1": "Organisez le jeu en fonction du nombre de joueurs (y compris ARNO). Un joueur humain sera toujours le premier joueur.",
-    "text2": "Chaque ARNO commence avec <b>-3 points de conservation</b> et des points d'attrait selon l'ordre des joueurs.",
-    "text2-conservation":"Placez trois cubes de joueur en guise de rappel à côté du compteur de points de conservation d'ARNO et retirez-les un par un dès qu'ARNO a marqué ses premiers points de conservation.",
+    "text2": "Chaque ARNO commence avec <b>-{count} points de conservation</b> et des points d'attrait selon l'ordre des joueurs.",
+    "text2-conservation":"Placez {count} cubes de joueur en guise de rappel à côté du compteur de points de conservation d'ARNO et retirez-les un par un dès qu'ARNO a marqué ses premiers points de conservation.",
     "text2-appeal": "Par exemple, si ARNO est le 3ème joueur, il commence avec 2 points d'attraits.",
     "text3": "Chaque ARNO reçoit les composants d'une couleur, un plateau zoo (carte A), une carte de score final face cachée et 8 cartes Zoo aléatoires.",
     "text4": "Placez tous les jetons de joueur de la couleur d'ARNO à côté de son plateau zoo.",
