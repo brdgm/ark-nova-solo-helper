@@ -40,8 +40,8 @@
   "setupARNO": {
     "title": "Configuració d'ARNO",
     "text1": "Configureu el joc segons el recompte de jugadors (inclosos els ARNO). Un jugador humà serà el jugador titular.",
-    "text2": "Cada ARNO comença amb <b>-3 punts de conservació</b> i punts d'apel·lació segons l'ordre del jugador.",
-    "text2-conservation": "Col·loqueu tres fitxes de jugadors com a recordatori al costat del comptador de punts de conservació d'ARNO i traieu-les una a una tan bon punt ARNO anota els seus primers punts de conservació.",
+    "text2": "Cada ARNO comença amb <b>-{count} punts de conservació</b> i punts d'apel·lació segons l'ordre del jugador.",
+    "text2-conservation": "Col·loqueu {count} fitxes de jugadors com a recordatori al costat del comptador de punts de conservació d'ARNO i traieu-les una a una tan bon punt ARNO anota els seus primers punts de conservació.",
     "text2-appeal": "Per exemple, si ARNO és el 3r jugador, comença amb 2 punts d'apel·lació.",
     "text3": "Cada ARNO rep els components d'un color, un taulell zoològic (mapa A), una carta de puntuació final cara avall i 8 cartes zoo aleatòries.",
     "text4": "Col·loqueu totes les fitxes del jugador del color d'ARNO al costat del seu taulell de zoo.",

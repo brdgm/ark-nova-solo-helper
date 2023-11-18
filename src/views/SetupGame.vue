@@ -6,6 +6,7 @@
 
   <PlayersSetup/>
   <DifficultyLevel/>
+  <ExpansionsSetup/>
   <PickZooMap/>
   <ActionCardDistribution/>
 
@@ -25,6 +26,7 @@ import ActionCardDistribution from '@/components/setup/ActionCardDistribution.vu
 import FooterButtons from '@/components/structure/FooterButtons.vue'
 import AboutARNO from '@/components/structure/AboutARNO.vue'
 import PickZooMap from '@/components/setup/PickZooMap.vue'
+import ExpansionsSetup from '@/components/setup/ExpansionsSetup.vue'
 
 export default defineComponent({
   name: 'SetupGame',
@@ -34,7 +36,8 @@ export default defineComponent({
     ActionCardDistribution,
     FooterButtons,
     AboutARNO,
-    PickZooMap
+    PickZooMap,
+    ExpansionsSetup
   },
   setup() {
     const { t } = useI18n()

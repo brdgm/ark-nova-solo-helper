@@ -20,7 +20,13 @@
     "difficultyLevel": {
       "title": "Schwierigkeitsgrad",
       "easy": "Leicht",
-      "hard": "Schwer"
+      "hard": "Schwer",
+      "level7plus": "Level 7+: Wenn du eine noch größere Herausforderung suchst: gib ARNO für jeden zusätzlichen Schwierigkeitsgrad einen weiteren Artenschutzpunkt zu Beginn des Spiels."
+    },
+    "expansions": {
+      "title": "Erweiterungen",
+      "marine-worlds": "Wasserwelten",
+      "marineWorldsNewActionCards": "Nimm dir 3 zufällige der 20 <b>neuen Aktionskarten</b> und wähle 2 davon (mit unterschiedlichen Aktionstypen)."
     },
     "pickZooMap": {
       "title": "Zooplan",
@@ -40,8 +46,8 @@
   "setupARNO": {
     "title": "ARNO Spielaufbau",
     "text1": "Baue das Spiel entsprechend der Spieleranzahl (inklusive ARNO(s)) auf. Ein menschlicher Spieler ist Startspieler.",
-    "text2": "Jeder ARNO beginnt mit <b>-3 Artenschutzpunkten</B> und Attraktion entsprechend der Reihenfolge.",
-    "text2-conservation": "Lege z.B. drei Zählsteine neben ARNOs Artenschutzmarker und entferne sie nach und nach, sobald ARNO seine ersten Artenschutzpunkte während des Spiels gesammelt hat.",
+    "text2": "Jeder ARNO beginnt mit <b>-{count} Artenschutzpunkten</B> und Attraktion entsprechend der Reihenfolge.",
+    "text2-conservation": "Lege z.B. {count} Zählsteine neben ARNOs Artenschutzmarker und entferne sie nach und nach, sobald ARNO seine ersten Artenschutzpunkte während des Spiels gesammelt hat.",
     "text2-appeal": "Ist ARNO z.B. der dritte Spieler, startet er mit 2 Attraktionspunkten.",
     "text3": "Jeder ARNO erhält die Komponenten einer Farbe, einen Zooplan A, eine verdeckte Endwertungskarte sowie 8 zufällige Zookarten.",
     "text4": "Lege alle Markierungssteine neben den Zooplan von ARNO.",
@@ -67,7 +73,8 @@
     "upgradeCard": {
       "title": "Karte Aufwerten",
       "text": "Eine Aktionskarte von ARNO aufwerten?",
-      "note": "Bitte beachten: Erreicht ARNO den 2 Punkte-Bonus der Artenschutzleiste wählt er immer einen zusätzlichen Arbeiter, keine Karten-Aufwertung."
+      "note": "Bitte beachten: Erreicht ARNO den 2 Punkte-Bonus der Artenschutzleiste wählt er immer einen zusätzlichen Arbeiter, keine Karten-Aufwertung.",
+      "noteAppeal15BonusTile": "ARNO wählt das Bonusplättchen wenn er mehr als 15 Ansehen erreicht (wenn verfügbar)."
     },
     "revertUpgradeCard": {
       "title": "Karten-Aufwertung rückgängig machen",
