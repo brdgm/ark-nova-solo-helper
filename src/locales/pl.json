@@ -30,11 +30,6 @@
       "map0": "Mapa 0 (średniozaawansowany)",
       "mapAdvanced": "Mapa {id} (zaawansowany)",
       "mapAdvancedMapPack": "Mapa {id} (Zaawansowany, Pakiet Map {mapPack})"
-    },
-    "actionCardDistribution": {
-      "title": "Rozkład Kart Akcji",
-      "schema": "Prawdopodobieństwo (%)",
-      "text": "Opcja eksperymentalna. Opcja '0-25-25-25-25' podąża za oficjalnymi zasadami ARNO"
     }
   },
   "setupARNO": {

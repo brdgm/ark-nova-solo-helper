@@ -30,11 +30,6 @@
       "map0": "Mapa 0 (normal)",
       "mapAdvanced": "Mapa {id} (avançat)",
       "mapAdvancedMapPack": "Mapa {id} (avançat, Mapa Pack {mapPack})"
-    },
-    "actionCardDistribution": {
-      "title": "Acció Distribució de cartes",
-      "schema": "Probabilitat (%)",
-      "text": "Opció experimental. L'opció '0-25-25-25-25' segueix el reglament ARNO."
     }
   },
   "setupARNO": {

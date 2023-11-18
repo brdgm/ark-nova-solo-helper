@@ -36,11 +36,6 @@
       "map0": "Plan 0 (mittel)",
       "mapAdvanced": "Plan {id} (fortgeschritten)",
       "mapAdvancedMapPack": "Plan {id} (fortgeschritten, Zooplan Pack {mapPack})"
-    },
-    "actionCardDistribution": {
-      "title": "Aktionskarten-Verteilung",
-      "schema": "Wahrscheinlichkeit (%)",
-      "text": "Experimentelle Option. Die Auswahl '0-25-25-25-25' entspricht den ARNO-Regeln."
     }
   },
   "setupARNO": {

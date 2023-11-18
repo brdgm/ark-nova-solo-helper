@@ -6,9 +6,8 @@
 
   <PlayersSetup/>
   <DifficultyLevel/>
-  <ExpansionsSetup/>
   <PickZooMap/>
-  <ActionCardDistribution/>
+  <ExpansionsSetup/>
 
   <router-link to="/setupARNO" class="btn btn-primary btn-lg mt-4">
     {{t('setupARNO.title')}}
@@ -22,7 +21,6 @@ import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import PlayersSetup from '@/components/setup/PlayersSetup.vue'
 import DifficultyLevel from '@/components/setup/DifficultyLevel.vue'
-import ActionCardDistribution from '@/components/setup/ActionCardDistribution.vue'
 import FooterButtons from '@/components/structure/FooterButtons.vue'
 import AboutARNO from '@/components/structure/AboutARNO.vue'
 import PickZooMap from '@/components/setup/PickZooMap.vue'
@@ -33,7 +31,6 @@ export default defineComponent({
   components: {
     PlayersSetup,
     DifficultyLevel,
-    ActionCardDistribution,
     FooterButtons,
     AboutARNO,
     PickZooMap,

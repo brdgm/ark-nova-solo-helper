@@ -30,11 +30,6 @@
       "map0": "Map 0 (gemiddeld)",
       "mapAdvanced": "Map {id} (moeilijk)",
       "mapAdvancedMapPack": "Map {id} (advanced, Map Pack {mapPack})"
-    },
-    "actionCardDistribution": {
-      "title": "Actie Kaartverdeling",
-      "schema": "Verdeling (%)",
-      "text": "Experimentele optie. De optie '0-25-25-25-25' volgt de ARNO regels."
     }
   },
   "setupARNO": {

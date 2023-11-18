@@ -30,11 +30,6 @@
         "map0": "地图 0 (中等)",
         "mapAdvanced": "地图 {id} (进阶)",
         "mapAdvancedMapPack": "地图 {id} (进阶, 地图扩充包 {mapPack})"
-      },
-      "actionCardDistribution": {
-        "title": "行动卡牌分布",
-        "schema": "概率 (%)",
-        "text": "测试功能。'0-25-25-25-25' 这个选项是ARNO规则书上设定的概率。"
       }
     },
     "setupARNO": {

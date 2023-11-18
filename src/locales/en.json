@@ -36,11 +36,6 @@
       "map0": "Map 0 (intermediate)",
       "mapAdvanced": "Map {id} (advanced)",
       "mapAdvancedMapPack": "Map {id} (advanced, Map Pack {mapPack})"
-    },
-    "actionCardDistribution": {
-      "title": "Action Card Distribution",
-      "schema": "Probability (%)",
-      "text": "Experimental option. The option '0-25-25-25-25' follows the ARNO ruleset."
     }
   },
   "setupARNO": {

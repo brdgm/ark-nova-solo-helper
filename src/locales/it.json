@@ -30,11 +30,6 @@
       "map0": "Mappa 0 (intermedia)",
       "mapAdvanced": "Mappa {id} (avanzata)",
       "mapAdvancedMapPack": "Mappa {id} (avanzata, Pacchetto Mappe {mapPack})"
-    },
-    "actionCardDistribution": {
-      "title": "Distribuzione Delle Carte Azione",
-      "schema": "Probabilità (%)",
-      "text": "Opzione sperimentale. L'opzione '0-25-25-25-25' segue il regolamento di ARNO."
     }
   },
   "setupARNO": {

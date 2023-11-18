@@ -1,4 +1,3 @@
-import ActionCardDistributionSchema from '@/services/enum/ActionCardDistributionSchema'
 import DifficultyLevel from '@/services/enum/DifficultyLevel'
 import PlayerColor from '@/services/enum/PlayerColor'
 import { Setup } from '@/store'
@@ -43,7 +42,6 @@ function mockSetup(globalDifficultyLevel?: DifficultyLevel, botDifficultyLevels?
       playerColors: [PlayerColor.BLACK, PlayerColor.BLUE, PlayerColor.RED]
     },
     difficultyLevel: globalDifficultyLevel,
-    difficultyLevels: botDifficultyLevels,
-    actionCardDistribution: ActionCardDistributionSchema.P0_10_20_30_40      
+    difficultyLevels: botDifficultyLevels
   }
 }
