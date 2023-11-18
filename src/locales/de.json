@@ -72,7 +72,8 @@
     "upgradeCard": {
       "title": "Karte Aufwerten",
       "text": "Eine Aktionskarte von ARNO aufwerten?",
-      "note": "Bitte beachten: Erreicht ARNO den 2 Punkte-Bonus der Artenschutzleiste wählt er immer einen zusätzlichen Arbeiter, keine Karten-Aufwertung."
+      "note": "Bitte beachten: Erreicht ARNO den 2 Punkte-Bonus der Artenschutzleiste wählt er immer einen zusätzlichen Arbeiter, keine Karten-Aufwertung.",
+      "noteAppeal15BonusTile": "ARNO wählt das Bonusplättchen wenn er mehr als 15 Ansehen erreicht (wenn verfügbar)."
     },
     "revertUpgradeCard": {
       "title": "Karten-Aufwertung rückgängig machen",

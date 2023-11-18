@@ -11,7 +11,10 @@
       <button v-if="!bonusTilePosition" type="button" class="btn btn-primary btn-sm ms-2" @click="pickBonusTilePosition()">{{t('bonusTile.pick')}}</button>
       <p v-if="bonusTilePosition==1" v-html="t('bonusTile.left')"></p>
       <p v-if="bonusTilePosition==2" v-html="t('bonusTile.right')"></p>
-      <p class="fst-italic small mt-3" v-html="t('roundBot.upgradeCard.note')"></p>
+      <p class="fst-italic small mt-3">
+        <span v-html="t('roundBot.upgradeCard.note')"></span><br/>
+        <span v-if="hasMarineWorldsExpansion" v-html="t('roundBot.upgradeCard.noteAppeal15BonusTile')"></span>
+      </p>
       <hr/>
       <div v-if="gainPartnerZoo" class="mt-4 mb-4"><GainPartnerZoo/></div>
       <div v-else-if="gainPartnerUniversity" class="mt-4 mb-4"><GainPartnerUniversity/></div>
@@ -45,6 +48,8 @@ import AppIcon from '../structure/AppIcon.vue'
 import GainPartnerZoo from './GainPartnerZoo.vue'
 import GainPartnerUniversity from './GainPartnerUniversity.vue'
 import ModalDialog from 'brdgm-commons/src/components/structure/ModalDialog.vue'
+import { useStore } from '@/store'
+import Expansion from '@/services/enum/Expansion'
 
 export default defineComponent({
   name: 'BonusTile',
@@ -56,6 +61,7 @@ export default defineComponent({
   },
   setup() {
     const { t } = useI18n()
+    useStore()
     return { t }
   },
   data() {
@@ -63,6 +69,11 @@ export default defineComponent({
       bonusTilePosition: undefined as number | undefined,
       gainPartnerZoo: false,
       gainPartnerUniversity: false
+    }
+  },
+  computed: {
+    hasMarineWorldsExpansion() : boolean {
+      return (this.$store.state.setup.expansions ?? []).includes(Expansion.MARINE_WORLDS)
     }
   },
   methods: {
