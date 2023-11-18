@@ -1,4 +1,3 @@
-import ActionCardDistributionSchema from '@/services/enum/ActionCardDistributionSchema'
 import CardName from '@/services/enum/CardName'
 import DifficultyLevel from '@/services/enum/DifficultyLevel'
 import PlayerColor from '@/services/enum/PlayerColor'
@@ -21,7 +20,6 @@ export interface Setup {
   difficultyLevel?: DifficultyLevel  // for backward-compatibility
   difficultyLevels?: DifficultyLevel[]  // difficulty level per bot
   zooMaps?: string[]
-  actionCardDistribution: ActionCardDistributionSchema
   expansions?: Expansion[]
   debugMode?: boolean
 }
@@ -70,8 +68,7 @@ export const store = createStore<State>({
         playerCount: 1,
         botCount: 1,
         playerColors: [PlayerColor.BLUE,PlayerColor.RED,PlayerColor.YELLOW,PlayerColor.BLACK]
-      },
-      actionCardDistribution: ActionCardDistributionSchema.P0_25_25_25_25
+      }
     },
     rounds: []
   },
@@ -100,9 +97,6 @@ export const store = createStore<State>({
         state.setup.expansions = []
       }
       toggleArrayItem(state.setup.expansions, expansion)
-    },
-    setupActionCardDistribution(state : State, schema: ActionCardDistributionSchema) {
-      state.setup.actionCardDistribution = schema
     },
     setupZooMaps(state : State, zooMaps: string[]) {
       state.setup.zooMaps = zooMaps
