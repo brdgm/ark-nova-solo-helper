@@ -2,7 +2,7 @@
     "gameTitle": "Ark Nova",
     "home": {
       "title": "Ark Nova - Asistente para juego en solitario",
-      "play1": "Juega el <a href='https://boardgamegeek.com/thread/2823056/rno-alternative-solo-mode' target='_blank' rel='noopener'><b>modo en solitario A.R.N.O. 2.0</b></a> (no oficial) de <a href='https://boardgamegeek.com/boardgame/342942/ark-nova' target='_blank' rel='noopener'><b>Ark Nova</b></a>. A diferencia del modo en solitario oficial, este simula la presencia uno o más oponentes adicionales para asemejar la partida en solitario a una partida multijugador.",
+      "play1": "Juega el <a href='https://boardgamegeek.com/thread/2823056/rno-alternative-solo-mode' target='_blank' rel='noopener'><b>modo en solitario A.R.N.O. 3.0</b></a> (no oficial) de <a href='https://boardgamegeek.com/boardgame/342942/ark-nova' target='_blank' rel='noopener'><b>Ark Nova</b></a>. A diferencia del modo en solitario oficial, este simula la presencia uno o más oponentes adicionales para asemejar la partida en solitario a una partida multijugador.",
       "play2": "Para este modo necesitas solamente los componentes incluidos en el juego base. Esta aplicación sustituye el mazo de cartas de ARNO y los dados, al mismo tiempo que registra el progreso de ARNO.",
       "feedback": "Discusión y Contribuciones:"
     },
