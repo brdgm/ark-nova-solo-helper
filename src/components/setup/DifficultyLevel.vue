@@ -22,6 +22,12 @@
     </div>
   </template>
 
+  <div class="row" v-if="hasLevel6">
+    <div class="offset-2 offset-md-1 col-8 col-md-10 text-muted small">
+      {{t('setup.difficultyLevel.level7plus')}}
+    </div>
+  </div>
+
 </template>
 
 <script lang="ts">
@@ -47,6 +53,9 @@ export default defineComponent({
   computed: {
     botCount() : number {
       return this.$store.state.setup.playerSetup.botCount
+    },
+    hasLevel6() : boolean {
+      return this.levels.filter(level => level >= 6).length > 0
     }
   },
   methods: {

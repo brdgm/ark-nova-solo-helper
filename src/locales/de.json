@@ -20,7 +20,8 @@
     "difficultyLevel": {
       "title": "Schwierigkeitsgrad",
       "easy": "Leicht",
-      "hard": "Schwer"
+      "hard": "Schwer",
+      "level7plus": "Level 7+: Wenn du eine noch größere Herausforderung suchst: gib ARNO für jeden zusätzlichen Schwierigkeitsgrad einen weiteren Artenschutzpunkt zu Beginn des Spiels."
     },
     "expansions": {
       "title": "Erweiterungen",

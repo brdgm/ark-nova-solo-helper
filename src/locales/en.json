@@ -20,7 +20,8 @@
     "difficultyLevel": {
       "title": "Difficulty Level",
       "easy": "Easy",
-      "hard": "Hard"
+      "hard": "Hard",
+      "level7plus": "Level 7+: If you want to play harder, add one conservation point for ARNO at the start of the game for each additional level."
     },
     "expansions": {
       "title": "Expansions",
