@@ -30,11 +30,6 @@
       "map0": "Plateau 0 (intermédiaire)",
       "mapAdvanced": "Plateau {id} (avancé)",
       "mapAdvancedMapPack": "Plateau {id} (avancé, pack de Plateau {mapPack})"
-    },
-    "actionCardDistribution": {
-      "title": "Répartition des Cartes Actions",
-      "schema": "Probabilité (%)",
-      "text": "Il s'agit d'une option expérimentale. L'option '0-25-25-25-25' suit les règles classiques d'ARNO."
     }
   },
   "setupARNO": {

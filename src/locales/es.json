@@ -30,11 +30,6 @@
         "map0": "Mapa 0 (intermedio)",
         "mapAdvanced": "Map {id} (avanzado)",
         "mapAdvancedMapPack": "Map {id} (avanzado, Map Pack {mapPack})"
-      },
-      "actionCardDistribution": {
-        "title": "Distribución de las cartas de acción",
-        "schema": "Probabilidad (%)",
-        "text": "Configuración experimental. La opción '0-25-25-25-25' corresponde a las reglas de ARNO."
       }
     },
     "setupARNO": {
