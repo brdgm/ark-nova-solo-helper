@@ -101,7 +101,8 @@ export default defineComponent({
   right: 0;
   top: 9.25rem;
   margin-right: 0.75rem;
-  text-decoration: underline dotted;
+  text-decoration: underline;
+  text-decoration-style: dotted;
   color: #000;
   text-align: right;
 }

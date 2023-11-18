@@ -35,7 +35,8 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 a {
-  text-decoration: underline dotted;
+  text-decoration: underline;
+  text-decoration-style: dotted;
   color: #000;
 }
 .icon {

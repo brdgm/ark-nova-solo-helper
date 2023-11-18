@@ -284,7 +284,8 @@ export default defineComponent({
 .actionHelp {
   cursor: help;
   :deep(b) {
-    text-decoration: underline dotted;
+    text-decoration: underline;
+    text-decoration-style: dotted;
   }
 }
 .overwriteAssociation.actions {
