@@ -2,7 +2,7 @@
   <ol>
     <li v-html="t('setupARNO.text1')"></li>
     <li>
-      <img src="@/assets/arno-conservation-start-setup.jpg" class="conservation-start-setup float-end ms-2 me-2 mt-2" alt=""/>
+      <img :src="conservationSetupImageFileName" class="conservation-start-setup float-end ms-2 me-2 mt-2" alt=""/>
       <span v-html="t('setupARNO.text2')"></span>
       <ul>
         <li v-html="t('setupARNO.text2-conservation')"></li>
@@ -29,6 +29,8 @@
 </template>
 
 <script lang="ts">
+import Expansion from '@/services/enum/Expansion'
+import { useStore } from '@/store'
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 
@@ -36,7 +38,17 @@ export default defineComponent({
   name: 'SetupARNOInstructions',
   setup() {
     const { t } = useI18n()
+    useStore()
     return { t }
+  },
+  computed: {
+    hasExpansionComponents() : boolean {
+      return (this.$store.state.setup.expansions ?? []).includes(Expansion.MARINE_WORLDS)
+    },
+    conservationSetupImageFileName() : string {
+      const components = this.hasExpansionComponents ? 'expansion' : 'base'
+      return new URL(`/src/assets/arno-conservation-start-setup/start-setup-${components}-3.webp`, import.meta.url).toString()
+    }
   }
 })
 </script>
