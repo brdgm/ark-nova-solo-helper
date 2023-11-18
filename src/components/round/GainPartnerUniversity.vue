@@ -18,12 +18,11 @@ import rollDice from 'brdgm-commons/src/util/random/rollDice'
 import rollDiceDifferentValue from 'brdgm-commons/src/util/random/rollDiceDifferentValue'
 import randomEnum from 'brdgm-commons/src/util/random/randomEnum'
 import randomEnumDifferentValue from 'brdgm-commons/src/util/random/randomEnumDifferentValue'
-import { defineComponent } from 'vue'
+import { defineComponent, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import AppIcon from '../structure/AppIcon.vue'
 import Expansion from '@/services/enum/Expansion'
 import { useStore } from '@/store'
-import { ref } from 'vue'
 import AnimalType from '@/services/enum/AnimalType'
 
 export default defineComponent({
