@@ -2,7 +2,7 @@
 
   <div class="float-end m-2 w-25">
     <a href="https://boardgamegeek.com/boardgame/342942/ark-nova" target="_blank" rel="noopener">
-      <img src="../assets/game-ark-nova.jpg" class="rounded shadow w-100" alt=""/>
+      <img src="../assets/game-ark-nova.jpg" class="rounded shadow w-100 mb-3" alt=""/>
     </a>
   </div>
 
