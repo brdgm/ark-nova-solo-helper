@@ -84,8 +84,8 @@ export default defineComponent({
     })
     const store = useStore()
 
-    // handle PWA updates with prompt if a new version is detected, check every 8h for a new version
-    const checkForNewVersionsIntervalSeconds = 8 * 60 * 60
+    // handle PWA updates with prompt if a new version is detected, check regularly for a new version
+    const checkForNewVersionsIntervalSeconds = 1 * 60 * 60
     const updateServiceWorker = registerSW({
       // check for new app version, see https://vite-pwa-org.netlify.app/guide/periodic-sw-updates.html
       onRegisteredSW(swScriptUrl : string, registration? : ServiceWorkerRegistration) {
