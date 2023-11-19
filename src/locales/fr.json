@@ -2,7 +2,7 @@
   "gameTitle": "Ark Nova",
   "home": {
     "title": "Aide de jeu Solo - Ark Nova",
-    "play1": "Jouez au <a href='https://boardgamegeek.com/thread/2823056/rno-alternative-solo-mode' target='_blank' rel='noopener'><b>Mode Solo A.R.N.O. 2.0 </b></a> (non-officielle) d'<a href='https://boardgamegeek.com/boardgame/342942/ark-nova' target='_blank' rel='noopener'><b>Ark Nova</b></a>. Contrairement au mode solo officiel, ce mode simule un ou plusieurs adversaires supplémentaires, comme dans un jeu multi-joueurs.",
+    "play1": "Jouez au <a href='https://boardgamegeek.com/thread/2823056/rno-alternative-solo-mode' target='_blank' rel='noopener'><b>Mode Solo A.R.N.O. 3.0 </b></a> (non-officielle) d'<a href='https://boardgamegeek.com/boardgame/342942/ark-nova' target='_blank' rel='noopener'><b>Ark Nova</b></a>. Contrairement au mode solo officiel, ce mode simule un ou plusieurs adversaires supplémentaires, comme dans un jeu multi-joueurs.",
     "play2": "Pour jouer en mode solo, il vous suffit d'avoir le jeu de base. Cette application remplace le jeu de cartes ARNO et les dés et suit la progression d'ARNO durant la partie.",
     "feedback": "Discussion et Retour:"
   },
@@ -30,18 +30,13 @@
       "map0": "Plateau 0 (intermédiaire)",
       "mapAdvanced": "Plateau {id} (avancé)",
       "mapAdvancedMapPack": "Plateau {id} (avancé, pack de Plateau {mapPack})"
-    },
-    "actionCardDistribution": {
-      "title": "Répartition des Cartes Actions",
-      "schema": "Probabilité (%)",
-      "text": "Il s'agit d'une option expérimentale. L'option '0-25-25-25-25' suit les règles classiques d'ARNO."
     }
   },
   "setupARNO": {
     "title": "Mise en place d'ARNO",
     "text1": "Organisez le jeu en fonction du nombre de joueurs (y compris ARNO). Un joueur humain sera toujours le premier joueur.",
-    "text2": "Chaque ARNO commence avec <b>-3 points de conservation</b> et des points d'attrait selon l'ordre des joueurs.",
-    "text2-conservation":"Placez trois cubes de joueur en guise de rappel à côté du compteur de points de conservation d'ARNO et retirez-les un par un dès qu'ARNO a marqué ses premiers points de conservation.",
+    "text2": "Chaque ARNO commence avec <b>-{count} points de conservation</b> et des points d'attrait selon l'ordre des joueurs.",
+    "text2-conservation":"Placez {count} cubes de joueur en guise de rappel à côté du compteur de points de conservation d'ARNO et retirez-les un par un dès qu'ARNO a marqué ses premiers points de conservation.",
     "text2-appeal": "Par exemple, si ARNO est le 3ème joueur, il commence avec 2 points d'attraits.",
     "text3": "Chaque ARNO reçoit les composants d'une couleur, un plateau zoo (carte A), une carte de score final face cachée et 8 cartes Zoo aléatoires.",
     "text4": "Placez tous les jetons de joueur de la couleur d'ARNO à côté de son plateau zoo.",

@@ -1,5 +1,6 @@
 # Ark Nova Solo Helper
 
+[![Build](https://github.com/brdgm/ark-nova-solo-helper/workflows/Build/badge.svg?branch=develop)](https://github.com/brdgm/ark-nova-solo-helper/actions?query=workflow%3ABuild+branch%3Adevelop)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=brdgm_ark-nova-solo-helper&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=brdgm_ark-nova-solo-helper)
 
 
@@ -20,7 +21,7 @@ npm install
 
 ### Compiles and hot-reloads for development
 ```
-npm run serve
+npm run dev
 ```
 
 ### Compiles and minifies for production

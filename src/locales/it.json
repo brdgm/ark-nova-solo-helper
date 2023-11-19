@@ -2,7 +2,7 @@
   "gameTitle": "Ark Nova",
   "home": {
     "title": "Aiutante Ark Nova Solo",
-    "play1": "Gioca la <a href='https://boardgamegeek.com/thread/2823056/rno-alternative-solo-mode' target='_blank' rel='noopener'><b>modalità in solitaria (non ufficiale) A.R.N.O. 2.0</b></a> di <a href='https://boardgamegeek.com/boardgame/342942/ark-nova' target='_blank' rel='noopener'><b>Ark Nova</b></a>. A differenza della modalità in solitario ufficiale ARNO simula avversari addizionali, in maniera simile ad una partita a più giocatori.",
+    "play1": "Gioca la <a href='https://boardgamegeek.com/thread/2823056/rno-alternative-solo-mode' target='_blank' rel='noopener'><b>modalità in solitaria (non ufficiale) A.R.N.O. 3.0</b></a> di <a href='https://boardgamegeek.com/boardgame/342942/ark-nova' target='_blank' rel='noopener'><b>Ark Nova</b></a>. A differenza della modalità in solitario ufficiale ARNO simula avversari addizionali, in maniera simile ad una partita a più giocatori.",
     "play2": "Per giocare alla modalità solitario hai bisogno solo del gioco base. Questa applicazione sostituisce il mazzo di carte ARNO e i dadi, oltre a tener traccia dei progressi di ARNO.",
     "feedback": "Discussioni e Feedback:"
   },
@@ -30,18 +30,13 @@
       "map0": "Mappa 0 (intermedia)",
       "mapAdvanced": "Mappa {id} (avanzata)",
       "mapAdvancedMapPack": "Mappa {id} (avanzata, Pacchetto Mappe {mapPack})"
-    },
-    "actionCardDistribution": {
-      "title": "Distribuzione Delle Carte Azione",
-      "schema": "Probabilità (%)",
-      "text": "Opzione sperimentale. L'opzione '0-25-25-25-25' segue il regolamento di ARNO."
     }
   },
   "setupARNO": {
     "title": "Setup di ARNO",
     "text1": "Prepara il gioco in base al numero di giocatori (compresi gli ARNO). Un giocatore umano sarà il giocatore iniziale.",
-    "text2": "Ogni ARNO inizia con <b>-3 punti conservazione</b> e punti attrattiva a seconda dell'ordine di partenza.",
-    "text2-conservation": "Metti tre segnalini giocatore come promemoria accanto al segnalino punti conservazione di ARNO e rimuovili uno per uno non appena ARNO ha segnato i suoi primi punti conservazione.",
+    "text2": "Ogni ARNO inizia con <b>-{count} punti conservazione</b> e punti attrattiva a seconda dell'ordine di partenza.",
+    "text2-conservation": "Metti {count} segnalini giocatore come promemoria accanto al segnalino punti conservazione di ARNO e rimuovili uno per uno non appena ARNO ha segnato i suoi primi punti conservazione.",
     "text2-appeal": "Per esempio, se ARNO è il 3° giocatore, inizia con 2 punti attrattiva.",
     "text3": "Ogni ARNO riceve i componenti di un colore, una mappa zoo (mappa A), una carta Punteggio Finale a faccia in giù e 8 carte Zoo casuali.",
     "text4": "Metti tutti i segnalini giocatore del colore di ARNO accanto alla sua mappa zoo.",

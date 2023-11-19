@@ -2,7 +2,7 @@
   "gameTitle": "Ark Nova",
   "home": {
     "title": "Ark Nova Solo Helper",
-    "play1": "Speel de <a href='https://boardgamegeek.com/thread/2823056/rno-alternative-solo-mode' target='_blank' rel='noopener'><b>A.R.N.O. 2.0 Solo Mode</b></a> (Niet officieel) of <a href='https://boardgamegeek.com/boardgame/342942/ark-nova' target='_blank' rel='noopener'><b>Ark Nova</b></a>. In tegenstelling tot de officiële solo mode, simuleert deze aanvullend(e) tegenstander(s) zoals bij een multi-player spel.",
+    "play1": "Speel de <a href='https://boardgamegeek.com/thread/2823056/rno-alternative-solo-mode' target='_blank' rel='noopener'><b>A.R.N.O. 3.0 Solo Mode</b></a> (Niet officieel) of <a href='https://boardgamegeek.com/boardgame/342942/ark-nova' target='_blank' rel='noopener'><b>Ark Nova</b></a>. In tegenstelling tot de officiële solo mode, simuleert deze aanvullend(e) tegenstander(s) zoals bij een multi-player spel.",
     "play2": "Om de solo mode te kunnen spelen heb je alleen het basisspel nodig. Deze helper-app vervangt de ARNO spelkaarten en de dobbelsteen en houdt ARNO's voortgang bij.",
     "feedback": "Discussie en Feedback:"
   },
@@ -30,18 +30,13 @@
       "map0": "Map 0 (gemiddeld)",
       "mapAdvanced": "Map {id} (moeilijk)",
       "mapAdvancedMapPack": "Map {id} (advanced, Map Pack {mapPack})"
-    },
-    "actionCardDistribution": {
-      "title": "Actie Kaartverdeling",
-      "schema": "Verdeling (%)",
-      "text": "Experimentele optie. De optie '0-25-25-25-25' volgt de ARNO regels."
     }
   },
   "setupARNO": {
     "title": "ARNO Setup",
     "text1": "ZEt het spel klaar volgens het aantal spelers (inclusief ARNO(s)). Een menselijke speler zal de startspeler zijn.",
-    "text2": "Elke ARNO start met <b>-3 conservatie punten</b> en met populariteitspunten volgens de spelersvolgorde.",
-    "text2-conservation": "Plaats 3 spelerstokens als reminder naast Arno's conservatiespoor en verwijder ze 1 voor 1 als Arno zijn eerste conservatiepunten scoort.",
+    "text2": "Elke ARNO start met <b>-{count} conservatie punten</b> en met populariteitspunten volgens de spelersvolgorde.",
+    "text2-conservation": "Plaats {count} spelerstokens als reminder naast Arno's conservatiespoor en verwijder ze 1 voor 1 als Arno zijn eerste conservatiepunten scoort.",
     "text2-appeal": "Bijvoorbeeld: is ARNO de 3e speler, dan start hij met 2 populariteitspunten.",
     "text3": "Elke ARNO ontvangt de spelonderdelen van één kleur, een dierentuinkaart (map A), één gesloten Eindtellingskaart en 8 willekeurige Dierentuinkaarten.",
     "text4": "Plaats alle spelerstokens van ARNO’s kleur naast zijn dierentuinkaart.",

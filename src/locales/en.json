@@ -2,7 +2,7 @@
   "gameTitle": "Ark Nova",
   "home": {
     "title": "Ark Nova Solo Helper",
-    "play1": "Play the <a href='https://boardgamegeek.com/thread/2823056/rno-alternative-solo-mode' target='_blank' rel='noopener'><b>A.R.N.O. 2.0 Solo Mode</b></a> (unofficial) of <a href='https://boardgamegeek.com/boardgame/342942/ark-nova' target='_blank' rel='noopener'><b>Ark Nova</b></a>. Unlike the official solo mode, this simulates additional opponent(s) similar to a multi-player game.",
+    "play1": "Play the <a href='https://boardgamegeek.com/thread/2823056/rno-alternative-solo-mode' target='_blank' rel='noopener'><b>A.R.N.O. 3.0 Solo Mode</b></a> (unofficial) of <a href='https://boardgamegeek.com/boardgame/342942/ark-nova' target='_blank' rel='noopener'><b>Ark Nova</b></a>. Unlike the official solo mode, this simulates additional opponent(s) similar to a multi-player game.",
     "play2": "To play the solo mode you only need the base game. This helper application replaces the ARNO card deck and the dice and tracks ARNO's progression.",
     "feedback": "Discussion and Feedback:"
   },
@@ -20,7 +20,13 @@
     "difficultyLevel": {
       "title": "Difficulty Level",
       "easy": "Easy",
-      "hard": "Hard"
+      "hard": "Hard",
+      "level7plus": "Level 7+: If you want to play harder, add one conservation point for ARNO at the start of the game for each additional level."
+    },
+    "expansions": {
+      "title": "Expansions",
+      "marine-worlds": "Marine Worlds",
+      "marineWorldsNewActionCards": "Take 3 of the <b>new Action cards</b> at random and choose 2 of those (with different action types)."
     },
     "pickZooMap": {
       "title": "Zoo Map",
@@ -30,18 +36,13 @@
       "map0": "Map 0 (intermediate)",
       "mapAdvanced": "Map {id} (advanced)",
       "mapAdvancedMapPack": "Map {id} (advanced, Map Pack {mapPack})"
-    },
-    "actionCardDistribution": {
-      "title": "Action Card Distribution",
-      "schema": "Probability (%)",
-      "text": "Experimental option. The option '0-25-25-25-25' follows the ARNO ruleset."
     }
   },
   "setupARNO": {
     "title": "ARNO Setup",
-    "text1": "Set up the game according to player count (including ARNO(s)). A human player will be the starting player.",
-    "text2": "Every ARNO starts with <b>-3 conservation points</b> and appeal points according to the player order.",
-    "text2-conservation": "Place three player tokens as a reminder next to ARNO’s conservation points counter and remove them one by one as soon as ARNO scored his first conservation points.",
+    "text1": "Set up the game according to player count, including ARNO(s). A human player will be the starting player.",
+    "text2": "Every ARNO starts with <b>-{count} conservation points</b> and appeal points according to the player order.",
+    "text2-conservation": "Place {count} player tokens as a reminder next to ARNO’s conservation points counter and remove them one by one as soon as ARNO scored his first conservation points.",
     "text2-appeal": "E.g. if ARNO is the 3rd player, he starts with 2 appeal points.",
     "text3": "Every ARNO receives the components of one color, a zoo mat (map A), one face-down Final Scoring card and 8 random Zoo cards.",
     "text4": "Place all player tokens of ARNO’s color next to his zoo mat.",
@@ -67,7 +68,8 @@
     "upgradeCard": {
       "title": "Upgrade Card",
       "text": "Upgrade an action card from ARNO?",
-      "note": "Please note: Once ARNO reaches 2 conservation points, he always chooses to take an additional association worker, not a card upgrade."
+      "note": "Please note: Once ARNO reaches 2 conservation points, he always chooses to take an additional association worker, not a card upgrade.",
+      "noteAppeal15BonusTile": "ARNO chooses the bonus tile if he reaches more than 15 reputation (if sti available)."
     },
     "revertUpgradeCard": {
       "title": "Revert Upgrade Card",
@@ -89,7 +91,7 @@
     "pickConservationProject": {
       "conservationProjectSelection": "Conservation Project Selection",
       "conservationProjectsHand": "How many Conservation Project cards has ARNO on his zoo mat?",
-      "conservationProjectsBoardNoToken": "How many Conservation Project cards are available next to the Association board without any player tokens?",
+      "conservationProjectsBoardNoToken": "How many Conservation Project cards are available next to the Association board without any player tokens? (Ignore blocker tokens from the unused color.)",
       "conservationProjectsBoardAvailable": "How many Conservation Project cards are available next to the Association board which ARNO did not support yet?",
       "pick": "Pick Conservation Project",
       "pickFromHand": "ARNO supports the {number}. Conservation Project card from his zoo mat.",

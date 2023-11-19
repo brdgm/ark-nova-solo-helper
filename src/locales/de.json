@@ -2,7 +2,7 @@
   "gameTitle": "Arche Nova",
   "home": {
     "title": "Arche Nova Solo Helper",
-    "play1": "Spiele den <a href='https://boardgamegeek.com/thread/2823056/rno-alternative-solo-mode' target='_blank' rel='noopener'><b>A.R.N.O. 2.0 Solo-Modus</b></a> (inoffiziell) von <a href='https://boardgamegeek.com/boardgame/342942/ark-nova' target='_blank' rel='noopener'><b>Arche Nova</b></a>. Im Unterschied zum offiziellen Solo-Modus werden ein oder mehrere zusätzliche Gegner simuliert wie in einem Mehrspieler-Spiel.",
+    "play1": "Spiele den <a href='https://boardgamegeek.com/thread/2823056/rno-alternative-solo-mode' target='_blank' rel='noopener'><b>A.R.N.O. 3.0 Solo-Modus</b></a> (inoffiziell) von <a href='https://boardgamegeek.com/boardgame/342942/ark-nova' target='_blank' rel='noopener'><b>Arche Nova</b></a>. Im Unterschied zum offiziellen Solo-Modus werden ein oder mehrere zusätzliche Gegner simuliert wie in einem Mehrspieler-Spiel.",
     "play2": "Um den Solo-Modus zu spielen benötigst Du nur das Basis-Spiel. Diese Applikation ersetzt das ARNO Karten-Deck und die Würfel und kontrolliert den Fortschritt von ARNO.",
     "feedback": "Discussion and Feedback:"
   },
@@ -20,7 +20,13 @@
     "difficultyLevel": {
       "title": "Schwierigkeitsgrad",
       "easy": "Leicht",
-      "hard": "Schwer"
+      "hard": "Schwer",
+      "level7plus": "Level 7+: Wenn du eine noch größere Herausforderung suchst: gib ARNO für jeden zusätzlichen Schwierigkeitsgrad einen weiteren Artenschutzpunkt zu Beginn des Spiels."
+    },
+    "expansions": {
+      "title": "Erweiterungen",
+      "marine-worlds": "Wasserwelten",
+      "marineWorldsNewActionCards": "Nimm dir 3 zufällige der 20 <b>neuen Aktionskarten</b> und wähle 2 davon (mit unterschiedlichen Aktionstypen)."
     },
     "pickZooMap": {
       "title": "Zooplan",
@@ -30,18 +36,13 @@
       "map0": "Plan 0 (mittel)",
       "mapAdvanced": "Plan {id} (fortgeschritten)",
       "mapAdvancedMapPack": "Plan {id} (fortgeschritten, Zooplan Pack {mapPack})"
-    },
-    "actionCardDistribution": {
-      "title": "Aktionskarten-Verteilung",
-      "schema": "Wahrscheinlichkeit (%)",
-      "text": "Experimentelle Option. Die Auswahl '0-25-25-25-25' entspricht den ARNO-Regeln."
     }
   },
   "setupARNO": {
     "title": "ARNO Spielaufbau",
-    "text1": "Baue das Spiel entsprechend der Spieleranzahl (inklusive ARNO(s)) auf. Ein menschlicher Spieler ist Startspieler.",
-    "text2": "Jeder ARNO beginnt mit <b>-3 Artenschutzpunkten</B> und Attraktion entsprechend der Reihenfolge.",
-    "text2-conservation": "Lege z.B. drei Zählsteine neben ARNOs Artenschutzmarker und entferne sie nach und nach, sobald ARNO seine ersten Artenschutzpunkte während des Spiels gesammelt hat.",
+    "text1": "Baue das Spiel entsprechend der Spieleranzahl auf, inklusive ARNO(s). Ein menschlicher Spieler ist Startspieler.",
+    "text2": "Jeder ARNO beginnt mit <b>-{count} Artenschutzpunkten</B> und Attraktion entsprechend der Reihenfolge.",
+    "text2-conservation": "Lege z.B. {count} Zählsteine neben ARNOs Artenschutzmarker und entferne sie nach und nach, sobald ARNO seine ersten Artenschutzpunkte während des Spiels gesammelt hat.",
     "text2-appeal": "Ist ARNO z.B. der dritte Spieler, startet er mit 2 Attraktionspunkten.",
     "text3": "Jeder ARNO erhält die Komponenten einer Farbe, einen Zooplan A, eine verdeckte Endwertungskarte sowie 8 zufällige Zookarten.",
     "text4": "Lege alle Markierungssteine neben den Zooplan von ARNO.",
@@ -67,7 +68,8 @@
     "upgradeCard": {
       "title": "Karte Aufwerten",
       "text": "Eine Aktionskarte von ARNO aufwerten?",
-      "note": "Bitte beachten: Erreicht ARNO den 2 Punkte-Bonus der Artenschutzleiste wählt er immer einen zusätzlichen Arbeiter, keine Karten-Aufwertung."
+      "note": "Bitte beachten: Erreicht ARNO den 2 Punkte-Bonus der Artenschutzleiste wählt er immer einen zusätzlichen Arbeiter, keine Karten-Aufwertung.",
+      "noteAppeal15BonusTile": "ARNO wählt das Bonusplättchen wenn er mehr als 15 Ansehen erreicht (wenn verfügbar)."
     },
     "revertUpgradeCard": {
       "title": "Karten-Aufwertung rückgängig machen",
@@ -89,7 +91,7 @@
     "pickConservationProject": {
       "conservationProjectSelection": "Artenschutzprojekt-Auswahl",
       "conservationProjectsHand": "Wie viele Artenschutzprojekte hat ARNO auf seinem Zooplan?",
-      "conservationProjectsBoardNoToken": "Wie viele Artenschutzprojekte liegen aus, die noch keine Markierungssteine haben (komplett frei)?",
+      "conservationProjectsBoardNoToken": "Wie viele Artenschutzprojekte liegen aus, die noch keine Markierungssteine von anderen Spielern haben? (Ignoriere die blockierenden Markierungssteine mit der ungenutzten Farbe.)",
       "conservationProjectsBoardAvailable": "Wie viele Artenschutprojekte liegen aus, die ARNO noch unterstützen kann?",
       "pick": "Artenschutzprojekt ermitteln",
       "pickFromHand": "ARNO unterstützt das {number}. Artenschutzprojekt von seinem Zooplan.",

@@ -5,13 +5,11 @@ import { RouteLocation } from 'vue-router'
 import { Store } from 'vuex'
 import BotActions from '@/services/BotActions'
 import PlayerColor from '@/services/enum/PlayerColor'
-import ActionCardDistributionSchema from '@/services/enum/ActionCardDistributionSchema'
 import getDifficultyLevel from './getDifficultyLevel'
 
 export default class NavigationState {
 
   readonly difficultyLevel : DifficultyLevel
-  readonly actionCardDistribution : ActionCardDistributionSchema
   readonly playerCount : number
   readonly botCount : number
   readonly round : number
@@ -23,7 +21,6 @@ export default class NavigationState {
 
   constructor(route : RouteLocation, store : Store<State>) {    
     const setup = store.state.setup
-    this.actionCardDistribution = setup.actionCardDistribution
     this.playerCount = setup.playerSetup.playerCount
     this.botCount = setup.playerSetup.botCount
 
@@ -53,7 +50,7 @@ export default class NavigationState {
       if (roundNumber == 1) {
         // start new game
         cardSlots = CardSlots.new()
-        botActions = BotActions.newRandomSlot(cardSlots, this.difficultyLevel, this.actionCardDistribution, tokenScoringCardCount)
+        botActions = BotActions.newRandomSlot(cardSlots, this.difficultyLevel, tokenScoringCardCount)
         // start appeal depending on player order
         appealCount = botNumber + this.playerCount - 1
       }
@@ -65,10 +62,10 @@ export default class NavigationState {
         cardSlots = CardSlots.fromPersistence(this.previousBotRound.cardSlots)
         tokenScoringCardCount = this.previousBotRound.tokenScoringCardCount
         tokenNotepadCount = this.previousBotRound.tokenNotepadCount
-        appealCount = this.previousBotRound.appealCount || 0
+        appealCount = this.previousBotRound.appealCount ?? 0
         // move previous card to first position
         cardSlots.moveFirst(cardSlots.get(this.previousBotRound.slotNumber))
-        botActions = BotActions.newRandomSlot(cardSlots, this.difficultyLevel, this.actionCardDistribution, tokenScoringCardCount)
+        botActions = BotActions.newRandomSlot(cardSlots, this.difficultyLevel, tokenScoringCardCount)
       }
       botRound = {
         round: roundNumber,
@@ -92,7 +89,7 @@ export default class NavigationState {
     if (this.bot > 0) {
       playerColor = playerColors[this.playerCount + this.bot - 1]
     }
-    return playerColor || PlayerColor.BLUE
+    return playerColor ?? PlayerColor.BLUE
   }
 
 }

@@ -2,10 +2,10 @@
   <ol>
     <li v-html="t('setupARNO.text1')"></li>
     <li>
-      <img src="@/assets/arno-conservation-start-setup.jpg" class="conservation-start-setup float-end ms-2 me-2 mt-2"/>
-      <span v-html="t('setupARNO.text2')"></span>
+      <img :src="conservationSetupImageFileName" class="conservation-start-setup float-end ms-2 me-2 mt-2" alt=""/>
+      <span v-html="t('setupARNO.text2', {count:conservationPointStartMinus})"></span>
       <ul>
-        <li v-html="t('setupARNO.text2-conservation')"></li>
+        <li v-html="t('setupARNO.text2-conservation', {count:conservationPointStartMinus})"></li>
         <li v-html="t('setupARNO.text2-appeal')"></li>
       </ul>
     </li>
@@ -24,11 +24,13 @@
     <li v-html="t('setupARNO.text8')"></li>
   </ol>
   <p>
-    <img src="@/assets/arno-zoo-mat.jpg" class="zoomat"/>
+    <img src="@/assets/arno-zoo-mat.jpg" class="zoomat" alt=""/>
   </p>
 </template>
 
 <script lang="ts">
+import Expansion from '@/services/enum/Expansion'
+import { useStore } from '@/store'
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 
@@ -36,7 +38,20 @@ export default defineComponent({
   name: 'SetupARNOInstructions',
   setup() {
     const { t } = useI18n()
+    useStore()
     return { t }
+  },
+  computed: {
+    hasMarineWorldsExpansion() : boolean {
+      return (this.$store.state.setup.expansions ?? []).includes(Expansion.MARINE_WORLDS)
+    },
+    conservationPointStartMinus() : number {
+      return this.hasMarineWorldsExpansion ? 3 : 5
+    },
+    conservationSetupImageFileName() : string {
+      const components = this.hasMarineWorldsExpansion ? 'expansion' : 'base'
+      return new URL(`/src/assets/arno-conservation-start-setup/start-setup-${components}-${this.conservationPointStartMinus}.webp`, import.meta.url).toString()
+    }
   }
 })
 </script>

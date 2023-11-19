@@ -1,10 +1,11 @@
-import ActionCardDistributionSchema from '@/services/enum/ActionCardDistributionSchema'
 import CardName from '@/services/enum/CardName'
 import DifficultyLevel from '@/services/enum/DifficultyLevel'
 import PlayerColor from '@/services/enum/PlayerColor'
 import { InjectionKey } from 'vue'
 import { createStore, useStore as baseUseStore, Store } from 'vuex'
 import { name } from '@/../package.json'
+import Expansion from '@/services/enum/Expansion'
+import toggleArrayItem from 'brdgm-commons/src/util/array/toggleArrayItem'
 
 const LOCALSTORAGE_KEY = `${name}.store`
 
@@ -19,7 +20,7 @@ export interface Setup {
   difficultyLevel?: DifficultyLevel  // for backward-compatibility
   difficultyLevels?: DifficultyLevel[]  // difficulty level per bot
   zooMaps?: string[]
-  actionCardDistribution: ActionCardDistributionSchema
+  expansions?: Expansion[]
   debugMode?: boolean
 }
 export interface PlayerSetup {
@@ -67,8 +68,7 @@ export const store = createStore<State>({
         playerCount: 1,
         botCount: 1,
         playerColors: [PlayerColor.BLUE,PlayerColor.RED,PlayerColor.YELLOW,PlayerColor.BLACK]
-      },
-      actionCardDistribution: ActionCardDistributionSchema.P0_25_25_25_25
+      }
     },
     rounds: []
   },
@@ -92,8 +92,11 @@ export const store = createStore<State>({
     setupDifficultyLevels(state : State, levels: number[]) {
       state.setup.difficultyLevels = levels
     },
-    setupActionCardDistribution(state : State, schema: ActionCardDistributionSchema) {
-      state.setup.actionCardDistribution = schema
+    setupToggleExpansion(state : State, expansion: Expansion) {
+      if (!state.setup.expansions) {
+        state.setup.expansions = []
+      }
+      toggleArrayItem(state.setup.expansions, expansion)
     },
     setupZooMaps(state : State, zooMaps: string[]) {
       state.setup.zooMaps = zooMaps

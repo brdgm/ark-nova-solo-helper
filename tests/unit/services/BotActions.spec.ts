@@ -2,7 +2,6 @@ import BotActions from '@/services/BotActions'
 import Cards from '@/services/Cards'
 import CardSlots from '@/services/CardSlots'
 import Action from '@/services/enum/Action'
-import ActionCardDistributionSchema from '@/services/enum/ActionCardDistributionSchema'
 import CardName from '@/services/enum/CardName'
 import DifficultyLevel from '@/services/enum/DifficultyLevel'
 import { expect } from 'chai'
@@ -10,7 +9,7 @@ import { expect } from 'chai'
 describe('services/BotActions', () => {
   it('randomPick', () => {
     const cardSlots = CardSlots.new()
-    const botActions = BotActions.newRandomSlot(cardSlots, DifficultyLevel.L1_BEGINNER, ActionCardDistributionSchema.P0_25_25_25_25, 0)
+    const botActions = BotActions.newRandomSlot(cardSlots, DifficultyLevel.L1_BEGINNER, 0)
 
     expect(botActions.activeCard).not.to.undefined
     expect(botActions.slotNumber).to.greaterThanOrEqual(2)
@@ -46,10 +45,10 @@ describe('services/BotActions', () => {
     const botActions = setup(CardName.ASSOCIATION, false, 4, DifficultyLevel.L3_EASY)
 
     expect(botActions.activeCard.name).to.eq(CardName.ASSOCIATION)
-    expect(botActions.actions).to.eql([{action: Action.GAIN_PARTNER_ZOO, amount: 0}])
+    expect(botActions.actions).to.eql([{action: Action.GAIN_PARTNER_UNIVERSITY, amount: 0}])
     expect(botActions.hasFallback).to.true
     expect(botActions.fallbackActions).to.eql([
-      {action: Action.CONSERVATION, amount: 2},
+      {action: Action.CONSERVATION, amount: 1},
       {action: Action.BREAK, amount: 2},
       {action: Action.GAIN_PARTNER_ZOO_OR_UNIVERSITY, amount: 0}
     ])
@@ -65,7 +64,7 @@ describe('services/BotActions', () => {
     ])
     expect(botActions.hasFallback).to.true
     expect(botActions.fallbackActions).to.eql([
-      {action: Action.CONSERVATION, amount: 2},
+      {action: Action.CONSERVATION, amount: 1},
       {action: Action.BREAK, amount: 2},
       {action: Action.GAIN_PARTNER_ZOO_OR_UNIVERSITY, amount: 0}
     ])
@@ -120,7 +119,7 @@ describe('services/BotActions', () => {
     const botActions = setup(CardName.BUILD, false, 5, DifficultyLevel.L5_HARD)
 
     expect(botActions.activeCard.name).to.eq(CardName.BUILD)
-    expect(botActions.actions).to.eql([{action: Action.CONSERVATION, amount: 4}])
+    expect(botActions.actions).to.eql([{action: Action.CONSERVATION, amount: 3}])
     expect(botActions.hasFallback).to.false
   })
 
@@ -128,7 +127,10 @@ describe('services/BotActions', () => {
     const botActions = setup(CardName.BUILD, true, 2, DifficultyLevel.L3_EASY)
 
     expect(botActions.activeCard.name).to.eq(CardName.BUILD)
-    expect(botActions.actions).to.eql([{action: Action.REPUTATION, amount: 2}])
+    expect(botActions.actions).to.eql([
+      {action: Action.TAKE_CARD_DISPLAY, amount: 0},
+      {action: Action.REPUTATION, amount: 1}
+    ])
     expect(botActions.hasFallback).to.false
   })
 

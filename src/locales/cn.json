@@ -2,7 +2,7 @@
     "gameTitle": "方舟动物园",
     "home": {
       "title": "方舟动物园单人模式助手",
-      "play1": "游玩 <a href='https://boardgamegeek.com/thread/2823056/rno-alternative-solo-mode' target='_blank' rel='noopener'><b>A.R.N.O. 2.0 单人模式</b></a> (unofficial) of <a href='https://boardgamegeek.com/boardgame/342942/ark-nova' target='_blank' rel='noopener'><b>方舟动物园</b></a>. 不同于官方的单人模式，本模式意在模拟多人对局的真实情况。",
+      "play1": "游玩 <a href='https://boardgamegeek.com/thread/2823056/rno-alternative-solo-mode' target='_blank' rel='noopener'><b>A.R.N.O. 3.0 单人模式</b></a> (unofficial) of <a href='https://boardgamegeek.com/boardgame/342942/ark-nova' target='_blank' rel='noopener'><b>方舟动物园</b></a>. 不同于官方的单人模式，本模式意在模拟多人对局的真实情况。",
       "play2": "你只需要基础游戏即可游玩。本助手会代替ARNO卡组并追踪自动机的进度。",
       "feedback": "意见反馈:"
     },
@@ -30,18 +30,13 @@
         "map0": "地图 0 (中等)",
         "mapAdvanced": "地图 {id} (进阶)",
         "mapAdvancedMapPack": "地图 {id} (进阶, 地图扩充包 {mapPack})"
-      },
-      "actionCardDistribution": {
-        "title": "行动卡牌分布",
-        "schema": "概率 (%)",
-        "text": "测试功能。'0-25-25-25-25' 这个选项是ARNO规则书上设定的概率。"
       }
     },
     "setupARNO": {
       "title": "ARNO设置",
       "text1": "根据玩家人数设置游戏 (包括 ARNO)。 人类玩家会是起始玩家。",
-      "text2": "每个ARNO 开始时有 <b>-3 保护点数</b>和顺位对应的魅力。",
-      "text2-conservation": "在ARNO的保护点数指示物边上放置3个玩家标记，每当它提升1点保护点数后，移除一个。",
+      "text2": "每个ARNO 开始时有 <b>-{count} 保护点数</b>和顺位对应的魅力。",
+      "text2-conservation": "在ARNO的保护点数指示物边上放置{count}个玩家标记，每当它提升1点保护点数后，移除一个。",
       "text2-appeal": "例如：如果ARNO是三号位，则它开始时有2点魅力。",
       "text3": "每个ARNO拿取它对应颜色的游戏配件，一张地图A，一张终局记分卡和8张随机卡牌。",
       "text4": "在ARNO地图边上放置玩家标记。",
