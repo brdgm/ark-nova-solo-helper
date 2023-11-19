@@ -40,7 +40,7 @@
   },
   "setupARNO": {
     "title": "ARNO Spielaufbau",
-    "text1": "Baue das Spiel entsprechend der Spieleranzahl (inklusive ARNO(s)) auf. Ein menschlicher Spieler ist Startspieler.",
+    "text1": "Baue das Spiel entsprechend der Spieleranzahl auf, inklusive ARNO(s). Ein menschlicher Spieler ist Startspieler.",
     "text2": "Jeder ARNO beginnt mit <b>-{count} Artenschutzpunkten</B> und Attraktion entsprechend der Reihenfolge.",
     "text2-conservation": "Lege z.B. {count} Zählsteine neben ARNOs Artenschutzmarker und entferne sie nach und nach, sobald ARNO seine ersten Artenschutzpunkte während des Spiels gesammelt hat.",
     "text2-appeal": "Ist ARNO z.B. der dritte Spieler, startet er mit 2 Attraktionspunkten.",
