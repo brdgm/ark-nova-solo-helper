@@ -51,7 +51,7 @@
   <ModalDialog id="actionHelpProjectConservationWorkModal" :title="t('roundBot.actionHelpProjectConservationWork.title')"
       :size-lg="true">
     <template #body>
-      <PickConservationProject ref="pickConservationProject"/>
+      <PickConservationProject ref="pickConservationProject" :navigationState="navigationState"/>
     </template>
     <template #footer>
       <button class="btn btn-outline-secondary" @click="pickConservationProject.reset()">{{t('action.reset')}}</button>

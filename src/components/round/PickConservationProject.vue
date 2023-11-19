@@ -29,18 +29,22 @@
 
 <script lang="ts">
 import rollDice from 'brdgm-commons/src/util/random/rollDice'
-import { useStore } from '@/store'
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import DifficultyLevel from '@/services/enum/DifficultyLevel'
+import NavigationState from '@/util/NavigationState'
 
 export default defineComponent({
   name: 'PickConservationProject',
   setup() {
     const { t } = useI18n()
-    const store = useStore()
-    const difficultyLevel = store.state.setup.difficultyLevel
-    return { t, difficultyLevel }
+    return { t }
+  },
+  props: {
+    navigationState: {
+      type: NavigationState,
+      required: true
+    }
   },
   data() {
     return {
@@ -59,6 +63,9 @@ export default defineComponent({
     },
     conservationProjectPicked() : boolean {
       return this.pickFromHand || this.pickFromBoardNoToken || this.pickFromBoardAvailable
+    },
+    difficultyLevel() : DifficultyLevel {
+      return this.navigationState.difficultyLevel
     },
     projectSlotLeftMost() : boolean {
       return this.difficultyLevel == DifficultyLevel.L5_HARD || this.difficultyLevel == DifficultyLevel.L6_VERY_HARD
