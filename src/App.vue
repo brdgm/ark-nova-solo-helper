@@ -65,9 +65,9 @@ import AppHeader from 'brdgm-commons/src/components/structure/AppHeader.vue'
 import AppFooter from 'brdgm-commons/src/components/structure/AppFooter.vue'
 import ModalDialog from 'brdgm-commons/src/components/structure/ModalDialog.vue'
 import getErrorMessage from 'brdgm-commons/src/util/error/getErrorMessage'
-import showModal, { showModalIfExist } from 'brdgm-commons/src/util/modal/showModal'
+import showModal from 'brdgm-commons/src/util/modal/showModal'
 import { version, description } from '@/../package.json'
-import { registerSW } from 'virtual:pwa-register'
+import registerSWWithOptions from 'brdgm-commons/src/util/serviceWorker/registerSWWithOptions'
 
 export default defineComponent({
   name: 'App',
@@ -83,12 +83,8 @@ export default defineComponent({
     })
     const store = useStore()
 
-    // PWA refresh
-    const updateServiceWorker = registerSW({
-      onNeedRefresh() {
-        showModalIfExist('serviceWorkerUpdatedRefresh')
-      }
-    })
+    // handle PWA updates with prompt if a new version is detected, check every 8h for a new version
+    const updateServiceWorker = registerSWWithOptions({checkUpdateIntervalSeconds: 8 * 60 * 60})
 
     store.commit('initialiseStore')
     locale.value = store.state.language
