@@ -91,7 +91,7 @@
     "pickConservationProject": {
       "conservationProjectSelection": "Conservation Project Selection",
       "conservationProjectsHand": "How many Conservation Project cards has ARNO on his zoo mat?",
-      "conservationProjectsBoardNoToken": "How many Conservation Project cards are available next to the Association board without any player tokens?",
+      "conservationProjectsBoardNoToken": "How many Conservation Project cards are available next to the Association board without any player tokens? (Ignore blocker tokens from the unused color.)",
       "conservationProjectsBoardAvailable": "How many Conservation Project cards are available next to the Association board which ARNO did not support yet?",
       "pick": "Pick Conservation Project",
       "pickFromHand": "ARNO supports the {number}. Conservation Project card from his zoo mat.",

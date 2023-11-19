@@ -91,7 +91,7 @@
     "pickConservationProject": {
       "conservationProjectSelection": "Artenschutzprojekt-Auswahl",
       "conservationProjectsHand": "Wie viele Artenschutzprojekte hat ARNO auf seinem Zooplan?",
-      "conservationProjectsBoardNoToken": "Wie viele Artenschutzprojekte liegen aus, die noch keine Markierungssteine haben (komplett frei)?",
+      "conservationProjectsBoardNoToken": "Wie viele Artenschutzprojekte liegen aus, die noch keine Markierungssteine von anderen Spielern haben? (Ignoriere die blockierenden Markierungssteine mit der ungenutzten Farbe.)",
       "conservationProjectsBoardAvailable": "Wie viele Artenschutprojekte liegen aus, die ARNO noch unterstützen kann?",
       "pick": "Artenschutzprojekt ermitteln",
       "pickFromHand": "ARNO unterstützt das {number}. Artenschutzprojekt von seinem Zooplan.",
