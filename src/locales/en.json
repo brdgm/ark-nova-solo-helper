@@ -69,7 +69,7 @@
       "title": "Upgrade Card",
       "text": "Upgrade an action card from ARNO?",
       "note": "Please note: Once ARNO reaches 2 conservation points, he always chooses to take an additional association worker, not a card upgrade.",
-      "noteAppeal15BonusTile": "ARNO chooses the bonus tile if he reaches more than 15 reputation (if sti available)."
+      "noteAppeal15BonusTile": "ARNO chooses the bonus tile if he reaches more than 15 reputation (if still available)."
     },
     "revertUpgradeCard": {
       "title": "Revert Upgrade Card",
