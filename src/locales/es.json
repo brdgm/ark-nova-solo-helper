@@ -20,7 +20,7 @@
     "difficultyLevel": {
            "title": "Dificultad",
            "easy": "Fácil",
-           "hard": "Difícil"
+           "hard": "Difícil",
         "level7plus": "Nivel 7+: Si deseas un modo más difícil, añade un punto de conservación para ARNO al principio del juego por cada nivel adicional."
     },
     "expansions": {
@@ -66,10 +66,9 @@
     "associationWorker": "ARNO coloca un <b>Trabajador Asociado</b>:",
     "fallbackText": "Alternativamente, si no es posible:",
     "upgradeCard": {
-    "upgradeCard": {
       "title": "Mejora una carta",
       "text": "¿Mejorar una carta de acción de ARNO?",
-      "note": "Nota: Cuando ARNO acumula 2 puntos de conservación, escoge tener un nuevo trabajador asociado, no mejorar una carta."
+      "note": "Nota: Cuando ARNO acumula 2 puntos de conservación, escoge tener un nuevo trabajador asociado, no mejorar una carta.",
       "noteAppeal15BonusTile": "ARNO escoge la loseta de bonificación si alcanza más de 15 de reputación (si aún se encuentra disponible)."
     },
     "revertUpgradeCard": {
@@ -151,7 +150,7 @@
   "breakInfo": {
     "link": "Pausa",
     "text1": "Durante las pausas, ARNO toma <b>tres cartas</b> del mazo. Conserva el primer Proyecto de Conservación y juega la primera carta de Animal en su tablero de zoológico.",
-    "text2": "      "text2": "La carta de Animal jugada puede disparar efectos de las cartas de los jugadores humanos. Las demás cartas son descartadas."
+    "text2": "La carta de Animal jugada puede disparar efectos de las cartas de los jugadores humanos. Las demás cartas son descartadas."
   },
   "bonusTile": {
     "link": "Loseta de bonificación",
