@@ -1,27 +1,27 @@
 {
   "gameTitle": "Ark Nova",
-     "home": {
-       "title": "Ark Nova - Asistente para juego en solitario",
-       "play1": "Juega el <a href='https://boardgamegeek.com/thread/2823056/rno-alternative-solo-mode' target='_blank' rel='noopener'><b>modo en solitario A.R.N.O. 3.0</b></a> (no oficial) de <a href='https://boardgamegeek.com/boardgame/342942/ark-nova' target='_blank' rel='noopener'><b>Ark Nova</b></a>. A diferencia del modo en solitario oficial, este simula la presencia uno o más oponentes adicionales para asemejar la partida en solitario a una partida multijugador.",
-       "play2": "Para este modo necesitas solamente los componentes incluidos en el juego base. Esta aplicación sustituye el mazo de cartas de ARNO y los dados, al mismo tiempo que registra el progreso de ARNO.",
-      "feedback": "Discusión y Contribuciones:"
+  "home": {
+    "title": "Ark Nova - Asistente para juego en solitario",
+    "play1": "Juega el <a href='https://boardgamegeek.com/thread/2823056/rno-alternative-solo-mode' target='_blank' rel='noopener'><b>modo en solitario A.R.N.O. 3.0</b></a> (no oficial) de <a href='https://boardgamegeek.com/boardgame/342942/ark-nova' target='_blank' rel='noopener'><b>Ark Nova</b></a>. A diferencia del modo en solitario oficial, este simula la presencia uno o más oponentes adicionales para asemejar la partida en solitario a una partida multijugador.",
+    "play2": "Para este modo necesitas solamente los componentes incluidos en el juego base. Esta aplicación sustituye el mazo de cartas de ARNO y los dados, al mismo tiempo que registra el progreso de ARNO.",
+    "feedback": "Discusión y Contribuciones:"
   },
-   "setup": {
-        "title": "Configurar partida",
-        "players": {
-          "title": "Jugador",
-          "playerCount": "Jugadores humanos",
-          "playerCountItem": "{count} Jugador | {count} Jugadores",
-          "playerColor": "Color del jugador | Color del jugador {index}",
-          "botCount": "ARNO Bots",
-          "botCountItem": "{count} ARNO Bot | {count} ARNO Bots",
-        "botColor": "ARNO Color | ARNO {index} Color"
+  "setup": {
+    "title": "Configurar partida",
+    "players": {
+      "title": "Jugador",
+      "playerCount": "Jugadores humanos",
+      "playerCountItem": "{count} Jugador | {count} Jugadores",
+      "playerColor": "Color del jugador | Color del jugador {index}",
+      "botCount": "ARNO Bots",
+      "botCountItem": "{count} ARNO Bot | {count} ARNO Bots",
+      "botColor": "ARNO Color | ARNO {index} Color"
     },
     "difficultyLevel": {
-           "title": "Dificultad",
-           "easy": "Fácil",
-           "hard": "Difícil",
-        "level7plus": "Nivel 7+: Si deseas un modo más difícil, añade un punto de conservación para ARNO al principio del juego por cada nivel adicional."
+      "title": "Dificultad",
+      "easy": "Fácil",
+      "hard": "Difícil",
+      "level7plus": "Nivel 7+: Si deseas un modo más difícil, añade un punto de conservación para ARNO al principio del juego por cada nivel adicional."
     },
     "expansions": {
       "title": "Expansiones",
@@ -29,14 +29,14 @@
       "marineWorldsNewActionCards": "Toma 3 de las <b>nuevas cartas de Acción</b> al azar y escoge 2 de ellas (con diferentes tipos de acción)."
     },
     "pickZooMap": {
-        "title": "Mapa",
-        "pickRandom": "Escoger al azar (avanzado)",
-        "pleaseSelect": "(Seleccione un mapa)",
-        "mapA": "Mapa A (fácil)",
-        "map0": "Mapa 0 (intermedio)",
-        "mapAdvanced": "Mapa {id} (avanzado)",
-        "mapAdvancedMapPack": "Mapa {id} (avanzado, Mapa Promocional {mapPack})"
-      }
+      "title": "Mapa",
+      "pickRandom": "Escoger al azar (avanzado)",
+      "pleaseSelect": "(Seleccione un mapa)",
+      "mapA": "Mapa A (fácil)",
+      "map0": "Mapa 0 (intermedio)",
+      "mapAdvanced": "Mapa {id} (avanzado)",
+      "mapAdvancedMapPack": "Mapa {id} (avanzado, Mapa Promocional {mapPack})"
+    }
   },
   "setupARNO": {
     "title": "Configuración de ARNO",
@@ -54,9 +54,9 @@
     "text7-3": "Si ARNO tiene menos de cuatro cartas, adicionalmente conserva cartas de animal (hasta tener cuatro cartas).",
     "text8": "No necesitas dados ni cartas de acción para los ARNO."
   },
-   "roundPlayer": {
-     "title": "Jugador | Jugador {player}",
-     "info": "Toma tu turno."
+  "roundPlayer": {
+    "title": "Jugador | Jugador {player}",
+    "info": "Toma tu turno."
   },
   "roundBot": {
     "title": "ARNO | ARNO {bot}",
@@ -83,7 +83,7 @@
       "chooseDifferent": "Escoge una acción de asociación diferente:"
     },
     "actionHelpProjectConservationWork": {
-      "title": "Proyecto de Conservación"      
+      "title": "Proyecto de Conservación"
     },
     "actionFallbackPickPartnerZooOrUniversity": {
       "title": "Adquirir un Zoológico Amigo o una Universidad"
@@ -123,7 +123,7 @@
     "association": "Asociación",
     "build": "Construcción",
     "cards": "Cartas",
-    "sponsors": "Patrocinios"    
+    "sponsors": "Patrocinios"
   },
   "cardAction": {
     "gain-partner-zoo": "Adquiere el <b>Zoológico Amigo #{number}</b>.",
