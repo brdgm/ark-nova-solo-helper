@@ -1,190 +1,201 @@
 {
-    "gameTitle": "Ark Nova",
-    "home": {
-      "title": "Ark Nova - Asistente para juego en solitario",
-      "play1": "Juega el <a href='https://boardgamegeek.com/thread/2823056/rno-alternative-solo-mode' target='_blank' rel='noopener'><b>modo en solitario A.R.N.O. 3.0</b></a> (no oficial) de <a href='https://boardgamegeek.com/boardgame/342942/ark-nova' target='_blank' rel='noopener'><b>Ark Nova</b></a>. A diferencia del modo en solitario oficial, este simula la presencia uno o más oponentes adicionales para asemejar la partida en solitario a una partida multijugador.",
-      "play2": "Para este modo necesitas solamente los componentes incluidos en el juego base. Esta aplicación sustituye el mazo de cartas de ARNO y los dados, al mismo tiempo que registra el progreso de ARNO.",
-      "feedback": "Discusión y Contribuciones:"
-    },
-    "setup": {
-      "title": "Configurar partida",
-      "players": {
-        "title": "Jugador",
-        "playerCount": "Jugadores humanos",
-        "playerCountItem": "{count} Jugador | {count} Jugadores",
-        "playerColor": "Color del jugador | Color del jugador {index}",
-        "botCount": "ARNO Bots",
-        "botCountItem": "{count} ARNO Bot | {count} ARNO Bots",
-        "botColor": "ARNO Color | ARNO {index} Color"
-      },
-      "difficultyLevel": {
-        "title": "Dificultad",
-        "easy": "Fácil",
-        "hard": "Difícil"
-      },
-      "pickZooMap": {
-        "title": "Mapa",
-        "pickRandom": "Escoger al azar (avanzado)",
-        "pleaseSelect": "(Seleccione un mapa)",
-        "mapA": "Mapa A (fácil)",
-        "map0": "Mapa 0 (intermedio)",
-        "mapAdvanced": "Map {id} (avanzado)",
-        "mapAdvancedMapPack": "Map {id} (avanzado, Map Pack {mapPack})"
-      }
-    },
-    "setupARNO": {
-      "title": "Configuración de ARNO",
-      "text1": "Prepara la partida para el número total de jugadores (contando los ARNO bots) con los siguientes cambios para la preparación de los ARNO. Escoge a uno de los jugadores humanos como el jugador inicial.",
-      "text2": "Cada ARNO comienza con <b>-{count} puntos de conservación</b>, 0 puntos de reputación, y los puntos de atractivo correspondientes al orden del turno.",
-      "text2-conservation": "Por cada ARNO, coloca {count} cubos de jugador de su color junto al medidor de puntos de conservación. Cada vez que ARNO gane uno o más puntos de conservación, retira esa misma cantidad de cubos de su color del medidor. Cuando no queden cubos de su color sobre el medidor de reputación, ARNO podrá avanzar sobre el medidor como lo haría cualquier jugador humano.",
-      "text2-appeal": "Ej. Si un ARNO es el 3er jugador, comienza con 2 puntos de atractivo.",
-      "text3": "Cada ARNO recibe los cubos restantes y los asistentes de su color, un tablero de zoológico A, una carta de Puntuación Final (boca abajo) y 8 cartas de zoológico aleatorias.",
-      "text4": "Coloca todos los cubos de jugador de su color junto al tablero de cada ARNO. <b>Nota:</b> no coloques ningún cubo en los espacios correspondientes a las bonificaciones por apoyar los Proyectos de Conservación.",
-      "text5": "Cada ARNO comienza la partida con un asistente sobre su libreta de notas. Coloca el resto de sus asistentes sobre el espacio designado para ello en su tablero.",
-      "text6": "Para cada ARNO, coloca su carta de Puntuación Final y sus cartas de zoológico sobre la zona de construcción de su tablero de zoológico. Esto inhabilitará el área de construcción del tablero; esta área no es necesaria para ARNO.",
-      "text7": "Selecciona la mano inicial de cada ARNO; cada ARNO conservará a lo más 4 de sus 8 cartas:",
-      "text7-1": "Descarta todas las cartas de Patrocinador.",
-      "text7-2": "Conserva todas las cartas de Proyecto de Conservación.",
-      "text7-3": "SI ARNO tiene menos de cuatro cartas, conservará cartas de Animal hasta tener 4 cartas en total o quedarse sin cartas de Animal.",
-      "text8": "No necesitas dados ni cartas de acción para los ARNO."
-    },
-    "roundPlayer": {
-      "title": "Jugador | Jugador {player}",
-      "info": "Toma tu turno."
-    },
-    "roundBot": {
-      "title": "ARNO | ARNO {bot}",
-      "upgrade": "Mejora",
-      "revertUpgrade": "Cancelar",
-      "reroll": "Relanzar",
-      "associationWorker": "ARNO coloca un <b>Trabajador Asociado</b>:",
-      "fallbackText": "Alternativamente, si no es posible:",
-      "upgradeCard": {
-        "title": "Mejora una carta",
-        "text": "¿Mejorar una carta de acción de ARNO?",
-        "note": "Nota: Cuando ARNO acumula 2 puntos de conservación, escoge tener un nuevo trabajador asociado, no mejorar una carta."
-      },
-      "revertUpgradeCard": {
-        "title": "Cancelar la mejora de la carta",
-        "text": "Puedes cancelar la mejora de una carta de ARNO si la mejoraste <i>accidentalmente</i>.",
-        "choose": "(Escoger)"
-      },
-      "actionHelpAssociationWorker": {
-        "title": "Coloca un trabajador asociado",
-        "text": "ARNO nunca coloca dos trabajadores en la misma acción. Si ARNO ya tiene uno de sus trabajadores asociados en esta tarea de asociación, selecciona la siguiente labor más poderosa donde no tenga colocado ninguno de sus trabajadores. Si no hay ninguna acción más poderosa disponible, entonces selecciona la siguiente labor más débil donde no tenga colocado ninguno de sus trabajadores.",
-        "text-fallback": "SI ARNO no tiene trabajadores disponibles, recibe +2 puntos de conservación y avanza la pausa dos veces. Adicionalmente, recibe un nuevo Zoológico Amigo o una Universidad, priorizando aquel del que tiene menos en su tablero.",
-        "chooseDifferent": "Escoge una acción de asociación diferente:"
-      },
-      "actionHelpProjectConservationWork": {
-        "title": "Proyecto de Conservación"      
-      },
-      "actionFallbackPickPartnerZooOrUniversity": {
-        "title": "Adquirir un Zoológico Amigo o una Universidad"
-      },
-      "pickConservationProject": {
-        "conservationProjectSelection": "Escoger un Proyecto de Conservación",
-        "conservationProjectsHand": "¿Cuántas cartas de Proyecto de Conservación tiene ARNO en su tablero de zoológico?",
-        "conservationProjectsBoardNoToken": "¿Cuántos Proyectos de Conservación hay junto al tablero de Asociación sin ningún cubo de jugador?",
-        "conservationProjectsBoardAvailable": "¿Cuántos Proyectos de Conservación hay junto al tablero de Asociación que ARNO no haya apoyado aún?",
-        "pick": "Escoger un Proyecto de Conservación",
-        "pickFromHand": "ARNO apoya el Proyecto de Conservación {number} de su tablero de zoológico.",
-        "pickFromBoardNoToken": "ARNO apoya el Proyecto de Conservación {number} junto al tablero de Asociaciones que no tenga ningún cubo de jugador.",
-        "pickFromBoardAvailable": "ARNO apoya el Proyecto de Conservación {number}junto al tablero de Asociaciones que tenga espacio para uno de sus cubos.",
-        "tokenPlacement": "Colocación del cubo de jugador",
-        "projectSlotLeftMost": "ARNO quiere colocar su cubo en el espacio de la izquierda.",
-        "projectSlotMiddle": "ARNO quiere colocar su cubo en el espacio del centro.",
-        "projectSlotRightMost": "ARNO quiere colocar su cubo en el espacio de la derecha.",
-        "projectSlotAlternatives": "Si este espacio ya está ocupado por otro jugador, ARNO coloca su cubo en el siguiente espacio a la izquierda. Si no es posible, lo coloca en el siguiente espacio a la derecha. "
-      },
-      "gainPartnerZooOrUniversity": {
-        "missingMost": "¿De qué tiene menos ARNO?",
-        "partnerZoo": "Zoológico Amigo",
-        "partnerUniversity": "Universidad",
-        "pickRandom": "Al azar"
-      }
+  "gameTitle": "Ark Nova",
+  "home": {
+    "title": "Ark Nova - Asistente para juego en solitario",
+    "play1": "Juega el <a href='https://boardgamegeek.com/thread/2823056/rno-alternative-solo-mode' target='_blank' rel='noopener'><b>modo en solitario A.R.N.O. 3.0</b></a> (no oficial) de <a href='https://boardgamegeek.com/boardgame/342942/ark-nova' target='_blank' rel='noopener'><b>Ark Nova</b></a>. A diferencia del modo en solitario oficial, este simula la presencia uno o más oponentes adicionales para asemejar la partida en solitario a una partida multijugador.",
+    "play2": "Para este modo necesitas solamente los componentes incluidos en el juego base. Esta aplicación sustituye el mazo de cartas de ARNO y los dados, al mismo tiempo que registra el progreso de ARNO.",
+    "feedback": "Discusión y Contribuciones:"
+  },
+  "setup": {
+    "title": "Configurar partida",
+    "players": {
+      "title": "Jugador",
+      "playerCount": "Jugadores humanos",
+      "playerCountItem": "{count} Jugador | {count} Jugadores",
+      "playerColor": "Color del jugador | Color del jugador {index}",
+      "botCount": "ARNO Bots",
+      "botCountItem": "{count} ARNO Bot | {count} ARNO Bots",
+      "botColor": "ARNO Color | ARNO {index} Color"
     },
     "difficultyLevel": {
-      "1": "Nivel 1: Principiante",
-      "2": "Nivel 2: Muy fácil",
-      "3": "Nivel 3: Fácil",
-      "4": "Nivel 4: Intermedio",
-      "5": "Nivel 5: Difícil",
-      "6": "Nivel 6: Muy difícil"
+      "title": "Dificultad",
+      "easy": "Fácil",
+      "hard": "Difícil",
+      "level7plus": "Nivel 7+: Si deseas un modo más difícil, añade un punto de conservación para ARNO al principio del juego por cada nivel adicional."
     },
-    "cardType": {
-      "animals": "Animales",
-      "association": "Asociación",
-      "build": "Construcción",
-      "cards": "Cartas",
-      "sponsors": "Patrocinios"    
+    "expansions": {
+      "title": "Expansiones",
+      "marine-worlds": "Mundos Marinos",
+      "marineWorldsNewActionCards": "Toma 3 de las <b>nuevas cartas de Acción</b> al azar y escoge 2 de ellas (con diferentes tipos de acción)."
     },
-    "cardAction": {
-      "gain-partner-zoo": "Adquiere el <b>Zoológico Amigo #{number}</b>.",
-      "gain-partner-university": "Adquiere la <b>Universidad #{number}</b>.",
-      "conservation-project-work": "<b>Proyecto de Conservación</b>.",
-      "take-card-display": "Captura la <b>carta #{number}</b> del despliegue.",
-      "token-scoring-card": "Coloca <b>1</b> cubo de jugador de ARNO en su carta de Puntuación Final",
-      "token-notepad": "Coloca <b>{amount}</b> cubo(s) de jugador de ARNO sobre su <b>libreta</b> (se utilizarán durante la puntuación final).",
-      "donate": "ARNO hace una donación."
-    },
-    "aboutARNO": {
-      "link": "Reglas de ARNO",
-      "title": "Resumen de reglas de A.R.N.O.",
-      "text1": "ARNO <b>no usa dinero</b>. ARNO no gasta dinero para llevar a cabo acciones y nunca recibe dinero.",
-      "text2": "ARNO <b>solo utiliza el área derecha de su tablero de zoológico</b>. Aquí coloca sus Zoológicos Amigos y Universidades, y también guarda a sus trabajadores asociados. El área izquierda de su zoológico no se utiliza más que para colocar sus cartas de zoológico y su carta de Puntuación Final.",
-      "text3": "ARNO recibe las siguientes <b>bonificaciones</b> de su tablero de zoológico y de los tableros compartidos: <b>puntos de conservación, mejoras de cartas, puntos de reputación y trabajadores asociados</b>. Por otro lado, no recibe ninguna bonificación de las cartas de Animal o Patrocinador, construcciones, entornos, marcadores-X, ni durante la pausa.",
-      "text4": "Las cartas de Animal que se encuentren colocadas sobre el tablero de zoológico de ARNO funcionan como <b>referencia para algunos efectos de cartas</b> de los jugadores humanos. Siempre que ARNO coloque otra carta de animal sobre su tablero, los íconos de la carta pueden disparar efectos de las cartas de los jugadores humanos.",
-      "text5": "ARNO <b>nunca puede ser el objetivo de ningún efecto interactivo</b>. Si ARNO necesariamente fuera ser el objetivo de un efecto interactivo, en su lugar utiliza los efectos alternativos de juego en solitario de las cartas.",
-      "text6": "Siempre que ARNO <b>reciba cartas</b> durante la partida, descarta todas las cartas de Patrocinador y coloca las cartas de Animal y de Proyectos de Conservación en su tablero de zoológico."
-    },
-    "roundDisplay": {
-      "round": "Ronda {round}"
-    },
-    "breakInfo": {
-      "link": "Pausa",
-      "text1": "Durante las pausas, ARNO toma <b>tres cartas</b> del mazo. Conserva el primer Proyecto de Conservación y juega la primera carta de Animal en su tablero de zoológico.",
-      "text2": "La carta de Animal jugada puede disparar efectos de las cartas de los jugadores humanos. Las demás cartas son descartadas."
-    },
-    "bonusTile": {
-      "link": "Loseta de bonificación",
-      "text": "ARNO nunca escoge la bonificación impresa en el tablero en las zonas con tres opciones.",
-      "pick": "Escoger una loseta de bonificación",
-      "left": "ARNO escoge la loseta de bonificación <b>izquierda</b>.",
-      "right": "ARNO escoge la loseta de bonificación <b>derecha</b>.",
-      "usage": "ARNO puede utilizar solamente las siguientes tres losetas de bonificación. ARNO no recibe ninguna bonificación de las otras losetas.",
-      "pickPartnerZoo": "Selecciona un Zoológico Amigo",
-      "pickPartnerUniversity": "Selecciona una Universidad"
-    },
-    "scoring": {
-      "title": "Puntuación final",
-      "humanPlayers": "Jugadores humanos",
-      "humanPlayersText": "Ganan puntos de conservación o atractivo de su(s) <b>Carta(s) de Puntuación Final</b> y de sus cartas con el ícono de <b>final del juego</b>.",
-      "botText": "Ganan <b>{conservationPoints} punto(s) de conservación</b> por tener {tokenScoringCardCount} cubo(s) sobre su carta de Puntuación Final y {tokenNotepadCount} cubo(s) sobre su libreta.",
-      "conservationPoints": "Puntos de Conservación",
-      "appeal": "Atractivo",
-      "victoryPoints": "Puntos de Victoria",
-      "appealReputationTrack": "La aplicación cuenta el atractivo que ARNO recibe de jugar cartas. No puede registrar el atractivo que ARNO recibe en lugar de reputación en el espacio 15 del trayecto de reputación."
-    },
-    "notfound": {
-      "title": "No Encontrado"
-    },
-    "action": {
-      "playGame": "Jugar",
-      "startGame": "Comenzar Partida",
-      "next": "Siguiente",
-      "abortGame": "Abortar Juego",
-      "abortGameConfirm": "Abortando el juego actual - ¿estás seguro?",
-      "finishGame": "Terminar Partida",
-      "finishGameConfirm": "Terminar juego y hacer la puntuación final - ¿estás seguro?",
-      "endGame": "Terminar Partida",
-      "endGameConfirm": "Terminar juego y regresar a la pantalla de inicio - ¿estás seguro?",
-      "cancel": "Cancelar",
-      "backToHome": "Regresar a la pantalla de inicio",
-      "back": "Regresar",
-      "close": "Cerrar",
-      "reset": "Reiniciar"
-    },
-    "footer": {
-      "credits": "Créditos"
+    "pickZooMap": {
+      "title": "Mapa",
+      "pickRandom": "Escoger al azar (avanzado)",
+      "pleaseSelect": "(Seleccione un mapa)",
+      "mapA": "Mapa A (fácil)",
+      "map0": "Mapa 0 (intermedio)",
+      "mapAdvanced": "Mapa {id} (avanzado)",
+      "mapAdvancedMapPack": "Mapa {id} (avanzado, Mapa Promocional {mapPack})"
     }
+  },
+  "setupARNO": {
+    "title": "Configuración de ARNO",
+    "text1": "Prepara la partida para el número total de jugadores (contando los ARNO bots) con los siguientes cambios para la preparación de los ARNO. Escoge a uno de los jugadores humanos como el jugador inicial.",
+    "text2": "Cada ARNO comienza con <b>-{count} puntos de conservación</b>, 0 puntos de reputación, y los puntos de atractivo correspondientes al orden del turno.",
+    "text2-conservation": "Coloca {count} fichas de jugador como recordatorio junto al contador de puntos de conservación de ARNO y retíralas una a una en cuanto ARNO consiga sus primeros puntos de conservación.",
+    "text2-appeal": "Ej. Si ARNO es el 3er jugador, comienza con 2 puntos de atractivo.",
+    "text3": "Cada ARNO recibe los componentes de un color, un tablero de zoológico (map A), una carta de Puntuación Final (boca abajo) y 8 cartas de zoológico aleatorias.",
+    "text4": "Coloca todos los cubos de jugador de su color junto al tablero de cada ARNO.",
+    "text5": "Cada ARNO comienza la partida con un asistente sobre su libreta de notas. Coloca el resto de sus asistentes sobre el espacio designado para ello en su tablero.",
+    "text6": "Para cada ARNO, coloca su carta de Puntuación Final y sus cartas de zoológico sobre la zona de construcción de su tablero de zoológico. Esto inhabilitará el área de construcción del tablero; esta área no es necesaria para ARNO.",
+    "text7": "Ordena las 8 cartas de zoológico de cada ARNO por tipo:",
+    "text7-1": "Descarta todas las cartas de Patrocinador.",
+    "text7-2": "Conserva todas las cartas de Proyecto de Conservación (máximo cuatro cartas).",
+    "text7-3": "Si ARNO tiene menos de cuatro cartas, adicionalmente conserva cartas de animal (hasta tener cuatro cartas).",
+    "text8": "No necesitas dados ni cartas de acción para los ARNO."
+  },
+  "roundPlayer": {
+    "title": "Jugador | Jugador {player}",
+    "info": "Toma tu turno."
+  },
+  "roundBot": {
+    "title": "ARNO | ARNO {bot}",
+    "upgrade": "Mejora",
+    "revertUpgrade": "Cancelar",
+    "reroll": "Relanzar",
+    "associationWorker": "ARNO coloca un <b>Trabajador Asociado</b>:",
+    "fallbackText": "Alternativamente, si no es posible:",
+    "upgradeCard": {
+      "title": "Mejora una carta",
+      "text": "¿Mejorar una carta de acción de ARNO?",
+      "note": "Nota: Cuando ARNO acumula 2 puntos de conservación, escoge tener un nuevo trabajador asociado, no mejorar una carta.",
+      "noteAppeal15BonusTile": "ARNO escoge la loseta de bonificación si alcanza más de 15 de reputación (si aún se encuentra disponible)."
+    },
+    "revertUpgradeCard": {
+      "title": "Cancelar la mejora de la carta",
+      "text": "Puedes cancelar la mejora de una carta de ARNO si la mejoraste <i>accidentalmente</i>.",
+      "choose": "(Escoger)"
+    },
+    "actionHelpAssociationWorker": {
+      "title": "Coloca un trabajador asociado",
+      "text": "Si ARNO ya cuenta con un trabajador en esta acción de asociación, selecciona la siguiente más alta donde aún no cuente con trabajadores. Básicamente usa sus marcadores X para mejorar la acción; nunca coloca dos trabajadores en la misma acción. Si no hay una acción más alta, selecciona la siguiente acción de menor valor.",
+      "text-fallback": "Si ARNO no tiene trabajadores disponibles, recibe +2 puntos de conservación y avanza la pausa dos veces. Adicionalmente, recibe un nuevo Zoológico Amigo o una Universidad, priorizando aquel del que tiene menos en su tablero.",
+      "chooseDifferent": "Escoge una acción de asociación diferente:"
+    },
+    "actionHelpProjectConservationWork": {
+      "title": "Proyecto de Conservación"
+    },
+    "actionFallbackPickPartnerZooOrUniversity": {
+      "title": "Adquirir un Zoológico Amigo o una Universidad"
+    },
+    "pickConservationProject": {
+      "conservationProjectSelection": "Escoger un Proyecto de Conservación",
+      "conservationProjectsHand": "Cuántas cartas de Proyecto de Conservación tiene ARNO en su tablero de zoológico?",
+      "conservationProjectsBoardNoToken": "Cuántos Proyectos de Conservación hay junto al tablero de Asociación sin ningún cubo de jugador? (Ignora las fichas de colores no usados en el juego.)",
+      "conservationProjectsBoardAvailable": "Cuántos Proyectos de Conservación hay junto al tablero de Asociación que ARNO no haya apoyado aún?",
+      "pick": "Escoger un Proyecto de Conservación",
+      "pickFromHand": "ARNO apoya el Proyecto de Conservación {number} de su tablero de zoológico.",
+      "pickFromBoardNoToken": "ARNO apoya el Proyecto de Conservación {number} junto al tablero de Asociaciones que no tenga ningún cubo de jugador.",
+      "pickFromBoardAvailable": "ARNO apoya el Proyecto de Conservación {number}junto al tablero de Asociaciones que tenga espacio para uno de sus cubos.",
+      "tokenPlacement": "Colocación del cubo de jugador",
+      "projectSlotLeftMost": "ARNO prefiere colocar su cubo en el espacio de la izquierda.",
+      "projectSlotMiddle": "ARNO prefiere colocar su cubo en el espacio del centro.",
+      "projectSlotRightMost": "ARNO prefiere colocar su cubo en el espacio de la derecha.",
+      "projectSlotAlternatives": "Si este espacio ya está ocupado por otro jugador, ARNO coloca su cubo en el siguiente espacio a la izquierda. Si no es posible, lo coloca en el siguiente espacio a la derecha."
+    },
+    "gainPartnerZooOrUniversity": {
+      "missingMost": "¿De qué tiene menos ARNO?",
+      "partnerZoo": "Zoológico Amigo",
+      "partnerUniversity": "Universidad",
+      "pickRandom": "Al azar"
+    }
+  },
+  "difficultyLevel": {
+    "1": "Level 1: Principiante",
+    "2": "Level 2: Muy fácil",
+    "3": "Level 3: Fácil",
+    "4": "Level 4: Intermedio",
+    "5": "Level 5: Difícil",
+    "6": "Level 6: Muy difícil"
+  },
+  "cardType": {
+    "animals": "Animales",
+    "association": "Asociación",
+    "build": "Construcción",
+    "cards": "Cartas",
+    "sponsors": "Patrocinios"
+  },
+  "cardAction": {
+    "gain-partner-zoo": "Adquiere el <b>Zoológico Amigo #{number}</b>.",
+    "gain-partner-university": "Adquiere la <b>Universidad #{number}</b>.",
+    "conservation-project-work": "<b>Proyecto de Conservación</b>.",
+    "take-card-display": "Captura la <b>carta #{number}</b> del despliegue.",
+    "token-scoring-card": "Coloca <b>1</b> cubo de jugador de ARNO en su carta de Puntuación Final.",
+    "token-notepad": "Coloca <b>{amount}</b> cubo de jugador de ARNO en su <b>libreta</b> (para el efecto de puntuación final). | Coloca <b>{amount}</b> cubos de ARNO en su <b>libreta</b> (para el efecto de puntuación final).",
+    "donate": "ARNO hace una donación."
+  },
+  "aboutARNO": {
+    "link": "Reglas de ARNO",
+    "title": "Resumen de reglas de A.R.N.O.",
+    "text1": "ARNO <b>no usa dinero</b>. Él no gasta dinero para las acciones, y nunca recibe dinero (por ejemplo, durante las pausas o de cartas de Animales).",
+    "text2": "ARNO <b>únicamente usa la zona derecha de su tablero de zoológico</b>. Aquí coloca sus Zoológicos Amigos y Universidades, y también guarda a sus trabajadores asociados. También recibe los bonos una vez los desbloquea. El área izquierda de su zoológico no se utiliza más que para colocar sus cartas de zoológico y su carta de Puntuación Final.",
+    "text3": "ARNO recibe las siguientes <b>bonificaciones</b> de su tablero de zoológico y de los tableros compartidos: <b>Puntos de conservación, mejoras de cartas, puntos de reputación y trabajadores asociados</b>. Por otro lado, no recibe ninguna bonificación de las cartas de Animal o Patrocinador, construcciones, entornos, marcadores-X, ni durante la pausa.",
+    "text4": "Las cartas de Animal que se encuentren colocadas sobre el tablero de zoológico de ARNO funcionan como <b>referencia para algunos efectos de cartas</b> de los jugadores humanos. Siempre que ARNO coloque otra carta de animal sobre su tablero, los íconos de la carta pueden disparar efectos de las cartas de los jugadores humanos.",
+    "text5": "ARNO <b>nunca puede ser el objetivo de ningún efecto interactivo</b>. En su lugar utiliza los efectos alternativos de juego en solitario de las cartas.",
+    "text6": "Siempre que ARNO <b>reciba cartas</b> durante la partida, descarta todas las cartas de Patrocinador y coloca las cartas de Animal y de Proyectos de Conservación en su tablero de zoológico."
+  },
+  "roundDisplay": {
+    "round": "Ronda {round}"
+  },
+  "breakInfo": {
+    "link": "Pausa",
+    "text1": "Durante las pausas, ARNO toma <b>tres cartas</b> del mazo. Conserva el primer Proyecto de Conservación y juega la primera carta de Animal en su tablero de zoológico.",
+    "text2": "La carta de Animal jugada puede disparar efectos de las cartas de los jugadores humanos. Las demás cartas son descartadas."
+  },
+  "bonusTile": {
+    "link": "Loseta de bonificación",
+    "text": "ARNO nunca escoge la bonificación impresa en el tablero en las zonas con tres opciones.",
+    "pick": "Escoger una loseta de bonificación",
+    "left": "ARNO escoge la loseta de bonificación <b>izquierda</b>.",
+    "right": "ARNO escoge la loseta de bonificación <b>derecha</b>.",
+    "usage": "ARNO puede utilizar solamente las siguientes tres losetas de bonificación. ARNO no recibe ninguna bonificación de las otras losetas.",
+    "pickPartnerZoo": "Selecciona un Zoológico Amigo",
+    "pickPartnerUniversity": "Selecciona una Universidad"
+  },
+  "scoring": {
+    "title": "Puntuación final",
+    "humanPlayers": "Jugadores humanos",
+    "humanPlayersText": "Ganan puntos de conservación o atractivo de su(s) <b>Carta(s) de Puntuación Final</b> y de sus cartas con el ícono de <b>final del juego</b>.",
+    "botText": "Ganan <b>{conservationPoints} punto(s) de conservación</b> por tener {tokenScoringCardCount} cubo(s) sobre su carta de Puntuación Final y {tokenNotepadCount} cubo(s) sobre su libreta.",
+    "conservationPoints": "Puntos de Conservación",
+    "appeal": "Atractivo",
+    "victoryPoints": "Puntos de Victoria",
+    "appealReputationTrack": "La aplicación cuenta el atractivo que ARNO recibe de jugar cartas. No puede registrar el atractivo que ARNO recibe en lugar de reputación en el espacio 15 del trayecto de reputación."
+  },
+  "notfound": {
+    "title": "No Encontrado"
+  },
+  "action": {
+    "playGame": "Jugar",
+    "startGame": "Comenzar Partida",
+    "next": "Siguiente",
+    "abortGame": "Abortar Juego",
+    "abortGameConfirm": "Abortando el juego actual - ¿estás seguro?",
+    "finishGame": "Terminar Partida",
+    "finishGameConfirm": "Terminar juego y hacer la puntuación final - ¿estás seguro?",
+    "endGame": "Terminar Partida",
+    "endGameConfirm": "Terminar juego y regresar a la pantalla de inicio - ¿estás seguro?",
+    "cancel": "Cancelar",
+    "backToHome": "Regresar a la pantalla de Inicio",
+    "back": "Regresar",
+    "close": "Cerrar",
+    "reset": "Reiniciar"
+  },
+  "footer": {
+    "credits": "Créditos"
+  },
+  "serviceWorkerUpdatedRefresh": {
+    "title": "Actualizar aplicación",
+    "notice": "La aplicación ha sido actualizada - ¿deseas actualizar para usar la última versión?"
+  }
 }
