@@ -34,7 +34,6 @@ export default defineComponent({
     ModalDialog,
     SponsorCardDiscard
   },
-  emits: ['sponsorCardDiscardUpdate'],
   props: {
     round: {
       type: Number,
@@ -61,9 +60,8 @@ export default defineComponent({
   watch: {
     sponsorCardDiscardCount: {
       handler() {
-        this.$store.commit('roundSponsorCardDiscardCount',
+        this.$store.commit('roundBreakSponsorCardDiscardCount',
           { round: this.round, botBreakSponsorCardDiscardCount: this.sponsorCardDiscardCount })
-        this.$emit('sponsorCardDiscardUpdate')
       },
       deep: true
     }

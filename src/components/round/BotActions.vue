@@ -16,7 +16,15 @@
       <template v-if="isGainPartnerZoo(action.action)"><GainPartnerZoo/></template>
       <template v-else-if="isGainPartnerUniversity(action.action)"><GainPartnerUniversity/></template>
       <span v-else-if="isConservationProjectWork(action.action)" class="actionHelp" v-html="t(`cardAction.${action.action}`)" data-bs-toggle="modal" data-bs-target="#actionHelpProjectConservationWorkModal"></span>
-      <span v-else v-html="t(`cardAction.${action.action}`,{number:getRandomNumber(action.action),amount:action.amount},action.amount)"></span>
+      <span v-else v-html="t(`cardAction.${action.action}`,{number:takeCardRandomNumber,amount:action.amount},action.amount)"></span>
+      <template v-if="hasProjectModuleExpansion && isTakeCardDisplay(action.action)">
+        <p class="mt-2">
+          <label class="form-check-label">
+            <input class="form-check-input" type="checkbox" :value="true" v-model="takeCardSponsorCard">
+            {{t('roundBot.takeCardDisplay.sponsorCardDiscard')}}
+          </label>
+        </p>
+      </template>
     </div>
   </div>
   <div class="actions" v-if="botActions.hasFallback">
@@ -90,6 +98,7 @@ import GainPartnerUniversity from './GainPartnerUniversity.vue'
 import GainPartnerZoo from './GainPartnerZoo.vue'
 import GainPartnerZooOrUniversity from './GainPartnerZooOrUniversity.vue'
 import ModalDialog from 'brdgm-commons/src/components/structure/ModalDialog.vue'
+import Expansion from '@/services/enum/Expansion'
 
 export default defineComponent({
   name: 'BotActions',
@@ -117,7 +126,9 @@ export default defineComponent({
   },
   data() {
     return {
-      overwriteBotActions: [] as BotAction[]
+      overwriteBotActions: [] as BotAction[],
+      takeCardRandomNumber: rollDice(6),
+      takeCardSponsorCard: (this.navigationState.botRound?.sponsorCardDiscardCount ?? 0) == 1
     }
   },
   computed: {
@@ -142,6 +153,9 @@ export default defineComponent({
     },
     actionsWithDescription() : BotAction[] {
       return this.actionsAll.filter(item => !this.isIconOnly(item.action))
+    },
+    hasProjectModuleExpansion() : boolean {
+      return (this.$store.state.setup.expansions ?? []).includes(Expansion.ARNO_CONSERVATION_PROJECT_MODULE)
     }
   },
   methods: {
@@ -190,11 +204,8 @@ export default defineComponent({
     isConservationProjectWork(action : Action) : boolean {
       return action == Action.CONSERVATION_PROJECT_WORK
     },
-    getRandomNumber(action : Action) : number {
-      if (action == Action.TAKE_CARD_DISPLAY) {
-        return rollDice(6)
-      }
-      return 0
+    isTakeCardDisplay(action : Action) : boolean {
+      return action == Action.TAKE_CARD_DISPLAY
     },
     overwriteAssociationAction(action : Action) : void {
       this.overwriteBotActions = this.botActions.actions
@@ -207,6 +218,13 @@ export default defineComponent({
             }
             return botAction;
           })
+    }
+  },
+  watch: {
+    takeCardSponsorCard(newValue) {
+      const sponsorCardDiscardCount = newValue ? 1 : 0
+      this.$store.commit('roundBotSponsorCardDiscardCount',
+          {round:this.navigationState.round, bot:this.navigationState.bot,sponsorCardDiscardCount})
     }
   }
 })

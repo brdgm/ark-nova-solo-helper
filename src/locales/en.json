@@ -107,6 +107,9 @@
       "partnerZoo": "Partner Zoo",
       "partnerUniversity": "Partner University",
       "pickRandom": "Pick Random"
+    },
+    "takeCardDisplay": {
+      "sponsorCardDiscard": "Check here if it is a sponsor card (and discard it)"
     }
   },
   "difficultyLevel": {

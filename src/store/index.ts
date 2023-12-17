@@ -130,16 +130,20 @@ export const store = createStore<State>({
             })
       }
     },
-    roundSponsorCardDiscardCount(state : State, data: { round: number, botBreakSponsorCardDiscardCount : number[] }) {
-      let round = state.rounds[data.round - 1]
-      if (!round) {
-        round = {
-          round : data.round,
-          botRound: []
+    roundBreakSponsorCardDiscardCount(state : State, data: { round: number, botBreakSponsorCardDiscardCount : number[] }) {
+      const round = state.rounds[data.round - 1]
+      if (round) {
+        round.botBreakSponsorCardDiscardCount = data.botBreakSponsorCardDiscardCount
+      }
+    },
+    roundBotSponsorCardDiscardCount(state : State, data: { round: number, bot: number, sponsorCardDiscardCount : number }) {
+      const round = state.rounds[data.round - 1]
+      if (round) {
+        const botRound = round.botRound[data.bot - 1]
+        if (botRound) {
+          botRound.sponsorCardDiscardCount = data.sponsorCardDiscardCount
         }
       }
-      round.botBreakSponsorCardDiscardCount = data.botBreakSponsorCardDiscardCount
-      state.rounds[data.round - 1] = round
     },
     resetGame(state : State) {
       state.rounds = []
