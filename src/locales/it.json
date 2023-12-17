@@ -34,19 +34,15 @@
   },
   "setupARNO": {
     "title": "Setup di ARNO",
-    "text1": "Prepara il gioco in base al numero di giocatori (compresi gli ARNO). Un giocatore umano sarà il giocatore iniziale.",
-    "text2": "Ogni ARNO inizia con <b>-{count} punti conservazione</b> e punti attrattiva a seconda dell'ordine di partenza.",
-    "text2-conservation": "Metti {count} segnalini giocatore come promemoria accanto al segnalino punti conservazione di ARNO e rimuovili uno per uno non appena ARNO ha segnato i suoi primi punti conservazione.",
-    "text2-appeal": "Per esempio, se ARNO è il 3° giocatore, inizia con 2 punti attrattiva.",
-    "text3": "Ogni ARNO riceve i componenti di un colore, una mappa zoo (mappa A), una carta Punteggio Finale a faccia in giù e 8 carte Zoo casuali.",
-    "text4": "Metti tutti i segnalini giocatore del colore di ARNO accanto alla sua mappa zoo.",
-    "text5": "ARNO inizia con un lavoratore delle associazioni sul suo taccuino. Posiziona i restanti 3 negli spazi designati sotto il taccuino della mappa zoo.",
-    "text6": "Posiziona la carta Punteggio Finale nell'area sinistra della mappa zoo. Coprirà l’area di costruzione che non è necessaria per ARNO.",
-    "text7": "Ordina le 8 carte Zoo di ARNO in base al tipo:",
-    "text7-1": "Scarta tutte le carte Sponsor.",
-    "text7-2": "ARNO tiene un massimo di quattro carte. Mantiene tutte le carte Progetto di Conservazione (massimo quattro).",
-    "text7-3": "Se ARNO ora ha meno di quattro carte, allora tiene carte Animali (fino a quattro carte totali).",
-    "text8": "Non hai bisogno di dadi o delle carte azione."
+    "setupPlayerCount": "Prepara il gioco in base al numero di giocatori (compresi gli ARNO). Un giocatore umano sarà il giocatore iniziale.",
+    "startPoints": "Ogni ARNO inizia con <b>-{count} punti conservazione</b> e punti attrattiva a seconda dell'ordine di partenza.",
+    "startPointsConservation": "Metti {count} segnalini giocatore come promemoria accanto al segnalino punti conservazione di ARNO e rimuovili uno per uno non appena ARNO ha segnato i suoi primi punti conservazione.",
+    "startPointsAppeal": "Per esempio, se ARNO è il 3° giocatore, inizia con 2 punti attrattiva.",
+    "startComponents": "Ogni ARNO riceve i componenti di un colore, una mappa zoo (mappa A), una carta Punteggio Finale a faccia in giù e 8 carte Zoo casuali.",
+    "playerTokens": "Metti tutti i segnalini giocatore del colore di ARNO accanto alla sua mappa zoo.",
+    "associationWorker": "ARNO inizia con un lavoratore delle associazioni sul suo taccuino. Posiziona i restanti 3 negli spazi designati sotto il taccuino della mappa zoo.",
+    "finalScoringCard": "Posiziona la carta Punteggio Finale nell'area sinistra della mappa zoo. Coprirà l’area di costruzione che non è necessaria per ARNO.",
+    "noDiceActionCards": "Non hai bisogno di dadi o delle carte azione."
   },
   "roundPlayer": {
     "title": "Giocatore | Giocatore {player}",

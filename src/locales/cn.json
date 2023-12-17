@@ -34,19 +34,15 @@
     },
     "setupARNO": {
       "title": "ARNO设置",
-      "text1": "根据玩家人数设置游戏 (包括 ARNO)。 人类玩家会是起始玩家。",
-      "text2": "每个ARNO 开始时有 <b>-{count} 保护点数</b>和顺位对应的魅力。",
-      "text2-conservation": "在ARNO的保护点数指示物边上放置{count}个玩家标记，每当它提升1点保护点数后，移除一个。",
-      "text2-appeal": "例如：如果ARNO是三号位，则它开始时有2点魅力。",
-      "text3": "每个ARNO拿取它对应颜色的游戏配件，一张地图A，一张终局记分卡和8张随机卡牌。",
-      "text4": "在ARNO地图边上放置玩家标记。",
-      "text5": "ARNO开始时有一个协会事务员，将剩下的放置在地图对应位置。",
-      "text6": "将终局记分卡放置在地图左边，这会覆盖地图，但ARNO本身也不需要使用地图。",
-      "text7": "将ARNO的卡牌按照类型排序：",
-      "text7-1": "弃置所有赞助商卡牌。",
-      "text7-2": "ARNO最多保留4张卡牌。它会保留所有保护项目卡牌，但也不能超过4张。",
-      "text7-3": "如果此时ARNO卡牌数量小于4，它会额外保留动物卡牌直到拥有4张为止。",
-      "text8": "你不需要使用骰子或者是行动卡牌。"
+      "setupPlayerCount": "根据玩家人数设置游戏 (包括 ARNO)。 人类玩家会是起始玩家。",
+      "startPoints": "每个ARNO 开始时有 <b>-{count} 保护点数</b>和顺位对应的魅力。",
+      "startPointsConservation": "在ARNO的保护点数指示物边上放置{count}个玩家标记，每当它提升1点保护点数后，移除一个。",
+      "startPointsAppeal": "例如：如果ARNO是三号位，则它开始时有2点魅力。",
+      "startComponents": "每个ARNO拿取它对应颜色的游戏配件，一张地图A，一张终局记分卡和8张随机卡牌。",
+      "playerTokens": "在ARNO地图边上放置玩家标记。",
+      "associationWorker": "ARNO开始时有一个协会事务员，将剩下的放置在地图对应位置。",
+      "finalScoringCard": "将终局记分卡放置在地图左边，这会覆盖地图，但ARNO本身也不需要使用地图。",
+      "noDiceActionCards": "你不需要使用骰子或者是行动卡牌。"
     },
     "roundPlayer": {
       "title": "玩家 | 玩家 {player}",

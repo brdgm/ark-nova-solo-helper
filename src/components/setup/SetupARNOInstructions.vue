@@ -1,27 +1,24 @@
 <template>
   <ol>
-    <li v-html="t('setupARNO.text1')"></li>
+    <li v-html="t('setupARNO.setupPlayerCount')"></li>
     <li>
       <img :src="conservationSetupImageFileName" class="conservation-start-setup float-end ms-2 me-2 mt-2" alt=""/>
-      <span v-html="t('setupARNO.text2', {count:conservationPointStartMinus})"></span>
+      <span v-html="t('setupARNO.startPoints', {count:conservationPointStartMinus})"></span>
       <ul>
-        <li v-html="t('setupARNO.text2-conservation', {count:conservationPointStartMinus})"></li>
-        <li v-html="t('setupARNO.text2-appeal')"></li>
+        <li v-html="t('setupARNO.startPointsConservation', {count:conservationPointStartMinus})"></li>
+        <li v-html="t('setupARNO.startPointsAppeal')"></li>
       </ul>
     </li>
-    <li v-html="t('setupARNO.text3')"></li>
-    <li v-html="t('setupARNO.text4')"></li>
-    <li v-html="t('setupARNO.text5')"></li>
-    <li v-html="t('setupARNO.text6')"></li>
     <li>
-      <span v-html="t('setupARNO.text7')"></span>
+      <span v-html="t('setupARNO.startComponents')"></span>
       <ul>
-        <li v-html="t('setupARNO.text7-1')"></li>
-        <li v-html="t('setupARNO.text7-2')"></li>
-        <li v-html="t('setupARNO.text7-3')"></li>
+        <li v-html="t('setupARNO.startComponentsKeepCards')"></li>
       </ul>
     </li>
-    <li v-html="t('setupARNO.text8')"></li>
+    <li v-html="t('setupARNO.playerTokens')"></li>
+    <li v-html="t('setupARNO.associationWorker')"></li>
+    <li v-html="t('setupARNO.finalScoringCard')"></li>
+    <li v-html="t('setupARNO.noDiceActionCards')"></li>
   </ol>
   <p>
     <img src="@/assets/arno-zoo-mat.jpg" class="zoomat" alt=""/>

@@ -34,19 +34,15 @@
   },
   "setupARNO": {
     "title": "Configuració d'ARNO",
-    "text1": "Configureu el joc segons el recompte de jugadors (inclosos els ARNO). Un jugador humà serà el jugador titular.",
-    "text2": "Cada ARNO comença amb <b>-{count} punts de conservació</b> i punts d'apel·lació segons l'ordre del jugador.",
-    "text2-conservation": "Col·loqueu {count} fitxes de jugadors com a recordatori al costat del comptador de punts de conservació d'ARNO i traieu-les una a una tan bon punt ARNO anota els seus primers punts de conservació.",
-    "text2-appeal": "Per exemple, si ARNO és el 3r jugador, comença amb 2 punts d'apel·lació.",
-    "text3": "Cada ARNO rep els components d'un color, un taulell zoològic (mapa A), una carta de puntuació final cara avall i 8 cartes zoo aleatòries.",
-    "text4": "Col·loqueu totes les fitxes del jugador del color d'ARNO al costat del seu taulell de zoo.",
-    "text5": "ARNO comença amb un treballador de l'associació al seu bloc de notes. Col·loqueu els 3 restants als espais designats a sota del bloc de notes del seu taulell de zoo.",
-    "text6": "Col·loqueu la carta de puntuació final a la zona esquerra del taulell de zoo. D'aquesta manera es cobrirà la superfície edificable que no és necessària per a ARNO.",
-    "text7": "Ordena les 8 cartes Zoo de l'ARNO segons el tipus:",
-    "text7-1": "Descarta totes les cartes sponsor.",
-    "text7-2": "ARNO guarda un màxim de quatre cartes. Conserva totes les fitxes del Projecte de Conservació (màxim quatre).",
-    "text7-3": "Si ARNO ara ha guardat menys de quatre cartes, a més manté les cartes d'Animals (fins a quatre en total).",
-    "text8": "No necessites daus ni targetes d'acció."
+    "setupPlayerCount": "Configureu el joc segons el recompte de jugadors (inclosos els ARNO). Un jugador humà serà el jugador titular.",
+    "startPoints": "Cada ARNO comença amb <b>-{count} punts de conservació</b> i punts d'apel·lació segons l'ordre del jugador.",
+    "startPointsConservation": "Col·loqueu {count} fitxes de jugadors com a recordatori al costat del comptador de punts de conservació d'ARNO i traieu-les una a una tan bon punt ARNO anota els seus primers punts de conservació.",
+    "startPointsAppeal": "Per exemple, si ARNO és el 3r jugador, comença amb 2 punts d'apel·lació.",
+    "startComponents": "Cada ARNO rep els components d'un color, un taulell zoològic (mapa A), una carta de puntuació final cara avall i 8 cartes zoo aleatòries.",
+    "playerTokens": "Col·loqueu totes les fitxes del jugador del color d'ARNO al costat del seu taulell de zoo.",
+    "associationWorker": "ARNO comença amb un treballador de l'associació al seu bloc de notes. Col·loqueu els 3 restants als espais designats a sota del bloc de notes del seu taulell de zoo.",
+    "finalScoringCard": "Col·loqueu la carta de puntuació final a la zona esquerra del taulell de zoo. D'aquesta manera es cobrirà la superfície edificable que no és necessària per a ARNO.",
+    "noDiceActionCards": "No necessites daus ni targetes d'acció."
   },
   "roundPlayer": {
     "title": "Jugador | Jugador {player}",

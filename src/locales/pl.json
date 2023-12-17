@@ -34,19 +34,15 @@
   },
   "setupARNO": {
     "title": "Przygotowanie ARNO",
-    "text1": "Przygotuj grę odpowiednio do liczby graczy (wliczając ARNO). Ludzki gracz zawsze jest pierwszym graczem.",
-    "text2": "Każdy ARNO startuje z <b>-{count} punktami Ochrony Przyrody</b> oraz punktami atrakcyjności zgodnie z kolejnością graczy.",
-    "text2-conservation": "Umieść {count} znaczniki gracza, jako przypomnienie, tuż obok znacznika punktacji Ochrony Przyrody ARNO. Usuwaj je jeden za drugim kiedy ARNO będzie zdobywać swoje pierwsze punkty Ochrony Przyrody.",
-    "text2-appeal": "Np. Jeśli ARNO jest trzecim graczem, rozpoczyna z dwoma punktami atrakcyjności.",
-    "text3": "Każdy ARNO otrzymuje komponenty w jednym kolorze, planszę gracza (mapa A), jedną zakrytą kartę Punktacji Końcowej oraz 8 losowych kart Zoo.",
-    "text4": "Umieść wszystkie znaczniki gracza w kolorze ARNO tuż obok jego planszy gracza.",
-    "text5": "ARNO startuje z jednym pracownikiem stowarzyszenia na swoim notatniku. Połóż pozostałych trzech pracowników na odpowiednich miejscach poniżej jego notatnika.",
-    "text6": "Umieść kartę Punktacji Końcowej po lewej stronie planszy gracza. Zakryje ona obszar budowy z którego ARNO nie korzysta.",
-    "text7": "Posortuj 8 kart Zoo ARNO według podanych typów:",
-    "text7-1": "Odrzuć wszystkie karty Sponsorów",
-    "text7-2": "ARNO zachowuje maksymalnie cztery karty. Zachowuje on wszystkie projekty Ochrony Przyrody (maksymalnie cztery).",
-    "text7-3": "Jeśli ARNO posiada teraz mniej niż cztery karty, zachowuje on karty Zwierząt (tak aby mieć cztery karty).",
-    "text8": "Nie potrzebujesz żadnych kości, ani kart akcji ARNO."
+    "setupPlayerCount": "Przygotuj grę odpowiednio do liczby graczy (wliczając ARNO). Ludzki gracz zawsze jest pierwszym graczem.",
+    "startPoints": "Każdy ARNO startuje z <b>-{count} punktami Ochrony Przyrody</b> oraz punktami atrakcyjności zgodnie z kolejnością graczy.",
+    "startPointsConservation": "Umieść {count} znaczniki gracza, jako przypomnienie, tuż obok znacznika punktacji Ochrony Przyrody ARNO. Usuwaj je jeden za drugim kiedy ARNO będzie zdobywać swoje pierwsze punkty Ochrony Przyrody.",
+    "startPointsAppeal": "Np. Jeśli ARNO jest trzecim graczem, rozpoczyna z dwoma punktami atrakcyjności.",
+    "startComponents": "Każdy ARNO otrzymuje komponenty w jednym kolorze, planszę gracza (mapa A), jedną zakrytą kartę Punktacji Końcowej oraz 8 losowych kart Zoo.",
+    "playerTokens": "Umieść wszystkie znaczniki gracza w kolorze ARNO tuż obok jego planszy gracza.",
+    "associationWorker": "ARNO startuje z jednym pracownikiem stowarzyszenia na swoim notatniku. Połóż pozostałych trzech pracowników na odpowiednich miejscach poniżej jego notatnika.",
+    "finalScoringCard": "Umieść kartę Punktacji Końcowej po lewej stronie planszy gracza. Zakryje ona obszar budowy z którego ARNO nie korzysta.",
+    "noDiceActionCards": "Nie potrzebujesz żadnych kości, ani kart akcji ARNO."
   },
   "roundPlayer": {
     "title": "Gracz | Gracz {player}",

@@ -34,19 +34,15 @@
   },
   "setupARNO": {
     "title": "ARNO Setup",
-    "text1": "ZEt het spel klaar volgens het aantal spelers (inclusief ARNO(s)). Een menselijke speler zal de startspeler zijn.",
-    "text2": "Elke ARNO start met <b>-{count} conservatie punten</b> en met populariteitspunten volgens de spelersvolgorde.",
-    "text2-conservation": "Plaats {count} spelerstokens als reminder naast Arno's conservatiespoor en verwijder ze 1 voor 1 als Arno zijn eerste conservatiepunten scoort.",
-    "text2-appeal": "Bijvoorbeeld: is ARNO de 3e speler, dan start hij met 2 populariteitspunten.",
-    "text3": "Elke ARNO ontvangt de spelonderdelen van één kleur, een dierentuinkaart (map A), één gesloten Eindtellingskaart en 8 willekeurige Dierentuinkaarten.",
-    "text4": "Plaats alle spelerstokens van ARNO’s kleur naast zijn dierentuinkaart.",
-    "text5": "ARNO start met één medewerker op zijn notitieboek. Plaats de overige 3 op de daarvoor bestemde plaatsen onder het notitieboek op zijn dierentuinkaart.",
-    "text6": "Plaats de Eindtellingskaart op het linker gebied van de dierentuinkaart. Deze verbergt het bouwgebied welke niet nodig is voor ARNO.",
-    "text7": "Sorteer ARNO‘s 8 Dierenuinkaarten volgens het soort:",
-    "text7-1": "Verwijder alle sponsorkaarten.",
-    "text7-2": "ARNO houdt maximaal 4 kaarten. Hij houdt alle conservatieprojectkaarten (maximaal 4).",
-    "text7-3": "Als Arno nu minder dan 4 kaarten heeft, houdt hij daarnaast dierenkaarten (maximaal 4 kaarten totaal).",
-    "text8": "Je heb de dobbelsteen en actiekaarten niet nodig."
+    "setupPlayerCount": "ZEt het spel klaar volgens het aantal spelers (inclusief ARNO(s)). Een menselijke speler zal de startspeler zijn.",
+    "startPoints": "Elke ARNO start met <b>-{count} conservatie punten</b> en met populariteitspunten volgens de spelersvolgorde.",
+    "startPointsConservation": "Plaats {count} spelerstokens als reminder naast Arno's conservatiespoor en verwijder ze 1 voor 1 als Arno zijn eerste conservatiepunten scoort.",
+    "startPointsAppeal": "Bijvoorbeeld: is ARNO de 3e speler, dan start hij met 2 populariteitspunten.",
+    "startComponents": "Elke ARNO ontvangt de spelonderdelen van één kleur, een dierentuinkaart (map A), één gesloten Eindtellingskaart en 8 willekeurige Dierentuinkaarten.",
+    "playerTokens": "Plaats alle spelerstokens van ARNO’s kleur naast zijn dierentuinkaart.",
+    "associationWorker": "ARNO start met één medewerker op zijn notitieboek. Plaats de overige 3 op de daarvoor bestemde plaatsen onder het notitieboek op zijn dierentuinkaart.",
+    "finalScoringCard": "Plaats de Eindtellingskaart op het linker gebied van de dierentuinkaart. Deze verbergt het bouwgebied welke niet nodig is voor ARNO.",
+    "noDiceActionCards": "Je heb de dobbelsteen en actiekaarten niet nodig."
   },
   "roundPlayer": {
     "title": "Speler | Speler {player}",
