@@ -48,7 +48,6 @@
     "startComponents": "Jeder ARNO erhält die Komponenten einer Farbe, einen Zooplan A, eine verdeckte Endwertungskarte sowie 8 zufällige Zookarten.",
     "startComponentsKeepCards": "Von diesen Zookarten behält ARNO nur die Artenschutzkarten, maximal die ersten 2. Alle Sponsoren- und Tierkarten werden abgeworfen.",
     "discardedSponsorCards": "Bitte angeben, wie viele <b>Sponsorenkarten</b> während des Aufbaus abgeworfen wurden:",
-    "discardedSponsorCardsPerBot": "ARNO hat Sponsorenkarten abgeworfen: | ARNO {bot} hat Sponsorenkarten abgeworfen:",
     "playerTokens": "Lege alle Markierungssteine neben den Zooplan von ARNO.",
     "associationWorker": "ARNO startet mit einem Verbandsarbeiter auf dem Notizzettel. Lege die anderen 3 auf die entsprechenden Felder des Zooplans von ARNO.",
     "finalScoringCard": "Platziere die Endwertungskarte verdeckt auf der linken Seite des Zooplans. Der Grundriss wird dadurch überdeckt, aber wird für ARNO nicht benötigt.",
@@ -161,6 +160,9 @@
     "usage": "Diese drei Bonusplättchen kann ARNO nutzen. Bei allen anderen erhält ARNO keinen Bonus.",
     "pickPartnerZoo": "Partnerzoo auswählen",
     "pickPartnerUniversity": "Partneruniversität auswählen"
+  },
+  "sponsorCardDiscard": {
+    "discardedSponsorCardsPerBot": "ARNO hat Sponsorenkarten abgeworfen: | ARNO {bot} hat Sponsorenkarten abgeworfen:"
   },
   "scoring": {
     "title": "Auswertung",

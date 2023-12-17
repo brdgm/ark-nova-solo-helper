@@ -103,7 +103,7 @@ export const store = createStore<State>({
     setupZooMaps(state : State, zooMaps: string[]) {
       state.setup.zooMaps = zooMaps
     },
-    setupBotInitialSponsorCardDiscardCount(state : State, sponsorCardDiscardCount : number) {
+    setupBotInitialSponsorCardDiscardCount(state : State, sponsorCardDiscardCount : number[]) {
       state.setup.botInitialSponsorCardDiscardCount = sponsorCardDiscardCount
     },
     round(state : State, botRound : BotRound) {

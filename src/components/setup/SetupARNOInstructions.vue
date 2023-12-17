@@ -15,12 +15,7 @@
         <li v-html="t('setupARNO.startComponentsKeepCards')"></li>
         <li v-if="isProjectModuleExpansion">
           <span v-html="t('setupARNO.discardedSponsorCards')"></span>
-          <ul v-for="bot of botCount" :key="bot">
-            <li>
-              <span v-html="t('setupARNO.discardedSponsorCardsPerBot', {bot}, botCount)"></span>
-              <input type="number" min="0" max="8" step="1" v-model="sponsorCardDiscardCount[bot-1]" @focus="inputSelectAll"/>
-            </li>
-          </ul>
+          <SponsorCardDiscard v-model="sponsorCardDiscardCount"/>
         </li>
       </ul>
     </li>
@@ -39,9 +34,13 @@ import Expansion from '@/services/enum/Expansion'
 import { useStore } from '@/store'
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
+import SponsorCardDiscard from '../structure/SponsorCardDiscard.vue'
 
 export default defineComponent({
   name: 'SetupARNOInstructions',
+  components: {
+    SponsorCardDiscard
+  },
   setup() {
     const { t } = useI18n()
     useStore()
@@ -68,12 +67,6 @@ export default defineComponent({
     },
     botCount() : number {
       return this.$store.state.setup.playerSetup.botCount
-    }
-  },
-  methods: {
-    inputSelectAll(event: Event) : void {
-      const input = event.target as HTMLInputElement
-      input.select()
     }
   },
   mounted() {
@@ -124,9 +117,5 @@ li {
   &::marker {
     font-weight: bold;
   }
-}
-input {
-  width: 5rem;
-  margin-left: 0.5rem;
 }
 </style>
