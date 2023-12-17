@@ -19,14 +19,13 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import AppIcon from './AppIcon.vue'
 import ModalDialog from 'brdgm-commons/src/components/structure/ModalDialog.vue'
 import Expansion from '@/services/enum/Expansion'
 import { useStore } from '@/store'
 import SponsorCardDiscard from './SponsorCardDiscard.vue'
-import { ref } from 'vue'
 
 export default defineComponent({
   name: 'BreakInfo',

@@ -10,6 +10,7 @@
       <p v-html="t('aboutARNO.referenceValues')"></p>
       <p v-html="t('aboutARNO.noEffectTarget')"></p>
       <p v-html="t('aboutARNO.receiveCards')"></p>
+      <p v-if="hasProjectModuleExpansion" v-html="t('aboutARNO.projectModuleInfo')"></p>
     </template>
   </ModalDialog>
 

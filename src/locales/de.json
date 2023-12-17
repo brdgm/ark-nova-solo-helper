@@ -141,7 +141,8 @@
     "bonuses": "ARNO erhält die folgenden <b>Boni</b> von den Spielbrettern: <b>Artenschutzpunkte, Kartenaufwertungen, Rufpunkte und Verbandsarbeiter</b>. Neben Geld erhält auch keine Boni von Tier- oder Sponsorenkarten, Gebäude, Gehege, X-Marker oder Pausenboni.",
     "referenceValues": "Die Tierkarten, die ARNO in seinem Zoo gestapelt hat, dienen als <b>Referenzwerte für mögliche Karteneffekte</b> der menschlichen Spieler. Wann immer ARNO eine weitere Karte auf seinem Stapel platziert, gelten diese Eigenschaften für Effekte der Karten der anderen Spieler.",
     "noEffectTarget": "ARNO kann <b>nicht Opfer von interaktiven Effekten</b> werden, nutze stattdessen den abweichenden Effekt für das Solospiel.",
-    "receiveCards": "Immer wenn ARNO <b>Karten erhält</b>, werfe alle Sponsoren-Karten ab und lege Tier- und Artenschutzkarten auf die Kartenstapel auf dem Zooplan."
+    "receiveCards": "Immer wenn ARNO <b>Karten erhält</b>, werfe alle Sponsoren-Karten ab und lege Tier- und Artenschutzkarten auf die Kartenstapel auf dem Zooplan.",
+    "projectModuleInfo": "Für das optional Artenschutzprojekt-Modul ist es wichtig, dass alle abgeworfenen <b>Sponsoren-Karten nachverfolgt</b> werden. Bitte dafür die Dialoge in der Seitenleiste während ARNOs Zug oder während der Pause verwenden."
   },
   "roundDisplay": {
     "round": "Runde {round}"
@@ -163,7 +164,7 @@
     "pickPartnerUniversity": "Partneruniversität auswählen"
   },
   "sponsorCardDiscard": {
-    "discardedSponsorCardsPerBot": "ARNO hat Sponsorenkarten abgeworfen: | ARNO {bot} hat Sponsorenkarten abgeworfen:"
+    "count": "ARNO hat Sponsorenkarten abgeworfen: | ARNO {bot} hat Sponsorenkarten abgeworfen:"
   },
   "scoring": {
     "title": "Auswertung",
