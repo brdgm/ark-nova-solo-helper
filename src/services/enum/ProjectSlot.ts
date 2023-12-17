@@ -2,8 +2,8 @@
  * Conservation project slot
  */
 enum ProjectSlot {
-  LEFT = 'left',
+  RIGHT = 'right',
   MIDDLE = 'middle',
-  RIGHT = 'right'
+  LEFT = 'left'
 }
 export default ProjectSlot

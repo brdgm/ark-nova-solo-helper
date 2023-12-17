@@ -54,4 +54,12 @@ describe('services/ProjectModuleTracker', () => {
       expect(tracker.kioskCount).to.eq(kioskCount[i], `discardCount: ${i}, kioskCount`)
     }
   })
+
+  it('getPreferredProjectSlots', () => {
+    expect(new ProjectModuleTracker(0).getPreferredProjectSlots()).to.eql([ProjectSlot.RIGHT,ProjectSlot.MIDDLE,ProjectSlot.LEFT])
+    expect(new ProjectModuleTracker(1).getPreferredProjectSlots()).to.eql([ProjectSlot.MIDDLE,ProjectSlot.RIGHT,ProjectSlot.LEFT])
+    expect(new ProjectModuleTracker(2).getPreferredProjectSlots()).to.eql([ProjectSlot.RIGHT,ProjectSlot.MIDDLE,ProjectSlot.LEFT])
+    expect(new ProjectModuleTracker(3).getPreferredProjectSlots()).to.eql([ProjectSlot.LEFT,ProjectSlot.RIGHT,ProjectSlot.MIDDLE])
+    expect(new ProjectModuleTracker(4).getPreferredProjectSlots()).to.eql([ProjectSlot.MIDDLE,ProjectSlot.LEFT,ProjectSlot.RIGHT])
+  })
 })

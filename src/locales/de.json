@@ -100,7 +100,11 @@
       "projectSlotLeftMost": "ARNO platziert seinen Markierungsstein auf der höchsten Stufe (links).",
       "projectSlotMiddle": "ARNO platziert seinen Markierungsstein auf der mittleren Stufe.",
       "projectSlotRightMost": "ARNO platziert seinen Markierungsstein auf der untersten Stufe (rechts).",
-      "projectSlotAlternatives": "Ist die entsprechende Stufe bereits belegt, platziert er ihn auf der nächsthöheren Stufe. Falls auch das nicht möglich ist, auf der nächstniedrigeren Stufe."
+      "projectSlotAlternatives": "Ist die entsprechende Stufe bereits belegt, platziert er ihn auf der nächsthöheren Stufe. Falls auch das nicht möglich ist, auf der nächstniedrigeren Stufe.",
+      "projectModule": {
+        "tokenPlacement": "ARNO platziert seinen Markierungsstein auf dieser Stufe (in bevorzugter Reihenfolge):",
+        "gainConservationPoints": "ARNO bekommt die Artenschutzpunkte und andere Belohnungen von dieser Stufe: <b>{slot}</b>. Ist die entsprechende Stufe bereits belegt, bekommt er die Punkte von der nächsthöheren Stufe. Falls auch das nicht möglich ist, von der nächstniedrigeren Stufe."
+      }
     },
     "gainPartnerZooOrUniversity": {
       "missingMost": "Von welcher Art fehlt ARNO am meisten?",
@@ -137,9 +141,9 @@
     "donate": "ARNO spendet."
   },
   "projectSlot": {
-    "left": "Links",
+    "right": "Rechts",
     "middle": "Mitte",
-    "right": "Rechts"
+    "left": "Links"
   },
   "aboutARNO": {
     "link": "ARNO Regeln",

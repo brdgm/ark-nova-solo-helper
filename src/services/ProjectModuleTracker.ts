@@ -11,29 +11,23 @@ export default class ProjectModuleTracker {
     this._trackerPosition = getTrackerPosition(sponsorCardDiscardCount ?? 0)
   }
 
+  /**
+   * Current position of the project tracker.
+   */
   public get trackerPosition() : number {
     return this._trackerPosition
   }
 
+  /**
+   * Current preferred conservation project slot.
+   */
   public get projectSlot() : ProjectSlot {
-    switch (this._trackerPosition) {
-      case 2:
-      case 5:
-      case 7:
-      case 11:
-      case 13:
-        return ProjectSlot.MIDDLE
-      case 4:
-      case 8:
-      case 10:
-      case 12:
-      case 14:
-        return ProjectSlot.LEFT
-      default:
-        return ProjectSlot.RIGHT
-    }
+    return getProjectSlot(this.trackerPosition)
   }
 
+  /**
+   * Get number of kiosks.
+   */
   public get kioskCount() : number {
     if (this._trackerPosition >= 14) {
       return 5
@@ -55,6 +49,26 @@ export default class ProjectModuleTracker {
     }
   }
 
+  /**
+   * Get preferred conservation project slot with fallback slots.
+   */
+  public getPreferredProjectSlots() : ProjectSlot[] {
+    const slots : ProjectSlot[] = []
+    slots.push(this.projectSlot)
+    for (let i = this._trackerPosition - 1; i > 0; i--) {
+      const alternativeSlot = getProjectSlot(i)
+      if (!slots.includes(alternativeSlot) && slots.length < 3) {
+        slots.push(alternativeSlot)
+      }
+    }
+    for (const alternativeSlot of Object.values(ProjectSlot)) {
+      if (!slots.includes(alternativeSlot) && slots.length < 3) {
+        slots.push(alternativeSlot)
+      }
+    }
+    return slots
+  }
+
 }
 
 const MAX_TRACKER_POS : number = 14
@@ -70,5 +84,24 @@ function getTrackerPosition(sponsorCardDiscardCount: number) : number {
   }
   else {
     return steps
+  }
+}
+
+function getProjectSlot(trackerPosition : number) {
+  switch (trackerPosition) {
+    case 2:
+    case 5:
+    case 7:
+    case 11:
+    case 13:
+      return ProjectSlot.MIDDLE
+    case 4:
+    case 8:
+    case 10:
+    case 12:
+    case 14:
+      return ProjectSlot.LEFT
+    default:
+      return ProjectSlot.RIGHT
   }
 }
