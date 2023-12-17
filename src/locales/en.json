@@ -136,6 +136,11 @@
     "token-notepad": "Place <b>{amount}</b> ARNO player token on his <b>notepad</b> (for final scoring effect). | Place <b>{amount}</b> ARNO player tokens on his <b>notepad</b> (for final scoring effect).",
     "donate": "ARNO donates."
   },
+  "projectSlot": {
+    "left": "Left",
+    "middle": "Middle",
+    "right": "Right"
+  },
   "aboutARNO": {
     "link": "ARNO Rules",
     "title": "A.R.N.O. Rules Summary",
@@ -174,11 +179,6 @@
     "trackerPosition": "Tracker Position",
     "preferredProjectSlot": "Preferred Conservation Project Slot",
     "kioskCount": "Kiosk Count"
-  },
-  "projectSlot": {
-    "left": "Left",
-    "middle": "Middle",
-    "right": "Right"
   },
   "scoring": {
     "title": "Scoring",

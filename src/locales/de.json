@@ -136,6 +136,11 @@
     "token-notepad": "Lege <b>{amount}</b> ARNO Markierungsstein auf seinen <b>Notizzettel</b> (Endwertungseffekt). | Lege <b>{amount}</b> ARNO Markierungssteine auf seinen <b>Notizzettel</b> (Endwertungseffekt).",
     "donate": "ARNO spendet."
   },
+  "projectSlot": {
+    "left": "Links",
+    "middle": "Mitte",
+    "right": "Rechts"
+  },
   "aboutARNO": {
     "link": "ARNO Regeln",
     "title": "A.R.N.O. Regel-Zusammenfassung",
@@ -174,11 +179,6 @@
     "trackerPosition": "Tracker-Position",
     "preferredProjectSlot": "Bevorzugte Artenschutzprojekt-Position",
     "kioskCount": "Anzahl Kioske"
-  },
-  "projectSlot": {
-    "left": "Links",
-    "middle": "Mitte",
-    "right": "Rechts"
   },
   "scoring": {
     "title": "Auswertung",

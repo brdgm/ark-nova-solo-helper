@@ -12,11 +12,11 @@ export default function(state : State, round: number, bot: number) : ProjectModu
   const initial = botArrayValue(state.setup.botInitialSponsorCardDiscardCount, bot)
   const fromBreaks = state.rounds
       .filter(item => item.round <= round)
-      .reduce((sum, round) => sum + botArrayValue(round.botBreakSponsorCardDiscardCount, bot), 0)
+      .reduce((sum, roundData) => sum + botArrayValue(roundData.botBreakSponsorCardDiscardCount, bot), 0)
   const fromRounds = state.rounds
       .filter(item => item.round <= round)
       .map(item => item.botRound[bot - 1])
-      .reduce((sum, botRound) => sum + (botRound?.sponsorCardDiscardCount ?? 0), 0)
+      .reduce((sum, botRoundData) => sum + (botRoundData?.sponsorCardDiscardCount ?? 0), 0)
   const totalDiscarded = initial + fromBreaks + fromRounds
   return new ProjectModuleTracker(totalDiscarded)
 }
