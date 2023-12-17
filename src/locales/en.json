@@ -47,6 +47,8 @@
     "startPointsAppeal": "E.g. if ARNO is the 3rd player, he starts with 2 appeal points.",
     "startComponents": "Every ARNO receives the components of one color, a zoo mat (map A), one face-down Final Scoring card and 8 random Zoo cards.",
     "startComponentsKeepCards": "ARNO only keeps up to the first 2 Conservation Project cards. All Sponsor and Animal cards are discarded.",
+    "discardedSponsorCards": "Please specify the number of <b>sponsor cards</b> discarded during setup:",
+    "discardedSponsorCardsPerBot": "ARNO discarded sponsor cards: | ARNO {bot} discarded sponsor cards:",
     "playerTokens": "Place all player tokens of ARNO’s color next to his zoo mat.",
     "associationWorker": "ARNO starts with one association worker on his notepad. Place the remaining 3 on the designated spaces below the notepad on his zoo mat.",
     "finalScoringCard": "Place the Final Scoring card on the left area of the zoo mat. This will cover the building area which is not needed for ARNO.",

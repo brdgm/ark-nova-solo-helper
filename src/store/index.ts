@@ -22,6 +22,7 @@ export interface Setup {
   zooMaps?: string[]
   expansions?: Expansion[]
   debugMode?: boolean
+  botInitialSponsorCardDiscardCount?: number[]
 }
 export interface PlayerSetup {
   playerCount: number
@@ -101,6 +102,9 @@ export const store = createStore<State>({
     },
     setupZooMaps(state : State, zooMaps: string[]) {
       state.setup.zooMaps = zooMaps
+    },
+    setupBotInitialSponsorCardDiscardCount(state : State, sponsorCardDiscardCount : number) {
+      state.setup.botInitialSponsorCardDiscardCount = sponsorCardDiscardCount
     },
     round(state : State, botRound : BotRound) {
       let round = state.rounds[botRound.round - 1]

@@ -13,6 +13,15 @@
       <span v-html="t('setupARNO.startComponents')"></span>
       <ul>
         <li v-html="t('setupARNO.startComponentsKeepCards')"></li>
+        <li v-if="isProjectModuleExpansion">
+          <span v-html="t('setupARNO.discardedSponsorCards')"></span>
+          <ul v-for="bot of botCount" :key="bot">
+            <li>
+              <span v-html="t('setupARNO.discardedSponsorCardsPerBot', {bot}, botCount)"></span>
+              <input type="number" min="0" max="8" step="1" v-model="sponsorCardDiscardCount[bot-1]" @focus="inputSelectAll"/>
+            </li>
+          </ul>
+        </li>
       </ul>
     </li>
     <li v-html="t('setupARNO.playerTokens')"></li>
@@ -38,6 +47,11 @@ export default defineComponent({
     useStore()
     return { t }
   },
+  data() {
+    return {
+      sponsorCardDiscardCount: [0,0,0]
+    }
+  },
   computed: {
     hasMarineWorldsExpansion() : boolean {
       return (this.$store.state.setup.expansions ?? []).includes(Expansion.MARINE_WORLDS)
@@ -48,6 +62,29 @@ export default defineComponent({
     conservationSetupImageFileName() : string {
       const components = this.hasMarineWorldsExpansion ? 'expansion' : 'base'
       return new URL(`/src/assets/arno-conservation-start-setup/start-setup-${components}-${this.conservationPointStartMinus}.webp`, import.meta.url).toString()
+    },
+    isProjectModuleExpansion() : boolean {
+      return (this.$store.state.setup.expansions ?? []).includes(Expansion.ARNO_CONSERVATION_PROJECT_MODULE)
+    },
+    botCount() : number {
+      return this.$store.state.setup.playerSetup.botCount
+    }
+  },
+  methods: {
+    inputSelectAll(event: Event) : void {
+      const input = event.target as HTMLInputElement
+      input.select()
+    }
+  },
+  mounted() {
+    this.$store.commit('setupBotInitialSponsorCardDiscardCount', this.sponsorCardDiscardCount)
+  },
+  watch: {
+    sponsorCardDiscardCount: {
+      handler() {
+        this.$store.commit('setupBotInitialSponsorCardDiscardCount', this.sponsorCardDiscardCount)
+      },
+      deep: true
     }
   }
 })
@@ -82,11 +119,14 @@ img {
     width: 100%;
   }
 }
-
 li {
   margin-top: 0.5rem;
   &::marker {
     font-weight: bold;
   }
+}
+input {
+  width: 5rem;
+  margin-left: 0.5rem;
 }
 </style>
