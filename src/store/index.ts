@@ -40,6 +40,7 @@ export interface BotRound {
   tokenScoringCardCount: number
   tokenNotepadCount: number
   appealCount?: number
+  sponsorCardDiscardCount?: number
 }
 export interface CardSlotsPersistence {
   slots: CardName[]
