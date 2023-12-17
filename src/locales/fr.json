@@ -126,20 +126,20 @@
   "aboutARNO": {
     "link": "Règles d'ARNO",
     "title": "Résumé des règles d'A.R.N.O.",
-    "text1": "ARNO <b>n’utilise pas de crédits</b>. Il ne dépense aucun crédit lors de ses actions, et n’en reçoit jamais (par exemple pendant les pauses ou lors de la pose d’animaux)",
-    "text2": "ARNO ne <b>se sert que de la partie droite de son plateau Zoo</b>. C’est ici qu’il place ses zoos partenaires, ses universités et d’où il prend ses bénévoles. Il reçoit aussi les bonus lorsqu’il les recouvre. La partie gauche de son zoo ne sera utilisée que pour placer ses cartes Animaux et sa carte de Décompte final.",
-    "text3": "ARNO reçoit les <b>bonus suivants</b> de son plateau zoo et du plateau de jeu : Points de conservation, Amélioration de cartes, Points de réputation et bénévoles. Pendant la pause, il ne reçoit ni crédits, ni jeton X, ni bonus de ses cartes Animaux ou Mécènes, de ses kiosques ou enclos. ",
-    "text4": "Les icônes des cartes animaux posées sur le plateau zoo d’ARNO peuvent être <b> prises en compte par les joueurs humains comme icônes d’autres zoos</b>. Quand ARNO place une carte Animal dans son zoo, les icônes présentes sur la carte peuvent affecter les effets des cartes des joueurs humains. ",
-    "text5": "ARNO <b>ne peut jamais être la cible d’effets d’interaction de cartes</b>. A la place, il faut utiliser l’effet présent dans la bande bleue en bas de la carte.",
-    "text6": "Chaque fois qu'ARNO <b>reçoit des cartes</b> pendant la partie, défaussez toutes les cartes de Mécènes et empilez les cartes Animaux et de Projets de conservation sur son plateau zoo."
+    "noMoney": "ARNO <b>n’utilise pas de crédits</b>. Il ne dépense aucun crédit lors de ses actions, et n’en reçoit jamais (par exemple pendant les pauses ou lors de la pose d’animaux)",
+    "rightArea": "ARNO ne <b>se sert que de la partie droite de son plateau Zoo</b>. C’est ici qu’il place ses zoos partenaires, ses universités et d’où il prend ses bénévoles. Il reçoit aussi les bonus lorsqu’il les recouvre. La partie gauche de son zoo ne sera utilisée que pour placer ses cartes Animaux et sa carte de Décompte final.",
+    "bonuses": "ARNO reçoit les <b>bonus suivants</b> de son plateau zoo et du plateau de jeu : Points de conservation, Amélioration de cartes, Points de réputation et bénévoles. Pendant la pause, il ne reçoit ni crédits, ni jeton X, ni bonus de ses cartes Animaux ou Mécènes, de ses kiosques ou enclos. ",
+    "referenceValues": "Les icônes des cartes animaux posées sur le plateau zoo d’ARNO peuvent être <b> prises en compte par les joueurs humains comme icônes d’autres zoos</b>. Quand ARNO place une carte Animal dans son zoo, les icônes présentes sur la carte peuvent affecter les effets des cartes des joueurs humains. ",
+    "noEffectTarget": "ARNO <b>ne peut jamais être la cible d’effets d’interaction de cartes</b>. A la place, il faut utiliser l’effet présent dans la bande bleue en bas de la carte.",
+    "receiveCards": "Chaque fois qu'ARNO <b>reçoit des cartes</b> pendant la partie, défaussez toutes les cartes de Mécènes et empilez les cartes Animaux et de Projets de conservation sur son plateau zoo."
   },
   "roundDisplay": {
     "round": "Tour {round}"
   },
   "breakInfo": {
     "link": "Pause",
-    "text1": "Pendant les pauses, ARNO pioche <b>trois cartes</b> depuis la pioche. Il garde la première carte Projet de Conservation et joue la première carte Animal sur son plateau zoo.",
-    "text2": "La carte Animal jouée peut déclencher un effet bonus pour le ou les joueurs humains. Les autres cartes sont défaussées."
+    "drawThreeCards": "Pendant les pauses, ARNO pioche <b>trois cartes</b> depuis la pioche. Il garde la première carte Projet de Conservation et joue la première carte Animal sur son plateau zoo.",
+    "triggerBonus": "La carte Animal jouée peut déclencher un effet bonus pour le ou les joueurs humains. Les autres cartes sont défaussées."
   },
   "bonusTile": {
     "link": "Tuile bonus",

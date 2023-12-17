@@ -136,20 +136,20 @@
   "aboutARNO": {
     "link": "ARNO Rules",
     "title": "A.R.N.O. Rules Summary",
-    "text1": "ARNO <b>doesn‘t use money</b>. He doesn‘t spend money for actions, and never receives money (for example during breaks or from Animal cards).",
-    "text2": "ARNO <b>only uses the right area of his zoo mat</b>. This is where he places his partner zoos and universities and where he takes his association workers from. He also receives the bonuses once he uncovers them. The left area of his zoo plan will not be considered and only be used to place his Zoo cards and Final Scoring card.",
-    "text3": "ARNO receives the following <b>bonuses</b> from his zoo plan and the general boards: <b>Conservation points, card upgrades, reputation points and association workers</b>. Besides money he also doesn’t receive any bonuses from Animal or Sponsor cards, buildings, enclosures, X-markers or during breaks.",
-    "text4": "The Animal cards that are stacked on ARNO’s zoo mat provide <b>reference values for certain card effects</b> of the human players. Whenever ARNO places another Animal card on his stack, its icons will trigger the card effects of the other player(s).",
-    "text5": "ARNO can <b>never be the target of an interactive effect</b>. Please use the alternative solo play effects of those cards instead.",
-    "text6": "Every time ARNO <b>receives cards</b> during the game, discard all sponsor cards and stack animal and conservation project cards on his zoo mat."
+    "noMoney": "ARNO <b>doesn‘t use money</b>. He doesn‘t spend money for actions, and never receives money (for example during breaks or from Animal cards).",
+    "rightArea": "ARNO <b>only uses the right area of his zoo mat</b>. This is where he places his partner zoos and universities and where he takes his association workers from. He also receives the bonuses once he uncovers them. The left area of his zoo plan will not be considered and only be used to place his Zoo cards and Final Scoring card.",
+    "bonuses": "ARNO receives the following <b>bonuses</b> from his zoo plan and the general boards: <b>Conservation points, card upgrades, reputation points and association workers</b>. Besides money he also doesn’t receive any bonuses from Animal or Sponsor cards, buildings, enclosures, X-markers or during breaks.",
+    "referenceValues": "The Animal cards that are stacked on ARNO’s zoo mat provide <b>reference values for certain card effects</b> of the human players. Whenever ARNO places another Animal card on his stack, its icons will trigger the card effects of the other player(s).",
+    "noEffectTarget": "ARNO can <b>never be the target of an interactive effect</b>. Please use the alternative solo play effects of those cards instead.",
+    "receiveCards": "Every time ARNO <b>receives cards</b> during the game, discard all sponsor cards and stack animal and conservation project cards on his zoo mat."
   },
   "roundDisplay": {
     "round": "Round {round}"
   },
   "breakInfo": {
     "link": "Break",
-    "text1": "During the breaks, ARNO draws <b>three cards</b> from the deck. He keeps the first Conservation Project card and plays the first Animal Card to his zoo mat.",
-    "text2": "The played Animal card might trigger a bonus effect for the human player(s). The other cards are discarded.",
+    "drawThreeCards": "During the breaks, ARNO draws <b>three cards</b> from the deck. He keeps the first Conservation Project card and plays the first Animal Card to his zoo mat.",
+    "triggerBonus": "The played Animal card might trigger a bonus effect for the human player(s). The other cards are discarded.",
     "discardedSponsorCards": "Please specify the number of <b>sponsor cards</b> discarded during break:"
   },
   "bonusTile": {

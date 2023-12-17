@@ -4,12 +4,12 @@
   <ModalDialog id="aboutARNOModal" :title="t('aboutARNO.title')" class="text-start"
       :size-lg="true" :scrollable="true">
     <template #body>
-      <p v-html="t('aboutARNO.text1')"></p>
-      <p v-html="t('aboutARNO.text2')"></p>
-      <p v-html="t('aboutARNO.text3')"></p>
-      <p v-html="t('aboutARNO.text4')"></p>
-      <p v-html="t('aboutARNO.text5')"></p>
-      <p v-html="t('aboutARNO.text6')"></p>
+      <p v-html="t('aboutARNO.noMoney')"></p>
+      <p v-html="t('aboutARNO.rightArea')"></p>
+      <p v-html="t('aboutARNO.bonuses')"></p>
+      <p v-html="t('aboutARNO.referenceValues')"></p>
+      <p v-html="t('aboutARNO.noEffectTarget')"></p>
+      <p v-html="t('aboutARNO.receiveCards')"></p>
     </template>
   </ModalDialog>
 
@@ -19,6 +19,8 @@
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import ModalDialog from 'brdgm-commons/src/components/structure/ModalDialog.vue'
+import { useStore } from '@/store'
+import Expansion from '@/services/enum/Expansion'
 
 export default defineComponent({
   name: 'AboutARNO',
@@ -27,7 +29,13 @@ export default defineComponent({
   },
   setup() {
     const { t } = useI18n()
+    useStore()
     return { t }
+  },
+  computed: {
+    hasProjectModuleExpansion() : boolean {
+      return (this.$store.state.setup.expansions ?? []).includes(Expansion.ARNO_CONSERVATION_PROJECT_MODULE)
+    }
   }
 })
 </script>

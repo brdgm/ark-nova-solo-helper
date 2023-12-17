@@ -7,8 +7,8 @@
 
   <ModalDialog id="breakInfoModal" :title="t('breakInfo.link')" class="text-start">
     <template #body>
-      <p v-html="t('breakInfo.text1')"></p>
-      <p v-html="t('breakInfo.text2')"></p>
+      <p v-html="t('breakInfo.drawThreeCards')"></p>
+      <p v-html="t('breakInfo.triggerBonus')"></p>
       <template v-if="hasProjectModuleExpansion">
         <span v-html="t('breakInfo.discardedSponsorCards')"></span>
         <SponsorCardDiscard v-model="sponsorCardDiscardCount"/>
