@@ -15,7 +15,7 @@
         <li v-html="t('setupARNO.startComponentsKeepCards')"></li>
         <li v-if="hasProjectModuleExpansion">
           <span v-html="t('setupARNO.discardedSponsorCards')"></span>
-          <SponsorCardDiscard v-model="sponsorCardDiscardCount"/>
+          <SponsorCardDiscard v-model="sponsorCardDiscardCount" :maxCount="8"/>
         </li>
       </ul>
     </li>

@@ -142,7 +142,7 @@
     "referenceValues": "The Animal cards that are stacked on ARNO’s zoo mat provide <b>reference values for certain card effects</b> of the human players. Whenever ARNO places another Animal card on his stack, its icons will trigger the card effects of the other player(s).",
     "noEffectTarget": "ARNO can <b>never be the target of an interactive effect</b>. Please use the alternative solo play effects of those cards instead.",
     "receiveCards": "Every time ARNO <b>receives cards</b> during the game, discard all sponsor cards and stack animal and conservation project cards on his zoo mat.",
-    "projectModuleInfo": "For the optional conservation project module it's important to <b>track all sponsor cards</b> that are discarded at any time. For this, use the dialogs in the sidebar during ARNO's turn or during a break."
+    "projectModuleInfo": "For the optional conservation project module it's important to <b>track all sponsor cards</b> that are discarded at any time. For this, you have to specify the number of sponsor cards the ARNO discards during break (in the corresponding dialog), or if he snaps a card."
   },
   "roundDisplay": {
     "round": "Round {round}"
@@ -165,6 +165,17 @@
   },
   "sponsorCardDiscard": {
     "count": "ARNO discarded sponsor cards: | ARNO {bot} discarded sponsor cards:"
+  },
+  "projectTrackerAllBotsInfo": {
+    "title": "ARNO Status",
+    "trackerPosition": "Tracker Position",
+    "preferredProjectSlot": "Preferred Conservation Project Slot",
+    "kioskCount": "Kiosk Count"
+  },
+  "projectSlot": {
+    "left": "Left",
+    "middle": "Middle",
+    "right": "Right"
   },
   "scoring": {
     "title": "Scoring",

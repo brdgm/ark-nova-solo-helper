@@ -2,7 +2,7 @@
   <ul v-for="bot of botCount" :key="bot">
     <li>
       <span v-html="t('sponsorCardDiscard.count', {bot}, botCount)"></span>
-      <input type="number" min="0" max="8" step="1" v-model="count[bot-1]" @focus="inputSelectAll"/>
+      <input type="number" min="0" :max="maxCount" step="1" v-model="count[bot-1]" @focus="inputSelectAll"/>
     </li>
   </ul>
 </template>
@@ -18,6 +18,10 @@ export default defineComponent({
   props: {
     modelValue: {
       type: Array as PropType<number[]>,
+      required: true
+    },
+    maxCount: {
+      type: Number,
       required: true
     }
   },

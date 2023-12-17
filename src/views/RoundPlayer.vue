@@ -3,6 +3,7 @@
     <AboutARNO/>
     <BreakInfo :round="round"/>
     <RoundDisplay :navigation-state="navigationState"/>
+    <ProjectTrackerArnoStatus :round="round"/>
   </div>
   <h1><PlayerColorDisplay :playerColor="playerColor" class="me-2"/>{{t('roundPlayer.title', {player:player}, playerCount)}}</h1>
 
@@ -26,6 +27,7 @@ import { useRoute } from 'vue-router'
 import AboutARNO from '@/components/structure/AboutARNO.vue'
 import RoundDisplay from '@/components/structure/RoundDisplay.vue'
 import BreakInfo from '@/components/structure/BreakInfo.vue'
+import ProjectTrackerArnoStatus from '@/components/structure/ProjectTrackerArnoStatus.vue'
 
 export default defineComponent({
   name: 'RoundPlayer',
@@ -34,7 +36,8 @@ export default defineComponent({
     FooterButtons,
     AboutARNO,
     RoundDisplay,
-    BreakInfo
+    BreakInfo,
+    ProjectTrackerArnoStatus
   },
   setup() {
     const { t } = useI18n()

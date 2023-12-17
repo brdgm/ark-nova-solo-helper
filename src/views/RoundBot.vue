@@ -3,6 +3,8 @@
     <AboutARNO/>
     <BreakInfo :round="round"/>
     <RoundDisplay :navigation-state="navigationState"/>
+    <BonusTile/>
+    <ProjectTrackerArnoStatus :round="round"/>
   </div>
   <h1><PlayerColorDisplay :playerColor="playerColor" class="me-2"/>{{t('roundBot.title', {bot:bot}, botCount)}}</h1>
 
@@ -30,6 +32,8 @@ import AboutARNO from '@/components/structure/AboutARNO.vue'
 import RoundDisplay from '@/components/structure/RoundDisplay.vue'
 import BreakInfo from '@/components/structure/BreakInfo.vue'
 import BotDebugInfo from '@/components/round/BotDebugInfo.vue'
+import ProjectTrackerArnoStatus from '@/components/structure/ProjectTrackerArnoStatus.vue'
+import BonusTile from '@/components/round/BonusTile.vue'
 
 export default defineComponent({
   name: 'RoundBot',
@@ -40,7 +44,9 @@ export default defineComponent({
     AboutARNO,
     RoundDisplay,
     BreakInfo,
-    BotDebugInfo
+    BotDebugInfo,
+    ProjectTrackerArnoStatus,
+    BonusTile
   },
   setup() {
     const { t } = useI18n()

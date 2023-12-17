@@ -11,7 +11,7 @@
       <p v-html="t('breakInfo.triggerBonus')"></p>
       <template v-if="hasProjectModuleExpansion">
         <span v-html="t('breakInfo.discardedSponsorCards')"></span>
-        <SponsorCardDiscard v-model="sponsorCardDiscardCount"/>
+        <SponsorCardDiscard v-model="sponsorCardDiscardCount" :max-count="3"/>
       </template>
     </template>
   </ModalDialog>
@@ -34,6 +34,7 @@ export default defineComponent({
     ModalDialog,
     SponsorCardDiscard
   },
+  emits: ['sponsorCardDiscardUpdate'],
   props: {
     round: {
       type: Number,
@@ -62,6 +63,7 @@ export default defineComponent({
       handler() {
         this.$store.commit('roundSponsorCardDiscardCount',
           { round: this.round, botBreakSponsorCardDiscardCount: this.sponsorCardDiscardCount })
+        this.$emit('sponsorCardDiscardUpdate')
       },
       deep: true
     }

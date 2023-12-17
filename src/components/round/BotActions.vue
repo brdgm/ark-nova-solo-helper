@@ -1,5 +1,4 @@
 <template>
-  <BonusTile/>
   <ActionCards :navigation-state="navigationState"/>
 
   <hr/>
@@ -83,7 +82,6 @@ import AppIcon from '../structure/AppIcon.vue'
 import ActionCards from './ActionCards.vue'
 import CardSlots from '@/services/CardSlots'
 import PickConservationProject from './PickConservationProject.vue'
-import BonusTile from './BonusTile.vue'
 import Card from '@/services/Card'
 import Action from '@/services/enum/Action'
 import BotAction from '@/services/BotAction'
@@ -98,7 +96,6 @@ export default defineComponent({
   components: {
     AppIcon,
     ActionCards,
-    BonusTile,
     GainPartnerZoo,
     GainPartnerUniversity,
     PickConservationProject,

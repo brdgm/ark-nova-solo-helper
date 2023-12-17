@@ -142,7 +142,7 @@
     "referenceValues": "Die Tierkarten, die ARNO in seinem Zoo gestapelt hat, dienen als <b>Referenzwerte für mögliche Karteneffekte</b> der menschlichen Spieler. Wann immer ARNO eine weitere Karte auf seinem Stapel platziert, gelten diese Eigenschaften für Effekte der Karten der anderen Spieler.",
     "noEffectTarget": "ARNO kann <b>nicht Opfer von interaktiven Effekten</b> werden, nutze stattdessen den abweichenden Effekt für das Solospiel.",
     "receiveCards": "Immer wenn ARNO <b>Karten erhält</b>, werfe alle Sponsoren-Karten ab und lege Tier- und Artenschutzkarten auf die Kartenstapel auf dem Zooplan.",
-    "projectModuleInfo": "Für das optional Artenschutzprojekt-Modul ist es wichtig, dass alle abgeworfenen <b>Sponsoren-Karten nachverfolgt</b> werden. Bitte dafür die Dialoge in der Seitenleiste während ARNOs Zug oder während der Pause verwenden."
+    "projectModuleInfo": "Für das optional Artenschutzprojekt-Modul ist es wichtig, dass alle abgeworfenen <b>Sponsoren-Karten nachverfolgt</b> werden. Dafür muss die Anzahl der abgeworfenen Sponsorenkarten in der Pause erfasst werden (über den entsprechenden Dialog), sowie wenn ARNO eine Karte schnappt."
   },
   "roundDisplay": {
     "round": "Runde {round}"
@@ -165,6 +165,17 @@
   },
   "sponsorCardDiscard": {
     "count": "ARNO hat Sponsorenkarten abgeworfen: | ARNO {bot} hat Sponsorenkarten abgeworfen:"
+  },
+  "projectTrackerAllBotsInfo": {
+    "title": "ARNO Status",
+    "trackerPosition": "Tracker-Position",
+    "preferredProjectSlot": "Bevorzugte Artenschutzprojekt-Position",
+    "kioskCount": "Anzahl Kioske"
+  },
+  "projectSlot": {
+    "left": "Links",
+    "middle": "Mitte",
+    "right": "Rechts"
   },
   "scoring": {
     "title": "Auswertung",
