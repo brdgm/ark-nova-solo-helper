@@ -25,6 +25,7 @@
     },
     "expansions": {
       "title": "Expansions",
+      "arno-conservation-project-module": "ARNO: Variable Conservation Project condition determination",
       "marine-worlds": "Marine Worlds",
       "marineWorldsNewActionCards": "Take 3 of the <b>new Action cards</b> at random and choose 2 of those (with different action types)."
     },
