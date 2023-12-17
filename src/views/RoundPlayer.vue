@@ -1,7 +1,7 @@
 <template>
   <div class="float-end text-end">
     <AboutARNO/>
-    <BreakInfo/>
+    <BreakInfo :round="round"/>
     <RoundDisplay :navigation-state="navigationState"/>
   </div>
   <h1><PlayerColorDisplay :playerColor="playerColor" class="me-2"/>{{t('roundPlayer.title', {player:player}, playerCount)}}</h1>

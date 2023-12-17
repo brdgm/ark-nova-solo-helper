@@ -9,6 +9,10 @@
     <template #body>
       <p v-html="t('breakInfo.text1')"></p>
       <p v-html="t('breakInfo.text2')"></p>
+      <template v-if="hasProjectModuleExpansion">
+        <span v-html="t('breakInfo.discardedSponsorCards')"></span>
+        <SponsorCardDiscard v-model="sponsorCardDiscardCount"/>
+      </template>
     </template>
   </ModalDialog>
 
@@ -19,16 +23,49 @@ import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import AppIcon from './AppIcon.vue'
 import ModalDialog from 'brdgm-commons/src/components/structure/ModalDialog.vue'
+import Expansion from '@/services/enum/Expansion'
+import { useStore } from '@/store'
+import SponsorCardDiscard from './SponsorCardDiscard.vue'
+import { ref } from 'vue'
 
 export default defineComponent({
   name: 'BreakInfo',
   components: {
     AppIcon,
-    ModalDialog
+    ModalDialog,
+    SponsorCardDiscard
   },
-  setup() {
+  props: {
+    round: {
+      type: Number,
+      required: true
+    }
+  },
+  setup(props) {
     const { t } = useI18n()
-    return { t }
+    const store = useStore()
+
+    const sponsorCardDiscardCount = ref([0,0,0])
+    const roundData = store.state.rounds.find(item => item.round == props.round)
+    if (roundData?.botBreakSponsorCardDiscardCount) {
+      sponsorCardDiscardCount.value = roundData.botBreakSponsorCardDiscardCount
+    }
+
+    return { t, sponsorCardDiscardCount }
+  },
+  computed: {
+    hasProjectModuleExpansion() : boolean {
+      return (this.$store.state.setup.expansions ?? []).includes(Expansion.ARNO_CONSERVATION_PROJECT_MODULE)
+    }
+  },
+  watch: {
+    sponsorCardDiscardCount: {
+      handler() {
+        this.$store.commit('roundSponsorCardDiscardCount',
+          { round: this.round, botBreakSponsorCardDiscardCount: this.sponsorCardDiscardCount })
+      },
+      deep: true
+    }
   }
 })
 </script>

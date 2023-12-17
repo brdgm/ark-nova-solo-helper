@@ -149,7 +149,8 @@
   "breakInfo": {
     "link": "Break",
     "text1": "During the breaks, ARNO draws <b>three cards</b> from the deck. He keeps the first Conservation Project card and plays the first Animal Card to his zoo mat.",
-    "text2": "The played Animal card might trigger a bonus effect for the human player(s). The other cards are discarded."
+    "text2": "The played Animal card might trigger a bonus effect for the human player(s). The other cards are discarded.",
+    "discardedSponsorCards": "Please specify the number of <b>sponsor cards</b> discarded during break:"
   },
   "bonusTile": {
     "link": "Bonus Tile",

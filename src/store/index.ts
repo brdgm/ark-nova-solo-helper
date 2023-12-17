@@ -32,6 +32,7 @@ export interface PlayerSetup {
 export interface Round {
   round: number
   botRound: BotRound[]
+  botBreakSponsorCardDiscardCount?: number[]
 }
 export interface BotRound {
   round: number
@@ -128,6 +129,17 @@ export const store = createStore<State>({
               botRound.cardSlots.upgradedCards = botRound.cardSlots.upgradedCards.filter(cardName => cardName != payload.cardName)
             })
       }
+    },
+    roundSponsorCardDiscardCount(state : State, data: { round: number, botBreakSponsorCardDiscardCount : number[] }) {
+      let round = state.rounds[data.round - 1]
+      if (!round) {
+        round = {
+          round : data.round,
+          botRound: []
+        }
+      }
+      round.botBreakSponsorCardDiscardCount = data.botBreakSponsorCardDiscardCount
+      state.rounds[data.round - 1] = round
     },
     resetGame(state : State) {
       state.rounds = []

@@ -13,7 +13,7 @@
       <span v-html="t('setupARNO.startComponents')"></span>
       <ul>
         <li v-html="t('setupARNO.startComponentsKeepCards')"></li>
-        <li v-if="isProjectModuleExpansion">
+        <li v-if="hasProjectModuleExpansion">
           <span v-html="t('setupARNO.discardedSponsorCards')"></span>
           <SponsorCardDiscard v-model="sponsorCardDiscardCount"/>
         </li>
@@ -55,15 +55,15 @@ export default defineComponent({
     hasMarineWorldsExpansion() : boolean {
       return (this.$store.state.setup.expansions ?? []).includes(Expansion.MARINE_WORLDS)
     },
+    hasProjectModuleExpansion() : boolean {
+      return (this.$store.state.setup.expansions ?? []).includes(Expansion.ARNO_CONSERVATION_PROJECT_MODULE)
+    },
     conservationPointStartMinus() : number {
       return this.hasMarineWorldsExpansion ? 3 : 5
     },
     conservationSetupImageFileName() : string {
       const components = this.hasMarineWorldsExpansion ? 'expansion' : 'base'
       return new URL(`/src/assets/arno-conservation-start-setup/start-setup-${components}-${this.conservationPointStartMinus}.webp`, import.meta.url).toString()
-    },
-    isProjectModuleExpansion() : boolean {
-      return (this.$store.state.setup.expansions ?? []).includes(Expansion.ARNO_CONSERVATION_PROJECT_MODULE)
     },
     botCount() : number {
       return this.$store.state.setup.playerSetup.botCount

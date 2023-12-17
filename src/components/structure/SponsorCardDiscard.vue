@@ -9,8 +9,7 @@
 
 <script lang="ts">
 import { useStore } from '@/store'
-import { PropType } from 'vue'
-import { defineComponent } from 'vue'
+import { defineComponent, PropType } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 export default defineComponent({

@@ -149,7 +149,8 @@
   "breakInfo": {
     "link": "Pause",
     "text1": "Während den Pausen zieht ARNO <b>drei Karten</b> vom Nachziehstapel und legt, falls verfügbar, jeweils die erste Artenschutzprojekt- und Tierkarte auf seinen Zooplan.",
-    "text2": "Die Tierkarte kann dabei einen Effekt beim menschlichen Spieler auslösen. Die anderen Karten werden abgeworfen."
+    "text2": "Die Tierkarte kann dabei einen Effekt beim menschlichen Spieler auslösen. Die anderen Karten werden abgeworfen.",
+    "discardedSponsorCards": "Bitte angeben, wie viele <b>Sponsorenkarten</b> während der Pause abgeworfen wurden:"
   },
   "bonusTile": {
     "link": "Bonus&shy;plättchen",
