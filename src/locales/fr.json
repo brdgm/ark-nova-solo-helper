@@ -34,19 +34,15 @@
   },
   "setupARNO": {
     "title": "Mise en place d'ARNO",
-    "text1": "Organisez le jeu en fonction du nombre de joueurs (y compris ARNO). Un joueur humain sera toujours le premier joueur.",
-    "text2": "Chaque ARNO commence avec <b>-{count} points de conservation</b> et des points d'attrait selon l'ordre des joueurs.",
-    "text2-conservation":"Placez {count} cubes de joueur en guise de rappel à côté du compteur de points de conservation d'ARNO et retirez-les un par un dès qu'ARNO a marqué ses premiers points de conservation.",
-    "text2-appeal": "Par exemple, si ARNO est le 3ème joueur, il commence avec 2 points d'attraits.",
-    "text3": "Chaque ARNO reçoit les composants d'une couleur, un plateau zoo (carte A), une carte de score final face cachée et 8 cartes Zoo aléatoires.",
-    "text4": "Placez tous les jetons de joueur de la couleur d'ARNO à côté de son plateau zoo.",
-    "text5": "ARNO commence avec un bénévole sur son bloc-notes. Placez les 3 autres sur les espaces dédiés en dessous du bloc-notes sur son plateau zoo.",
-    "text6": "Placez la carte de score final sur la partie gauche du plateau zoo. Cela permet de couvrir la zone des bâtiment qui n'est pas nécessaire pour ARNO.",
-    "text7": "Triez les 8 cartes Zoo d'ARNO en fonction de leur type :",
-    "text7-1": "Défaussez toutes les cartes de Mécènes.",
-    "text7-2": "ARNO peut garder un maximum de quatre cartes. Il conserve toutes les cartes de projet de conservation (quatre au maximum).",
-    "text7-3": "Si ARNO possède maintenant moins de quatre cartes, il peut également garder les cartes Animaux (jusqu'à quatre au total)",
-    "text8": "Vous n'avez pas besoin de dés ou de cartes d'action."
+    "setupPlayerCount": "Organisez le jeu en fonction du nombre de joueurs (y compris ARNO). Un joueur humain sera toujours le premier joueur.",
+    "startPoints": "Chaque ARNO commence avec <b>-{count} points de conservation</b> et des points d'attrait selon l'ordre des joueurs.",
+    "startPointsConservation":"Placez {count} cubes de joueur en guise de rappel à côté du compteur de points de conservation d'ARNO et retirez-les un par un dès qu'ARNO a marqué ses premiers points de conservation.",
+    "startPointsAppeal": "Par exemple, si ARNO est le 3ème joueur, il commence avec 2 points d'attraits.",
+    "startComponents": "Chaque ARNO reçoit les composants d'une couleur, un plateau zoo (carte A), une carte de score final face cachée et 8 cartes Zoo aléatoires.",
+    "playerTokens": "Placez tous les jetons de joueur de la couleur d'ARNO à côté de son plateau zoo.",
+    "associationWorker": "ARNO commence avec un bénévole sur son bloc-notes. Placez les 3 autres sur les espaces dédiés en dessous du bloc-notes sur son plateau zoo.",
+    "finalScoringCard": "Placez la carte de score final sur la partie gauche du plateau zoo. Cela permet de couvrir la zone des bâtiment qui n'est pas nécessaire pour ARNO.",
+    "noDiceActionCards": "Vous n'avez pas besoin de dés ou de cartes d'action."
   },
   "roundPlayer": {
     "title": "Joueur | Joueur {player}",

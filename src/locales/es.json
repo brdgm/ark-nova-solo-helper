@@ -40,19 +40,15 @@
   },
   "setupARNO": {
     "title": "Configuración de ARNO",
-    "text1": "Prepara la partida para el número total de jugadores (contando los ARNO bots) con los siguientes cambios para la preparación de los ARNO. Escoge a uno de los jugadores humanos como el jugador inicial.",
-    "text2": "Cada ARNO comienza con <b>-{count} puntos de conservación</b>, 0 puntos de reputación, y los puntos de atractivo correspondientes al orden del turno.",
-    "text2-conservation": "Coloca {count} fichas de jugador como recordatorio junto al contador de puntos de conservación de ARNO y retíralas una a una en cuanto ARNO consiga sus primeros puntos de conservación.",
-    "text2-appeal": "Ej. Si ARNO es el 3er jugador, comienza con 2 puntos de atractivo.",
-    "text3": "Cada ARNO recibe los componentes de un color, un tablero de zoológico (map A), una carta de Puntuación Final (boca abajo) y 8 cartas de zoológico aleatorias.",
-    "text4": "Coloca todos los cubos de jugador de su color junto al tablero de cada ARNO.",
-    "text5": "Cada ARNO comienza la partida con un asistente sobre su libreta de notas. Coloca el resto de sus asistentes sobre el espacio designado para ello en su tablero.",
-    "text6": "Para cada ARNO, coloca su carta de Puntuación Final y sus cartas de zoológico sobre la zona de construcción de su tablero de zoológico. Esto inhabilitará el área de construcción del tablero; esta área no es necesaria para ARNO.",
-    "text7": "Ordena las 8 cartas de zoológico de cada ARNO por tipo:",
-    "text7-1": "Descarta todas las cartas de Patrocinador.",
-    "text7-2": "Conserva todas las cartas de Proyecto de Conservación (máximo cuatro cartas).",
-    "text7-3": "Si ARNO tiene menos de cuatro cartas, adicionalmente conserva cartas de animal (hasta tener cuatro cartas).",
-    "text8": "No necesitas dados ni cartas de acción para los ARNO."
+    "setupPlayerCount": "Prepara la partida para el número total de jugadores (contando los ARNO bots) con los siguientes cambios para la preparación de los ARNO. Escoge a uno de los jugadores humanos como el jugador inicial.",
+    "startPoints": "Cada ARNO comienza con <b>-{count} puntos de conservación</b>, 0 puntos de reputación, y los puntos de atractivo correspondientes al orden del turno.",
+    "startPointsConservation": "Coloca {count} fichas de jugador como recordatorio junto al contador de puntos de conservación de ARNO y retíralas una a una en cuanto ARNO consiga sus primeros puntos de conservación.",
+    "startPointsAppeal": "Ej. Si ARNO es el 3er jugador, comienza con 2 puntos de atractivo.",
+    "startComponents": "Cada ARNO recibe los componentes de un color, un tablero de zoológico (map A), una carta de Puntuación Final (boca abajo) y 8 cartas de zoológico aleatorias.",
+    "playerTokens": "Coloca todos los cubos de jugador de su color junto al tablero de cada ARNO.",
+    "associationWorker": "Cada ARNO comienza la partida con un asistente sobre su libreta de notas. Coloca el resto de sus asistentes sobre el espacio designado para ello en su tablero.",
+    "finalScoringCard": "Para cada ARNO, coloca su carta de Puntuación Final y sus cartas de zoológico sobre la zona de construcción de su tablero de zoológico. Esto inhabilitará el área de construcción del tablero; esta área no es necesaria para ARNO.",
+    "noDiceActionCards": "No necesitas dados ni cartas de acción para los ARNO."
   },
   "roundPlayer": {
     "title": "Jugador | Jugador {player}",
