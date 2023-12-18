@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="mt-1 mb-1">
     <a id="breakInfo" data-bs-toggle="modal" href="#breakInfoModal">
       <AppIcon name="break" class="icon"/>{{t('breakInfo.link')}}
     </a>
