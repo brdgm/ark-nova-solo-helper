@@ -131,10 +131,15 @@ export const store = createStore<State>({
       }
     },
     roundBreakSponsorCardDiscardCount(state : State, data: { round: number, botBreakSponsorCardDiscardCount : number[] }) {
-      const round = state.rounds[data.round - 1]
-      if (round) {
-        round.botBreakSponsorCardDiscardCount = data.botBreakSponsorCardDiscardCount
+      let round = state.rounds[data.round - 1]
+      if (!round) {
+        round = {
+          round : data.round,
+          botRound: []
+        }
+        state.rounds[data.round - 1] = round
       }
+      round.botBreakSponsorCardDiscardCount = data.botBreakSponsorCardDiscardCount
     },
     roundBotSponsorCardDiscardCount(state : State, data: { round: number, bot: number, sponsorCardDiscardCount : number }) {
       const round = state.rounds[data.round - 1]
