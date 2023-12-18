@@ -1,9 +1,9 @@
 <template>
   <p class="arnoStatusLink mt-3" v-if="hasProjectModuleExpansion">
-    <a data-bs-toggle="modal" href="#arnoStatusModal">{{t('projectTrackerAllBotsInfo.title')}}</a>
+    <a data-bs-toggle="modal" href="#arnoStatusModal">{{t('projectTrackerArnoStatus.title')}}</a>
   </p>
 
-  <ModalDialog id="arnoStatusModal" :title="t('projectTrackerAllBotsInfo.title')">
+  <ModalDialog id="arnoStatusModal" :title="t('projectTrackerArnoStatus.title')">
     <template #body>
       <table>
         <tr>
@@ -11,15 +11,15 @@
           <th scope="col" v-for="bot of botCount" :key="bot">{{t('roundBot.title', {bot}, botCount)}}</th>
         </tr>
         <tr v-if="debugMode">
-          <th scope="row">{{t('projectTrackerAllBotsInfo.trackerPosition')}}</th>
+          <th scope="row">{{t('projectTrackerArnoStatus.trackerPosition')}}</th>
           <td v-for="bot of botCount" :key="bot">{{projectModuleTrackers[bot - 1].trackerPosition}}</td>
         </tr>
         <tr>
-          <th scope="row">{{t('projectTrackerAllBotsInfo.preferredProjectSlot')}}</th>
+          <th scope="row">{{t('projectTrackerArnoStatus.preferredProjectSlot')}}</th>
           <td v-for="bot of botCount" :key="bot">{{t(`projectSlot.${projectModuleTrackers[bot - 1].projectSlot}`)}}</td>
         </tr>
         <tr>
-          <th scope="row">{{t('projectTrackerAllBotsInfo.kioskCount')}}</th>
+          <th scope="row">{{t('projectTrackerArnoStatus.kioskCount')}}</th>
           <td v-for="bot of botCount" :key="bot">{{projectModuleTrackers[bot - 1].kioskCount}}</td>
         </tr>
       </table>
