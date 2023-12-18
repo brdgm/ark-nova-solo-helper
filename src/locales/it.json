@@ -34,19 +34,15 @@
   },
   "setupARNO": {
     "title": "Setup di ARNO",
-    "text1": "Prepara il gioco in base al numero di giocatori (compresi gli ARNO). Un giocatore umano sarà il giocatore iniziale.",
-    "text2": "Ogni ARNO inizia con <b>-{count} punti conservazione</b> e punti attrattiva a seconda dell'ordine di partenza.",
-    "text2-conservation": "Metti {count} segnalini giocatore come promemoria accanto al segnalino punti conservazione di ARNO e rimuovili uno per uno non appena ARNO ha segnato i suoi primi punti conservazione.",
-    "text2-appeal": "Per esempio, se ARNO è il 3° giocatore, inizia con 2 punti attrattiva.",
-    "text3": "Ogni ARNO riceve i componenti di un colore, una mappa zoo (mappa A), una carta Punteggio Finale a faccia in giù e 8 carte Zoo casuali.",
-    "text4": "Metti tutti i segnalini giocatore del colore di ARNO accanto alla sua mappa zoo.",
-    "text5": "ARNO inizia con un lavoratore delle associazioni sul suo taccuino. Posiziona i restanti 3 negli spazi designati sotto il taccuino della mappa zoo.",
-    "text6": "Posiziona la carta Punteggio Finale nell'area sinistra della mappa zoo. Coprirà l’area di costruzione che non è necessaria per ARNO.",
-    "text7": "Ordina le 8 carte Zoo di ARNO in base al tipo:",
-    "text7-1": "Scarta tutte le carte Sponsor.",
-    "text7-2": "ARNO tiene un massimo di quattro carte. Mantiene tutte le carte Progetto di Conservazione (massimo quattro).",
-    "text7-3": "Se ARNO ora ha meno di quattro carte, allora tiene carte Animali (fino a quattro carte totali).",
-    "text8": "Non hai bisogno di dadi o delle carte azione."
+    "setupPlayerCount": "Prepara il gioco in base al numero di giocatori (compresi gli ARNO). Un giocatore umano sarà il giocatore iniziale.",
+    "startPoints": "Ogni ARNO inizia con <b>-{count} punti conservazione</b> e punti attrattiva a seconda dell'ordine di partenza.",
+    "startPointsConservation": "Metti {count} segnalini giocatore come promemoria accanto al segnalino punti conservazione di ARNO e rimuovili uno per uno non appena ARNO ha segnato i suoi primi punti conservazione.",
+    "startPointsAppeal": "Per esempio, se ARNO è il 3° giocatore, inizia con 2 punti attrattiva.",
+    "startComponents": "Ogni ARNO riceve i componenti di un colore, una mappa zoo (mappa A), una carta Punteggio Finale a faccia in giù e 8 carte Zoo casuali.",
+    "playerTokens": "Metti tutti i segnalini giocatore del colore di ARNO accanto alla sua mappa zoo.",
+    "associationWorker": "ARNO inizia con un lavoratore delle associazioni sul suo taccuino. Posiziona i restanti 3 negli spazi designati sotto il taccuino della mappa zoo.",
+    "finalScoringCard": "Posiziona la carta Punteggio Finale nell'area sinistra della mappa zoo. Coprirà l’area di costruzione che non è necessaria per ARNO.",
+    "noDiceActionCards": "Non hai bisogno di dadi o delle carte azione."
   },
   "roundPlayer": {
     "title": "Giocatore | Giocatore {player}",
@@ -124,20 +120,20 @@
   "aboutARNO": {
     "link": "Regole ARNO",
     "title": "Riassunto delle Regole A.R.N.O.",
-    "text1": "ARNO <b>non usa soldi</b>. Non spende soldi per le azioni e non riceve mai soldi (ad esempio durante le pause o dalle carte Animali).",
-    "text2": "ARNO <b>usa solo l’area destra della sua mappa zoo</b>. È dove piazza i suoi zoo partner e le università, ed anche dove prende i lavoratori delle associazioni. Riceve anche i bonus una volta scoperti. L’area sinistra del suo zoo non verrà considerata ed usata solamente per piazzare le carte Zoo e la carta Punteggio Finale.",
-    "text3": "ARNO riceve i seguenti <b>bonus</b> dalla sua mappa zoo e dalla plancia generale: <b>punti Conservazione, miglioramenti delle carte, punti reputazione e lavoratori delle associazioni.</b> Oltre ai soldi non riceve nemmeno i bonus dalle carte Animali o Sponsor, edifici, recinti, segnalini X o durante le pause.",
-    "text4": "Le carte Animale impilate sulla mappa zoo di ARNO offrono <b>icone di riferimento per alcuni effetti delle carte</b> dei giocatori umani. Quando ARNO piazza un altro Animale sulla sua pila, le icone innescano gli effetti sulle carte degli altri giocatori.",
-    "text5": "ARNO <b>non è mai il bersaglio di un effetto interattivo</b>. Per favore usate gli effetti alternativi per il solitario su quelle carte.",
-    "text6": "Ogni volta che ARNO <b>riceve carte</b> durante il gioco, scarta tutti gli sponsor e impila le carte animali e progetti di conservazione sulla sua mappa zoo."
+    "noMoney": "ARNO <b>non usa soldi</b>. Non spende soldi per le azioni e non riceve mai soldi (ad esempio durante le pause o dalle carte Animali).",
+    "rightArea": "ARNO <b>usa solo l’area destra della sua mappa zoo</b>. È dove piazza i suoi zoo partner e le università, ed anche dove prende i lavoratori delle associazioni. Riceve anche i bonus una volta scoperti. L’area sinistra del suo zoo non verrà considerata ed usata solamente per piazzare le carte Zoo e la carta Punteggio Finale.",
+    "bonuses": "ARNO riceve i seguenti <b>bonus</b> dalla sua mappa zoo e dalla plancia generale: <b>punti Conservazione, miglioramenti delle carte, punti reputazione e lavoratori delle associazioni.</b> Oltre ai soldi non riceve nemmeno i bonus dalle carte Animali o Sponsor, edifici, recinti, segnalini X o durante le pause.",
+    "referenceValues": "Le carte Animale impilate sulla mappa zoo di ARNO offrono <b>icone di riferimento per alcuni effetti delle carte</b> dei giocatori umani. Quando ARNO piazza un altro Animale sulla sua pila, le icone innescano gli effetti sulle carte degli altri giocatori.",
+    "noEffectTarget": "ARNO <b>non è mai il bersaglio di un effetto interattivo</b>. Per favore usate gli effetti alternativi per il solitario su quelle carte.",
+    "receiveCards": "Ogni volta che ARNO <b>riceve carte</b> durante il gioco, scarta tutti gli sponsor e impila le carte animali e progetti di conservazione sulla sua mappa zoo."
   },
   "roundDisplay": {
     "round": "Round {round}"
   },
   "breakInfo": {
     "link": "Pausa",
-    "text1": "Durante le pause, ARNO pesca <b>tre carte</b> dal mazzo. Tiene la prima crta Progetto di Conservazione e gioca la prima carta Animale sulla sua mappa zoo.",
-    "text2": "La carta Animale giocata potrebbe attivare un effetto bonus per i giocatori umani. Le altre carte vengono scartate."
+    "drawThreeCards": "Durante le pause, ARNO pesca <b>tre carte</b> dal mazzo. Tiene la prima crta Progetto di Conservazione e gioca la prima carta Animale sulla sua mappa zoo.",
+    "triggerBonus": "La carta Animale giocata potrebbe attivare un effetto bonus per i giocatori umani. Le altre carte vengono scartate."
   },
   "bonusTile": {
     "link": "Tessera Bonus",

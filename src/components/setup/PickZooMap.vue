@@ -2,13 +2,13 @@
   <h3 class="mt-4 mb-3">{{t('setup.pickZooMap.title')}}</h3>
 
   <div class="row mt-3">
-    <div class="col-sm-5 col-md-3">
+    <div class="col-sm-5 col-lg-3">
       <label for="playerCount" class="form-label">{{t('setup.pickZooMap.title')}}</label>
       <button type="button" class="upgrade btn btn-outline-secondary btn-sm ms-2" @click="pickRandom">
         {{t('setup.pickZooMap.pickRandom')}}
       </button><br/>
     </div>
-    <div class="col-sm-5 col-md-3 mt-3 mt-sm-0">
+    <div class="col-sm-5 col-lg-3 mt-3 mt-sm-0">
       <select class="form-select" v-for="playerIndex in $store.state.setup.playerSetup.playerCount" :key="playerIndex" v-model="selectedMaps[playerIndex - 1]">
         <option :value="''">{{t('setup.pickZooMap.pleaseSelect')}}</option>
         <option :value="'A'">{{t('setup.pickZooMap.mapA')}}</option>

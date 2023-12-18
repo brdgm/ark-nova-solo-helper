@@ -4,26 +4,26 @@
   <template v-for="bot in botCount" :key="bot">
     <h6 v-if="botCount > 1">{{t('roundBot.title', {bot:bot}, botCount)}}</h6>
     <div class="row">
-      <div class="col-2 col-md-1 text-end">
+      <div class="col-2 col-lg-1 text-end">
         <label for="difficultyLevel" class="form-label">{{t('setup.difficultyLevel.easy')}}</label>
       </div>
-      <div class="col-8 col-md-4">
+      <div class="col-8 col-lg-4">
         <input type="range" class="form-range" min="1" max="6" id="difficultyLevel"
             :value="levels[bot-1]" @input="updateDifficultyLevel(bot, $event)">
       </div>
-      <div class="col-2 col-md-1">
+      <div class="col-2 col-lg-1">
         <label for="difficultyLevel" class="form-label">{{t('setup.difficultyLevel.hard')}}</label>
       </div>
     </div>
     <div class="row">
-      <div class="offset-2 offset-md-1 col-8 col-md-4 text-muted small">
+      <div class="offset-2 offset-lg-1 col-8 col-lg-4 text-muted small">
         {{t(`difficultyLevel.${levels[bot-1]}`)}}
       </div>
     </div>
   </template>
 
   <div class="row" v-if="hasLevel6">
-    <div class="offset-2 offset-md-1 col-8 col-md-10 text-muted small">
+    <div class="offset-2 offset-lg-1 col-8 col-lg-10 text-muted small">
       {{t('setup.difficultyLevel.level7plus')}}
     </div>
   </div>
