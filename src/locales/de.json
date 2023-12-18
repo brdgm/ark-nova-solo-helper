@@ -25,6 +25,7 @@
     },
     "expansions": {
       "title": "Erweiterungen",
+      "arno-conservation-project-module": "ARNO: Variable Artenschutzprojektstufenbestimmung",
       "marine-worlds": "Wasserwelten",
       "marineWorldsNewActionCards": "Nimm dir 3 zufällige der 20 <b>neuen Aktionskarten</b> und wähle 2 davon (mit unterschiedlichen Aktionstypen)."
     },
@@ -46,6 +47,7 @@
     "startPointsAppeal": "Ist ARNO z.B. der dritte Spieler, startet er mit 2 Attraktionspunkten.",
     "startComponents": "Jeder ARNO erhält die Komponenten einer Farbe, einen Zooplan A, eine verdeckte Endwertungskarte sowie 8 zufällige Zookarten.",
     "startComponentsKeepCards": "Von diesen Zookarten behält ARNO nur die Artenschutzkarten, maximal die ersten 2. Alle Sponsoren- und Tierkarten werden abgeworfen.",
+    "discardedSponsorCards": "Bitte angeben, wie viele <b>Sponsorenkarten</b> während des Aufbaus abgeworfen wurden:",
     "playerTokens": "Lege alle Markierungssteine neben den Zooplan von ARNO.",
     "associationWorker": "ARNO startet mit einem Verbandsarbeiter auf dem Notizzettel. Lege die anderen 3 auf die entsprechenden Felder des Zooplans von ARNO.",
     "finalScoringCard": "Platziere die Endwertungskarte verdeckt auf der linken Seite des Zooplans. Der Grundriss wird dadurch überdeckt, aber wird für ARNO nicht benötigt.",
@@ -98,13 +100,20 @@
       "projectSlotLeftMost": "ARNO platziert seinen Markierungsstein auf der höchsten Stufe (links).",
       "projectSlotMiddle": "ARNO platziert seinen Markierungsstein auf der mittleren Stufe.",
       "projectSlotRightMost": "ARNO platziert seinen Markierungsstein auf der untersten Stufe (rechts).",
-      "projectSlotAlternatives": "Ist die entsprechende Stufe bereits belegt, platziert er ihn auf der nächsthöheren Stufe. Falls auch das nicht möglich ist, auf der nächstniedrigeren Stufe."
+      "projectSlotAlternatives": "Ist die entsprechende Stufe bereits belegt, platziert er ihn auf der nächsthöheren Stufe. Falls auch das nicht möglich ist, auf der nächstniedrigeren Stufe.",
+      "projectModule": {
+        "tokenPlacement": "ARNO platziert seinen Markierungsstein auf dieser Stufe (in bevorzugter Reihenfolge):",
+        "gainConservationPoints": "ARNO bekommt die Artenschutzpunkte und andere Belohnungen von dieser Stufe: <b>{slot}</b>. Ist die entsprechende Stufe bereits belegt, bekommt er die Punkte von der nächsthöheren Stufe. Falls auch das nicht möglich ist, von der nächstniedrigeren Stufe."
+      }
     },
     "gainPartnerZooOrUniversity": {
       "missingMost": "Von welcher Art fehlt ARNO am meisten?",
       "partnerZoo": "Partnerzoo",
       "partnerUniversity": "Partneruniversität",
       "pickRandom": "Zufällig wählen"
+    },
+    "takeCardDisplay": {
+      "sponsorCardDiscard": "Hier markieren wenn es eine Sponsorenkarte ist (und diese abwerfen)"
     }
   },
   "difficultyLevel": {
@@ -131,23 +140,30 @@
     "token-notepad": "Lege <b>{amount}</b> ARNO Markierungsstein auf seinen <b>Notizzettel</b> (Endwertungseffekt). | Lege <b>{amount}</b> ARNO Markierungssteine auf seinen <b>Notizzettel</b> (Endwertungseffekt).",
     "donate": "ARNO spendet."
   },
+  "projectSlot": {
+    "right": "Rechts",
+    "middle": "Mitte",
+    "left": "Links"
+  },
   "aboutARNO": {
     "link": "ARNO Regeln",
     "title": "A.R.N.O. Regel-Zusammenfassung",
-    "text1": "ARNO <b>nutzt kein Geld</b>, d.h. für alle Aktionen, die er ausführt, muss er kein Geld ausgeben. Er erhält während den Pausen etc. auch keine Einnahmen.",
-    "text2": "ARNO <b>nutzt nur den rechten Bereich seines Zooplans</b>. Hier legt er wie die menschlichen Spieler seine Partnerzoos und -universitäten ab bzw. nimmt seine Verbandsarbeiter. Er erhält auch die verschiedenen Boni, sobald er sie aufdeckt. Der linke Bereich wird von ARNO nicht berücksichtigt und nur für die Ablage seiner Zookarten und Endwertungskarte verwendet.",
-    "text3": "ARNO erhält die folgenden <b>Boni</b> von den Spielbrettern: <b>Artenschutzpunkte, Kartenaufwertungen, Rufpunkte und Verbandsarbeiter</b>. Neben Geld erhält auch keine Boni von Tier- oder Sponsorenkarten, Gebäude, Gehege, X-Marker oder Pausenboni.",
-    "text4": "Die Tierkarten, die ARNO in seinem Zoo gestapelt hat, dienen als <b>Referenzwerte für mögliche Karteneffekte</b> der menschlichen Spieler. Wann immer ARNO eine weitere Karte auf seinem Stapel platziert, gelten diese Eigenschaften für Effekte der Karten der anderen Spieler.",
-    "text5": "ARNO kann <b>nicht Opfer von interaktiven Effekten</b> werden, nutze stattdessen den abweichenden Effekt für das Solospiel.",
-    "text6": "Immer wenn ARNO <b>Karten erhält</b>, werfe alle Sponsoren-Karten ab und lege Tier- und Artenschutzkarten auf die Kartenstapel auf dem Zooplan."
+    "noMoney": "ARNO <b>nutzt kein Geld</b>, d.h. für alle Aktionen, die er ausführt, muss er kein Geld ausgeben. Er erhält während den Pausen etc. auch keine Einnahmen.",
+    "rightArea": "ARNO <b>nutzt nur den rechten Bereich seines Zooplans</b>. Hier legt er wie die menschlichen Spieler seine Partnerzoos und -universitäten ab bzw. nimmt seine Verbandsarbeiter. Er erhält auch die verschiedenen Boni, sobald er sie aufdeckt. Der linke Bereich wird von ARNO nicht berücksichtigt und nur für die Ablage seiner Zookarten und Endwertungskarte verwendet.",
+    "bonuses": "ARNO erhält die folgenden <b>Boni</b> von den Spielbrettern: <b>Artenschutzpunkte, Kartenaufwertungen, Rufpunkte und Verbandsarbeiter</b>. Neben Geld erhält auch keine Boni von Tier- oder Sponsorenkarten, Gebäude, Gehege, X-Marker oder Pausenboni.",
+    "referenceValues": "Die Tierkarten, die ARNO in seinem Zoo gestapelt hat, dienen als <b>Referenzwerte für mögliche Karteneffekte</b> der menschlichen Spieler. Wann immer ARNO eine weitere Karte auf seinem Stapel platziert, gelten diese Eigenschaften für Effekte der Karten der anderen Spieler.",
+    "noEffectTarget": "ARNO kann <b>nicht Opfer von interaktiven Effekten</b> werden, nutze stattdessen den abweichenden Effekt für das Solospiel.",
+    "receiveCards": "Immer wenn ARNO <b>Karten erhält</b>, werfe alle Sponsoren-Karten ab und lege Tier- und Artenschutzkarten auf die Kartenstapel auf dem Zooplan.",
+    "projectModuleInfo": "Für das optional Artenschutzprojekt-Modul ist es wichtig, dass alle abgeworfenen <b>Sponsoren-Karten nachverfolgt</b> werden. Dafür muss die Anzahl der abgeworfenen Sponsorenkarten in der Pause erfasst werden (über den entsprechenden Dialog), sowie wenn ARNO eine Karte schnappt."
   },
   "roundDisplay": {
     "round": "Runde {round}"
   },
   "breakInfo": {
     "link": "Pause",
-    "text1": "Während den Pausen zieht ARNO <b>drei Karten</b> vom Nachziehstapel und legt, falls verfügbar, jeweils die erste Artenschutzprojekt- und Tierkarte auf seinen Zooplan.",
-    "text2": "Die Tierkarte kann dabei einen Effekt beim menschlichen Spieler auslösen. Die anderen Karten werden abgeworfen."
+    "drawThreeCards": "Während den Pausen zieht ARNO <b>drei Karten</b> vom Nachziehstapel und legt, falls verfügbar, jeweils die erste Artenschutzprojekt- und Tierkarte auf seinen Zooplan.",
+    "triggerBonus": "Die Tierkarte kann dabei einen Effekt beim menschlichen Spieler auslösen. Die anderen Karten werden abgeworfen.",
+    "discardedSponsorCards": "Bitte angeben, wie viele <b>Sponsorenkarten</b> während der Pause abgeworfen wurden:"
   },
   "bonusTile": {
     "link": "Bonus&shy;plättchen",
@@ -158,6 +174,15 @@
     "usage": "Diese drei Bonusplättchen kann ARNO nutzen. Bei allen anderen erhält ARNO keinen Bonus.",
     "pickPartnerZoo": "Partnerzoo auswählen",
     "pickPartnerUniversity": "Partneruniversität auswählen"
+  },
+  "sponsorCardDiscard": {
+    "count": "ARNO hat Sponsorenkarten abgeworfen: | ARNO {bot} hat Sponsorenkarten abgeworfen:"
+  },
+  "projectTrackerAllBotsInfo": {
+    "title": "ARNO Status",
+    "trackerPosition": "Tracker-Position",
+    "preferredProjectSlot": "Bevorzugte Artenschutzprojekt-Position",
+    "kioskCount": "Anzahl Kioske"
   },
   "scoring": {
     "title": "Auswertung",

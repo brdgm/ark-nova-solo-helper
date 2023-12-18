@@ -120,20 +120,20 @@
   "aboutARNO": {
     "link": "ARNO Regels",
     "title": "A.R.N.O. Regels Overzicht",
-    "text1": "ARNO <b>spendeert geen geld</b>. Hij spendeert nooit geld voor acties, en krijgt nooit geld (bijvoorbeeld tijdens pauzes of van dierenkaarten).",
-    "text2": "ARNO <b>gebruikt alleen de rechterkant van zijn dierentuinkaart</b>. Hier plaatst hij zijn parterdierentuinen en universiteiten en hier haalt hij zijn medewerkers vandaan. Hij ontvangt ook de bonussen als hij ze ondekt. De linkerkant van zijn dierentuin wordt niet gebruikt en dient alleen als plek voor zijn dierentuinkaarten en eindscorekaart.",
-    "text3": "ARNO ontvangt de volgende <b>bonussen</b> van zijn dierentuinkaart algemene borden: <b>Conservatiepunten, kaartupgrades, reputatiepunten en medewerkers</b>. Naast geld ontvang hij ook geen bonussen van Dier- of Sponsorkaarten, gebouwen, verblijven, X-markers of tijdens pauzes.",
-    "text4": "De dierenkaarten die gestapeld zijn op ARNO’s dierentuinkaart geven <b>reference waardes voor bepaalde kaarteffecten</b> van de menselijke spelers. Telkens wanneer ARNO een andere dierenkaart op zijn stapel legt, activeert zijn symbool de kaarteffecten van de andere speler(s).",
-    "text5": "ARNO kan <b>kan nooit het slachtoffer zijn van een interactief effect</b>. Gebruik in plaats daarvan de alternatieve solo play effecten van deze kaarten.",
-    "text6": "Elke keer als ARNO <b>kaarten ontvangt</b> tijdens het spel, verwijder alle sponsorkaarten en stapel dier- en conservatieprojectkaarten op zijn dierentuinkaart."
+    "noMoney": "ARNO <b>spendeert geen geld</b>. Hij spendeert nooit geld voor acties, en krijgt nooit geld (bijvoorbeeld tijdens pauzes of van dierenkaarten).",
+    "rightArea": "ARNO <b>gebruikt alleen de rechterkant van zijn dierentuinkaart</b>. Hier plaatst hij zijn parterdierentuinen en universiteiten en hier haalt hij zijn medewerkers vandaan. Hij ontvangt ook de bonussen als hij ze ondekt. De linkerkant van zijn dierentuin wordt niet gebruikt en dient alleen als plek voor zijn dierentuinkaarten en eindscorekaart.",
+    "bonuses": "ARNO ontvangt de volgende <b>bonussen</b> van zijn dierentuinkaart algemene borden: <b>Conservatiepunten, kaartupgrades, reputatiepunten en medewerkers</b>. Naast geld ontvang hij ook geen bonussen van Dier- of Sponsorkaarten, gebouwen, verblijven, X-markers of tijdens pauzes.",
+    "referenceValues": "De dierenkaarten die gestapeld zijn op ARNO’s dierentuinkaart geven <b>reference waardes voor bepaalde kaarteffecten</b> van de menselijke spelers. Telkens wanneer ARNO een andere dierenkaart op zijn stapel legt, activeert zijn symbool de kaarteffecten van de andere speler(s).",
+    "noEffectTarget": "ARNO kan <b>kan nooit het slachtoffer zijn van een interactief effect</b>. Gebruik in plaats daarvan de alternatieve solo play effecten van deze kaarten.",
+    "receiveCards": "Elke keer als ARNO <b>kaarten ontvangt</b> tijdens het spel, verwijder alle sponsorkaarten en stapel dier- en conservatieprojectkaarten op zijn dierentuinkaart."
   },
   "roundDisplay": {
     "round": "Ronde {round}"
   },
   "breakInfo": {
     "link": "Pauze",
-    "text1": "Tijdens pauzes, ARNO trekt <b>drie kaarten</b> van de trekstapel. Hij houdt de eerste conservatieprojectkaart en speelt de eerste dierenkaart in zijn dierentuin.",
-    "text2": "De gespeelde dierenkaart kan een bonus voor de menselijke spelers activeren. De andere kaarten worden afgelegd."
+    "drawThreeCards": "Tijdens pauzes, ARNO trekt <b>drie kaarten</b> van de trekstapel. Hij houdt de eerste conservatieprojectkaart en speelt de eerste dierenkaart in zijn dierentuin.",
+    "triggerBonus": "De gespeelde dierenkaart kan een bonus voor de menselijke spelers activeren. De andere kaarten worden afgelegd."
   },
   "bonusTile": {
     "link": "Bonustegel",

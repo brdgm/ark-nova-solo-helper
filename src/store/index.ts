@@ -22,6 +22,7 @@ export interface Setup {
   zooMaps?: string[]
   expansions?: Expansion[]
   debugMode?: boolean
+  botInitialSponsorCardDiscardCount?: number[]
 }
 export interface PlayerSetup {
   playerCount: number
@@ -31,6 +32,7 @@ export interface PlayerSetup {
 export interface Round {
   round: number
   botRound: BotRound[]
+  botBreakSponsorCardDiscardCount?: number[]
 }
 export interface BotRound {
   round: number
@@ -40,6 +42,7 @@ export interface BotRound {
   tokenScoringCardCount: number
   tokenNotepadCount: number
   appealCount?: number
+  sponsorCardDiscardCount?: number
 }
 export interface CardSlotsPersistence {
   slots: CardName[]
@@ -101,6 +104,9 @@ export const store = createStore<State>({
     setupZooMaps(state : State, zooMaps: string[]) {
       state.setup.zooMaps = zooMaps
     },
+    setupBotInitialSponsorCardDiscardCount(state : State, sponsorCardDiscardCount : number[]) {
+      state.setup.botInitialSponsorCardDiscardCount = sponsorCardDiscardCount
+    },
     round(state : State, botRound : BotRound) {
       let round = state.rounds[botRound.round - 1]
       if (!round) {
@@ -122,6 +128,21 @@ export const store = createStore<State>({
             .forEach(botRound => {
               botRound.cardSlots.upgradedCards = botRound.cardSlots.upgradedCards.filter(cardName => cardName != payload.cardName)
             })
+      }
+    },
+    roundBreakSponsorCardDiscardCount(state : State, data: { round: number, botBreakSponsorCardDiscardCount : number[] }) {
+      const round = state.rounds[data.round - 1]
+      if (round) {
+        round.botBreakSponsorCardDiscardCount = data.botBreakSponsorCardDiscardCount
+      }
+    },
+    roundBotSponsorCardDiscardCount(state : State, data: { round: number, bot: number, sponsorCardDiscardCount : number }) {
+      const round = state.rounds[data.round - 1]
+      if (round) {
+        const botRound = round.botRound[data.bot - 1]
+        if (botRound) {
+          botRound.sponsorCardDiscardCount = data.sponsorCardDiscardCount
+        }
       }
     },
     resetGame(state : State) {

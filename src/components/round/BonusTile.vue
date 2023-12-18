@@ -1,5 +1,7 @@
 <template>
-  <a id="bonusTile" data-bs-toggle="modal" href="#getBonusTileModal" v-html="t('bonusTile.link')"></a>
+  <p class="bonusTileLink">
+    <a data-bs-toggle="modal" href="#getBonusTileModal" v-html="t('bonusTile.link')"></a>
+  </p>
 
   <ModalDialog id="getBonusTileModal">
     <template #header>
@@ -96,15 +98,17 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-#bonusTile {
-  position: absolute;
-  right: 0;
-  top: 9.25rem;
-  margin-right: 0.75rem;
-  text-decoration: underline;
-  text-decoration-style: dotted;
-  color: #000;
-  text-align: right;
+.bonusTileLink {
+  margin-top: 0.5rem;
+  a {
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    color: #000;
+    text-align: right;
+  }
+}
+#getBonusTileModal {
+  text-align: left;
 }
 .bonusTileImage {
   display: inline-block;

@@ -133,20 +133,20 @@
   "aboutARNO": {
     "link": "Reglas de ARNO",
     "title": "Resumen de reglas de A.R.N.O.",
-    "text1": "ARNO <b>no usa dinero</b>. Él no gasta dinero para las acciones, y nunca recibe dinero (por ejemplo, durante las pausas o de cartas de Animales).",
-    "text2": "ARNO <b>únicamente usa la zona derecha de su tablero de zoológico</b>. Aquí coloca sus Zoológicos Amigos y Universidades, y también guarda a sus trabajadores asociados. También recibe los bonos una vez los desbloquea. El área izquierda de su zoológico no se utiliza más que para colocar sus cartas de zoológico y su carta de Puntuación Final.",
-    "text3": "ARNO recibe las siguientes <b>bonificaciones</b> de su tablero de zoológico y de los tableros compartidos: <b>Puntos de conservación, mejoras de cartas, puntos de reputación y trabajadores asociados</b>. Por otro lado, no recibe ninguna bonificación de las cartas de Animal o Patrocinador, construcciones, entornos, marcadores-X, ni durante la pausa.",
-    "text4": "Las cartas de Animal que se encuentren colocadas sobre el tablero de zoológico de ARNO funcionan como <b>referencia para algunos efectos de cartas</b> de los jugadores humanos. Siempre que ARNO coloque otra carta de animal sobre su tablero, los íconos de la carta pueden disparar efectos de las cartas de los jugadores humanos.",
-    "text5": "ARNO <b>nunca puede ser el objetivo de ningún efecto interactivo</b>. En su lugar utiliza los efectos alternativos de juego en solitario de las cartas.",
-    "text6": "Siempre que ARNO <b>reciba cartas</b> durante la partida, descarta todas las cartas de Patrocinador y coloca las cartas de Animal y de Proyectos de Conservación en su tablero de zoológico."
+    "noMoney": "ARNO <b>no usa dinero</b>. Él no gasta dinero para las acciones, y nunca recibe dinero (por ejemplo, durante las pausas o de cartas de Animales).",
+    "rightArea": "ARNO <b>únicamente usa la zona derecha de su tablero de zoológico</b>. Aquí coloca sus Zoológicos Amigos y Universidades, y también guarda a sus trabajadores asociados. También recibe los bonos una vez los desbloquea. El área izquierda de su zoológico no se utiliza más que para colocar sus cartas de zoológico y su carta de Puntuación Final.",
+    "bonuses": "ARNO recibe las siguientes <b>bonificaciones</b> de su tablero de zoológico y de los tableros compartidos: <b>Puntos de conservación, mejoras de cartas, puntos de reputación y trabajadores asociados</b>. Por otro lado, no recibe ninguna bonificación de las cartas de Animal o Patrocinador, construcciones, entornos, marcadores-X, ni durante la pausa.",
+    "referenceValues": "Las cartas de Animal que se encuentren colocadas sobre el tablero de zoológico de ARNO funcionan como <b>referencia para algunos efectos de cartas</b> de los jugadores humanos. Siempre que ARNO coloque otra carta de animal sobre su tablero, los íconos de la carta pueden disparar efectos de las cartas de los jugadores humanos.",
+    "noEffectTarget": "ARNO <b>nunca puede ser el objetivo de ningún efecto interactivo</b>. En su lugar utiliza los efectos alternativos de juego en solitario de las cartas.",
+    "receiveCards": "Siempre que ARNO <b>reciba cartas</b> durante la partida, descarta todas las cartas de Patrocinador y coloca las cartas de Animal y de Proyectos de Conservación en su tablero de zoológico."
   },
   "roundDisplay": {
     "round": "Ronda {round}"
   },
   "breakInfo": {
     "link": "Pausa",
-    "text1": "Durante las pausas, ARNO toma <b>tres cartas</b> del mazo. Conserva el primer Proyecto de Conservación y juega la primera carta de Animal en su tablero de zoológico.",
-    "text2": "La carta de Animal jugada puede disparar efectos de las cartas de los jugadores humanos. Las demás cartas son descartadas."
+    "drawThreeCards": "Durante las pausas, ARNO toma <b>tres cartas</b> del mazo. Conserva el primer Proyecto de Conservación y juega la primera carta de Animal en su tablero de zoológico.",
+    "triggerBonus": "La carta de Animal jugada puede disparar efectos de las cartas de los jugadores humanos. Las demás cartas son descartadas."
   },
   "bonusTile": {
     "link": "Loseta de bonificación",

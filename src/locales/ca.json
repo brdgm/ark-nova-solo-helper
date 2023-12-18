@@ -126,20 +126,20 @@
   "aboutARNO": {
     "link": "Regles d'ARNO",
     "title": "Llistat regles d'A.R.N.O.",
-    "text1": "ARNO <b>no utilitza diners</b>. No gasta diners per accions i mai no rep diners (per exemple, durant les pauses o de les targetes Animal).",
-    "text2": "ARNO <b>només utilitza la zona dreta del seu taulell de Zoo</b>. Aquí és on col·loca els seus socis de Zoo i Universitats i d'on treu els treballadors de la seva associació. També rep les bonificacions un cop les descobreix. No es considerarà la zona esquerra del seu taulell de zoo i només s'utilitzarà per col·locar les seves cartes Zoo i la carta de Puntuació Final.",
-    "text3": "ARNO rep les següents bonificacions del seu pla de zoo i dels <b>taulells</b> generals: <b>Punts de conservació, millores de cartes, punts de reputació i treballadors de l'associació</b>. A més dels diners, tampoc no rep cap bonificació de cartes d'animals o patrocinadors, edificis, tancaments, marcadors X o durant els descansos.",
-    "text4": "Les cartes d'Animals que s'apilen al taulell de zoo d'ARNO proporcionen <b>valors de referència per a determinats efectes de carta</b> dels jugadors humans. Sempre que ARNO col·loqui una altra carta Animal a la seva pila, les seves icones desencadenaran els efectes de cartes dels altres jugadors.",
-    "text5": "ARNO <b>mai pot ser l'objectiu d'un efecte interactiu</b>. Utilitzeu els efectes alternatius de joc en solitari d'aquestes cartes.",
-    "text6": "Cada vegada que ARNO rep cartes durant el joc, <b>descarteu</b> totes les cartes dels patrocinadors i apila cartes d'animals i projectes de conservació al seu taulell de zoo."
+    "noMoney": "ARNO <b>no utilitza diners</b>. No gasta diners per accions i mai no rep diners (per exemple, durant les pauses o de les targetes Animal).",
+    "rightArea": "ARNO <b>només utilitza la zona dreta del seu taulell de Zoo</b>. Aquí és on col·loca els seus socis de Zoo i Universitats i d'on treu els treballadors de la seva associació. També rep les bonificacions un cop les descobreix. No es considerarà la zona esquerra del seu taulell de zoo i només s'utilitzarà per col·locar les seves cartes Zoo i la carta de Puntuació Final.",
+    "bonuses": "ARNO rep les següents bonificacions del seu pla de zoo i dels <b>taulells</b> generals: <b>Punts de conservació, millores de cartes, punts de reputació i treballadors de l'associació</b>. A més dels diners, tampoc no rep cap bonificació de cartes d'animals o patrocinadors, edificis, tancaments, marcadors X o durant els descansos.",
+    "referenceValues": "Les cartes d'Animals que s'apilen al taulell de zoo d'ARNO proporcionen <b>valors de referència per a determinats efectes de carta</b> dels jugadors humans. Sempre que ARNO col·loqui una altra carta Animal a la seva pila, les seves icones desencadenaran els efectes de cartes dels altres jugadors.",
+    "noEffectTarget": "ARNO <b>mai pot ser l'objectiu d'un efecte interactiu</b>. Utilitzeu els efectes alternatius de joc en solitari d'aquestes cartes.",
+    "receiveCards": "Cada vegada que ARNO rep cartes durant el joc, <b>descarteu</b> totes les cartes dels patrocinadors i apila cartes d'animals i projectes de conservació al seu taulell de zoo."
   },
   "roundDisplay": {
     "round": "Ronda {round}"
   },
   "breakInfo": {
     "link": "Pausa",
-    "text1": "Durant les pauses, ARNO treu <b>tres cartes</b> de la baralla. Conserva la primera carta del Projecte de Conservació i juga la primera Carta d'Animals al seu taulell de zoo.",
-    "text2": "La carta Animal jugada pot desencadenar un efecte de bonificació per als jugadors humans. Les altres cartes es descarten."
+    "drawThreeCards": "Durant les pauses, ARNO treu <b>tres cartes</b> de la baralla. Conserva la primera carta del Projecte de Conservació i juga la primera Carta d'Animals al seu taulell de zoo.",
+    "triggerBonus": "La carta Animal jugada pot desencadenar un efecte de bonificació per als jugadors humans. Les altres cartes es descarten."
   },
   "bonusTile": {
     "link": "Rajola de bonificació",

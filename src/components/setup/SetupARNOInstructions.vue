@@ -13,6 +13,10 @@
       <span v-html="t('setupARNO.startComponents')"></span>
       <ul>
         <li v-html="t('setupARNO.startComponentsKeepCards')"></li>
+        <li v-if="hasProjectModuleExpansion">
+          <span v-html="t('setupARNO.discardedSponsorCards')"></span>
+          <SponsorCardDiscard v-model="sponsorCardDiscardCount" :maxCount="8"/>
+        </li>
       </ul>
     </li>
     <li v-html="t('setupARNO.playerTokens')"></li>
@@ -30,17 +34,29 @@ import Expansion from '@/services/enum/Expansion'
 import { useStore } from '@/store'
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
+import SponsorCardDiscard from '../structure/SponsorCardDiscard.vue'
 
 export default defineComponent({
   name: 'SetupARNOInstructions',
+  components: {
+    SponsorCardDiscard
+  },
   setup() {
     const { t } = useI18n()
     useStore()
     return { t }
   },
+  data() {
+    return {
+      sponsorCardDiscardCount: [0,0,0]
+    }
+  },
   computed: {
     hasMarineWorldsExpansion() : boolean {
       return (this.$store.state.setup.expansions ?? []).includes(Expansion.MARINE_WORLDS)
+    },
+    hasProjectModuleExpansion() : boolean {
+      return (this.$store.state.setup.expansions ?? []).includes(Expansion.ARNO_CONSERVATION_PROJECT_MODULE)
     },
     conservationPointStartMinus() : number {
       return this.hasMarineWorldsExpansion ? 3 : 5
@@ -48,6 +64,20 @@ export default defineComponent({
     conservationSetupImageFileName() : string {
       const components = this.hasMarineWorldsExpansion ? 'expansion' : 'base'
       return new URL(`/src/assets/arno-conservation-start-setup/start-setup-${components}-${this.conservationPointStartMinus}.webp`, import.meta.url).toString()
+    },
+    botCount() : number {
+      return this.$store.state.setup.playerSetup.botCount
+    }
+  },
+  mounted() {
+    this.$store.commit('setupBotInitialSponsorCardDiscardCount', this.sponsorCardDiscardCount)
+  },
+  watch: {
+    sponsorCardDiscardCount: {
+      handler() {
+        this.$store.commit('setupBotInitialSponsorCardDiscardCount', this.sponsorCardDiscardCount)
+      },
+      deep: true
     }
   }
 })
@@ -82,7 +112,6 @@ img {
     width: 100%;
   }
 }
-
 li {
   margin-top: 0.5rem;
   &::marker {

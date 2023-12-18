@@ -126,20 +126,20 @@
   "aboutARNO": {
     "link": "Zasady ARNO",
     "title": "Podsumowanie Zasad A.R.N.O.",
-    "text1": "ARNO <b>nie używa pieniędzy</b>. Nie wydaje pieniędzy na akcje i nigdy nie otrzymuje pieniędzy (np. w czasie przerw lub z kart Zwierząt).",
-    "text2": "ARNO <b>korzysta wyłącznie z prawej strony swojej planszy gracza</b>. To tam umieszcza swoje Zoo partnerskie i Uniwersytety partnerskie oraz otrzymuje stamtąd dodatkowych pracowników. Zdobywa również bonusy, które tam odkryje. Lewy obszar jego planszy gracza nie jest brany pod uwagę. Będzie służyć wyłącznie do umieszczania kart Zoo oraz karty Punktacji Końcowej.",
-    "text3": "ARNO otrzymuje następujące <b>bonusy</b> ze swojej planszy gracza oraz planszy gry: <b>Punkty Ochrony Przyrody, ulepszenia kart, punkty reputacji oraz pracowników stowarzyszenia</b>. Oprócz pieniędzy nie otrzymuje również żadnych bonusów z kart Zwierząt, kart Sponsorów, budynków, wybiegów, żetonów X oraz podczas przerwy.",
-    "text4": "Karty Zwierząt, które układamy na planszy gracza ARNO, zapewniają <b>wszystkie wartości dla efektów kart</b> ludzkich graczy. Za każdym razem kiedy ARNO położy kartę Zwierzęcia na swojej planszy, wszystkie ikony z tej karty będą wywoływać efekty na kartach ludzkich graczy.",
-    "text5": "ARNO <b>nie może zostać celem interaktywnego efektu</b>. Zamiast tego użyj alternatywnych efektów solo z dolnej części karty.",
-    "text6": "Za każdym razem kiedy ARNO <b>otrzymuje karty</b> w czasie gry, odrzuć wszystkie karty sponsorów. Karty Zwierząt oraz karty Ochrony Przyrody połóż na planszy gracza ARNO."
+    "noMoney": "ARNO <b>nie używa pieniędzy</b>. Nie wydaje pieniędzy na akcje i nigdy nie otrzymuje pieniędzy (np. w czasie przerw lub z kart Zwierząt).",
+    "rightArea": "ARNO <b>korzysta wyłącznie z prawej strony swojej planszy gracza</b>. To tam umieszcza swoje Zoo partnerskie i Uniwersytety partnerskie oraz otrzymuje stamtąd dodatkowych pracowników. Zdobywa również bonusy, które tam odkryje. Lewy obszar jego planszy gracza nie jest brany pod uwagę. Będzie służyć wyłącznie do umieszczania kart Zoo oraz karty Punktacji Końcowej.",
+    "bonuses": "ARNO otrzymuje następujące <b>bonusy</b> ze swojej planszy gracza oraz planszy gry: <b>Punkty Ochrony Przyrody, ulepszenia kart, punkty reputacji oraz pracowników stowarzyszenia</b>. Oprócz pieniędzy nie otrzymuje również żadnych bonusów z kart Zwierząt, kart Sponsorów, budynków, wybiegów, żetonów X oraz podczas przerwy.",
+    "referenceValues": "Karty Zwierząt, które układamy na planszy gracza ARNO, zapewniają <b>wszystkie wartości dla efektów kart</b> ludzkich graczy. Za każdym razem kiedy ARNO położy kartę Zwierzęcia na swojej planszy, wszystkie ikony z tej karty będą wywoływać efekty na kartach ludzkich graczy.",
+    "noEffectTarget": "ARNO <b>nie może zostać celem interaktywnego efektu</b>. Zamiast tego użyj alternatywnych efektów solo z dolnej części karty.",
+    "receiveCards": "Za każdym razem kiedy ARNO <b>otrzymuje karty</b> w czasie gry, odrzuć wszystkie karty sponsorów. Karty Zwierząt oraz karty Ochrony Przyrody połóż na planszy gracza ARNO."
   },
   "roundDisplay": {
     "round": "Tura {round}"
   },
   "breakInfo": {
     "link": "Przerwa",
-    "text1": "W czasie przerw, ARNO dobiera <b>trzy karty</b> z talii. Zostawia dla siebie pierwszy Projekt Ochrony Przyrody oraz zagrywa na swoją planszę gracza pierwsze zwierzę.",
-    "text2": "Zagrana karta zwierzęcia może wywołać dodatkowy efekt dla gracza (graczy).  Pozostałe karty są odrzucane."
+    "drawThreeCards": "W czasie przerw, ARNO dobiera <b>trzy karty</b> z talii. Zostawia dla siebie pierwszy Projekt Ochrony Przyrody oraz zagrywa na swoją planszę gracza pierwsze zwierzę.",
+    "triggerBonus": "Zagrana karta zwierzęcia może wywołać dodatkowy efekt dla gracza (graczy).  Pozostałe karty są odrzucane."
   },
   "bonusTile": {
     "link": "Kafle Bonusowe",

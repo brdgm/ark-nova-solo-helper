@@ -25,6 +25,7 @@
     },
     "expansions": {
       "title": "Expansions",
+      "arno-conservation-project-module": "ARNO: Variable Conservation Project condition determination",
       "marine-worlds": "Marine Worlds",
       "marineWorldsNewActionCards": "Take 3 of the <b>new Action cards</b> at random and choose 2 of those (with different action types)."
     },
@@ -46,6 +47,7 @@
     "startPointsAppeal": "E.g. if ARNO is the 3rd player, he starts with 2 appeal points.",
     "startComponents": "Every ARNO receives the components of one color, a zoo mat (map A), one face-down Final Scoring card and 8 random Zoo cards.",
     "startComponentsKeepCards": "ARNO only keeps up to the first 2 Conservation Project cards. All Sponsor and Animal cards are discarded.",
+    "discardedSponsorCards": "Please specify the number of <b>sponsor cards</b> discarded during setup:",    
     "playerTokens": "Place all player tokens of ARNO’s color next to his zoo mat.",
     "associationWorker": "ARNO starts with one association worker on his notepad. Place the remaining 3 on the designated spaces below the notepad on his zoo mat.",
     "finalScoringCard": "Place the Final Scoring card on the left area of the zoo mat. This will cover the building area which is not needed for ARNO.",
@@ -98,13 +100,20 @@
       "projectSlotLeftMost": "ARNO prefers to place his token on the leftmost slot.",
       "projectSlotMiddle": "ARNO prefers to place his token on the middle slot.",
       "projectSlotRightMost": "ARNO prefers to place his token on the rightmost slot.",
-      "projectSlotAlternatives": "If this slot is already covered by another player, he places it on the next level to the left. If that’s not possible as well, on the next available level to the right."
+      "projectSlotAlternatives": "If this slot is already covered by another player, he places it on the next level to the left. If that’s not possible as well, on the next available level to the right.",
+      "projectModule": {
+        "tokenPlacement": "ARNO places a token on this slot (in preferred order):",
+        "gainConservationPoints": "ARNO gains the conservation points and other bonuses from this slot: <b>{slot}</b>. If this slot is already covered by another player, he gains the points from the next level to the left. If that’s not possible as well, from the next available level to the right."
+      }
     },
     "gainPartnerZooOrUniversity": {
       "missingMost": "What is ARNO missing most?",
       "partnerZoo": "Partner Zoo",
       "partnerUniversity": "Partner University",
       "pickRandom": "Pick Random"
+    },
+    "takeCardDisplay": {
+      "sponsorCardDiscard": "Check here if it is a sponsor card (and discard it)"
     }
   },
   "difficultyLevel": {
@@ -131,23 +140,30 @@
     "token-notepad": "Place <b>{amount}</b> ARNO player token on his <b>notepad</b> (for final scoring effect). | Place <b>{amount}</b> ARNO player tokens on his <b>notepad</b> (for final scoring effect).",
     "donate": "ARNO donates."
   },
+  "projectSlot": {
+    "right": "Right",
+    "middle": "Middle",
+    "left": "Left"
+  },
   "aboutARNO": {
     "link": "ARNO Rules",
     "title": "A.R.N.O. Rules Summary",
-    "text1": "ARNO <b>doesn‘t use money</b>. He doesn‘t spend money for actions, and never receives money (for example during breaks or from Animal cards).",
-    "text2": "ARNO <b>only uses the right area of his zoo mat</b>. This is where he places his partner zoos and universities and where he takes his association workers from. He also receives the bonuses once he uncovers them. The left area of his zoo plan will not be considered and only be used to place his Zoo cards and Final Scoring card.",
-    "text3": "ARNO receives the following <b>bonuses</b> from his zoo plan and the general boards: <b>Conservation points, card upgrades, reputation points and association workers</b>. Besides money he also doesn’t receive any bonuses from Animal or Sponsor cards, buildings, enclosures, X-markers or during breaks.",
-    "text4": "The Animal cards that are stacked on ARNO’s zoo mat provide <b>reference values for certain card effects</b> of the human players. Whenever ARNO places another Animal card on his stack, its icons will trigger the card effects of the other player(s).",
-    "text5": "ARNO can <b>never be the target of an interactive effect</b>. Please use the alternative solo play effects of those cards instead.",
-    "text6": "Every time ARNO <b>receives cards</b> during the game, discard all sponsor cards and stack animal and conservation project cards on his zoo mat."
+    "noMoney": "ARNO <b>doesn‘t use money</b>. He doesn‘t spend money for actions, and never receives money (for example during breaks or from Animal cards).",
+    "rightArea": "ARNO <b>only uses the right area of his zoo mat</b>. This is where he places his partner zoos and universities and where he takes his association workers from. He also receives the bonuses once he uncovers them. The left area of his zoo plan will not be considered and only be used to place his Zoo cards and Final Scoring card.",
+    "bonuses": "ARNO receives the following <b>bonuses</b> from his zoo plan and the general boards: <b>Conservation points, card upgrades, reputation points and association workers</b>. Besides money he also doesn’t receive any bonuses from Animal or Sponsor cards, buildings, enclosures, X-markers or during breaks.",
+    "referenceValues": "The Animal cards that are stacked on ARNO’s zoo mat provide <b>reference values for certain card effects</b> of the human players. Whenever ARNO places another Animal card on his stack, its icons will trigger the card effects of the other player(s).",
+    "noEffectTarget": "ARNO can <b>never be the target of an interactive effect</b>. Please use the alternative solo play effects of those cards instead.",
+    "receiveCards": "Every time ARNO <b>receives cards</b> during the game, discard all sponsor cards and stack animal and conservation project cards on his zoo mat.",
+    "projectModuleInfo": "For the optional conservation project module it's important to <b>track all sponsor cards</b> that are discarded at any time. For this, you have to specify the number of sponsor cards the ARNO discards during break (in the corresponding dialog), or if he snaps a card."
   },
   "roundDisplay": {
     "round": "Round {round}"
   },
   "breakInfo": {
     "link": "Break",
-    "text1": "During the breaks, ARNO draws <b>three cards</b> from the deck. He keeps the first Conservation Project card and plays the first Animal Card to his zoo mat.",
-    "text2": "The played Animal card might trigger a bonus effect for the human player(s). The other cards are discarded."
+    "drawThreeCards": "During the breaks, ARNO draws <b>three cards</b> from the deck. He keeps the first Conservation Project card and plays the first Animal Card to his zoo mat.",
+    "triggerBonus": "The played Animal card might trigger a bonus effect for the human player(s). The other cards are discarded.",
+    "discardedSponsorCards": "Please specify the number of <b>sponsor cards</b> discarded during break:"
   },
   "bonusTile": {
     "link": "Bonus Tile",
@@ -158,6 +174,15 @@
     "usage": "ARNO can only use these three bonus tiles. He does not receive any bonus from the others.",
     "pickPartnerZoo": "Pick Partner Zoo",
     "pickPartnerUniversity": "Pick Partner University"
+  },
+  "sponsorCardDiscard": {
+    "count": "ARNO discarded sponsor cards: | ARNO {bot} discarded sponsor cards:"
+  },
+  "projectTrackerAllBotsInfo": {
+    "title": "ARNO Status",
+    "trackerPosition": "Tracker Position",
+    "preferredProjectSlot": "Preferred Conservation Project Slot",
+    "kioskCount": "Kiosk Count"
   },
   "scoring": {
     "title": "Scoring",

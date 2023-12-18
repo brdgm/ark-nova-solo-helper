@@ -20,10 +20,27 @@
     <p v-if="pickFromBoardNoToken" class="fw-bold" v-html="t('roundBot.pickConservationProject.pickFromBoardNoToken',{number:conservationProjectNumber})"></p>
     <p v-if="pickFromBoardAvailable" class="fw-bold" v-html="t('roundBot.pickConservationProject.pickFromBoardAvailable',{number:conservationProjectNumber})"></p>
     <h6>{{t('roundBot.pickConservationProject.tokenPlacement')}}</h6>
-    <p v-if="projectSlotLeftMost" class="fw-bold" v-html="t('roundBot.pickConservationProject.projectSlotLeftMost')"></p>
-    <p v-if="projectSlotMiddle" class="fw-bold" v-html="t('roundBot.pickConservationProject.projectSlotMiddle')"></p>
-    <p v-if="projectSlotRightMost" class="fw-bold" v-html="t('roundBot.pickConservationProject.projectSlotRightMost')"></p>
-    <p v-html="t('roundBot.pickConservationProject.projectSlotAlternatives')"></p>
+    <template v-if="hasProjectModuleExpansion">
+      <p class="fw-bold">
+        <span v-html="t('roundBot.pickConservationProject.projectModule.tokenPlacement')"></span>
+        <span>&nbsp;</span>
+        <template v-for="(slot,index) of projectSlotsModulePlacement" :key="slot">
+          <span v-if="index > 0">, </span>
+          <span>{{t(`projectSlot.${slot}`)}}</span>
+        </template>
+        <span>.</span>
+      </p>
+      <p>
+        <span v-html="t('roundBot.pickConservationProject.projectModule.gainConservationPoints',{slot:t(`projectSlot.${projectSlotDifficultyLevel}`)})"></span>
+      </p>
+      <p></p>
+    </template>
+    <template v-else>
+      <p v-if="projectSlotLeftMost" class="fw-bold" v-html="t('roundBot.pickConservationProject.projectSlotLeftMost')"></p>
+      <p v-if="projectSlotMiddle" class="fw-bold" v-html="t('roundBot.pickConservationProject.projectSlotMiddle')"></p>
+      <p v-if="projectSlotRightMost" class="fw-bold" v-html="t('roundBot.pickConservationProject.projectSlotRightMost')"></p>
+      <p v-html="t('roundBot.pickConservationProject.projectSlotAlternatives')"></p>
+    </template>
   </template>
 </template>
 
@@ -33,6 +50,9 @@ import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import DifficultyLevel from '@/services/enum/DifficultyLevel'
 import NavigationState from '@/util/NavigationState'
+import Expansion from '@/services/enum/Expansion'
+import ProjectSlot from '@/services/enum/ProjectSlot'
+import getProjectModuleTrackerForRound from '@/util/getProjectModuleTrackerForRound'
 
 export default defineComponent({
   name: 'PickConservationProject',
@@ -67,14 +87,33 @@ export default defineComponent({
     difficultyLevel() : DifficultyLevel {
       return this.navigationState.difficultyLevel
     },
+    projectSlotDifficultyLevel() : ProjectSlot {
+      switch (this.difficultyLevel) {
+        case DifficultyLevel.L5_HARD:
+        case DifficultyLevel.L6_VERY_HARD:
+          return ProjectSlot.LEFT
+        case DifficultyLevel.L3_EASY:
+        case DifficultyLevel.L4_MEDIUM:
+          return ProjectSlot.MIDDLE
+        default:
+          return ProjectSlot.RIGHT
+      }
+    },
     projectSlotLeftMost() : boolean {
-      return this.difficultyLevel == DifficultyLevel.L5_HARD || this.difficultyLevel == DifficultyLevel.L6_VERY_HARD
+      return this.projectSlotDifficultyLevel == ProjectSlot.LEFT
     },
     projectSlotMiddle() : boolean {
-      return this.difficultyLevel == DifficultyLevel.L3_EASY || this.difficultyLevel == DifficultyLevel.L4_MEDIUM
+      return this.projectSlotDifficultyLevel == ProjectSlot.MIDDLE
     },
     projectSlotRightMost() : boolean {
-      return this.difficultyLevel == DifficultyLevel.L1_BEGINNER || this.difficultyLevel == DifficultyLevel.L2_VERY_EASY
+      return this.projectSlotDifficultyLevel == ProjectSlot.RIGHT
+    },
+    projectSlotsModulePlacement() : ProjectSlot[] {
+      const projectModuleTracker = getProjectModuleTrackerForRound(this.$store.state, this.navigationState.round, this.navigationState.bot)
+      return projectModuleTracker.getPreferredProjectSlots()
+    },
+    hasProjectModuleExpansion() : boolean {
+      return (this.$store.state.setup.expansions ?? []).includes(Expansion.ARNO_CONSERVATION_PROJECT_MODULE)
     }
   },
   methods: {
