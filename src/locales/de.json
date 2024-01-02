@@ -178,7 +178,7 @@
   "sponsorCardDiscard": {
     "count": "ARNO hat Sponsorenkarten abgeworfen: | ARNO {bot} hat Sponsorenkarten abgeworfen:"
   },
-  "projectTrackerAllBotsInfo": {
+  "projectTrackerArnoStatus": {
     "title": "ARNO Status",
     "trackerPosition": "Tracker-Position",
     "preferredProjectSlot": "Bevorzugte Artenschutzprojekt-Position",
