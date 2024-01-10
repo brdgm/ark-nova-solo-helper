@@ -12,6 +12,7 @@
     "test:unit": "vitest",
     "test:coverage": "vitest run --coverage",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
+    "lint:watch": "nodemon --exec \"npm run lint\" --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts",
     "generate-pwa-assets": "pwa-assets-generator"
   },
   "dependencies": {
@@ -43,6 +44,7 @@
     "eslint": "^8.55.0",
     "eslint-plugin-vue": "^9.19.2",
     "jsdom": "^23.0.1",
+    "nodemon": "^3.0.2",
     "sass": "^1.69.5",
     "source-map-support": "^0.5.21",
     "ts-node": "^10.9.2",
