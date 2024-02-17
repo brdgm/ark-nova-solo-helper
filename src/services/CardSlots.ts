@@ -1,5 +1,5 @@
 import { CardSlotsPersistence } from '@/store'
-import * as _ from 'lodash'
+import { shuffle, cloneDeep } from 'lodash'
 import Card from './Card'
 import Cards from './Cards'
 import CardName from './enum/CardName'
@@ -91,7 +91,7 @@ export default class CardSlots {
   public toPersistence() : CardSlotsPersistence {
     return {
       slots: this._slots.map(card => card.name),
-      upgradedCards: _.cloneDeep(this._upgradedCards)
+      upgradedCards: cloneDeep(this._upgradedCards)
     }
   }
 
@@ -101,7 +101,7 @@ export default class CardSlots {
   public static new() : CardSlots {
     const cards = [
       Cards.get(CardName.ANIMALS),
-      ..._.shuffle(Cards.getAll().filter(card => card.name != CardName.ANIMALS))
+      ...shuffle(Cards.getAll().filter(card => card.name != CardName.ANIMALS))
     ]
     return new CardSlots(cards, [])
   }
@@ -112,7 +112,7 @@ export default class CardSlots {
   public static fromPersistence(persistence : CardSlotsPersistence) : CardSlots {
     return new CardSlots(
       persistence.slots.map(Cards.get),
-      _.cloneDeep(persistence.upgradedCards)
+      cloneDeep(persistence.upgradedCards)
     )
   }
 
