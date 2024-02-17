@@ -15,16 +15,17 @@ export default defineConfig({
       registerType: 'prompt',
       manifestFilename: 'manifest.json',
       filename: 'service-worker.js',
+      // cache all asset imports
+      workbox: {
+        globPatterns: ["**/*"]
+      },
+      // include all static assets
       includeAssets: [
-        'favicon.ico',
-        'img/icons/favicon.ico',
-        'img/icons/favicon.svg',
-        'img/icons/apple-touch-icon-60x60.png',
-        'img/icons/apple-touch-icon-76x76.png',
-        'img/icons/apple-touch-icon-120x120.png',
-        'img/icons/apple-touch-icon-152x152.png',
-        'img/icons/apple-touch-icon-180x180.png',
-        'img/icons/maskable-icon-512x512.png'
+        "**/*.ico",
+        "**/*.svg",
+        "**/*.png",
+        "**/*.jpg",
+        "**/*.webp"
       ],
       manifest: {
         name: description,
