@@ -44,7 +44,7 @@
         <dt>Application Development</dt>
         <dd>Stefan Seifert</dd>
         <dt>Version</dt>
-        <dd>{{buildNumber}}</dd>
+        <dd>{{buildNumber}} (<a href="https://github.com/brdgm/ark-nova-solo-helper/releases" target="_blank" rel="noopener">Change Log</a>)</dd>
         <dt>Source Code (Apache-2.0 License)</dt>
         <dd><a href="https://github.com/brdgm/ark-nova-solo-helper" target="_blank" rel="noopener">https://github.com/brdgm/ark-nova-solo-helper</a></dd>
       </dl>
