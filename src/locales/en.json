@@ -118,11 +118,11 @@
   },
   "difficultyLevel": {
     "1": "Level 1: Beginner",
-    "2": "Level 2: Very Easy",
-    "3": "Level 3: Easy",
-    "4": "Level 4: Medium",
-    "5": "Level 5: Hard",
-    "6": "Level 6: Very Hard"
+    "2": "Level 2: Easy",
+    "3": "Level 3: Medium",
+    "4": "Level 4: Hard",
+    "5": "Level 5: Very Hard",
+    "6": "Level 6: Extreme Hard"
   },
   "cardType": {
     "animals": "Animals",
