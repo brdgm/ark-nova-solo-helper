@@ -20,7 +20,14 @@
     "difficultyLevel": {
       "title": "Poziom Trudności",
       "easy": "Łatwy",
-      "hard": "Trudny"
+      "hard": "Trudny",
+      "level7plus": "Poziom 7+: Jeśli chcesz zagrać na jeszcze trudniejszym poziomie, dodaj na początku gry jeden punkt Ochrony Przyrody dla ARNO za każdy dodatkowy poziom."
+    },
+    "expansions": {
+      "title": "Dodatki",
+      "arno-conservation-project-module": "ARNO: określenie zmiennych warunków udziału w Projekcie Ochrony Przyrody",
+      "marine-worlds": "Wodny Świat",
+      "marineWorldsNewActionCards": "Weź losowo 3 <b>nowe karty Akcji</b> i wybierz 2 z nich (z różnymi typami akcji)."
     },
     "pickZooMap": {
       "title": "Mapa Zoo",
@@ -39,6 +46,8 @@
     "startPointsConservation": "Umieść {count} znaczniki gracza, jako przypomnienie, tuż obok znacznika punktacji Ochrony Przyrody ARNO. Usuwaj je jeden za drugim kiedy ARNO będzie zdobywać swoje pierwsze punkty Ochrony Przyrody.",
     "startPointsAppeal": "Np. Jeśli ARNO jest trzecim graczem, rozpoczyna z dwoma punktami atrakcyjności.",
     "startComponents": "Każdy ARNO otrzymuje komponenty w jednym kolorze, planszę gracza (mapa A), jedną zakrytą kartę Punktacji Końcowej oraz 8 losowych kart Zoo.",
+    "startComponentsKeepCards": "ARNO zatrzymuje tylko pierwsze 2 karty Projektu Ochrony Przyrody. Wszystkie karty Sponsora i Zwierząt są odrzucane.",
+    "discardedSponsorCards": "Proszę podać liczbę <b>kart sponsorów</b> odrzuconych podczas przygotowania do gry:",
     "playerTokens": "Umieść wszystkie znaczniki gracza w kolorze ARNO tuż obok jego planszy gracza.",
     "associationWorker": "ARNO startuje z jednym pracownikiem stowarzyszenia na swoim notatniku. Połóż pozostałych trzech pracowników na odpowiednich miejscach poniżej jego notatnika.",
     "finalScoringCard": "Umieść kartę Punktacji Końcowej po lewej stronie planszy gracza. Zakryje ona obszar budowy z którego ARNO nie korzysta.",
@@ -58,7 +67,8 @@
     "upgradeCard": {
       "title": "Ulepsz Kartę",
       "text": "Czy chcesz ulepszyć jedną z kart akcji ARNO?",
-      "note": "Pamiętaj: Kiedy ARNO osiągnie 2 punkty Ochrony Przyrody, zawsze wybiera dodatkowego pracownika stowarzyszenia zamiast ulepszenia karty akcji."
+      "note": "Pamiętaj: Kiedy ARNO osiągnie 2 punkty Ochrony Przyrody, zawsze wybiera dodatkowego pracownika stowarzyszenia zamiast ulepszenia karty akcji.",
+      "noteAppeal15BonusTile": "ARNO wybiera kafel bonusowy, jeśli osiągnie więcej niż 15 reputacji (jeśli nadal jest dostępny)."
     },
     "revertUpgradeCard": {
       "title": "Cofnij Ulepszenie Karty",
@@ -90,13 +100,20 @@
       "projectSlotLeftMost": "ARNO preferuje położenie swojego znacznika na skrajnie lewym polu.",
       "projectSlotMiddle": "ARNO preferuje położenie swojego znacznika na środkowym polu.",
       "projectSlotRightMost": "ARNO preferuje położenie swojego znacznika na skrajnie prawym polu.",
-      "projectSlotAlternatives": "Jeśli to miejsce jest już zakryte przez innego gracza, umieszcza znacznik na następnym poziomie po lewej stronie. Jeśli to również nie jest możliwe, umieszcza na następnym dostępnym poziomie po prawej."
+      "projectSlotAlternatives": "Jeśli to miejsce jest już zakryte przez innego gracza, umieszcza znacznik na następnym poziomie po lewej stronie. Jeśli to również nie jest możliwe, umieszcza na następnym dostępnym poziomie po prawej.",
+      "projectModule": {
+        "tokenPlacement": "ARNO umieszcza żeton na tym polu (w preferowanej kolejności):",
+        "gainConservationPoints": "ARNO zdobywa punkty Ochrony Przyrody i inne bonusy z tego pola: <b>{slot}</b>. Jeśli to pole jest już zajęte przez innego gracza, zdobywa on punkty od następnego poziomu po lewej stronie. Jeśli to również nie jest możliwe, z następnego dostępnego pola po prawej stronie."
+      }
     },
     "gainPartnerZooOrUniversity": {
       "missingMost": "Czego ARNO ma najmniej?",
       "partnerZoo": "Zoo partnerskie",
       "partnerUniversity": "Uniwersytet partnerski",
       "pickRandom": "Wybierz Losowo"
+    },
+    "takeCardDisplay": {
+      "sponsorCardDiscard": "Sprawdź tutaj, czy jest to karta sponsora (i odrzuć ją)"
     }
   },
   "difficultyLevel": {
@@ -123,6 +140,11 @@
     "token-notepad": "Umieść <b>{amount}</b> znacznik gracza ARNO na jego <b>notatniku</b> (dla efektu punktacji końcowej). | Umieść <b>{amount}</b> znaczniki gracza ARNO na jego <b>notatniku</b> (dla efektu punktacji końcowej).",
     "donate": "ARNO przekazuje Dotację."
   },
+  "projectSlot": {
+    "right": "Prawy",
+    "middle": "Środkowy",
+    "left": "Lewy"
+  },
   "aboutARNO": {
     "link": "Zasady ARNO",
     "title": "Podsumowanie Zasad A.R.N.O.",
@@ -131,7 +153,8 @@
     "bonuses": "ARNO otrzymuje następujące <b>bonusy</b> ze swojej planszy gracza oraz planszy gry: <b>Punkty Ochrony Przyrody, ulepszenia kart, punkty reputacji oraz pracowników stowarzyszenia</b>. Oprócz pieniędzy nie otrzymuje również żadnych bonusów z kart Zwierząt, kart Sponsorów, budynków, wybiegów, żetonów X oraz podczas przerwy.",
     "referenceValues": "Karty Zwierząt, które układamy na planszy gracza ARNO, zapewniają <b>wszystkie wartości dla efektów kart</b> ludzkich graczy. Za każdym razem kiedy ARNO położy kartę Zwierzęcia na swojej planszy, wszystkie ikony z tej karty będą wywoływać efekty na kartach ludzkich graczy.",
     "noEffectTarget": "ARNO <b>nie może zostać celem interaktywnego efektu</b>. Zamiast tego użyj alternatywnych efektów solo z dolnej części karty.",
-    "receiveCards": "Za każdym razem kiedy ARNO <b>otrzymuje karty</b> w czasie gry, odrzuć wszystkie karty sponsorów. Karty Zwierząt oraz karty Ochrony Przyrody połóż na planszy gracza ARNO."
+    "receiveCards": "Za każdym razem kiedy ARNO <b>otrzymuje karty</b> w czasie gry, odrzuć wszystkie karty sponsorów. Karty Zwierząt oraz karty Ochrony Przyrody połóż na planszy gracza ARNO.",
+    "projectModuleInfo": "W przypadku opcjonalnego modułu projektu Ochrony Przyrody ważne jest, aby <b>śledzić wszystkie karty sponsorów</b>, które są odrzucane w dowolnym momencie. W tym celu musisz określić liczbę kart sponsora, które ARNO odrzuci podczas przerwy (w odpowiednim oknie dialogowym) lub jeśli skorzysta z akcji pozyskaj kartę."
   },
   "roundDisplay": {
     "round": "Tura {round}"
@@ -139,7 +162,8 @@
   "breakInfo": {
     "link": "Przerwa",
     "drawThreeCards": "W czasie przerw, ARNO dobiera <b>trzy karty</b> z talii. Zostawia dla siebie pierwszy Projekt Ochrony Przyrody oraz zagrywa na swoją planszę gracza pierwsze zwierzę.",
-    "triggerBonus": "Zagrana karta zwierzęcia może wywołać dodatkowy efekt dla gracza (graczy).  Pozostałe karty są odrzucane."
+    "triggerBonus": "Zagrana karta zwierzęcia może wywołać dodatkowy efekt dla gracza (graczy).  Pozostałe karty są odrzucane.",
+    "discardedSponsorCards": "Proszę podać liczbę <b>kart sponsorów</b> odrzuconych podczas przerwy:"
   },
   "bonusTile": {
     "link": "Kafle Bonusowe",
@@ -150,6 +174,15 @@
     "usage": "ARNO używa tylko tych trzech kafli bonusowych. Z pozostałych kafli nie otrzymuje żadnych bonusów.",
     "pickPartnerZoo": "Wybierz Zoo partnerskie",
     "pickPartnerUniversity": "Wybierz Uniwersytet partnerski"
+  },
+  "sponsorCardDiscard": {
+    "count": "ARNO odrzucone karty sponsorów: | ARNO {bot} odrzucił kart sponsorów:"
+  },
+  "projectTrackerArnoStatus": {
+    "title": "ARNO Status",
+    "trackerPosition": "Pozycja Trakera",
+    "preferredProjectSlot": "Preferowane pole na Projekt Ochrony Przyrody",
+    "kioskCount": "Liczba Kiosków"
   },
   "scoring": {
     "title": "Punktacja",
