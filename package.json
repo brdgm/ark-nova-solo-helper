@@ -21,6 +21,8 @@
     "brdgm-commons": "github:brdgm/brdgm-commons#1.6.1",
     "core-js": "~3.36.1",
     "lodash": "~4.17.21",
+    "pinia": "^2.1.7",
+    "pinia-plugin-persistedstate": "^3.2.1",
     "vue": "~3.4.21",
     "vue-i18n": "~9.11.1",
     "vue-router": "~4.2.5",
