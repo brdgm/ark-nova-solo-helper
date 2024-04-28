@@ -47,7 +47,7 @@
 import rollDice from 'brdgm-commons/src/util/random/rollDice'
 import { defineComponent, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { BotRound, useStore } from '@/store'
+import { BotRound, useStateStore } from '@/store/state'
 import NavigationState from '@/util/NavigationState'
 import CardSlots from '@/services/CardSlots'
 import AppIcon from '../structure/AppIcon.vue'
@@ -66,9 +66,9 @@ export default defineComponent({
   },
   setup() {
     const { t } = useI18n()
-    useStore()
+    const state = useStateStore()
     const pickConservationProject = ref()
-    return { t, pickConservationProject }
+    return { t, state, pickConservationProject }
   },
   props: {
     navigationState: {
@@ -101,13 +101,13 @@ export default defineComponent({
       const upgradeCardNo = rollDice(standardCards.length)
       this.cardSlots.upgradeCard(standardCards[upgradeCardNo-1])
       this.botRound.cardSlots = this.cardSlots.toPersistence()
-      this.$store.commit('round', this.botRound)
+      this.state.round(this.botRound)
       this.$forceUpdate()
     },
     revertUpgradedCard() : void {
       const revertCardName = this.revertCard as CardName
       this.cardSlots.revertUpgradeCard(Cards.get(revertCardName))
-      this.$store.commit('revertUpgradeCard', {bot:this.botRound.bot, cardName:revertCardName})
+      this.state.revertUpgradeCard({bot:this.botRound.bot, cardName:revertCardName})
       this.revertCard = ''
     }
   }

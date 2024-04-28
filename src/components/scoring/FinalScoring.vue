@@ -43,7 +43,7 @@
 </template>
 
 <script lang="ts">
-import { useStore } from '@/store'
+import { useStateStore } from '@/store/state'
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import PlayerColorDisplay from '@/components/structure/PlayerColorDisplay.vue'
@@ -57,21 +57,21 @@ export default defineComponent({
   },
   setup() {
     const { t } = useI18n()
-    const store = useStore()
+    const state = useStateStore()
     
-    const playerSetup = store.state.setup.playerSetup
+    const playerSetup = state.setup.playerSetup
     const playerCount = playerSetup.playerCount
     const botCount = playerSetup.botCount
     const playerColors = playerSetup.playerColors
     const lastBotRound = []
     for (let botIndex=0; botIndex<botCount; botIndex++) {
-      lastBotRound[botIndex] = store.state.rounds
+      lastBotRound[botIndex] = state.rounds
           .map(round => round.botRound[botIndex])
           .reverse()
           .find(botRound => botRound != undefined)
     }
 
-    return { t, playerCount, botCount, playerColors, lastBotRound }
+    return { t, state, playerCount, botCount, playerColors, lastBotRound }
   },
   data() {
     return {
@@ -130,7 +130,7 @@ export default defineComponent({
       return result > 0 ? result : 0
     },
     getDifficultyLevelForBot(bot : number) : DifficultyLevel {
-      return getDifficultyLevel(this.$store.state.setup, bot)
+      return getDifficultyLevel(this.state.setup, bot)
     }
   }
 })

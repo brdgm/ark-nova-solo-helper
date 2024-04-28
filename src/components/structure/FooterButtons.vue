@@ -6,7 +6,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { useStore } from '@/store'
+import { useStateStore } from '@/store/state'
 import CommonsFooterButtons from 'brdgm-commons/src/components/structure/FooterButtons.vue'
 
 export default defineComponent({
@@ -16,8 +16,8 @@ export default defineComponent({
   },
   setup() {
     const { t } = useI18n()
-    useStore()
-    return { t }
+    const state = useStateStore()
+    return { t, state }
   },
   props: {
     endGameButtonType: {
@@ -32,7 +32,7 @@ export default defineComponent({
   methods: {
     endGame() {
       if (this.endGameButtonType=='abortGame' || this.$route.name == 'Scoring') {
-        this.$store.commit('resetGame')
+        this.state.resetGame()
         this.$router.push('/')
       }
       else {

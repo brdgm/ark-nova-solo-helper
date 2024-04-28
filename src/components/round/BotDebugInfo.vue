@@ -7,7 +7,7 @@
 </template>
 
 <script lang="ts">
-import { BotRound } from '@/store'
+import { BotRound } from '@/store/state'
 import NavigationState from '@/util/NavigationState'
 import { defineComponent } from 'vue'
 

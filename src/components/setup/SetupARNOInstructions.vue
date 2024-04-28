@@ -31,7 +31,7 @@
 
 <script lang="ts">
 import Expansion from '@/services/enum/Expansion'
-import { useStore } from '@/store'
+import { useStateStore } from '@/store/state'
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import SponsorCardDiscard from '../structure/SponsorCardDiscard.vue'
@@ -43,8 +43,8 @@ export default defineComponent({
   },
   setup() {
     const { t } = useI18n()
-    useStore()
-    return { t }
+    const state = useStateStore()
+    return { t, state }
   },
   data() {
     return {
@@ -53,10 +53,10 @@ export default defineComponent({
   },
   computed: {
     hasMarineWorldsExpansion() : boolean {
-      return (this.$store.state.setup.expansions ?? []).includes(Expansion.MARINE_WORLDS)
+      return (this.state.setup.expansions ?? []).includes(Expansion.MARINE_WORLDS)
     },
     hasProjectModuleExpansion() : boolean {
-      return (this.$store.state.setup.expansions ?? []).includes(Expansion.ARNO_CONSERVATION_PROJECT_MODULE)
+      return (this.state.setup.expansions ?? []).includes(Expansion.ARNO_CONSERVATION_PROJECT_MODULE)
     },
     conservationPointStartMinus() : number {
       return this.hasMarineWorldsExpansion ? 3 : 5
@@ -66,16 +66,16 @@ export default defineComponent({
       return new URL(`/src/assets/arno-conservation-start-setup/start-setup-${components}-${this.conservationPointStartMinus}.webp`, import.meta.url).toString()
     },
     botCount() : number {
-      return this.$store.state.setup.playerSetup.botCount
+      return this.state.setup.playerSetup.botCount
     }
   },
   mounted() {
-    this.$store.commit('setupBotInitialSponsorCardDiscardCount', this.sponsorCardDiscardCount)
+    this.state.setupBotInitialSponsorCardDiscardCount(this.sponsorCardDiscardCount)
   },
   watch: {
     sponsorCardDiscardCount: {
       handler() {
-        this.$store.commit('setupBotInitialSponsorCardDiscardCount', this.sponsorCardDiscardCount)
+        this.state.setupBotInitialSponsorCardDiscardCount(this.sponsorCardDiscardCount)
       },
       deep: true
     }

@@ -8,7 +8,7 @@
 </template>
 
 <script lang="ts">
-import { useStore } from '@/store'
+import { useStateStore } from '@/store/state'
 import { defineComponent, PropType } from 'vue'
 import { useI18n } from 'vue-i18n'
 
@@ -27,8 +27,8 @@ export default defineComponent({
   },
   setup() {
     const { t } = useI18n()
-    useStore()
-    return { t }
+    const state = useStateStore()
+    return { t, state }
   },
   data() {
     return {
@@ -37,7 +37,7 @@ export default defineComponent({
   },
   computed: {
     botCount() : number {
-      return this.$store.state.setup.playerSetup.botCount
+      return this.state.setup.playerSetup.botCount
     }
   },
   methods: {

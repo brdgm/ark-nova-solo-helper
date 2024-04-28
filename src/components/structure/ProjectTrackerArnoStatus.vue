@@ -28,7 +28,7 @@
 </template>
 
 <script lang="ts">
-import { useStore } from '@/store'
+import { useStateStore } from '@/store/state'
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import ModalDialog from 'brdgm-commons/src/components/structure/ModalDialog.vue'
@@ -48,19 +48,19 @@ export default defineComponent({
   },
   setup(props) {
     const { t } = useI18n()
-    const store = useStore()
-    const projectModuleTrackers = getProjectModuleTrackersForRound(store.state, props.round)
-    return { t, projectModuleTrackers }
+    const state = useStateStore()
+    const projectModuleTrackers = getProjectModuleTrackersForRound(state, props.round)
+    return { t, state, projectModuleTrackers }
   },
   computed: {
     hasProjectModuleExpansion() : boolean {
-      return (this.$store.state.setup.expansions ?? []).includes(Expansion.ARNO_CONSERVATION_PROJECT_MODULE)
+      return (this.state.setup.expansions ?? []).includes(Expansion.ARNO_CONSERVATION_PROJECT_MODULE)
     },
     botCount() : number {
-      return this.$store.state.setup.playerSetup.botCount
+      return this.state.setup.playerSetup.botCount
     },
     debugMode() : boolean {
-      return this.$store.state.setup.debugMode ?? false
+      return this.state.setup.debugMode ?? false
     }
   }
 })

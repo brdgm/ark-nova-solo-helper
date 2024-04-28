@@ -19,6 +19,7 @@ import { useI18n } from 'vue-i18n'
 import FooterButtons from '@/components/structure/FooterButtons.vue'
 import SetupARNOInstructions from '@/components/setup/SetupARNOInstructions.vue'
 import AboutARNO from '@/components/structure/AboutARNO.vue'
+import { useStateStore } from '@/store/state'
 
 export default defineComponent({
   name: 'SetupARNO',
@@ -29,11 +30,12 @@ export default defineComponent({
   },
   setup() {
     const { t } = useI18n()
-    return { t }
+    const state = useStateStore()
+    return { t, state }
   },
   methods:{
     startGame() : void {
-      this.$store.commit('resetGame')
+      this.state.resetGame()
       this.$router.push('/round/1/player/1')
     }
   }
