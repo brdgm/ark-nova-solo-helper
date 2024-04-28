@@ -1,6 +1,6 @@
 import DifficultyLevel from '@/services/enum/DifficultyLevel'
 import PlayerColor from '@/services/enum/PlayerColor'
-import { Setup } from '@/store'
+import { Setup } from '@/store/state'
 import getDifficultyLevel from '@/util/getDifficultyLevel'
 import { expect } from 'chai'
 

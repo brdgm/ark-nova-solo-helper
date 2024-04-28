@@ -1,4 +1,4 @@
-import PlayerColor from '@/services/enum/PlayerColor';
+import PlayerColor from '@/services/enum/PlayerColor'
 
 /**
  * Get color code for player color.

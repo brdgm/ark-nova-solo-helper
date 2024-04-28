@@ -1,5 +1,5 @@
-import DifficultyLevel from '@/services/enum/DifficultyLevel';
-import { Setup } from '@/store';
+import DifficultyLevel from '@/services/enum/DifficultyLevel'
+import { Setup } from '@/store/state'
 
 /**
  * Get difficulty level assigned to bot.
