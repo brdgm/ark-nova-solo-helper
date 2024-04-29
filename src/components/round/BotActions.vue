@@ -83,7 +83,7 @@
 import rollDice from 'brdgm-commons/src/util/random/rollDice'
 import { defineComponent, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { BotRound, useStore } from '@/store'
+import { BotRound, useStateStore } from '@/store/state'
 import NavigationState from '@/util/NavigationState'
 import BotActions from '@/services/BotActions'
 import AppIcon from '../structure/AppIcon.vue'
@@ -113,10 +113,10 @@ export default defineComponent({
   },
   setup() {
     const { t } = useI18n()
-    useStore()
+    const state = useStateStore()
     const pickConservationProject = ref()
     const gainPartnerZooOrUniversity = ref()
-    return { t, pickConservationProject, gainPartnerZooOrUniversity }
+    return { t, state, pickConservationProject, gainPartnerZooOrUniversity }
   },
   props: {
     navigationState: {
@@ -155,7 +155,7 @@ export default defineComponent({
       return this.actionsAll.filter(item => !this.isIconOnly(item.action))
     },
     hasProjectModuleExpansion() : boolean {
-      return (this.$store.state.setup.expansions ?? []).includes(Expansion.ARNO_CONSERVATION_PROJECT_MODULE)
+      return (this.state.setup.expansions ?? []).includes(Expansion.ARNO_CONSERVATION_PROJECT_MODULE)
     }
   },
   methods: {
@@ -223,7 +223,7 @@ export default defineComponent({
   watch: {
     takeCardSponsorCard(newValue) {
       const sponsorCardDiscardCount = newValue ? 1 : 0
-      this.$store.commit('roundBotSponsorCardDiscardCount',
+      this.state.roundBotSponsorCardDiscardCount(
           {round:this.navigationState.round, bot:this.navigationState.bot,sponsorCardDiscardCount})
     }
   }

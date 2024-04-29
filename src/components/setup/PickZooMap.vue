@@ -9,7 +9,7 @@
       </button><br/>
     </div>
     <div class="col-sm-5 col-lg-3 mt-3 mt-sm-0">
-      <select class="form-select" v-for="playerIndex in $store.state.setup.playerSetup.playerCount" :key="playerIndex" v-model="selectedMaps[playerIndex - 1]">
+      <select class="form-select" v-for="playerIndex in state.setup.playerSetup.playerCount" :key="playerIndex" v-model="selectedMaps[playerIndex - 1]">
         <option :value="''">{{t('setup.pickZooMap.pleaseSelect')}}</option>
         <option :value="'A'">{{t('setup.pickZooMap.mapA')}}</option>
         <option :value="'0'">{{t('setup.pickZooMap.map0')}}</option>
@@ -21,20 +21,20 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import rollDice from 'brdgm-commons/src/util/random/rollDice'
+import { useStateStore } from '@/store/state'
 
 export default defineComponent({
   name: 'PickZooMap',
   setup() {
     const { t } = useI18n()
-    return { t }
-  },
-  data() {
-    return {
-      selectedMaps: this.$store.state.setup.zooMaps ?? ['','','']
-    }
+    const state = useStateStore()
+
+    const selectedMaps = ref(state.setup.zooMaps ?? ['','',''])
+
+    return { t, state, selectedMaps }
   },
   computed: {
     advancedMaps() : {id: string, title: string}[] {
@@ -67,7 +67,7 @@ export default defineComponent({
   watch: {
     selectedMaps: {
       handler() {
-        this.$store.commit('setupZooMaps', this.selectedMaps)
+        this.state.setupZooMaps(this.selectedMaps)
       },
       deep: true
     }

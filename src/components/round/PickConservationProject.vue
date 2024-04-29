@@ -53,12 +53,14 @@ import NavigationState from '@/util/NavigationState'
 import Expansion from '@/services/enum/Expansion'
 import ProjectSlot from '@/services/enum/ProjectSlot'
 import getProjectModuleTrackerForRound from '@/util/getProjectModuleTrackerForRound'
+import { useStateStore } from '@/store/state'
 
 export default defineComponent({
   name: 'PickConservationProject',
   setup() {
     const { t } = useI18n()
-    return { t }
+    const state = useStateStore()
+    return { t, state }
   },
   props: {
     navigationState: {
@@ -109,11 +111,11 @@ export default defineComponent({
       return this.projectSlotDifficultyLevel == ProjectSlot.RIGHT
     },
     projectSlotsModulePlacement() : ProjectSlot[] {
-      const projectModuleTracker = getProjectModuleTrackerForRound(this.$store.state, this.navigationState.round, this.navigationState.bot)
+      const projectModuleTracker = getProjectModuleTrackerForRound(this.state, this.navigationState.round, this.navigationState.bot)
       return projectModuleTracker.getPreferredProjectSlots()
     },
     hasProjectModuleExpansion() : boolean {
-      return (this.$store.state.setup.expansions ?? []).includes(Expansion.ARNO_CONSERVATION_PROJECT_MODULE)
+      return (this.state.setup.expansions ?? []).includes(Expansion.ARNO_CONSERVATION_PROJECT_MODULE)
     }
   },
   methods: {

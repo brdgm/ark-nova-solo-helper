@@ -23,30 +23,30 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { useStore } from '@/store'
+import { useStateStore } from '@/store/state'
 import Expansion from '@/services/enum/Expansion'
 
 export default defineComponent({
   name: 'ExpansionsSetup',
   setup() {
     const { t } = useI18n()
-    useStore()
-    return { t }
+    const state = useStateStore()
+    return { t, state }
   },
   computed: {
     expansions() : Expansion[] {
       return Object.values(Expansion)
     },
     hasMarineWorldsExpansion() : boolean {
-      return (this.$store.state.setup.expansions ?? []).includes(Expansion.MARINE_WORLDS)
+      return (this.state.setup.expansions ?? []).includes(Expansion.MARINE_WORLDS)
     },    
   },
   methods: {
     hasExpansion(expansion : Expansion) : boolean {
-      return (this.$store.state.setup.expansions ?? []).includes(expansion)
+      return (this.state.setup.expansions ?? []).includes(expansion)
     },
     toggleExpansion(expansion : Expansion) : void {
-      this.$store.commit('setupToggleExpansion', expansion)
+      this.state.setupToggleExpansion(expansion)
     },
   }
 })

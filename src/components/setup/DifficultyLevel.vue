@@ -33,26 +33,26 @@
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { useStore } from '@/store'
+import { useStateStore } from '@/store/state'
 import getDifficultyLevel from '@/util/getDifficultyLevel'
 
 export default defineComponent({
   name: 'DifficultyLevel',
   setup() {
     const { t } = useI18n()
-    const store = useStore()
+    const state = useStateStore()
 
     const initialLevels : number[] = []
     for (let bot = 1; bot<=3; bot++) {
-      initialLevels[bot-1] = getDifficultyLevel(store.state.setup, bot)
+      initialLevels[bot-1] = getDifficultyLevel(state.setup, bot)
     }
 
     const levels = ref(initialLevels)
-    return { t, levels }
+    return { t, state, levels }
   },
   computed: {
     botCount() : number {
-      return this.$store.state.setup.playerSetup.botCount
+      return this.state.setup.playerSetup.botCount
     },
     hasLevel6() : boolean {
       return this.levels.filter(level => level >= 6).length > 0
@@ -60,12 +60,12 @@ export default defineComponent({
   },
   methods: {
     getDifficultyLevelForBot(bot : number) {
-      return getDifficultyLevel(this.$store.state.setup, bot)
+      return getDifficultyLevel(this.state.setup, bot)
     },
     updateDifficultyLevel(bot : number, event: Event) {
       const level = parseInt((event.target as HTMLInputElement).value)
       this.levels[bot-1] = level
-      this.$store.commit('setupDifficultyLevels', this.levels.slice(0, this.botCount))
+      this.state.setup.difficultyLevels = this.levels.slice(0, this.botCount)
     }
   }
 })

@@ -1,14 +1,14 @@
 import CardSlots from '@/services/CardSlots'
 import DifficultyLevel from '@/services/enum/DifficultyLevel'
-import { BotRound, State } from '@/store'
+import { BotRound, useStateStore } from '@/store/state'
 import { RouteLocation } from 'vue-router'
-import { Store } from 'vuex'
 import BotActions from '@/services/BotActions'
 import PlayerColor from '@/services/enum/PlayerColor'
 import getDifficultyLevel from './getDifficultyLevel'
 
 export default class NavigationState {
 
+  readonly state
   readonly difficultyLevel : DifficultyLevel
   readonly playerCount : number
   readonly botCount : number
@@ -19,8 +19,9 @@ export default class NavigationState {
   readonly playerColor : PlayerColor
   readonly previousBotRound? : BotRound
 
-  constructor(route : RouteLocation, store : Store<State>) {    
-    const setup = store.state.setup
+  constructor(route : RouteLocation) {
+    this.state = useStateStore()
+    const setup = this.state.setup
     this.playerCount = setup.playerSetup.playerCount
     this.botCount = setup.playerSetup.botCount
 
@@ -28,17 +29,17 @@ export default class NavigationState {
     this.player = (route.name == 'RoundPlayer') ? parseInt(route.params['player'] as string) : 0
     this.bot = (route.name == 'RoundBot') ? parseInt(route.params['bot'] as string) : 0
     this.difficultyLevel = getDifficultyLevel(setup, this.bot)
-    this.previousBotRound = this.getBotRound(store, this.round - 1, this.bot)
-    this.botRound = this.getBotRound(store, this.round, this.bot)
+    this.previousBotRound = this.getBotRound(this.round - 1, this.bot)
+    this.botRound = this.getBotRound(this.round, this.bot)
     this.playerColor = this.getPlayerColor(setup.playerSetup.playerColors)
   }
 
-  private getBotRound(store : Store<State>, roundNumber : number, botNumber : number) : BotRound | undefined {
+  private getBotRound(roundNumber : number, botNumber : number) : BotRound | undefined {
     if (roundNumber <= 0 || botNumber <= 0) {
       return undefined
     }
     let botRound
-    const round = store.state.rounds[roundNumber - 1]
+    const round = this.state.rounds[roundNumber - 1]
     if (round) {
       botRound = round.botRound[botNumber - 1]      
     }
@@ -76,7 +77,7 @@ export default class NavigationState {
         tokenNotepadCount: tokenNotepadCount + botActions.getTokenNotepadCount(),
         appealCount: appealCount + botActions.getAppealCount()
       }
-      store.commit('round', botRound)
+      this.state.round(botRound)
     }
     return botRound
   }

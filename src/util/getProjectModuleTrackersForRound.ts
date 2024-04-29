@@ -1,6 +1,6 @@
-import ProjectModuleTracker from '@/services/ProjectModuleTracker';
-import { State } from '@/store';
-import getProjectModuleTrackerForRound from './getProjectModuleTrackerForRound';
+import ProjectModuleTracker from '@/services/ProjectModuleTracker'
+import { State } from '@/store/state'
+import getProjectModuleTrackerForRound from './getProjectModuleTrackerForRound'
 
 /**
  * Get project module tracker for given round and all bots.

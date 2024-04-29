@@ -22,7 +22,6 @@ import { useI18n } from 'vue-i18n'
 import PlayerColorDisplay from '@/components/structure/PlayerColorDisplay.vue'
 import FooterButtons from '@/components/structure/FooterButtons.vue'
 import NavigationState from '@/util/NavigationState'
-import { useStore } from '@/store'
 import { useRoute } from 'vue-router'
 import AboutARNO from '@/components/structure/AboutARNO.vue'
 import RoundDisplay from '@/components/structure/RoundDisplay.vue'
@@ -42,9 +41,8 @@ export default defineComponent({
   setup() {
     const { t } = useI18n()
     const route = useRoute()
-    const store = useStore()
 
-    const navigationState = new NavigationState(route, store)
+    const navigationState = new NavigationState(route)
     const round = navigationState.round
     const playerCount = navigationState.playerCount
     const botCount = navigationState.botCount
