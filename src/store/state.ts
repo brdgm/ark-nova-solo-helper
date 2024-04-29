@@ -79,7 +79,7 @@ export const useStateStore = defineStore(`${name}.store`, {
     },
     resetGame() {
       this.rounds = []
-      this.setup.zooMaps = undefined;
+      this.setup.zooMaps = undefined
     }
   },
   persist: true

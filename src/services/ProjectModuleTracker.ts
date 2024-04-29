@@ -1,4 +1,4 @@
-import ProjectSlot from "./enum/ProjectSlot"
+import ProjectSlot from './enum/ProjectSlot'
 
 /**
  * Tracks ARNO progress for the optional project module, depending on number of discarded sponsor cards.

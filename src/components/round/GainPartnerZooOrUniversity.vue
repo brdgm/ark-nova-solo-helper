@@ -43,7 +43,7 @@ export default defineComponent({
   data() {
     return {
       missingMostPartnerZooOrUniversity: 0
-    };
+    }
   },
   methods: {
     pickRandom() : void {

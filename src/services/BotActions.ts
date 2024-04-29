@@ -94,7 +94,7 @@ export default class BotActions {
     return this._actions
         .filter(item => item.action == action)
         .map(item => item.amount)
-        .reduce((previous, current) => previous + current, 0);
+        .reduce((previous, current) => previous + current, 0)
   }
 
   public static newRandomSlot(cardSlots : CardSlots, difficultyLevel : DifficultyLevel, tokenScoringCardCount : number) : BotActions {

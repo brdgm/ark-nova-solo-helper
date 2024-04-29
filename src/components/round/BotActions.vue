@@ -165,9 +165,9 @@ export default defineComponent({
         case Action.REPUTATION:
         case Action.CONSERVATION:
         case Action.BREAK:
-          return true;
+          return true
         default:
-          return false;
+          return false
       }
     },
     isAssociation(card : Card) {
@@ -179,9 +179,9 @@ export default defineComponent({
         case Action.GAIN_PARTNER_ZOO:
         case Action.GAIN_PARTNER_UNIVERSITY:
         case Action.CONSERVATION_PROJECT_WORK:
-          return true;
+          return true
         default:
-          return false;
+          return false
       }
     },
     getUnusedAssociationActions() : Action[] {
@@ -216,7 +216,7 @@ export default defineComponent({
                 amount: action==Action.REPUTATION ? 2 : 0
               }
             }
-            return botAction;
+            return botAction
           })
     }
   },

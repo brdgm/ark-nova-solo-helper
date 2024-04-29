@@ -50,9 +50,9 @@ export default defineComponent({
   },
   methods: {
     pickRandom() : void {
-      this.selectedMaps = ['','',''];
+      this.selectedMaps = ['','','']
       for (let i=0; i<this.selectedMaps.length; i++) {
-        this.selectedMaps[i] = this.pickUniqueMap();
+        this.selectedMaps[i] = this.pickUniqueMap()
       }
     },
     pickUniqueMap() : string {

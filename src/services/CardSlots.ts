@@ -65,7 +65,7 @@ export default class CardSlots {
    * @return true if less then 3 cards are upgraded.
    */
   public canUpgradeCard() : boolean {
-    return this._upgradedCards.length < 3;
+    return this._upgradedCards.length < 3
   }
 
   /**
