@@ -18,14 +18,14 @@
   "dependencies": {
     "@popperjs/core": "~2.11.8",
     "bootstrap": "~5.3.3",
-    "brdgm-commons": "github:brdgm/brdgm-commons#1.6.1",
-    "core-js": "~3.36.1",
+    "brdgm-commons": "github:brdgm/brdgm-commons#1.6.2",
+    "core-js": "~3.37.0",
     "lodash": "~4.17.21",
     "pinia": "^2.1.7",
     "pinia-plugin-persistedstate": "^3.2.1",
-    "vue": "~3.4.21",
-    "vue-i18n": "~9.11.1",
-    "vue-router": "~4.2.5"
+    "vue": "~3.4.26",
+    "vue-i18n": "~9.13.1",
+    "vue-router": "~4.3.2"
   },
   "devDependencies": {
     "@intlify/unplugin-vue-i18n": "^4.0.0",
@@ -34,25 +34,25 @@
     "@types/jsdom": "^21.1.6",
     "@types/lodash": "^4.17.0",
     "@types/mocha": "^10.0.6",
-    "@typescript-eslint/eslint-plugin": "^7.6.0",
-    "@typescript-eslint/parser": "^7.6.0",
+    "@typescript-eslint/eslint-plugin": "^7.8.0",
+    "@typescript-eslint/parser": "^7.8.0",
     "@vite-pwa/assets-generator": "^0.2.4",
     "@vitejs/plugin-legacy": "^5.3.2",
     "@vitejs/plugin-vue": "^5.0.4",
-    "@vitest/coverage-istanbul": "^1.4.0",
+    "@vitest/coverage-istanbul": "^1.5.3",
     "@vue/eslint-config-typescript": "^13.0.0",
     "babel-plugin-istanbul": "^6.1.1",
     "chai": "^5.1.0",
     "eslint": "^8.57.0",
-    "eslint-plugin-vue": "^9.24.1",
+    "eslint-plugin-vue": "^9.25.0",
     "jsdom": "^24.0.0",
     "nodemon": "^3.1.0",
-    "sass": "^1.74.1",
+    "sass": "^1.75.0",
     "source-map-support": "^0.5.21",
     "ts-node": "^10.9.2",
     "typescript": "~5.4.5",
-    "vite": "^5.2.8",
-    "vite-plugin-pwa": "^0.19.8",
-    "vitest": "^1.4.0"
+    "vite": "^5.2.10",
+    "vite-plugin-pwa": "^0.20.0",
+    "vitest": "^1.5.3"
   }
 }
