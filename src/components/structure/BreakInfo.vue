@@ -22,7 +22,7 @@
 import { defineComponent, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import AppIcon from './AppIcon.vue'
-import ModalDialog from 'brdgm-commons/src/components/structure/ModalDialog.vue'
+import ModalDialog from '@brdgm/brdgm-commons/src/components/structure/ModalDialog.vue'
 import Expansion from '@/services/enum/Expansion'
 import { useStateStore } from '@/store/state'
 import SponsorCardDiscard from './SponsorCardDiscard.vue'

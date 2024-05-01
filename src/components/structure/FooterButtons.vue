@@ -7,7 +7,7 @@
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useStateStore } from '@/store/state'
-import CommonsFooterButtons from 'brdgm-commons/src/components/structure/FooterButtons.vue'
+import CommonsFooterButtons from '@brdgm/brdgm-commons/src/components/structure/FooterButtons.vue'
 
 export default defineComponent({
   name: 'FooterButtons',

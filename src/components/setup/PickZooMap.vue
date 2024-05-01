@@ -23,7 +23,7 @@
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import rollDice from 'brdgm-commons/src/util/random/rollDice'
+import rollDice from '@brdgm/brdgm-commons/src/util/random/rollDice'
 import { useStateStore } from '@/store/state'
 
 export default defineComponent({

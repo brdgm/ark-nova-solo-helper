@@ -1,4 +1,4 @@
-import rollDice from 'brdgm-commons/src/util/random/rollDice'
+import rollDice from '@brdgm/brdgm-commons/src/util/random/rollDice'
 import BotAction from './BotAction'
 import Card, { CardAction } from './Card'
 import CardSlots from './CardSlots'

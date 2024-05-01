@@ -61,14 +61,14 @@
 import { defineComponent, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useStateStore } from '@/store/state'
-import AppHeader from 'brdgm-commons/src/components/structure/AppHeader.vue'
-import AppFooter from 'brdgm-commons/src/components/structure/AppFooter.vue'
-import ModalDialog from 'brdgm-commons/src/components/structure/ModalDialog.vue'
-import getErrorMessage from 'brdgm-commons/src/util/error/getErrorMessage'
-import showModal, { showModalIfExist } from 'brdgm-commons/src/util/modal/showModal'
+import AppHeader from '@brdgm/brdgm-commons/src/components/structure/AppHeader.vue'
+import AppFooter from '@brdgm/brdgm-commons/src/components/structure/AppFooter.vue'
+import ModalDialog from '@brdgm/brdgm-commons/src/components/structure/ModalDialog.vue'
+import getErrorMessage from '@brdgm/brdgm-commons/src/util/error/getErrorMessage'
+import showModal, { showModalIfExist } from '@brdgm/brdgm-commons/src/util/modal/showModal'
 import { version, description } from '@/../package.json'
 import { registerSW } from 'virtual:pwa-register'
-import onRegisteredSWCheckForUpdate from 'brdgm-commons/src/util/serviceWorker/onRegisteredSWCheckForUpdate'
+import onRegisteredSWCheckForUpdate from '@brdgm/brdgm-commons/src/util/serviceWorker/onRegisteredSWCheckForUpdate'
 
 export default defineComponent({
   name: 'App',

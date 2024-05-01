@@ -4,7 +4,7 @@ import PlayerColor from '@/services/enum/PlayerColor'
 import { defineStore } from 'pinia'
 import { name } from '@/../package.json'
 import Expansion from '@/services/enum/Expansion'
-import toggleArrayItem from 'brdgm-commons/src/util/array/toggleArrayItem'
+import toggleArrayItem from '@brdgm/brdgm-commons/src/util/array/toggleArrayItem'
 
 export const useStateStore = defineStore(`${name}.store`, {
   state: () => {

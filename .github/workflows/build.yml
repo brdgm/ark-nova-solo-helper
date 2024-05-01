@@ -18,22 +18,22 @@ jobs:
       SONARCLOUD_TOKEN: ${{ secrets.SONARCLOUD_TOKEN }}
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
       with:
         fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
 
     - name: Read properties from package.json
       id: package_json
-      uses: zoexx/github-action-json-file-properties@1.0.4
+      uses: zoexx/github-action-json-file-properties@1.0.6
       with:
         file_path: package.json
 
-    - uses: actions/setup-node@v3
+    - uses: actions/setup-node@v4
       with:
         node-version: 20
         cache: npm
 
-    - run: npm install
+    - run: npm ci
     - run: npm run lint
     - run: npm run test:coverage
     - run: npm run build

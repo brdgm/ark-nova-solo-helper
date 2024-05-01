@@ -14,10 +14,10 @@
 </template>
 
 <script lang="ts">
-import rollDice from 'brdgm-commons/src/util/random/rollDice'
-import rollDiceDifferentValue from 'brdgm-commons/src/util/random/rollDiceDifferentValue'
-import randomEnum from 'brdgm-commons/src/util/random/randomEnum'
-import randomEnumDifferentValue from 'brdgm-commons/src/util/random/randomEnumDifferentValue'
+import rollDice from '@brdgm/brdgm-commons/src/util/random/rollDice'
+import rollDiceDifferentValue from '@brdgm/brdgm-commons/src/util/random/rollDiceDifferentValue'
+import randomEnum from '@brdgm/brdgm-commons/src/util/random/randomEnum'
+import randomEnumDifferentValue from '@brdgm/brdgm-commons/src/util/random/randomEnumDifferentValue'
 import { defineComponent, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import AppIcon from '../structure/AppIcon.vue'

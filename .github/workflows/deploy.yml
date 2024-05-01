@@ -14,20 +14,20 @@ jobs:
       url: "https://brdgm.me/${{ steps.package_json.outputs.appDeployName }}"
 
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
 
     - name: Read properties from package.json
       id: package_json
-      uses: zoexx/github-action-json-file-properties@1.0.4
+      uses: zoexx/github-action-json-file-properties@1.0.6
       with:
         file_path: package.json
 
-    - uses: actions/setup-node@v3
+    - uses: actions/setup-node@v4
       with:
         node-version: 20
         cache: npm
 
-    - run: npm install
+    - run: npm ci
     - run: npm run test:unit
     - run: npm run build
 

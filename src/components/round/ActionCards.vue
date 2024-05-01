@@ -44,7 +44,7 @@
 </template>
 
 <script lang="ts">
-import rollDice from 'brdgm-commons/src/util/random/rollDice'
+import rollDice from '@brdgm/brdgm-commons/src/util/random/rollDice'
 import { defineComponent, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { BotRound, useStateStore } from '@/store/state'
@@ -52,7 +52,7 @@ import NavigationState from '@/util/NavigationState'
 import CardSlots from '@/services/CardSlots'
 import AppIcon from '../structure/AppIcon.vue'
 import CardTypeIcon from '../structure/CardTypeIcon.vue'
-import ModalDialog from 'brdgm-commons/src/components/structure/ModalDialog.vue'
+import ModalDialog from '@brdgm/brdgm-commons/src/components/structure/ModalDialog.vue'
 import Card from '@/services/Card'
 import Cards from '@/services/Cards'
 import CardName from '@/services/enum/CardName'

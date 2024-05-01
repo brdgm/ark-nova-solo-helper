@@ -16,9 +16,9 @@
     "generate-pwa-assets": "pwa-assets-generator"
   },
   "dependencies": {
+    "@brdgm/brdgm-commons": "^1.6.4",
     "@popperjs/core": "~2.11.8",
     "bootstrap": "~5.3.3",
-    "brdgm-commons": "github:brdgm/brdgm-commons#1.6.2",
     "core-js": "~3.37.0",
     "lodash": "~4.17.21",
     "pinia": "^2.1.7",

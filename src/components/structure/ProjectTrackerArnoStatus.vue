@@ -31,7 +31,7 @@
 import { useStateStore } from '@/store/state'
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
-import ModalDialog from 'brdgm-commons/src/components/structure/ModalDialog.vue'
+import ModalDialog from '@brdgm/brdgm-commons/src/components/structure/ModalDialog.vue'
 import getProjectModuleTrackersForRound from '@/util/getProjectModuleTrackersForRound'
 import Expansion from '@/services/enum/Expansion'
 

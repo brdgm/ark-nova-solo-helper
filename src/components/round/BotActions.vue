@@ -80,7 +80,7 @@
 </template>
 
 <script lang="ts">
-import rollDice from 'brdgm-commons/src/util/random/rollDice'
+import rollDice from '@brdgm/brdgm-commons/src/util/random/rollDice'
 import { defineComponent, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { BotRound, useStateStore } from '@/store/state'
@@ -97,7 +97,7 @@ import CardName from '@/services/enum/CardName'
 import GainPartnerUniversity from './GainPartnerUniversity.vue'
 import GainPartnerZoo from './GainPartnerZoo.vue'
 import GainPartnerZooOrUniversity from './GainPartnerZooOrUniversity.vue'
-import ModalDialog from 'brdgm-commons/src/components/structure/ModalDialog.vue'
+import ModalDialog from '@brdgm/brdgm-commons/src/components/structure/ModalDialog.vue'
 import Expansion from '@/services/enum/Expansion'
 
 export default defineComponent({
