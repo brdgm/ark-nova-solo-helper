@@ -1,22 +1,23 @@
-name: Deploy
+name: Release and Deploy
 
 on:
-  push:
-    branches:
-      - master
   workflow_dispatch:
 
 jobs:
-  deploy:
+  release:
     runs-on: ubuntu-latest
     environment:
       name: Production
-      url: "https://brdgm.me/${{ steps.deploy.outputs.app-deploy-name }}"
+      url: "https://brdgm.me/${{ steps.release.outputs.app-deploy-name }}"
+
+    permissions:
+      contents: write
 
     steps:
-      - uses: brdgm/github-action-deploy@v1
-        id: deploy
+      - uses: brdgm/github-action-release@v1
+        id: release
         with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           gh-site-deploy-pat: ${{ secrets.GH_SITE_DEPLOY_PAT }}
           gh-site-deploy-username: ${{ secrets.GH_SITE_DEPLOY_USERNAME }}
           gh-site-deploy-email: ${{ secrets.GH_SITE_DEPLOY_EMAIL }}
