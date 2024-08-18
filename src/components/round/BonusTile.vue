@@ -43,14 +43,14 @@
 </template>
 
 <script lang="ts">
-import rollDice from 'brdgm-commons/src/util/random/rollDice'
+import rollDice from '@brdgm/brdgm-commons/src/util/random/rollDice'
 import { defineComponent } from 'vue'
 import { useI18n } from 'vue-i18n'
 import AppIcon from '../structure/AppIcon.vue'
 import GainPartnerZoo from './GainPartnerZoo.vue'
 import GainPartnerUniversity from './GainPartnerUniversity.vue'
-import ModalDialog from 'brdgm-commons/src/components/structure/ModalDialog.vue'
-import { useStore } from '@/store'
+import ModalDialog from '@brdgm/brdgm-commons/src/components/structure/ModalDialog.vue'
+import { useStateStore } from '@/store/state'
 import Expansion from '@/services/enum/Expansion'
 
 export default defineComponent({
@@ -63,8 +63,8 @@ export default defineComponent({
   },
   setup() {
     const { t } = useI18n()
-    useStore()
-    return { t }
+    const state = useStateStore()
+    return { t, state }
   },
   data() {
     return {
@@ -75,7 +75,7 @@ export default defineComponent({
   },
   computed: {
     hasMarineWorldsExpansion() : boolean {
-      return (this.$store.state.setup.expansions ?? []).includes(Expansion.MARINE_WORLDS)
+      return (this.state.setup.expansions ?? []).includes(Expansion.MARINE_WORLDS)
     }
   },
   methods: {

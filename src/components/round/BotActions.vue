@@ -80,10 +80,10 @@
 </template>
 
 <script lang="ts">
-import rollDice from 'brdgm-commons/src/util/random/rollDice'
+import rollDice from '@brdgm/brdgm-commons/src/util/random/rollDice'
 import { defineComponent, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { BotRound, useStore } from '@/store'
+import { BotRound, useStateStore } from '@/store/state'
 import NavigationState from '@/util/NavigationState'
 import BotActions from '@/services/BotActions'
 import AppIcon from '../structure/AppIcon.vue'
@@ -97,7 +97,7 @@ import CardName from '@/services/enum/CardName'
 import GainPartnerUniversity from './GainPartnerUniversity.vue'
 import GainPartnerZoo from './GainPartnerZoo.vue'
 import GainPartnerZooOrUniversity from './GainPartnerZooOrUniversity.vue'
-import ModalDialog from 'brdgm-commons/src/components/structure/ModalDialog.vue'
+import ModalDialog from '@brdgm/brdgm-commons/src/components/structure/ModalDialog.vue'
 import Expansion from '@/services/enum/Expansion'
 
 export default defineComponent({
@@ -113,10 +113,10 @@ export default defineComponent({
   },
   setup() {
     const { t } = useI18n()
-    useStore()
+    const state = useStateStore()
     const pickConservationProject = ref()
     const gainPartnerZooOrUniversity = ref()
-    return { t, pickConservationProject, gainPartnerZooOrUniversity }
+    return { t, state, pickConservationProject, gainPartnerZooOrUniversity }
   },
   props: {
     navigationState: {
@@ -155,7 +155,7 @@ export default defineComponent({
       return this.actionsAll.filter(item => !this.isIconOnly(item.action))
     },
     hasProjectModuleExpansion() : boolean {
-      return (this.$store.state.setup.expansions ?? []).includes(Expansion.ARNO_CONSERVATION_PROJECT_MODULE)
+      return (this.state.setup.expansions ?? []).includes(Expansion.ARNO_CONSERVATION_PROJECT_MODULE)
     }
   },
   methods: {
@@ -165,9 +165,9 @@ export default defineComponent({
         case Action.REPUTATION:
         case Action.CONSERVATION:
         case Action.BREAK:
-          return true;
+          return true
         default:
-          return false;
+          return false
       }
     },
     isAssociation(card : Card) {
@@ -179,9 +179,9 @@ export default defineComponent({
         case Action.GAIN_PARTNER_ZOO:
         case Action.GAIN_PARTNER_UNIVERSITY:
         case Action.CONSERVATION_PROJECT_WORK:
-          return true;
+          return true
         default:
-          return false;
+          return false
       }
     },
     getUnusedAssociationActions() : Action[] {
@@ -216,14 +216,14 @@ export default defineComponent({
                 amount: action==Action.REPUTATION ? 2 : 0
               }
             }
-            return botAction;
+            return botAction
           })
     }
   },
   watch: {
     takeCardSponsorCard(newValue) {
       const sponsorCardDiscardCount = newValue ? 1 : 0
-      this.$store.commit('roundBotSponsorCardDiscardCount',
+      this.state.roundBotSponsorCardDiscardCount(
           {round:this.navigationState.round, bot:this.navigationState.bot,sponsorCardDiscardCount})
     }
   }

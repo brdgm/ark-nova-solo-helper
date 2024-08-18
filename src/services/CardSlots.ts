@@ -1,4 +1,4 @@
-import { CardSlotsPersistence } from '@/store'
+import { CardSlotsPersistence } from '@/store/state'
 import { shuffle, cloneDeep } from 'lodash'
 import Card from './Card'
 import Cards from './Cards'
@@ -65,7 +65,7 @@ export default class CardSlots {
    * @return true if less then 3 cards are upgraded.
    */
   public canUpgradeCard() : boolean {
-    return this._upgradedCards.length < 3;
+    return this._upgradedCards.length < 3
   }
 
   /**

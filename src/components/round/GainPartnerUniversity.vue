@@ -14,15 +14,15 @@
 </template>
 
 <script lang="ts">
-import rollDice from 'brdgm-commons/src/util/random/rollDice'
-import rollDiceDifferentValue from 'brdgm-commons/src/util/random/rollDiceDifferentValue'
-import randomEnum from 'brdgm-commons/src/util/random/randomEnum'
-import randomEnumDifferentValue from 'brdgm-commons/src/util/random/randomEnumDifferentValue'
+import rollDice from '@brdgm/brdgm-commons/src/util/random/rollDice'
+import rollDiceDifferentValue from '@brdgm/brdgm-commons/src/util/random/rollDiceDifferentValue'
+import randomEnum from '@brdgm/brdgm-commons/src/util/random/randomEnum'
+import randomEnumDifferentValue from '@brdgm/brdgm-commons/src/util/random/randomEnumDifferentValue'
 import { defineComponent, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import AppIcon from '../structure/AppIcon.vue'
 import Expansion from '@/services/enum/Expansion'
-import { useStore } from '@/store'
+import { useStateStore } from '@/store/state'
 import AnimalType from '@/services/enum/AnimalType'
 
 export default defineComponent({
@@ -32,9 +32,9 @@ export default defineComponent({
   },
   setup() {
     const { t } = useI18n()
-    const store = useStore()
+    const state = useStateStore()
 
-    const hasMarineWorldsExpansion = (store.state.setup.expansions ?? []).includes(Expansion.MARINE_WORLDS)
+    const hasMarineWorldsExpansion = (state.setup.expansions ?? []).includes(Expansion.MARINE_WORLDS)
     const universityCount = hasMarineWorldsExpansion ? 4 : 3
     const universityRandomNumber = ref(rollDice(universityCount))
     const animalTypeRandom = ref(randomEnum(AnimalType))

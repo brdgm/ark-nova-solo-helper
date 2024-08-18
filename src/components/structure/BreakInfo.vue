@@ -22,9 +22,9 @@
 import { defineComponent, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import AppIcon from './AppIcon.vue'
-import ModalDialog from 'brdgm-commons/src/components/structure/ModalDialog.vue'
+import ModalDialog from '@brdgm/brdgm-commons/src/components/structure/ModalDialog.vue'
 import Expansion from '@/services/enum/Expansion'
-import { useStore } from '@/store'
+import { useStateStore } from '@/store/state'
 import SponsorCardDiscard from './SponsorCardDiscard.vue'
 
 export default defineComponent({
@@ -42,25 +42,25 @@ export default defineComponent({
   },
   setup(props) {
     const { t } = useI18n()
-    const store = useStore()
+    const state = useStateStore()
 
     const sponsorCardDiscardCount = ref([0,0,0])
-    const roundData = store.state.rounds.find(item => item.round == props.round)
+    const roundData = state.rounds.find(item => item.round == props.round)
     if (roundData?.botBreakSponsorCardDiscardCount) {
       sponsorCardDiscardCount.value = roundData.botBreakSponsorCardDiscardCount
     }
 
-    return { t, sponsorCardDiscardCount }
+    return { t, state, sponsorCardDiscardCount }
   },
   computed: {
     hasProjectModuleExpansion() : boolean {
-      return (this.$store.state.setup.expansions ?? []).includes(Expansion.ARNO_CONSERVATION_PROJECT_MODULE)
+      return (this.state.setup.expansions ?? []).includes(Expansion.ARNO_CONSERVATION_PROJECT_MODULE)
     }
   },
   watch: {
     sponsorCardDiscardCount: {
       handler() {
-        this.$store.commit('roundBreakSponsorCardDiscardCount',
+        this.state.roundBreakSponsorCardDiscardCount(
           { round: this.round, botBreakSponsorCardDiscardCount: this.sponsorCardDiscardCount })
       },
       deep: true

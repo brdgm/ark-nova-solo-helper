@@ -14,7 +14,7 @@
     {{t('action.next')}}
   </router-link>
 
-  <BotDebugInfo :navigation-state="navigationState" v-if="$store.state.setup.debugMode"/>
+  <BotDebugInfo :navigation-state="navigationState" v-if="state.setup.debugMode"/>
 
   <FooterButtons :backButtonRouteTo="backButtonRouteTo" endGameButtonType="finishGame"/>
 </template>
@@ -26,7 +26,7 @@ import PlayerColorDisplay from '@/components/structure/PlayerColorDisplay.vue'
 import BotActions from '@/components/round/BotActions.vue'
 import FooterButtons from '@/components/structure/FooterButtons.vue'
 import { useRoute } from 'vue-router'
-import { useStore } from '@/store'
+import { useStateStore } from '@/store/state'
 import NavigationState from '@/util/NavigationState'
 import AboutARNO from '@/components/structure/AboutARNO.vue'
 import RoundDisplay from '@/components/structure/RoundDisplay.vue'
@@ -51,9 +51,9 @@ export default defineComponent({
   setup() {
     const { t } = useI18n()
     const route = useRoute()
-    const store = useStore()
+    const state = useStateStore()
 
-    const navigationState = new NavigationState(route, store)
+    const navigationState = new NavigationState(route)
     const round = navigationState.round
     const playerCount = navigationState.playerCount
     const botCount = navigationState.botCount
@@ -61,7 +61,7 @@ export default defineComponent({
     const playerColor = navigationState.playerColor
     const keyDownHandler = ref((_event:KeyboardEvent) => {})  // eslint-disable-line @typescript-eslint/no-empty-function, @typescript-eslint/no-unused-vars
 
-    return { t, navigationState, round, playerCount, botCount, bot, playerColor, keyDownHandler }
+    return { t, state, navigationState, round, playerCount, botCount, bot, playerColor, keyDownHandler }
   },
   mounted() {
     this.keyDownHandler = (event:KeyboardEvent) => {

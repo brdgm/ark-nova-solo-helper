@@ -1,4 +1,4 @@
-import rollDice from 'brdgm-commons/src/util/random/rollDice'
+import rollDice from '@brdgm/brdgm-commons/src/util/random/rollDice'
 import BotAction from './BotAction'
 import Card, { CardAction } from './Card'
 import CardSlots from './CardSlots'
@@ -94,7 +94,7 @@ export default class BotActions {
     return this._actions
         .filter(item => item.action == action)
         .map(item => item.amount)
-        .reduce((previous, current) => previous + current, 0);
+        .reduce((previous, current) => previous + current, 0)
   }
 
   public static newRandomSlot(cardSlots : CardSlots, difficultyLevel : DifficultyLevel, tokenScoringCardCount : number) : BotActions {

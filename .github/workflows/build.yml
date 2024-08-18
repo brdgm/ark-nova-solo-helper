@@ -14,33 +14,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      SONARCLOUD_TOKEN: ${{ secrets.SONARCLOUD_TOKEN }}
 
     steps:
-    - uses: actions/checkout@v3
-      with:
-        fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
-
-    - name: Read properties from package.json
-      id: package_json
-      uses: zoexx/github-action-json-file-properties@1.0.4
-      with:
-        file_path: package.json
-
-    - uses: actions/setup-node@v3
-      with:
-        node-version: 20
-        cache: npm
-
-    - run: npm install
-    - run: npm run lint
-    - run: npm run test:coverage
-    - run: npm run build
-    - uses: SonarSource/sonarcloud-github-action@master
-      if: env.SONARCLOUD_TOKEN != null
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        SONAR_TOKEN: ${{ env.SONARCLOUD_TOKEN }}
-      with:
-        args: -Dsonar.projectVersion=${{steps.package_json.outputs.version}}
+      - uses: brdgm/github-action-build@v1
+        with:
+          sonar-token: ${{ secrets.SONARCLOUD_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}

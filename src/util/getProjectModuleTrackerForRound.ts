@@ -1,5 +1,5 @@
-import ProjectModuleTracker from '@/services/ProjectModuleTracker';
-import { State } from '@/store';
+import ProjectModuleTracker from '@/services/ProjectModuleTracker'
+import { State } from '@/store/state'
 
 /**
  * Get project module tracker for given round and bot.
