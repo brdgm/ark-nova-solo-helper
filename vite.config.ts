@@ -9,6 +9,9 @@ import { description, appDeployName } from './package.json'
 // https://vitejs.dev/config/
 export default defineConfig({
   base: `/${appDeployName}/`,
+  build: {
+    chunkSizeWarningLimit: 5242880
+  },
   plugins: [
     vue(),
     VitePWA({
