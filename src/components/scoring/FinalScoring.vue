@@ -11,32 +11,34 @@
 
   <h3 id="headlineScoringVP" v-html="t('scoring.victoryPoints')"></h3>
   <table aria-describedby="headlineScoringVP">
-    <tr>
-      <th scope="col"></th>
-      <th scope="col" v-html="t('scoring.conservationPoints')"></th>
-      <th scope="col" v-html="t('scoring.appeal')"></th>
-      <th scope="col" v-html="t('scoring.victoryPoints')"></th>
-      <th scope="col" class="difficultyLevelColumn" v-html="t('setup.difficultyLevel.title')"></th>
-    </tr>
-    <tr v-for="player in playerCount" :key="player">
-      <th scope="row" class="player"><PlayerColorDisplay :playerColor="playerColors[player-1]" :sizeRem="1.5"/>{{t('roundPlayer.title', {player:player}, playerCount)}}</th>
-      <td><input type="number" min="0" max="41" step="1" v-model="conservationPoints[player-1]" @focus="inputSelectAll"/></td>
-      <td><input type="number" min="0" max="113" step="1" v-model="appeal[player-1]" @focus="inputSelectAll"/></td>
-      <td>{{victoryPoints[player-1]}}</td>
-      <td class="difficultyLevelColumn"></td>
-    </tr>
-    <template v-for="bot in botCount" :key="bot">
+    <tbody>
       <tr>
-        <th scope="row" class="player"><PlayerColorDisplay :playerColor="playerColors[playerCount+bot-1]" :sizeRem="1.5"/>{{t('roundBot.title', {bot:bot}, botCount)}}</th>
-        <td><input type="number" min="0" max="41" step="1" v-model="conservationPoints[playerCount+bot-1]" @focus="inputSelectAll"/></td>
-        <td><input type="number" min="0" max="113" step="1" v-model="appeal[playerCount+bot-1]" @focus="inputSelectAll"/></td>
-        <td>{{victoryPoints[playerCount+bot-1]}}</td>
-        <td class="difficultyLevelColumn">{{t(`difficultyLevel.${getDifficultyLevelForBot(bot)}`)}}</td>
+        <th scope="col"></th>
+        <th scope="col" v-html="t('scoring.conservationPoints')"></th>
+        <th scope="col" v-html="t('scoring.appeal')"></th>
+        <th scope="col" v-html="t('scoring.victoryPoints')"></th>
+        <th scope="col" class="difficultyLevelColumn" v-html="t('setup.difficultyLevel.title')"></th>
       </tr>
-      <tr class="difficultyLevelRow">
-        <td colspan="4">{{t('setup.difficultyLevel.title')}}: {{t(`difficultyLevel.${getDifficultyLevelForBot(bot)}`)}}</td>
+      <tr v-for="player in playerCount" :key="player">
+        <th scope="row" class="player"><PlayerColorDisplay :playerColor="playerColors[player-1]" :sizeRem="1.5"/>{{t('roundPlayer.title', {player:player}, playerCount)}}</th>
+        <td><input type="number" min="0" max="41" step="1" v-model="conservationPoints[player-1]" @focus="inputSelectAll"/></td>
+        <td><input type="number" min="0" max="113" step="1" v-model="appeal[player-1]" @focus="inputSelectAll"/></td>
+        <td>{{victoryPoints[player-1]}}</td>
+        <td class="difficultyLevelColumn"></td>
       </tr>
-    </template>
+      <template v-for="bot in botCount" :key="bot">
+        <tr>
+          <th scope="row" class="player"><PlayerColorDisplay :playerColor="playerColors[playerCount+bot-1]" :sizeRem="1.5"/>{{t('roundBot.title', {bot:bot}, botCount)}}</th>
+          <td><input type="number" min="0" max="41" step="1" v-model="conservationPoints[playerCount+bot-1]" @focus="inputSelectAll"/></td>
+          <td><input type="number" min="0" max="113" step="1" v-model="appeal[playerCount+bot-1]" @focus="inputSelectAll"/></td>
+          <td>{{victoryPoints[playerCount+bot-1]}}</td>
+          <td class="difficultyLevelColumn">{{t(`difficultyLevel.${getDifficultyLevelForBot(bot)}`)}}</td>
+        </tr>
+        <tr class="difficultyLevelRow">
+          <td colspan="4">{{t('setup.difficultyLevel.title')}}: {{t(`difficultyLevel.${getDifficultyLevelForBot(bot)}`)}}</td>
+        </tr>
+      </template>
+    </tbody>
   </table>
 
   <p class="fst-italic small mt-3" v-html="t('scoring.appealReputationTrack')"></p>
