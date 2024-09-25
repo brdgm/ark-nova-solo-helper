@@ -16,7 +16,7 @@
     "generate-pwa-assets": "pwa-assets-generator"
   },
   "dependencies": {
-    "@brdgm/brdgm-commons": "^1.6.8",
+    "@brdgm/brdgm-commons": "^1.6.9",
     "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.3",
     "core-js": "^3.38.1",
@@ -47,10 +47,10 @@
     "eslint-plugin-vue": "^9.28.0",
     "jsdom": "^25.0.1",
     "nodemon": "^3.1.7",
-    "sass": "^1.78.0",
+    "sass": "~1.78.0",
     "source-map-support": "^0.5.21",
     "ts-node": "^10.9.2",
-    "typescript": "^5.5.4",
+    "typescript": "~5.5.4",
     "vite": "^5.4.7",
     "vite-plugin-pwa": "^0.20.5",
     "vitest": "^2.1.1"
