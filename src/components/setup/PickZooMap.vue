@@ -42,8 +42,15 @@ export default defineComponent({
       for (let i=1; i<=8; i++) {
         result.push({id: i+'', title: this.t('setup.pickZooMap.mapAdvanced', {id:i})})
       }
+      // map pack 1
       for (let i=9; i<=10; i++) {
-        result.push({id: i+'', title: this.t('setup.pickZooMap.mapAdvancedMapPack', {id:i,mapPack:1})})
+        const id = `${i}`
+        result.push({id: i+'', title: this.t('setup.pickZooMap.mapAdvancedMapPack', {id,mapPack:1})})
+      }
+      // map pack 2
+      for (let i=11; i<=15; i++) {
+        const id = (i== 15) ? 'T1' : `${i}`
+        result.push({id: i+'', title: this.t('setup.pickZooMap.mapAdvancedMapPack', {id,mapPack:2})})
       }
       return result
     }
