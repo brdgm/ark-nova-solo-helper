@@ -7,8 +7,8 @@ import { ref } from 'vue'
 
 export default class CardSlots {
 
-  private _slots
-  private _upgradedCards
+  private readonly _slots
+  private readonly _upgradedCards
 
   public constructor(slots : Card[], upgradedCards : CardName[]) {
     this._slots = ref(slots)
