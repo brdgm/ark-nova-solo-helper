@@ -3,23 +3,24 @@ import { shuffle, cloneDeep } from 'lodash'
 import Card from './Card'
 import Cards from './Cards'
 import CardName from './enum/CardName'
+import { ref } from 'vue'
 
 export default class CardSlots {
 
-  private _slots : Card[]
-  private _upgradedCards : CardName[]
+  private _slots
+  private _upgradedCards
 
   public constructor(slots : Card[], upgradedCards : CardName[]) {
-    this._slots = slots
-    this._upgradedCards = upgradedCards
+    this._slots = ref(slots)
+    this._upgradedCards = ref(upgradedCards)
   }
 
   public get slots() : readonly Card[] {
-    return this._slots
+    return this._slots.value
   }
 
   public get upgradedCardNames() : readonly CardName[] {
-    return this._upgradedCards
+    return this._upgradedCards.value
   }
 
   /**
@@ -27,17 +28,17 @@ export default class CardSlots {
    * @param slot Slot number (1-based)
    */
   public get(slot : number) : Card {
-    if (slot < 1 || slot > this._slots.length) {
+    if (slot < 1 || slot > this._slots.value.length) {
       throw new Error(`Invalid slot number: ${slot}`)
     }
-    return this._slots[slot - 1]
+    return this._slots.value[slot - 1]
   }
 
   /**
    * Check if card is upgraded.
    */
   public isUpgraded(card : Card) : boolean {
-    return this._upgradedCards.includes(card.name)
+    return this._upgradedCards.value.includes(card.name)
   }
 
   /**
@@ -47,7 +48,7 @@ export default class CardSlots {
     if (this.isUpgraded(card)) {      
       throw new Error(`Card is already upgraded: ${card.name}`)
     }
-    this._upgradedCards.push(card.name)
+    this._upgradedCards.value.push(card.name)
   }
 
   /**
@@ -57,7 +58,7 @@ export default class CardSlots {
     if (!this.isUpgraded(card)) {      
       throw new Error(`Card is not upgraded: ${card.name}`)
     }
-    this._upgradedCards = this._upgradedCards.filter(item => item != card.name)
+    this._upgradedCards.value = this._upgradedCards.value.filter(item => item != card.name)
   }
 
   /**
@@ -65,23 +66,23 @@ export default class CardSlots {
    * @return true if less then 3 cards are upgraded.
    */
   public canUpgradeCard() : boolean {
-    return this._upgradedCards.length < 3
+    return this._upgradedCards.value.length < 3
   }
 
   /**
    * @returns Whether upgrade cards can be reverted (at least one is upgraded).
    */
   public canRevertUpgradeCard() : boolean {
-    return this._upgradedCards.length > 0
+    return this._upgradedCards.value.length > 0
   }
 
   /**
    * Move card to first position after usage.
    */
   public moveFirst(card : Card) : void {
-    this._slots = [
+    this._slots.value = [
       card,
-      ...this._slots.filter(item => item.name != card.name)
+      ...this._slots.value.filter(item => item.name != card.name)
     ]
   }
 
@@ -90,8 +91,8 @@ export default class CardSlots {
    */
   public toPersistence() : CardSlotsPersistence {
     return {
-      slots: this._slots.map(card => card.name),
-      upgradedCards: cloneDeep(this._upgradedCards)
+      slots: this._slots.value.map(card => card.name),
+      upgradedCards: cloneDeep(this._upgradedCards.value)
     }
   }
 
