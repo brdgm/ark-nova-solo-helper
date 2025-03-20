@@ -1,6 +1,7 @@
 import pluginVue from 'eslint-plugin-vue'
 import vueTsEslintConfig from '@vue/eslint-config-typescript'
 import pluginVitest from '@vitest/eslint-plugin'
+import pluginPlaywright from 'eslint-plugin-playwright'
 
 export default [
   {
@@ -27,4 +28,9 @@ export default [
     },
   },
 
+  {
+    ...pluginPlaywright.configs['flat/recommended'],
+    files: ['tests/e2e/**/*.{test,spec}.{js,ts,jsx,tsx}'],
+  },
+    
 ]
