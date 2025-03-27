@@ -44,12 +44,24 @@ export default defineConfigWithVueTs(
     },
     rules: {
       'i18n-json/valid-json': 2,
-      'i18n-json/identical-keys': [2, {
-        filePath: path.resolve('src/locales/en.json'),
-      }],
       'i18n-json/identical-placeholders': [2, {
         filePath: path.resolve('src/locales/en.json'),
         ignoreTags: true,
+      }],
+    },
+  },
+  // ignore missing translation keys in incomplete locale files
+  {
+    files: ['src/locales/*.json'],
+    ignores: ['**/ca.json','**/es.json','**/fr.json','**/nl.json'],
+    plugins: { 'i18n-json': i18nJsonPlugin },
+    processor: {
+      meta: { name: '.json' },
+      ...i18nJsonPlugin.processors['.json'],
+    },
+    rules: {
+      'i18n-json/identical-keys': [2, {
+        filePath: path.resolve('src/locales/en.json'),
       }],
     },
   },

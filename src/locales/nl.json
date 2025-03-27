@@ -11,10 +11,10 @@
     "players": {
       "title": "Speler",
       "playerCount": "Menselijke Spelers",
-      "playerCountItem": "{aantal} Speler | {aantal} Spelers",
+      "playerCountItem": "{count} Speler | {count} Spelers",
       "playerColor": "Spelerskleur | Speler {index} Kleur",
       "botCount": "ARNO Bots",
-      "botCountItem": "{aantal} ARNO Bot | {aantal} ARNO Bots",
+      "botCountItem": "{count} ARNO Bot | {count} ARNO Bots",
       "botColor": "ARNO Kleur | ARNO {index} Kleur"
     },
     "difficultyLevel": {
