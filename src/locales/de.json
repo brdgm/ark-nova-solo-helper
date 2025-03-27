@@ -11,7 +11,7 @@
     "players": {
       "title": "Spieler",
       "playerCount": "Menschliche Spieler",
-      "playerCountItem": "{count} Spieler",
+      "playerCountItem": "{count} Spieler | {count} Spieler",
       "playerColor": "Spieler-Farbe | Spieler {index} Farbe",
       "botCount": "ARNO Bots",
       "botCountItem": "{count} ARNO Bot | {count} ARNO Bots",
