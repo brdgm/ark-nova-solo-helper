@@ -13,7 +13,7 @@
     "test:coverage": "vitest run --coverage",
     "test:e2e": "playwright test",
     "lint": "eslint . --fix",
-    "lint:watch": "nodemon --exec \"npm run lint\" --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts",
+    "lint:watch": "nodemon --exec \"npm run lint\" --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts,.json",
     "generate-pwa-assets": "pwa-assets-generator"
   },
   "dependencies": {
@@ -48,6 +48,7 @@
     "babel-plugin-istanbul": "^7.0.0",
     "chai": "^5.2.0",
     "eslint": "^9.22.0",
+    "eslint-plugin-i18n-json": "github:brdgm/eslint-plugin-i18n-json#4.1.0",
     "eslint-plugin-playwright": "^2.2.0",
     "eslint-plugin-vue": "^10.0.0",
     "jsdom": "^26.0.0",
