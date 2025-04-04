@@ -39,7 +39,7 @@
     "@types/mocha": "^10.0.10",
     "@typescript-eslint/eslint-plugin": "^8.26.0",
     "@typescript-eslint/parser": "^8.26.0",
-    "@vite-pwa/assets-generator": "^0.2.6",
+    "@vite-pwa/assets-generator": "^1.0.0",
     "@vitejs/plugin-legacy": "^6.0.2",
     "@vitejs/plugin-vue": "^5.2.1",
     "@vitest/coverage-istanbul": "^3.0.8",
@@ -58,7 +58,7 @@
     "ts-node": "^10.9.2",
     "typescript": "^5.8.2",
     "vite": "^6.2.1",
-    "vite-plugin-pwa": "^0.21.1",
+    "vite-plugin-pwa": "^1.0.0",
     "vitest": "^3.0.8"
   }
 }
