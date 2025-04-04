@@ -53,7 +53,7 @@ export default defineConfigWithVueTs(
   // ignore missing translation keys in incomplete locale files
   {
     files: ['src/locales/*.json'],
-    ignores: ['**/ca.json','**/es.json','**/fr.json','**/nl.json'],
+    ignores: ['**/ca.json','**/fr.json','**/nl.json'],
     plugins: { 'i18n-json': i18nJsonPlugin },
     processor: {
       meta: { name: '.json' },
