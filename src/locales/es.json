@@ -25,6 +25,7 @@
     },
     "expansions": {
       "title": "Expansiones",
+      "arno-conservation-project-module": "ARNO: Determinación variable de la opción de proyecto de conservación",
       "marine-worlds": "Mundos Marinos",
       "marineWorldsNewActionCards": "Toma 3 de las <b>nuevas cartas de Acción</b> al azar y escoge 2 de ellas (con diferentes tipos de acción)."
     },
@@ -45,6 +46,8 @@
     "startPointsConservation": "Coloca {count} fichas de jugador como recordatorio junto al contador de puntos de conservación de ARNO y retíralas una a una en cuanto ARNO consiga sus primeros puntos de conservación.",
     "startPointsAppeal": "Ej. Si ARNO es el 3er jugador, comienza con 2 puntos de atractivo.",
     "startComponents": "Cada ARNO recibe los componentes de un color, un tablero de zoológico (map A), una carta de Puntuación Final (boca abajo) y 8 cartas de zoológico aleatorias.",
+    "startComponentsKeepCards": "ARNO solo mantiene las primeras 2 cartas de Proyectos de Conservación. Descarta todas las cartas de Patrocinadores y Animales.",
+    "discardedSponsorCards": "Por favor indica el número de <b>cartas de patrocinadores</b> descartadas durante la preparación:",
     "playerTokens": "Coloca todos los cubos de jugador de su color junto al tablero de cada ARNO.",
     "associationWorker": "Cada ARNO comienza la partida con un asistente sobre su libreta de notas. Coloca el resto de sus asistentes sobre el espacio designado para ello en su tablero.",
     "finalScoringCard": "Para cada ARNO, coloca su carta de Puntuación Final y sus cartas de zoológico sobre la zona de construcción de su tablero de zoológico. Esto inhabilitará el área de construcción del tablero; esta área no es necesaria para ARNO.",
@@ -97,13 +100,20 @@
       "projectSlotLeftMost": "ARNO prefiere colocar su cubo en el espacio de la izquierda.",
       "projectSlotMiddle": "ARNO prefiere colocar su cubo en el espacio del centro.",
       "projectSlotRightMost": "ARNO prefiere colocar su cubo en el espacio de la derecha.",
-      "projectSlotAlternatives": "Si este espacio ya está ocupado por otro jugador, ARNO coloca su cubo en el siguiente espacio a la izquierda. Si no es posible, lo coloca en el siguiente espacio a la derecha."
+      "projectSlotAlternatives": "Si este espacio ya está ocupado por otro jugador, ARNO coloca su cubo en el siguiente espacio a la izquierda. Si no es posible, lo coloca en el siguiente espacio a la derecha.",
+      "projectModule": {
+        "tokenPlacement": "ARNO coloca una ficha en esta casilla (en orden de preferencia):",
+        "gainConservationPoints": "ARNO gana puntos de conservación y otras bonificaciones de esta casilla: <b>{slot}</b>. Si esta casilla ya está ocupada por otro jugador, gana puntos del siguiente nivel a la izquierda. Si eso tampoco es posible, del siguiente nivel a la derecha."
+      }
     },
     "gainPartnerZooOrUniversity": {
       "missingMost": "¿De qué tiene menos ARNO?",
       "partnerZoo": "Zoológico Amigo",
       "partnerUniversity": "Universidad",
       "pickRandom": "Al azar"
+    },
+    "takeCardDisplay": {
+      "sponsorCardDiscard": "Comprueba aquí si es una carta de patrocinador (y descártala)"
     }
   },
   "difficultyLevel": {
@@ -130,15 +140,21 @@
     "token-notepad": "Coloca <b>{amount}</b> cubo de jugador de ARNO en su <b>libreta</b> (para el efecto de puntuación final). | Coloca <b>{amount}</b> cubos de ARNO en su <b>libreta</b> (para el efecto de puntuación final).",
     "donate": "ARNO hace una donación."
   },
+  "projectSlot": {
+    "right": "Derecha",
+    "middle": "Centro",
+    "left": "Izquierda"
+  },
   "aboutARNO": {
     "link": "Reglas de ARNO",
     "title": "Resumen de reglas de A.R.N.O.",
     "noMoney": "ARNO <b>no usa dinero</b>. Él no gasta dinero para las acciones, y nunca recibe dinero (por ejemplo, durante las pausas o de cartas de Animales).",
     "rightArea": "ARNO <b>únicamente usa la zona derecha de su tablero de zoológico</b>. Aquí coloca sus Zoológicos Amigos y Universidades, y también guarda a sus trabajadores asociados. También recibe los bonos una vez los desbloquea. El área izquierda de su zoológico no se utiliza más que para colocar sus cartas de zoológico y su carta de Puntuación Final.",
-    "bonuses": "ARNO recibe las siguientes <b>bonificaciones</b> de su tablero de zoológico y de los tableros compartidos: <b>Puntos de conservación, mejoras de cartas, puntos de reputación y trabajadores asociados</b>. Por otro lado, no recibe ninguna bonificación de las cartas de Animal o Patrocinador, construcciones, entornos, marcadores-X, ni durante la pausa.",
-    "referenceValues": "Las cartas de Animal que se encuentren colocadas sobre el tablero de zoológico de ARNO funcionan como <b>referencia para algunos efectos de cartas</b> de los jugadores humanos. Siempre que ARNO coloque otra carta de animal sobre su tablero, los íconos de la carta pueden disparar efectos de las cartas de los jugadores humanos.",
+    "bonuses": "ARNO recibe las siguientes <b>bonificaciones</b> de su tablero de zoológico y de los tableros compartidos: <b>Puntos de conservación, mejoras de cartas, puntos de reputación y trabajadores asociados</b>. Por otro lado, no recibe ninguna bonificación de las cartas de Animales o Patrocinador, construcciones, entornos, marcadores-X, ni durante la pausa.",
+    "referenceValues": "Las cartas de Animales que se encuentren colocadas sobre el tablero de zoológico de ARNO funcionan como <b>referencia para algunos efectos de cartas</b> de los jugadores humanos. Siempre que ARNO coloque otra carta de animal sobre su tablero, los íconos de la carta pueden disparar efectos de las cartas de los jugadores humanos.",
     "noEffectTarget": "ARNO <b>nunca puede ser el objetivo de ningún efecto interactivo</b>. En su lugar utiliza los efectos alternativos de juego en solitario de las cartas.",
-    "receiveCards": "Siempre que ARNO <b>reciba cartas</b> durante la partida, descarta todas las cartas de Patrocinador y coloca las cartas de Animal y de Proyectos de Conservación en su tablero de zoológico."
+    "receiveCards": "Siempre que ARNO <b>reciba cartas</b> durante la partida, descarta todas las cartas de Patrocinadores y coloca las cartas de Animales y de Proyectos de Conservación en su tablero de zoológico.",
+    "projectModuleInfo": "Para el módulo opcional de proyecto de conservación es importante <b>llevar la cuenta de todas las cartas de patrocinadores</b> que se vayan descartando en cualquier momento. Para esto, debes especificar el número de cartas de patrocinadores que ARNO descarta durante la pausa (en el diálogo correspondiente), o si captura una carta."
   },
   "roundDisplay": {
     "round": "Ronda {round}"
@@ -146,8 +162,9 @@
   "breakInfo": {
     "link": "Pausa",
     "drawThreeCards": "Durante las pausas, ARNO toma <b>tres cartas</b> del mazo. Conserva el primer Proyecto de Conservación y juega la primera carta de Animal en su tablero de zoológico.",
-    "triggerBonus": "La carta de Animal jugada puede disparar efectos de las cartas de los jugadores humanos. Las demás cartas son descartadas."
-  },
+    "triggerBonus": "La carta de Animal jugada puede disparar efectos de las cartas de los jugadores humanos. Las demás cartas son descartadas.",
+    "discardedSponsorCards": "Por favor indica el número de <b>cartas de patrocinadores</b> descartadas durante la pausa:"
+},
   "bonusTile": {
     "link": "Loseta de bonificación",
     "text": "ARNO nunca escoge la bonificación impresa en el tablero en las zonas con tres opciones.",
@@ -157,6 +174,15 @@
     "usage": "ARNO puede utilizar solamente las siguientes tres losetas de bonificación. ARNO no recibe ninguna bonificación de las otras losetas.",
     "pickPartnerZoo": "Selecciona un Zoológico Amigo",
     "pickPartnerUniversity": "Selecciona una Universidad"
+  },
+  "sponsorCardDiscard": {
+    "count": "Cartas de patrocinadores descartadas por ARNO: | ARNO {bot} descartó cartas de patrocinadores:"
+  },
+  "projectTrackerArnoStatus": {
+    "title": "Estado de ARNO",
+    "trackerPosition": "Posición del Marcador",
+    "preferredProjectSlot": "Casilla preferida del Proyecto de Conservación:",
+    "kioskCount": "Número de Quioscos"
   },
   "scoring": {
     "title": "Puntuación final",
