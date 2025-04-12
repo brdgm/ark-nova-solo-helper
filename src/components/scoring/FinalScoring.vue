@@ -21,16 +21,16 @@
       </tr>
       <tr v-for="player in playerCount" :key="player">
         <th scope="row" class="player"><PlayerColorDisplay :playerColor="playerColors[player-1]" :sizeRem="1.5"/>{{t('roundPlayer.title', {player:player}, playerCount)}}</th>
-        <td><input type="number" min="0" max="41" step="1" v-model="conservationPoints[player-1]" @focus="inputSelectAll"/></td>
-        <td><input type="number" min="0" max="113" step="1" v-model="appeal[player-1]" @focus="inputSelectAll"/></td>
+        <td><ScoringTextInput :min="0" :max="41" v-model="conservationPoints[player-1]"/></td>
+        <td><ScoringTextInput :min="0" :max="113" v-model="appeal[player-1]"/></td>
         <td>{{victoryPoints[player-1]}}</td>
         <td class="difficultyLevelColumn"></td>
       </tr>
       <template v-for="bot in botCount" :key="bot">
         <tr>
           <th scope="row" class="player"><PlayerColorDisplay :playerColor="playerColors[playerCount+bot-1]" :sizeRem="1.5"/>{{t('roundBot.title', {bot:bot}, botCount)}}</th>
-          <td><input type="number" min="0" max="41" step="1" v-model="conservationPoints[playerCount+bot-1]" @focus="inputSelectAll"/></td>
-          <td><input type="number" min="0" max="113" step="1" v-model="appeal[playerCount+bot-1]" @focus="inputSelectAll"/></td>
+          <td><ScoringTextInput :min="0" :max="41" v-model="conservationPoints[playerCount+bot-1]"/></td>
+          <td><ScoringTextInput :min="0" :max="113" v-model="appeal[playerCount+bot-1]"/></td>
           <td>{{victoryPoints[playerCount+bot-1]}}</td>
           <td class="difficultyLevelColumn">{{t(`difficultyLevel.${getDifficultyLevelForBot(bot)}`)}}</td>
         </tr>
@@ -51,11 +51,13 @@ import { useI18n } from 'vue-i18n'
 import PlayerColorDisplay from '@/components/structure/PlayerColorDisplay.vue'
 import DifficultyLevel from '@/services/enum/DifficultyLevel'
 import getDifficultyLevel from '@/util/getDifficultyLevel'
+import ScoringTextInput from '@brdgm/brdgm-commons/src/components/form/ScoringTextInput.vue'
 
 export default defineComponent({
   name: 'FinalScoring',
   components: {
-    PlayerColorDisplay
+    PlayerColorDisplay,
+    ScoringTextInput
   },
   setup() {
     const { t } = useI18n()
@@ -91,10 +93,6 @@ export default defineComponent({
     }
   },
   methods: {
-    inputSelectAll(event: Event) : void {
-      const input = event.target as HTMLInputElement
-      input.select()
-    },
     getTokenScoringCardCount(bot : number) : number {
       return this.lastBotRound[bot - 1]?.tokenScoringCardCount ?? 0
     },
