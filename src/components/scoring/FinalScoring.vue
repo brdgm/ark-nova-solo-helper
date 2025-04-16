@@ -21,16 +21,16 @@
       </tr>
       <tr v-for="player in playerCount" :key="player">
         <th scope="row" class="player"><PlayerColorDisplay :playerColor="playerColors[player-1]" :sizeRem="1.5"/>{{t('roundPlayer.title', {player:player}, playerCount)}}</th>
-        <td><ScoringTextInput :min="0" :max="41" v-model="conservationPoints[player-1]"/></td>
-        <td><ScoringTextInput :min="0" :max="113" v-model="appeal[player-1]"/></td>
+        <td><NumberInput :min="0" :max="41" v-model="conservationPoints[player-1]"/></td>
+        <td><NumberInput :min="0" :max="113" v-model="appeal[player-1]"/></td>
         <td>{{victoryPoints[player-1]}}</td>
         <td class="difficultyLevelColumn"></td>
       </tr>
       <template v-for="bot in botCount" :key="bot">
         <tr>
           <th scope="row" class="player"><PlayerColorDisplay :playerColor="playerColors[playerCount+bot-1]" :sizeRem="1.5"/>{{t('roundBot.title', {bot:bot}, botCount)}}</th>
-          <td><ScoringTextInput :min="0" :max="41" v-model="conservationPoints[playerCount+bot-1]"/></td>
-          <td><ScoringTextInput :min="0" :max="113" v-model="appeal[playerCount+bot-1]"/></td>
+          <td><NumberInput :min="0" :max="41" v-model="conservationPoints[playerCount+bot-1]"/></td>
+          <td><NumberInput :min="0" :max="113" v-model="appeal[playerCount+bot-1]"/></td>
           <td>{{victoryPoints[playerCount+bot-1]}}</td>
           <td class="difficultyLevelColumn">{{t(`difficultyLevel.${getDifficultyLevelForBot(bot)}`)}}</td>
         </tr>
@@ -51,13 +51,14 @@ import { useI18n } from 'vue-i18n'
 import PlayerColorDisplay from '@/components/structure/PlayerColorDisplay.vue'
 import DifficultyLevel from '@/services/enum/DifficultyLevel'
 import getDifficultyLevel from '@/util/getDifficultyLevel'
-import ScoringTextInput from '@brdgm/brdgm-commons/src/components/form/ScoringTextInput.vue'
+import NumberInput from '@brdgm/brdgm-commons/src/components/form/NumberInput.vue'
+import toNumber from '@brdgm/brdgm-commons/src/util/form/toNumber'
 
 export default defineComponent({
   name: 'FinalScoring',
   components: {
     PlayerColorDisplay,
-    ScoringTextInput
+    NumberInput
   },
   setup() {
     const { t } = useI18n()
@@ -87,7 +88,7 @@ export default defineComponent({
     victoryPoints() : number[] {
       const result = []
       for (let i=0; i<this.conservationPoints.length && i<this.appeal.length; i++) {
-        result[i] = (this.appeal[i] || 0) - this.getAppealForConservationPoints(this.conservationPoints[i] || 0)
+        result[i] = (toNumber(this.appeal[i])) - this.getAppealForConservationPoints(toNumber(this.conservationPoints[i]))
       }
       return result
     }
@@ -119,7 +120,7 @@ export default defineComponent({
       }
       return scoringCardPoints + this.getTokenNotepadCount(bot)
     },
-    getAppealForConservationPoints(cp : number ) : number {
+    getAppealForConservationPoints(cp : number) : number {
       let result
       if (cp > 10) {
         result = 94 - (cp - 10) * 3
