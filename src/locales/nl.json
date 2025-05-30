@@ -149,7 +149,7 @@
     "title": "Score",
     "humanPlayers": "Menselijke Spelers",
     "humanPlayersText": "Krijg conservatiepunten of populariteit van <b>Eindscorekaart(en)</b> en van alle kaarten met <b>end-of-game icon</b>.",
-    "botText": "Krijg <b>{ConservatiePunten} conservatiepunt(en)</b> voor {tokenScoringCardCount} token(s) op de eindscorekaart en {tokenNotepadCount} token(s) op het notitieboek.",
+    "botText": "Krijg <b>{conservationPoints} conservatiepunt(en)</b> voor {tokenScoringCardCount} token(s) op de eindscorekaart en {tokenNotepadCount} token(s) op het notitieboek.",
     "conservationPoints": "Conservatie Punten",
     "appeal": "Appeal",
     "victoryPoints": "Overwinningspunten"
