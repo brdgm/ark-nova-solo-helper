@@ -54,7 +54,7 @@
     "noDiceActionCards": "Não são necessários dados nem cartas de ação."
   },
   "roundPlayer": {
-    "title": "Jogador | Jogador {jogador}",
+    "title": "Jogador | Jogador {player}",
     "info": "Faça seu turno."
   },
   "roundBot": {
@@ -157,7 +157,7 @@
     "projectModuleInfo": "Para o módulo de projeto de conservação opcional, é importante <b>registrar todas</b> as cartas de patrocinador que são removidas a qualquer momento. Para isso, você deve registrar o número de cartas de patrocinador que o ARNO descarta durante a pausa (na caixa de diálogo correspondente) ou se ele tirar uma carta."
   },
   "roundDisplay": {
-    "round": "Rodada {Rodada}"
+    "round": "Rodada {round}"
   },
   "breakInfo": {
     "link": "Pausa",
