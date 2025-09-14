@@ -29,7 +29,7 @@
     "vue-router": "^4.5.0"
   },
   "devDependencies": {
-    "@intlify/unplugin-vue-i18n": "^6.0.3",
+    "@intlify/unplugin-vue-i18n": "^11.0.0",
     "@playwright/test": "^1.51.0",
     "@tsconfig/node22": "^22.0.0",
     "@types/bootstrap": "^5.2.10",
@@ -46,7 +46,7 @@
     "@vitest/eslint-plugin": "^1.1.36",
     "@vue/eslint-config-typescript": "^14.5.0",
     "babel-plugin-istanbul": "^7.0.0",
-    "chai": "^5.2.0",
+    "chai": "^6.0.0",
     "eslint": "^9.22.0",
     "eslint-plugin-i18n-json": "github:brdgm/eslint-plugin-i18n-json#4.1.0",
     "eslint-plugin-playwright": "^2.2.0",
