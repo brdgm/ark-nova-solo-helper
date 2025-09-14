@@ -20,6 +20,12 @@ export default defineConfigWithVueTs(
   vueTsConfigs.recommended,
 
   {
+    rules: {
+      'semi': ['error', 'never']
+    }
+  },
+
+  {
     ...pluginVitest.configs.recommended,
     files: [
       'tests/**/*.{j,t}s?(x)',

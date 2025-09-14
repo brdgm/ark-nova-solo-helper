@@ -3,7 +3,7 @@
   "home": {
     "title": "Ark Nova Solo Helper",
     "play1": "Jogue <a href='https://boardgamegeek.com/thread/2823056/rno-alternative-solo-mode' target='_blank' rel='noopener'><b>A.R.N.O. 3.0 Modo Solo</b></a> (não oficial) do <a href='https://boardgamegeek.com/boardgame/342942/ark-nova' target='_blank' rel='noopener'><b>Ark Nova</b></a>. Se não gosta da versão solo oficial, esta simula oponentes adcionais similar a uma partida multi-player.",
-    "play2": "Para jogar o modo solo vocÊ precisa somente do jogo base. O Ark Nova Solo Helper substitui o conjunto de cartas e dados e a trilha de progressão do ARNO.",
+    "play2": "Para jogar o modo solo você precisa somente do jogo base. O Ark Nova Solo Helper substitui o conjunto de cartas e dados e a trilha de progressão do ARNO.",
     "feedback": "Discussão e Comentários:"
   },
   "setup": {
@@ -136,7 +136,7 @@
     "gain-partner-university": "Ganhe <b>Universidade Parceira #{number}</b>.",
     "conservation-project-work": "<b>Apóie um Projeto de Conservação</b>.",
     "take-card-display": "Pegue <b>card #{number}</b> da exibição.",
-    "token-scoring-card": "Posicione um marcado de jogador do ARNO na carta <b>1</b> de <b>Pontuação de Fim de Jogo</b>.",
+    "token-scoring-card": "Posicione <b>1</b> marcador de jogador do ARNO na carta de <b>Pontuação de Fim de Jogo</b>.",
     "token-notepad": "Posicione <b>{amount}</b> marcador de jogador do ARNO em seu <b>bloco de notas</b> (para efeito de pontuação final). | Posicione <b>{amount}</b> marcador de jogador do ARNO em seu <b>bloco de notas</b> (para efeito de pontuação final).",
     "donate": "ARNO Doações."
   },
@@ -148,7 +148,7 @@
   "aboutARNO": {
     "link": "ARNO Regras",
     "title": "A.R.N.O. Sumário de Regras",
-    "noMoney": "ARNO <b>não usa dinheiro</b>. Ele não gasta dinheiro em ações e nunca recebe dinheiro (por exemplo, durante as apusas ou de cartas de animais).",
+    "noMoney": "ARNO <b>não usa dinheiro</b>. Ele não gasta dinheiro em ações e nunca recebe dinheiro (por exemplo, durante as pausas ou de cartas de animais).",
     "rightArea": "ARNO <b>usa somente o lado direito do tabuleiro de zoológico</b>. É lá que ele coloca seus zoológicos e universidades parceiros e de onde tira seus Trabalhadores Associados. Ele também recebe os bônus quando os descobre. A área esquerda tabuleiro de zoológico não será considerada e só será usada para colocar suas cartas de zoológico e a carta de pontuação final.",
     "bonuses": "ARNO recebe os seguintes <b>bônus</b> do seu tabuleiro de zoológico e do tabuleiro principal: <b>Pontos de conservação, melhorias nas cartas, pontos de reputação e trabalhadores  associados</b>. Além de dinheiro, ele também não recebe nenhum bônus de cartas de animais ou de patrocinadores, edifícios, viveiros, marcadores X ou durante as pausas.",
     "referenceValues": "As cartas de animais no tabuleiro de zoológico do ARNO fornecem valores de referência para determinados efeitos de cartas dos jogadores humanos. Sempre que ARNO colocar outra carta de Animal em sua pilha, seus ícones acionarão os efeitos de carta do(s) outro(s) jogador(es).",
@@ -176,7 +176,7 @@
     "pickPartnerUniversity": "Escolha uma Universidade Parceira"
   },
   "sponsorCardDiscard": {
-    "count": "ARNO discarta cartas de patrocinador: | ARNO {bot} discarta cartas de patrocinador:"
+    "count": "ARNO descarta cartas de patrocinador: | ARNO {bot} descarta cartas de patrocinador:"
   },
   "projectTrackerArnoStatus": {
     "title": "ARNO Status",
