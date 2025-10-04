@@ -8,7 +8,7 @@ import { State } from '@/store/state'
  * @param bot Bot
  * @returns Project module tracker
  */
-export default function(state : State, round: number, bot: number) : ProjectModuleTracker {
+export default function getProjectModuleTrackerForRound(state : State, round: number, bot: number) : ProjectModuleTracker {
   const initial = botArrayValue(state.setup.botInitialSponsorCardDiscardCount, bot)
   const fromBreaks = state.rounds
       .filter(item => item.round <= round)

@@ -8,9 +8,9 @@ describe('services/CardSlots', () => {
 
     expect(cardSlots.slots.length).to.eq(5)
     expect(cardSlots.slots[0].name).to.eq(CardName.ANIMALS)
-    cardSlots.slots.forEach(card => {
+    for (const card of cardSlots.slots) {
       expect(cardSlots.isUpgraded(card), `card '${card.name}' upgraded`).to.false
-    })
+    }
   })
 
   it('upgradeAndMove', () => {
