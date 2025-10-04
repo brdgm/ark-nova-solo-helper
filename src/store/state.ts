@@ -10,7 +10,7 @@ export const useStateStore = defineStore(`${name}.store`, {
   state: () => {
     return {
       language: 'en',
-      baseFontSize: 1.0,
+      baseFontSize: 1,
       setup: {
         playerSetup: {
           playerCount: 1,

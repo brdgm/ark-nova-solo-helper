@@ -25,9 +25,9 @@ export default class NavigationState {
     this.playerCount = setup.playerSetup.playerCount
     this.botCount = setup.playerSetup.botCount
 
-    this.round = parseInt(route.params['round'] as string)
-    this.player = (route.name == 'RoundPlayer') ? parseInt(route.params['player'] as string) : 0
-    this.bot = (route.name == 'RoundBot') ? parseInt(route.params['bot'] as string) : 0
+    this.round = Number.parseInt(route.params['round'] as string)
+    this.player = (route.name == 'RoundPlayer') ? Number.parseInt(route.params['player'] as string) : 0
+    this.bot = (route.name == 'RoundBot') ? Number.parseInt(route.params['bot'] as string) : 0
     this.difficultyLevel = getDifficultyLevel(setup, this.bot)
     this.previousBotRound = this.getBotRound(this.round - 1, this.bot)
     this.botRound = this.getBotRound(this.round, this.bot)
