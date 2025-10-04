@@ -50,7 +50,7 @@ export const useStateStore = defineStore(`${name}.store`, {
     revertUpgradeCard(payload : BotRevertUpgradeCard) {
       // revert upgraded card for this bot in all rounds
       for (const round of this.rounds) {
-        for (const botRound of round.botRound.filter(botRound => botRound.bot==payload.bot)) {
+        for (const botRound of round.botRound.filter(item => item.bot==payload.bot)) {
           botRound.cardSlots.upgradedCards = botRound.cardSlots.upgradedCards.filter(cardName => cardName != payload.cardName)
         }
       }
