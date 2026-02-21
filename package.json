@@ -48,7 +48,7 @@
     "babel-plugin-istanbul": "^7.0.0",
     "chai": "^6.0.0",
     "eslint": "^9.22.0",
-    "eslint-plugin-i18n-json": "github:brdgm/eslint-plugin-i18n-json#4.1.0",
+    "eslint-plugin-i18n-json": "github:brdgm/eslint-plugin-i18n-json#4.1.1",
     "eslint-plugin-playwright": "^2.2.0",
     "eslint-plugin-vue": "^10.0.0",
     "jsdom": "^28.0.0",
