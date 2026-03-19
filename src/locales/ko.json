@@ -1,0 +1,223 @@
+{
+  "gameTitle": "아크 노바",
+  "home": {
+    "title": "아크 노바 솔로 헬퍼",
+    "play1": "<a href='https://boardgamegeek.com/thread/2823056/rno-alternative-solo-mode' target='_blank' rel='noopener'><b>A.R.N.O. 3.0 솔로 모드</b></a>(비공식)로 <a href='https://boardgamegeek.com/boardgame/342942/ark-nova' target='_blank' rel='noopener'><b>아크 노바</b></a>를 플레이하세요. 공식 솔로 모드와 달리, 멀티 플레이어 게임과 유사하게 추가 상대를 시뮬레이션합니다.",
+    "play2": "솔로 모드를 플레이하려면 기본 게임만 있으면 됩니다. 이 헬퍼 앱은 ARNO 카드 덱과 주사위를 대체하고 ARNO의 진행 상황을 추적합니다.",
+    "feedback": "토론 및 피드백:"
+  },
+  "setup": {
+    "title": "게임 설정",
+    "players": {
+      "title": "플레이어",
+      "playerCount": "인간 플레이어",
+      "playerCountItem": "플레이어 {count}명 | 플레이어 {count}명",
+      "playerColor": "플레이어 색상 | 플레이어 {index} 색상",
+      "botCount": "ARNO 봇",
+      "botCountItem": "ARNO 봇 {count}개 | ARNO 봇 {count}개",
+      "botColor": "ARNO 색상 | ARNO {index} 색상"
+    },
+    "difficultyLevel": {
+      "title": "난이도",
+      "easy": "쉬움",
+      "hard": "어려움",
+      "level7plus": "레벨 7+: 더 어렵게 플레이하려면, 추가 레벨마다 게임 시작 시 ARNO에게 보호 점수 1점을 추가하세요."
+    },
+    "expansions": {
+      "title": "확장판",
+      "arno-conservation-project-module": "ARNO: 가변 보호 프로젝트 조건 결정",
+      "marine-worlds": "해양 세계",
+      "marineWorldsNewActionCards": "<b>새 행동 카드</b> 3장을 무작위로 가져와서 그중 2장(서로 다른 행동 유형)을 선택하세요."
+    },
+    "pickZooMap": {
+      "title": "동물원 지도",
+      "pickRandom": "무작위 선택 (고급)",
+      "pleaseSelect": "(선택해주세요)",
+      "mapA": "맵 A (쉬움)",
+      "map0": "맵 0 (보통)",
+      "mapAdvanced": "맵 {id} (고급)",
+      "mapAdvancedMapPack": "맵 {id} (고급, 맵 팩 {mapPack})"
+    }
+  },
+  "setupARNO": {
+    "title": "ARNO 설정",
+    "setupPlayerCount": "ARNO를 포함한 플레이어 수에 따라 게임을 설정하세요. 인간 플레이어가 시작 플레이어가 됩니다.",
+    "startPoints": "모든 ARNO는 <b>보호 점수 -{count}점</b>으로 시작하며, 플레이어 순서에 따른 매력 점수를 받습니다.",
+    "startPointsConservation": "ARNO의 보호 점수 카운터 옆에 플레이어 마커 {count}개를 알림용으로 놓고, ARNO가 첫 보호 점수를 얻을 때마다 하나씩 제거하세요.",
+    "startPointsAppeal": "예: ARNO가 3번째 플레이어라면, 매력 점수 2점으로 시작합니다.",
+    "startComponents": "모든 ARNO는 한 색상의 구성품, 동물원 매트(맵 A), 뒤집어 놓은 최종 점수 카드 1장, 무작위 동물원 카드 8장을 받습니다.",
+    "startComponentsKeepCards": "ARNO는 처음 2장의 보호 프로젝트 카드만 보관합니다. 모든 후원자 및 동물 카드는 버립니다.",
+    "discardedSponsorCards": "설정 중 버려진 <b>후원자 카드</b> 수를 지정해주세요:",
+    "playerTokens": "ARNO 색상의 모든 플레이어 마커를 동물원 매트 옆에 놓으세요.",
+    "associationWorker": "ARNO는 메모장에 협회원 1명을 가지고 시작합니다. 나머지 3명은 동물원 매트의 메모장 아래 지정된 칸에 놓으세요.",
+    "finalScoringCard": "최종 점수 카드를 동물원 매트의 왼쪽 영역에 놓으세요. 이 영역은 ARNO에게 필요하지 않은 건물 영역을 덮게 됩니다.",
+    "noDiceActionCards": "주사위나 행동 카드는 필요하지 않습니다."
+  },
+  "roundPlayer": {
+    "title": "플레이어 | 플레이어 {player}",
+    "info": "당신의 차례입니다."
+  },
+  "roundBot": {
+    "title": "ARNO | ARNO {bot}",
+    "upgrade": "업그레이드",
+    "revertUpgrade": "되돌리기",
+    "reroll": "다시 굴리기",
+    "associationWorker": "ARNO가 <b>협회원</b>을 배치합니다:",
+    "fallbackText": "불가능한 경우 대안:",
+    "upgradeCard": {
+      "title": "카드 업그레이드",
+      "text": "ARNO의 행동 카드를 업그레이드하시겠습니까?",
+      "note": "참고: ARNO가 보호 점수 2점에 도달하면, 카드 업그레이드 대신 항상 추가 협회원을 선택합니다.",
+      "noteAppeal15BonusTile": "ARNO는 명성이 15를 초과하면 보너스 타일을 선택합니다 (아직 사용 가능한 경우)."
+    },
+    "revertUpgradeCard": {
+      "title": "업그레이드 되돌리기",
+      "text": "<i>실수로</i> 업그레이드한 카드를 되돌릴 수 있습니다.",
+      "choose": "(선택)"
+    },
+    "actionHelpAssociationWorker": {
+      "title": "협회원 배치",
+      "text": "ARNO가 이미 해당 협회 임무에 협회원을 배치한 경우, 아직 협회원이 없는 다음 상위 임무를 선택합니다. 기본적으로 X-토큰을 사용하여 행동을 강화하며, 같은 행동에 두 명의 협회원을 배치하지 않습니다. 상위 임무가 없으면 다음 가능한 하위 임무를 선택합니다.",
+      "text-fallback": "ARNO에게 더 이상 배치 가능한 협회원이 없으면, 보호 점수 +2를 받고 휴식 마커를 +2 전진시킵니다. 추가로 새 자매 동물원 또는 대학을 받습니다. 가장 부족한 종류를 우선 선택합니다.",
+      "chooseDifferent": "다른 협회 행동을 선택하세요:"
+    },
+    "actionHelpProjectConservationWork": {
+      "title": "보호 프로젝트 작업"
+    },
+    "actionFallbackPickPartnerZooOrUniversity": {
+      "title": "자매 동물원 또는 대학 획득"
+    },
+    "pickConservationProject": {
+      "conservationProjectSelection": "보호 프로젝트 선택",
+      "conservationProjectsHand": "ARNO의 동물원 매트에 보호 프로젝트 카드가 몇 장 있습니까?",
+      "conservationProjectsBoardNoToken": "협회판 옆에 플레이어 마커가 없는 보호 프로젝트 카드가 몇 장 있습니까? (사용하지 않는 색상의 차단 토큰은 무시하세요.)",
+      "conservationProjectsBoardAvailable": "협회판 옆에 ARNO가 아직 지원하지 않은 보호 프로젝트 카드가 몇 장 있습니까?",
+      "pick": "보호 프로젝트 선택",
+      "pickFromHand": "ARNO가 동물원 매트에서 {number}번째 보호 프로젝트 카드를 지원합니다.",
+      "pickFromBoardNoToken": "ARNO가 협회판 옆에서 플레이어 마커가 없는 {number}번째 보호 프로젝트를 지원합니다.",
+      "pickFromBoardAvailable": "ARNO가 협회판 옆에서 사용 가능한 {number}번째 보호 프로젝트를 지원합니다.",
+      "tokenPlacement": "토큰 배치",
+      "projectSlotLeftMost": "ARNO는 가장 왼쪽 슬롯에 토큰을 배치하는 것을 선호합니다.",
+      "projectSlotMiddle": "ARNO는 가운데 슬롯에 토큰을 배치하는 것을 선호합니다.",
+      "projectSlotRightMost": "ARNO는 가장 오른쪽 슬롯에 토큰을 배치하는 것을 선호합니다.",
+      "projectSlotAlternatives": "해당 슬롯이 이미 다른 플레이어에 의해 점유된 경우, 왼쪽 다음 단계에 배치합니다. 그것도 불가능하면, 오른쪽 다음 가능한 단계에 배치합니다.",
+      "projectModule": {
+        "tokenPlacement": "ARNO가 이 슬롯에 토큰을 배치합니다 (선호 순서):",
+        "gainConservationPoints": "ARNO가 이 슬롯에서 보호 점수와 기타 보너스를 획득합니다: <b>{slot}</b>. 해당 슬롯이 이미 다른 플레이어에 의해 점유된 경우, 왼쪽 다음 단계에서 점수를 획득합니다. 그것도 불가능하면, 오른쪽 다음 가능한 단계에서 획득합니다."
+      }
+    },
+    "gainPartnerZooOrUniversity": {
+      "missingMost": "ARNO에게 가장 부족한 것은?",
+      "partnerZoo": "자매 동물원",
+      "partnerUniversity": "자매 대학",
+      "pickRandom": "무작위 선택"
+    },
+    "takeCardDisplay": {
+      "sponsorCardDiscard": "후원자 카드인 경우 여기를 체크하세요 (버림)"
+    }
+  },
+  "difficultyLevel": {
+    "1": "레벨 1: 초보자",
+    "2": "레벨 2: 쉬움",
+    "3": "레벨 3: 보통",
+    "4": "레벨 4: 어려움",
+    "5": "레벨 5: 매우 어려움",
+    "6": "레벨 6: 극한"
+  },
+  "cardType": {
+    "animals": "동물",
+    "association": "협회",
+    "build": "건설",
+    "cards": "카드",
+    "sponsors": "후원자"
+  },
+  "cardAction": {
+    "gain-partner-zoo": "<b>자매 동물원 #{number}</b>을(를) 획득합니다.",
+    "gain-partner-university": "<b>자매 대학 #{number}</b>을(를) 획득합니다.",
+    "conservation-project-work": "<b>보호 프로젝트 작업</b>.",
+    "take-card-display": "카드 열에서 <b>카드 #{number}</b>을(를) 가져옵니다.",
+    "token-scoring-card": "ARNO 플레이어 마커 <b>1개</b>를 <b>최종 점수 카드</b>에 놓습니다.",
+    "token-notepad": "ARNO 플레이어 마커 <b>{amount}개</b>를 <b>메모장</b>에 놓습니다 (최종 점수 효과용). | ARNO 플레이어 마커 <b>{amount}개</b>를 <b>메모장</b>에 놓습니다 (최종 점수 효과용).",
+    "donate": "ARNO가 기부합니다."
+  },
+  "projectSlot": {
+    "right": "오른쪽",
+    "middle": "가운데",
+    "left": "왼쪽"
+  },
+  "aboutARNO": {
+    "link": "ARNO 규칙",
+    "title": "A.R.N.O. 규칙 요약",
+    "noMoney": "ARNO는 <b>돈을 사용하지 않습니다</b>. 행동에 돈을 쓰지 않으며, 돈을 받지도 않습니다 (예: 휴식 중이나 동물 카드로부터).",
+    "rightArea": "ARNO는 <b>동물원 매트의 오른쪽 영역만 사용합니다</b>. 여기에 자매 동물원과 대학을 배치하고 협회원을 가져옵니다. 공개되는 보너스도 여기서 받습니다. 왼쪽 영역은 사용하지 않으며, 동물원 카드와 최종 점수 카드를 놓는 데만 사용됩니다.",
+    "bonuses": "ARNO는 동물원 계획과 공용 보드에서 다음 <b>보너스</b>를 받습니다: <b>보호 점수, 카드 업그레이드, 명성 점수, 협회원</b>. 돈 외에도 동물 카드, 후원자 카드, 건물, 우리, X-토큰, 휴식으로부터의 보너스는 받지 않습니다.",
+    "referenceValues": "ARNO의 동물원 매트에 쌓인 동물 카드는 인간 플레이어의 특정 카드 효과에 대한 <b>참조 값</b>을 제공합니다. ARNO가 새로운 동물 카드를 스택에 놓을 때마다, 해당 아이콘이 다른 플레이어의 카드 효과를 발동시킵니다.",
+    "noEffectTarget": "ARNO는 <b>상호작용 효과의 대상이 될 수 없습니다</b>. 해당 카드의 대체 솔로 플레이 효과를 사용하세요.",
+    "receiveCards": "게임 중 ARNO가 <b>카드를 받을</b> 때마다, 모든 후원자 카드를 버리고 동물 및 보호 프로젝트 카드는 동물원 매트에 쌓습니다.",
+    "projectModuleInfo": "선택적 보호 프로젝트 모듈에서는 언제든 버려지는 모든 <b>후원자 카드를 추적</b>하는 것이 중요합니다. 이를 위해 ARNO가 휴식 중에 버리는 후원자 카드 수(해당 대화 상자에서)를 지정하거나, 카드를 가져올 때 지정해야 합니다."
+  },
+  "roundDisplay": {
+    "round": "라운드 {round}"
+  },
+  "breakInfo": {
+    "link": "휴식",
+    "drawThreeCards": "휴식 중에 ARNO는 덱에서 <b>카드 3장</b>을 뽑습니다. 첫 번째 보호 프로젝트 카드를 보관하고 첫 번째 동물 카드를 동물원 매트에 놓습니다.",
+    "triggerBonus": "놓인 동물 카드는 인간 플레이어에게 보너스 효과를 발동시킬 수 있습니다. 나머지 카드는 버립니다.",
+    "discardedSponsorCards": "휴식 중 버려진 <b>후원자 카드</b> 수를 지정해주세요:"
+  },
+  "bonusTile": {
+    "link": "보너스 타일",
+    "text": "ARNO는 사전 인쇄된 보너스를 선택하지 않습니다.",
+    "pick": "보너스 타일 선택",
+    "left": "ARNO가 진열대에서 <b>왼쪽</b> 보너스 타일을 가져갑니다.",
+    "right": "ARNO가 진열대에서 <b>오른쪽</b> 보너스 타일을 가져갑니다.",
+    "usage": "ARNO는 이 세 가지 보너스 타일만 사용할 수 있습니다. 나머지에서는 보너스를 받지 않습니다.",
+    "pickPartnerZoo": "자매 동물원 선택",
+    "pickPartnerUniversity": "자매 대학 선택"
+  },
+  "sponsorCardDiscard": {
+    "count": "ARNO가 버린 후원자 카드: | ARNO {bot}가 버린 후원자 카드:"
+  },
+  "projectTrackerArnoStatus": {
+    "title": "ARNO 상태",
+    "trackerPosition": "트래커 위치",
+    "preferredProjectSlot": "선호 보호 프로젝트 슬롯",
+    "kioskCount": "매점 수"
+  },
+  "scoring": {
+    "title": "점수 계산",
+    "humanPlayers": "인간 플레이어",
+    "humanPlayersText": "<b>최종 점수 카드</b>와 <b>게임 종료 아이콘</b>이 있는 모든 카드에서 보호 점수 또는 매력 점수를 획득하세요.",
+    "botText": "최종 점수 카드의 토큰 {tokenScoringCardCount}개와 메모장의 토큰 {tokenNotepadCount}개로 <b>보호 점수 {conservationPoints}점</b>을 획득합니다.",
+    "conservationPoints": "보호 점수",
+    "appeal": "매력 점수",
+    "victoryPoints": "승리 점수",
+    "appealReputationTrack": "앱은 ARNO가 카드 플레이로 받는 매력 점수를 계산합니다. 명성 트랙 15단계에서 명성 대신 받는 매력 점수는 추적할 수 없습니다."
+  },
+  "notfound": {
+    "title": "페이지를 찾을 수 없습니다"
+  },
+  "action": {
+    "playGame": "게임 시작",
+    "startGame": "게임 시작",
+    "next": "다음",
+    "abortGame": "게임 중단",
+    "abortGameConfirm": "진행 중인 게임을 중단하시겠습니까?",
+    "finishGame": "게임 종료",
+    "finishGameConfirm": "게임을 종료하고 점수 계산으로 이동하시겠습니까?",
+    "endGame": "게임 끝내기",
+    "endGameConfirm": "게임을 끝내고 홈 화면으로 돌아가시겠습니까?",
+    "cancel": "취소",
+    "backToHome": "홈으로 돌아가기",
+    "back": "뒤로",
+    "close": "닫기",
+    "reset": "초기화"
+  },
+  "footer": {
+    "credits": "크레딧"
+  },
+  "serviceWorkerUpdatedRefresh": {
+    "title": "앱 새로고침",
+    "notice": "앱이 업데이트되었습니다 - 최신 버전을 사용하려면 새로고침하시겠습니까?"
+  }
+}
