@@ -10,7 +10,7 @@ export const useStateStore = defineStore(`${name}.store`, {
   state: () => {
     return {
       language: 'en',
-      baseFontSize: 1.0,
+      baseFontSize: 1,
       setup: {
         playerSetup: {
           playerCount: 1,
@@ -50,11 +50,9 @@ export const useStateStore = defineStore(`${name}.store`, {
     revertUpgradeCard(payload : BotRevertUpgradeCard) {
       // revert upgraded card for this bot in all rounds
       for (const round of this.rounds) {
-        round.botRound
-            .filter(botRound => botRound.bot==payload.bot)
-            .forEach(botRound => {
-              botRound.cardSlots.upgradedCards = botRound.cardSlots.upgradedCards.filter(cardName => cardName != payload.cardName)
-            })
+        for (const botRound of round.botRound.filter(item => item.bot==payload.bot)) {
+          botRound.cardSlots.upgradedCards = botRound.cardSlots.upgradedCards.filter(cardName => cardName != payload.cardName)
+        }
       }
     },
     roundBreakSponsorCardDiscardCount(data: { round: number, botBreakSponsorCardDiscardCount : number[] }) {

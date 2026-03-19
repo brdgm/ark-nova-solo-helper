@@ -8,7 +8,7 @@ import getProjectModuleTrackerForRound from './getProjectModuleTrackerForRound'
  * @param round Round
  * @returns Project module trackers
  */
-export default function(state : State, round: number) : ProjectModuleTracker[] {
+export default function getProjectModuleTrackersForRound(state : State, round: number) : ProjectModuleTracker[] {
   const botCount = state.setup.playerSetup.botCount
   const projectModuleTrackers : ProjectModuleTracker[] = []
   for (let bot = 1; bot <= botCount; bot++) {

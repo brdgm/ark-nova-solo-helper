@@ -3,7 +3,7 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { VitePWA } from 'vite-plugin-pwa'
 import VueI18nPlugin from '@intlify/unplugin-vue-i18n/vite'
-import path from 'path'
+import path from 'node:path'
 import { description, appDeployName } from './package.json'
 import legacy from '@vitejs/plugin-legacy'
 

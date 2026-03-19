@@ -5,7 +5,7 @@ import PlayerColor from '@/services/enum/PlayerColor'
  * @param playerColor Player color
  * @returns Color code
  */
-export default function(playerColor: PlayerColor) : string {
+export default function getPlayerColorCode(playerColor: PlayerColor) : string {
   switch (playerColor) {
     case PlayerColor.BLUE:
       return "#0776ba"

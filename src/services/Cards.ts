@@ -524,7 +524,9 @@ const cards = [
 ]
 
 const cardsMap = new Map<CardName,Card>()
-cards.forEach(card => cardsMap.set(card.name, card))
+for (const card of cards) {
+  cardsMap.set(card.name, card)
+}
 
 export default {
 
