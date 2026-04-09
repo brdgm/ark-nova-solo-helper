@@ -3,6 +3,7 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { VitePWA } from 'vite-plugin-pwa'
 import VueI18nPlugin from '@intlify/unplugin-vue-i18n/vite'
+import fs from 'node:fs'
 import path from 'node:path'
 import { description, appDeployName } from './package.json'
 import legacy from '@vitejs/plugin-legacy'
@@ -61,6 +62,18 @@ export default defineConfig({
       include: [path.resolve(__dirname, './src/locales/**')],
       strictMessage: false
     }),
+    // generate languages.json metadata for the brdgm.github.io game index
+    {
+      name: 'generate-languages-json',
+      writeBundle() {
+        const localesDir = path.resolve(__dirname, './src/locales')
+        const languages = fs.readdirSync(localesDir)
+          .filter(f => f.endsWith('.json'))
+          .map(f => f.replace('.json', ''))
+        const outDir = path.resolve(__dirname, './dist')
+        fs.writeFileSync(path.resolve(outDir, 'languages.json'), JSON.stringify(languages))
+      }
+    },
     // support older browsers
     legacy({
       modernTargets: 'iOS >= 15, Safari >= 15',
