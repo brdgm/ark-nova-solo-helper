@@ -3,7 +3,7 @@
   "home": {
     "title": "Arche Nova Solo Helper",
     "play1": "Spiele den <a href='https://boardgamegeek.com/thread/2823056/rno-alternative-solo-mode' target='_blank' rel='noopener'><b>A.R.N.O. 3.0 Solo-Modus</b></a> (inoffiziell) von <a href='https://boardgamegeek.com/boardgame/342942/ark-nova' target='_blank' rel='noopener'><b>Arche Nova</b></a>. Im Unterschied zum offiziellen Solo-Modus werden ein oder mehrere zusätzliche Gegner simuliert wie in einem Mehrspieler-Spiel.",
-    "play2": "Um den Solo-Modus zu spielen benötigst Du nur das Basis-Spiel. Diese Applikation ersetzt das ARNO Karten-Deck und die Würfel und kontrolliert den Fortschritt von ARNO.",
+    "play2": "Um den Solo-Modus zu spielen, benötigst Du nur das Basis-Spiel. Diese Applikation ersetzt das ARNO Karten-Deck und die Würfel und kontrolliert den Fortschritt von ARNO.",
     "feedback": "Discussion and Feedback:"
   },
   "setup": {
@@ -67,12 +67,12 @@
     "upgradeCard": {
       "title": "Karte Aufwerten",
       "text": "Eine Aktionskarte von ARNO aufwerten?",
-      "note": "Bitte beachten: Erreicht ARNO den 2 Punkte-Bonus der Artenschutzleiste wählt er immer einen zusätzlichen Arbeiter, keine Karten-Aufwertung.",
-      "noteAppeal15BonusTile": "ARNO wählt das Bonusplättchen wenn er mehr als 15 Ansehen erreicht (wenn verfügbar)."
+      "note": "Bitte beachten: Erreicht ARNO den 2 Punkte-Bonus der Artenschutzleiste, wählt er immer einen zusätzlichen Arbeiter, keine Karten-Aufwertung.",
+      "noteAppeal15BonusTile": "ARNO wählt das Bonusplättchen, wenn er mehr als 15 Ansehen erreicht (wenn verfügbar)."
     },
     "revertUpgradeCard": {
       "title": "Karten-Aufwertung rückgängig machen",
-      "text": "Du kannst eine Karten-Aufwertung rückgängig machen wenn du diese <i>versehentlich</i> vorgenommen hast.",
+      "text": "Du kannst eine Karten-Aufwertung rückgängig machen, wenn du diese <i>versehentlich</i> vorgenommen hast.",
       "choose": "(Auswählen)"
     },
     "actionHelpAssociationWorker": {
@@ -91,7 +91,7 @@
       "conservationProjectSelection": "Artenschutzprojekt-Auswahl",
       "conservationProjectsHand": "Wie viele Artenschutzprojekte hat ARNO auf seinem Zooplan?",
       "conservationProjectsBoardNoToken": "Wie viele Artenschutzprojekte liegen aus, die noch keine Markierungssteine von anderen Spielern haben? (Ignoriere die blockierenden Markierungssteine mit der ungenutzten Farbe.)",
-      "conservationProjectsBoardAvailable": "Wie viele Artenschutprojekte liegen aus, die ARNO noch unterstützen kann?",
+      "conservationProjectsBoardAvailable": "Wie viele Artenschutzprojekte liegen aus, die ARNO noch unterstützen kann?",
       "pick": "Artenschutzprojekt ermitteln",
       "pickFromHand": "ARNO unterstützt das {number}. Artenschutzprojekt von seinem Zooplan.",
       "pickFromBoardNoToken": "ARNO unterstützt das {number}. ausliegende Artenschutzprojekt, das noch keine Markierungssteine hat.",
@@ -150,11 +150,11 @@
     "title": "A.R.N.O. Regel-Zusammenfassung",
     "noMoney": "ARNO <b>nutzt kein Geld</b>, d.h. für alle Aktionen, die er ausführt, muss er kein Geld ausgeben. Er erhält während den Pausen etc. auch keine Einnahmen.",
     "rightArea": "ARNO <b>nutzt nur den rechten Bereich seines Zooplans</b>. Hier legt er wie die menschlichen Spieler seine Partnerzoos und -universitäten ab bzw. nimmt seine Verbandsarbeiter. Er erhält auch die verschiedenen Boni, sobald er sie aufdeckt. Der linke Bereich wird von ARNO nicht berücksichtigt und nur für die Ablage seiner Zookarten und Endwertungskarte verwendet.",
-    "bonuses": "ARNO erhält die folgenden <b>Boni</b> von den Spielbrettern: <b>Artenschutzpunkte, Kartenaufwertungen, Rufpunkte und Verbandsarbeiter</b>. Neben Geld erhält auch keine Boni von Tier- oder Sponsorenkarten, Gebäude, Gehege, X-Marker oder Pausenboni.",
+    "bonuses": "ARNO erhält die folgenden <b>Boni</b> von den Spielbrettern: <b>Artenschutzpunkte, Kartenaufwertungen, Rufpunkte und Verbandsarbeiter</b>. Neben Geld erhält er auch keine Boni von Tier- oder Sponsorenkarten, Gebäude, Gehege, X-Marker oder Pausenboni.",
     "referenceValues": "Die Tierkarten, die ARNO in seinem Zoo gestapelt hat, dienen als <b>Referenzwerte für mögliche Karteneffekte</b> der menschlichen Spieler. Wann immer ARNO eine weitere Karte auf seinem Stapel platziert, gelten diese Eigenschaften für Effekte der Karten der anderen Spieler.",
     "noEffectTarget": "ARNO kann <b>nicht Opfer von interaktiven Effekten</b> werden, nutze stattdessen den abweichenden Effekt für das Solospiel.",
-    "receiveCards": "Immer wenn ARNO <b>Karten erhält</b>, werfe alle Sponsoren-Karten ab und lege Tier- und Artenschutzkarten auf die Kartenstapel auf dem Zooplan.",
-    "projectModuleInfo": "Für das optional Artenschutzprojekt-Modul ist es wichtig, dass alle abgeworfenen <b>Sponsoren-Karten nachverfolgt</b> werden. Dafür muss die Anzahl der abgeworfenen Sponsorenkarten in der Pause erfasst werden (über den entsprechenden Dialog), sowie wenn ARNO eine Karte schnappt."
+    "receiveCards": "Immer wenn ARNO <b>Karten erhält</b>, wirf alle Sponsoren-Karten ab und lege Tier- und Artenschutzkarten auf die Kartenstapel auf dem Zooplan.",
+    "projectModuleInfo": "Für das optionale Artenschutzprojekt-Modul ist es wichtig, dass alle abgeworfenen <b>Sponsoren-Karten nachverfolgt</b> werden. Dafür muss die Anzahl der abgeworfenen Sponsorenkarten in der Pause erfasst werden (über den entsprechenden Dialog), sowie wenn ARNO eine Karte schnappt."
   },
   "roundDisplay": {
     "round": "Runde {round}"
@@ -192,7 +192,7 @@
     "conservationPoints": "Arten&shy;schutz&shy;punkte",
     "appeal": "Attraktion",
     "victoryPoints": "Sieg&shy;punkte",
-    "appealReputationTrack": "Die App zählt die Attraktion die ARNO durch die Karten erhält. Sie kann nicht die Attraktion zählen, die ARNO anstelle von weiterem Ruf erhählt, wenn er auf Feld 15 der Rufleiste angekommen ist."
+    "appealReputationTrack": "Die App zählt die Attraktion die ARNO durch die Karten erhält. Sie kann nicht die Attraktion zählen, die ARNO anstelle von weiterem Ruf erhält, wenn er auf Feld 15 der Rufleiste angekommen ist."
   },
   "notfound": {
     "title": "Nicht Gefunden"
