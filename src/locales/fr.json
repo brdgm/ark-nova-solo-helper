@@ -20,7 +20,14 @@
     "difficultyLevel": {
       "title": "Niveau de difficulté",
       "easy": "Facile",
-      "hard": "Difficile"
+      "hard": "Difficile",
+      "level7plus": "Niveau 7+: Si vous voulez jouer plus difficile, ajoutez un point de conservation pour ARNO au début du jeu pour chaque niveau additionnel."
+    },
+    "expansions": {
+      "title": "Extensions",
+      "arno-conservation-project-module": "ARNO: Détermination variable de la condition de soutien aux Projets de Conservation",
+      "marine-worlds": "Mondes Marins",
+      "marineWorldsNewActionCards": "Prenez 3 des <b>nouvelles cartes Action</b> au hasard et choisissez-en 2 (de types différents)."
     },
     "pickZooMap": {
       "title": "Plateau Zoo",
@@ -39,6 +46,8 @@
     "startPointsConservation":"Placez {count} cubes de joueur en guise de rappel à côté du compteur de points de conservation d'ARNO et retirez-les un par un dès qu'ARNO a marqué ses premiers points de conservation.",
     "startPointsAppeal": "Par exemple, si ARNO est le 3ème joueur, il commence avec 2 points d'attraits.",
     "startComponents": "Chaque ARNO reçoit les composants d'une couleur, un plateau zoo (carte A), une carte de score final face cachée et 8 cartes Zoo aléatoires.",
+    "startComponentsKeepCards": "ARNO ne conserve que les 2 premières cartes de projets de conservation. Toutes les cartes Mécènes et Animaux sont défaussées.",
+    "discardedSponsorCards": "Veuillez spécifier le nombre de <b>cartes Mécènes</b> défaussées durant la mise en place:",    
     "playerTokens": "Placez tous les jetons de joueur de la couleur d'ARNO à côté de son plateau zoo.",
     "associationWorker": "ARNO commence avec un bénévole sur son bloc-notes. Placez les 3 autres sur les espaces dédiés en dessous du bloc-notes sur son plateau zoo.",
     "finalScoringCard": "Placez la carte de score final sur la partie gauche du plateau zoo. Cela permet de couvrir la zone des bâtiment qui n'est pas nécessaire pour ARNO.",
@@ -58,7 +67,8 @@
     "upgradeCard": {
       "title": "Améliorer une Carte",
       "text": "Améliorer une carte d'action d'ARNO",
-      "note": "Remarque : Lorsque ARNO atteint 2 points de conservation, il choisit toujours de prendre un bénévole supplémentaire, et non une amélioration de carte."
+      "note": "Remarque : Lorsque ARNO atteint 2 points de conservation, il choisit toujours de prendre un bénévole supplémentaire, et non une amélioration de carte.",
+      "noteAppeal15BonusTile": "ARNO choisit la tuile bonus s'il dépasse 15 de réputation (si encore disponible)."
     },
     "revertUpgradeCard": {
       "title": "Annuler une carte améliorée",
@@ -90,13 +100,20 @@
       "projectSlotLeftMost": "ARNO préfère placer son cube sur l'emplacement le plus à gauche.",
       "projectSlotMiddle": "ARNO préfère placer son cube sur l'emplacement au milieu",
       "projectSlotRightMost": "ARNO préfère placer son cube sur l'emplacement le plus à droite.",
-      "projectSlotAlternatives": "Si cet emplacement est déjà couvert par un autre joueur, il le place sur l'emplacement suivant à gauche. Si ce n'est pas possible également, sur le prochain emplacement disponible à droite."
+      "projectSlotAlternatives": "Si cet emplacement est déjà couvert par un autre joueur, il le place sur l'emplacement suivant à gauche. Si ce n'est pas possible également, sur le prochain emplacement disponible à droite.",
+      "projectModule": {
+        "tokenPlacement": "ARNO place un cube sur cet emplacement (avec pour ordre de préférence):",
+        "gainConservationPoints": "ARNO gagne les points de conservation et autres bonus de cet emplacement: <b>{slot}</b>. Si cet emplacement est déjà couvert par un autre joueur, il gagne les points de l'emplacement suivant à gauche. Si ce n'est pas possible également, depuis le prochain emplacement disponible à droite."
+      }
     },
     "gainPartnerZooOrUniversity": {
       "missingMost": "Que manque-t-il le plus à Arno?",
       "partnerZoo": "Zoo partenaire",
       "partnerUniversity": "Université",
       "pickRandom": "Choisir aléatoirement"
+    },
+    "takeCardDisplay": {
+      "sponsorCardDiscard": "Vérifiez s'il s'agit d'une carte Mécène (et défaussez-la)"
     }
   },
   "difficultyLevel": {
@@ -123,6 +140,11 @@
     "token-notepad": "Placez <b>{amount}</b> cube d'ARNO sur le <b>bloc-notes</b> (compte pour le décompte final). | Placez <b>{amount}</b> cubes d'ARNO sur le <b>bloc-notes</b> (compte pour le décompte final).",
     "donate": "ARNO fait un don."
   },
+  "projectSlot": {
+    "right": "Droite",
+    "middle": "Milieu",
+    "left": "Gauche"
+  },
   "aboutARNO": {
     "link": "Règles d'ARNO",
     "title": "Résumé des règles d'A.R.N.O.",
@@ -131,7 +153,8 @@
     "bonuses": "ARNO reçoit les <b>bonus suivants</b> de son plateau zoo et du plateau de jeu : Points de conservation, Amélioration de cartes, Points de réputation et bénévoles. Pendant la pause, il ne reçoit ni crédits, ni jeton X, ni bonus de ses cartes Animaux ou Mécènes, de ses kiosques ou enclos. ",
     "referenceValues": "Les icônes des cartes animaux posées sur le plateau zoo d’ARNO peuvent être <b> prises en compte par les joueurs humains comme icônes d’autres zoos</b>. Quand ARNO place une carte Animal dans son zoo, les icônes présentes sur la carte peuvent affecter les effets des cartes des joueurs humains. ",
     "noEffectTarget": "ARNO <b>ne peut jamais être la cible d’effets d’interaction de cartes</b>. A la place, il faut utiliser l’effet présent dans la bande bleue en bas de la carte.",
-    "receiveCards": "Chaque fois qu'ARNO <b>reçoit des cartes</b> pendant la partie, défaussez toutes les cartes de Mécènes et empilez les cartes Animaux et de Projets de conservation sur son plateau zoo."
+    "receiveCards": "Chaque fois qu'ARNO <b>reçoit des cartes</b> pendant la partie, défaussez toutes les cartes de Mécènes et empilez les cartes Animaux et de Projets de conservation sur son plateau zoo.",
+    "projectModuleInfo": "Pour le module optionnel de projet de conservation il est important de <b>suivre toutes les cartes Mécènes</b> qui ont été défaussées à tout moment. Pour cela, vous devez spécifier le nombre de cartes Mécènes qu'ARNO défausse durant la pause (dans la boite de dialogue correspondante), ou s'il capture une carte."
   },
   "roundDisplay": {
     "round": "Tour {round}"
@@ -139,17 +162,27 @@
   "breakInfo": {
     "link": "Pause",
     "drawThreeCards": "Pendant les pauses, ARNO pioche <b>trois cartes</b> depuis la pioche. Il garde la première carte Projet de Conservation et joue la première carte Animal sur son plateau zoo.",
-    "triggerBonus": "La carte Animal jouée peut déclencher un effet bonus pour le ou les joueurs humains. Les autres cartes sont défaussées."
+    "triggerBonus": "La carte Animal jouée peut déclencher un effet bonus pour le ou les joueurs humains. Les autres cartes sont défaussées.",
+    "discardedSponsorCards": "Veuillez spécifier le nombre de <b>cartes Mécènes</b> défaussées durant la pause:"
   },
   "bonusTile": {
     "link": "Tuile bonus",
     "text": "ARNO ne choisit jamais le bonus pré-imprimé.",
     "pick": "Choisir une tuile bonus",
     "left": "ARNO prend la tuile bonus <b>gauche</b>.",
-    "right": "AARNO prend la tuile bonus <b>droite</b>.",
+    "right": "ARNO prend la tuile bonus <b>droite</b>.",
     "usage": "ARNO ne peut utiliser que ces trois tuiles bonus. Il ne reçoit aucun bonus des autres tuiles.",
     "pickPartnerZoo": "Choisir un zoo partenaire",
     "pickPartnerUniversity": "Choisir une université"
+  },
+  "sponsorCardDiscard": {
+    "count": "ARNO cartes Mécènes défaussées: | ARNO {bot} cartes Mécènes défaussées:"
+  },
+  "projectTrackerArnoStatus": {
+    "title": "Statut d'ARNO",
+    "trackerPosition": "Position du Marqueur",
+    "preferredProjectSlot": "Emplacement préféré du Projet de Conservation",
+    "kioskCount": "Nombre de kiosques"
   },
   "scoring": {
     "title": "Décompte final",
