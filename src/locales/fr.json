@@ -22,6 +22,12 @@
       "easy": "Facile",
       "hard": "Difficile"
     },
+    "expansions": {
+      "title": "Extensions",
+      "arno-conservation-project-module": "ARNO: Détermination variable de la condition de soutien aux Projets de Conservation",
+      "marine-worlds": "Mondes Marins",
+      "marineWorldsNewActionCards": "Prenez 3 des <b>nouvelles cartes Action</b> au hasard et choisissez-en 2 (de types différents)."
+    },
     "pickZooMap": {
       "title": "Plateau Zoo",
       "pickRandom": "Choisir aléatoirement (avancé)",
