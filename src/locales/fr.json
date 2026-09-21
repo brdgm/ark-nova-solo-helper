@@ -12,16 +12,16 @@
       "title": "Joueur",
       "playerCount": "Joueur Humain",
       "playerCountItem": "{count} Joueur | {count} Joueurs",
-      "playerColor": "Couleur du Joueur | Couleur {index} Joueur",
+      "playerColor": "Couleur du Joueur | Couleur Joueur {index}",
       "botCount": "Ordinateur ARNO",
       "botCountItem": "{count} Ordinateur ARNO| {count} Ordinateurs ARNO",
-      "botColor": "Couleur d'ARNO | Couleur {index} ARNO"
+      "botColor": "Couleur d'ARNO | Couleur ARNO {index}"
     },
     "difficultyLevel": {
       "title": "Niveau de difficulté",
       "easy": "Facile",
       "hard": "Difficile",
-      "level7plus": "Niveau 7+: Si vous voulez jouer plus difficile, ajoutez un point de conservation pour ARNO au début du jeu pour chaque niveau additionnel."
+      "level7plus": "Niveau 7+: Si vous cherchez un défi encore plus grand, donnez à ARNO un point de conservation supplémentaire au début de la partie pour chaque niveau de difficulté additionnel."
     },
     "expansions": {
       "title": "Extensions",
@@ -72,7 +72,7 @@
     },
     "revertUpgradeCard": {
       "title": "Annuler une carte améliorée",
-      "text": "Vous pouvez annuler une carte améliorée si vous l'avez amélioré par <i>erreur</i>.",
+      "text": "Vous pouvez annuler une carte améliorée si vous l'avez améliorée par <i>erreur</i>.",
       "choose": "(Choisissez)"
     },
     "actionHelpAssociationWorker": {
@@ -90,12 +90,12 @@
     "pickConservationProject": {
       "conservationProjectSelection": "Sélectionnez un projet de conservation",
       "conservationProjectsHand": "Combien de cartes de projet de conservation ARNO a-t-il sur son plateau zoo ?",
-      "conservationProjectsBoardNoToken": "Combien de cartes projet de conservation sont disponibles à côté du plateau associative sans aucun cube de joueur ?",
-      "conservationProjectsBoardAvailable": "Combien de projets de conservation sont disponibles à côté du plateau associative qu'ARNO n'a pas encore soutenu ?",
+      "conservationProjectsBoardNoToken": "Combien de projets de conservation sont disponibles à côté du plateau Association sans aucun cube de joueur ?",
+      "conservationProjectsBoardAvailable": "Combien de projets de conservation sont disponibles à côté du plateau Association qu'ARNO n'a pas encore soutenu ?",
       "pick": "Choisissez un projet de conservation",
-      "pickFromHand": "ARNO soutient le {number} projet de conservation de son plateau zoo.",
-      "pickFromBoardNoToken": "ARNO soutient le {number} projet de conservation à côté du plateau associative sans cube joueur.",
-      "pickFromBoardAvailable": "ARNO soutient le {number} projet de conservation à côté du plateau associative qui est disponible pour lui.",
+      "pickFromHand": "ARNO soutient le projet de conservation #{number} de son plateau zoo.",
+      "pickFromBoardNoToken": "ARNO soutient le projet de conservation #{number} à côté du plateau Association sans aucun cube joueur.",
+      "pickFromBoardAvailable": "ARNO soutient le projet de conservation #{number} à côté du plateau Association qui lui est encore accessible.",
       "tokenPlacement": "Placement du cube",
       "projectSlotLeftMost": "ARNO préfère placer son cube sur l'emplacement le plus à gauche.",
       "projectSlotMiddle": "ARNO préfère placer son cube sur l'emplacement au milieu",
@@ -107,7 +107,7 @@
       }
     },
     "gainPartnerZooOrUniversity": {
-      "missingMost": "Que manque-t-il le plus à Arno?",
+      "missingMost": "Que manque-t-il le plus à ARNO?",
       "partnerZoo": "Zoo partenaire",
       "partnerUniversity": "Université",
       "pickRandom": "Choisir aléatoirement"
@@ -176,7 +176,7 @@
     "pickPartnerUniversity": "Choisir une université"
   },
   "sponsorCardDiscard": {
-    "count": "ARNO cartes Mécènes défaussées: | ARNO {bot} cartes Mécènes défaussées:"
+    "count": "ARNO : cartes Mécènes défaussées: | ARNO {bot} : cartes Mécènes défaussées:"
   },
   "projectTrackerArnoStatus": {
     "title": "Statut d'ARNO",
@@ -206,7 +206,7 @@
     "finishGame": "Terminez la partie",
     "finishGameConfirm": "Terminez la partie en cours et procédez au décompte final - êtes vous sûr?",
     "endGame": "Fin de partie",
-    "endGameConfirm": "Terminez lar partie et revenir à l'écran d'accueil - êtes vous sûr?",
+    "endGameConfirm": "Terminez la partie et revenir à l'écran d'accueil - êtes vous sûr?",
     "cancel": "Annuler",
     "backToHome": "Retourner à l'accueil",
     "back": "Retour",
