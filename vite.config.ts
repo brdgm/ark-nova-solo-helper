@@ -5,8 +5,10 @@ import { VitePWA } from 'vite-plugin-pwa'
 import VueI18nPlugin from '@intlify/unplugin-vue-i18n/vite'
 import fs from 'node:fs'
 import path from 'node:path'
-import { description, appDeployName } from './package.json' with { type: 'json' }
+import packageJson from './package.json' with { type: 'json' }
 import legacy from '@vitejs/plugin-legacy'
+
+const { description, appDeployName } = packageJson
 
 // https://vitejs.dev/config/
 export default defineConfig({
